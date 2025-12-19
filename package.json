@@ -1,0 +1,35 @@
+{
+  "name": "@bookph/core",
+  "version": "1.0.0",
+  "description": "BookPH Core - Backend packages and shared logic",
+  "private": false,
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./prisma": "./prisma/index.ts",
+    "./lib": "./lib/index.ts",
+    "./features": "./features/index.ts",
+    "./trpc": "./trpc/index.ts",
+    "./ee": "./ee/index.ts",
+    "./app-store": "./app-store/index.ts",
+    "./emails": "./emails/index.ts",
+    "./sms": "./sms/index.ts",
+    "./embeds": "./embeds/index.ts",
+    "./platform": "./platform/index.ts",
+    "./kysely": "./kysely/index.ts",
+    "./dayjs": "./dayjs/index.ts",
+    "./config": "./config/index.ts",
+    "./types": "./types/index.ts"
+  },
+  "scripts": {
+    "build": "echo 'Build script placeholder'",
+    "test": "echo 'Test script placeholder'"
+  },
+  "keywords": ["bookph", "booking", "scheduling", "core"],
+  "author": "Be1l-ai",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Be1l-ai/bookph-core.git"
+  }
+}
