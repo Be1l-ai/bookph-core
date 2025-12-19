@@ -1,5 +1,5 @@
 {
-  "extends": "@calcom/tsconfig/base.json",
+  "extends": "@bookph/tsconfig/base.json",
   "compilerOptions": {
     "jsx": "react",
     "target": "ES2015",
