@@ -1,10 +1,10 @@
 import { AtomsWrapper } from "@/components/atoms-wrapper";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import { ScheduleListItem } from "@calcom/features/schedules/components/ScheduleListItem";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { getScheduleListItemData } from "@calcom/lib/schedules/transformers/getScheduleListItemData";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { ScheduleListItem } from "@bookph/core/features/schedules/components/ScheduleListItem";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { getScheduleListItemData } from "@bookph/core/lib/schedules/transformers/getScheduleListItemData";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
 
 import { useAtomDuplicateSchedule } from "../../hooks/schedules/useAtomDuplicateSchedule";
 import { useAtomGetAllSchedules } from "../../hooks/schedules/useAtomGetAllSchedules";

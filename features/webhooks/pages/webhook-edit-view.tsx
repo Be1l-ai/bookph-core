@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { SkeletonContainer } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateWebhooksList } from "@calcom/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/actions";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import { SkeletonContainer } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateWebhooksList } from "@bookph/core/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/actions";
 
 import type { WebhookFormSubmitData } from "../components/WebhookForm";
 import WebhookForm from "../components/WebhookForm";

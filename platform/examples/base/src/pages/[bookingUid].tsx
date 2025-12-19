@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 // eslint-disable-next-line @calcom/eslint/deprecated-imports-next-router
 import { useRouter } from "next/router";
 
-import { useBooking, useCancelBooking } from "@calcom/atoms";
-import dayjs from "@calcom/dayjs";
-import { Icon } from "@calcom/ui/components/icon";
+import { useBooking, useCancelBooking } from "@bookph/core/atoms";
+import dayjs from "@bookph/core/dayjs";
+import { Icon } from "@bookph/ui/components/icon";
 
 const inter = Inter({ subsets: ["latin"] });
 

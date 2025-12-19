@@ -1,14 +1,14 @@
 import { z } from "zod";
 
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { Plan, SubscriptionStatus } from "@calcom/features/ee/billing/repository/billing/IBillingRepository";
-import { BillingEnabledOrgOnboardingService } from "@calcom/features/ee/organizations/lib/service/onboarding/BillingEnabledOrgOnboardingService";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
+import { getBillingProviderService } from "@bookph/core/ee/billing/di/containers/Billing";
+import { Plan, SubscriptionStatus } from "@bookph/core/features/ee/billing/repository/billing/IBillingRepository";
+import { BillingEnabledOrgOnboardingService } from "@bookph/core/features/ee/organizations/lib/service/onboarding/BillingEnabledOrgOnboardingService";
+import stripe from "@bookph/core/features/ee/payments/server/stripe";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { prisma } from "@bookph/core/prisma";
 
 import { getTeamBillingServiceFactory } from "../../di/containers/Billing";
 import type { SWHMap } from "./__handler";

@@ -1,9 +1,9 @@
 import type { Table } from "@tanstack/react-table";
 import { useCallback } from "react";
 
-import { convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
+import { convertFacetedValuesToMap, type FacetedValue } from "@bookph/core/features/data-table";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc";
 
 import { bookingStatusToText } from "../lib/bookingStatusToText";
 import type { HeaderRow } from "../lib/types";

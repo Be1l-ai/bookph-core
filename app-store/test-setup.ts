@@ -26,7 +26,7 @@ vi.mock("@calcom/atoms/hooks/useIsPlatform", () => ({
     return false;
   },
 }));
-vi.mock("@calcom/ui/classNames", () => ({
+vi.mock("@bookph/ui/classNames", () => ({
   default: (...args: string[]) => {
     return args.filter(Boolean).join(" ");
   },

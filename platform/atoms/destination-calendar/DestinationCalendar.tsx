@@ -1,5 +1,5 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Label } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Label } from "@bookph/ui/components/form";
 
 import { cn } from "../src/lib/utils";
 import type { DestinationCalendarProps } from "./DestinationCalendarSelector";

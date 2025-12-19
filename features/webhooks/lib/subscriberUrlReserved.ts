@@ -1,4 +1,4 @@
-import type { Webhook } from "@calcom/prisma/client";
+import type { Webhook } from "@bookph/core/prisma/client";
 
 interface Params {
   subscriberUrl: string;

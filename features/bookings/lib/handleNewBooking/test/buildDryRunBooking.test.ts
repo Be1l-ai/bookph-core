@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 
-import { BookingStatus, CreationSource } from "@calcom/prisma/enums";
+import { BookingStatus, CreationSource } from "@bookph/core/prisma/enums";
 
 import { buildDryRunBooking } from "../../service/RegularBookingService";
 

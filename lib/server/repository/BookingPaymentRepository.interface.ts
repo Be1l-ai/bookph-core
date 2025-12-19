@@ -1,4 +1,4 @@
-import type { JsonValue } from "@calcom/types/Json";
+import type { JsonValue } from "@bookph/core/types/Json";
 
 export interface BookingPaymentWithCredentials {
   id: number;

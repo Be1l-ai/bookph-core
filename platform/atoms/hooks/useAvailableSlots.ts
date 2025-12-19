@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
 import type {
   GetAvailableSlotsInput_2024_04_15,
   ApiResponse,
   ApiSuccessResponse,
-} from "@calcom/platform-types";
-import type { GetAvailableSlotsResponse } from "@calcom/trpc/server/routers/viewer/slots/util";
+} from "@bookph/core/platform-types";
+import type { GetAvailableSlotsResponse } from "@bookph/core/trpc/server/routers/viewer/slots/util";
 
 import http from "../lib/http";
 

@@ -1,10 +1,10 @@
 "use client";
 
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
+import { useCopy } from "@bookph/core/lib/hooks/useCopy";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { Button } from "@bookph/ui/components/button";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { useInsightsBookingParameters } from "../../hooks/useInsightsBookingParameters";
 import { ChartCard, ChartCardItem } from "../ChartCard";

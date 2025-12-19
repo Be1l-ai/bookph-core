@@ -1,4 +1,4 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
 
 export type MembersMatchResultType = {
   isUsingAttributeWeights: boolean;

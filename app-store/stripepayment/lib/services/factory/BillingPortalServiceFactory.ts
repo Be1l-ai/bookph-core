@@ -1,5 +1,5 @@
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import prisma from "@calcom/prisma";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import prisma from "@bookph/core/prisma";
 
 import type { BillingPortalService } from "../base/BillingPortalService";
 import { OrganizationBillingPortalService } from "../organization/OrganizationBillingPortalService";

@@ -1,4 +1,4 @@
-import { APP_NAME, COMPANY_NAME, EMAIL_FROM_NAME } from "@calcom/lib/constants";
+import { APP_NAME, COMPANY_NAME, EMAIL_FROM_NAME } from "@bookph/core/lib/constants";
 
 import type { EmailVerifyCode } from "../lib/types/email-types";
 import renderEmail from "../src/renderEmail";

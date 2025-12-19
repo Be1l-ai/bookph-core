@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import type { UseFormReturn } from "react-hook-form";
 import { useWatch } from "react-hook-form";
 
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
 
 import type { FormValues } from "../pages/workflow";
 

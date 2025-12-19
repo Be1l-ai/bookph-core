@@ -2,8 +2,8 @@ import prismaMock from "../../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { purchaseTeamOrOrgSubscription } from "@calcom/features/ee/teams/lib/payments";
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { purchaseTeamOrOrgSubscription } from "@bookph/core/features/ee/teams/lib/payments";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
 
 import type { IBillingRepository } from "../../repository/billing/IBillingRepository";
 import type { ITeamBillingDataRepository } from "../../repository/teamBillingData/ITeamBillingDataRepository";

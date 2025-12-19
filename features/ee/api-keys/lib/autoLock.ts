@@ -1,8 +1,8 @@
 import type { RatelimitResponse } from "@unkey/ratelimit";
 
-import { RedisService } from "@calcom/features/redis/RedisService";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import { RedisService } from "@bookph/core/features/redis/RedisService";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
 
 import { hashAPIKey } from "./apiKeys";
 

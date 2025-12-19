@@ -2,40 +2,40 @@ import { cloneDeep, merge } from "lodash";
 import { v5 as uuidv5 } from "uuid";
 import type { z } from "zod";
 
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { FAKE_DAILY_CREDENTIAL } from "@calcom/app-store/dailyvideo/lib/VideoApiAdapter";
-import { appKeysSchema as calVideoKeysSchema } from "@calcom/app-store/dailyvideo/zod";
-import { getLocationFromApp, MeetLocationType, MSTeamsLocationType } from "@calcom/app-store/locations";
-import getApps from "@calcom/app-store/utils";
-import { createEvent, updateEvent, deleteEvent } from "@calcom/features/calendars/lib/CalendarManager";
-import { createMeeting, updateMeeting, deleteMeeting } from "@calcom/features/conferencing/lib/videoClient";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import CrmManager from "@calcom/features/crmManager/crmManager";
-import CRMScheduler from "@calcom/features/crmManager/crmScheduler";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { getUid } from "@calcom/lib/CalEventParser";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
+import { getCalendar } from "@bookph/core/app-store/_utils/getCalendar";
+import { FAKE_DAILY_CREDENTIAL } from "@bookph/core/app-store/dailyvideo/lib/VideoApiAdapter";
+import { appKeysSchema as calVideoKeysSchema } from "@bookph/core/app-store/dailyvideo/zod";
+import { getLocationFromApp, MeetLocationType, MSTeamsLocationType } from "@bookph/core/app-store/locations";
+import getApps from "@bookph/core/app-store/utils";
+import { createEvent, updateEvent, deleteEvent } from "@bookph/core/features/calendars/lib/CalendarManager";
+import { createMeeting, updateMeeting, deleteMeeting } from "@bookph/core/features/conferencing/lib/videoClient";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import CrmManager from "@bookph/core/features/crmManager/crmManager";
+import CRMScheduler from "@bookph/core/features/crmManager/crmScheduler";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { getUid } from "@bookph/core/lib/CalEventParser";
+import { symmetricDecrypt } from "@bookph/core/lib/crypto";
+import { isDelegationCredential } from "@bookph/core/lib/delegationCredential";
+import logger from "@bookph/core/lib/logger";
 import {
   getPiiFreeDestinationCalendar,
   getPiiFreeUser,
   getPiiFreeCredential,
   getPiiFreeCalendarEvent,
-} from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import type { DestinationCalendar, BookingReference } from "@calcom/prisma/client";
-import { createdEventSchema } from "@calcom/prisma/zod-utils";
-import type { AdditionalInformation, CalendarEvent, NewCalendarEventType } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
-import type { Event } from "@calcom/types/Event";
+} from "@bookph/core/lib/piiFreeData";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { prisma } from "@bookph/core/prisma";
+import type { DestinationCalendar, BookingReference } from "@bookph/core/prisma/client";
+import { createdEventSchema } from "@bookph/core/prisma/zod-utils";
+import type { AdditionalInformation, CalendarEvent, NewCalendarEventType } from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
+import type { Event } from "@bookph/core/types/Event";
 import type {
   CreateUpdateResult,
   EventResult,
   PartialBooking,
   PartialReference,
-} from "@calcom/types/EventManager";
+} from "@bookph/core/types/EventManager";
 
 const log = logger.getSubLogger({ prefix: ["EventManager"] });
 const CALENDSO_ENCRYPTION_KEY = process.env.CALENDSO_ENCRYPTION_KEY || "";

@@ -1,16 +1,16 @@
-import { getOrgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
+import { getOrgDomainConfig } from "@bookph/core/features/ee/organizations/lib/orgDomains";
 import {
   getRoutedUsersWithContactOwnerAndFixedUsers,
   findMatchingHostsWithEventSegment,
   getNormalizedHosts,
-} from "@calcom/features/users/lib/getRoutedUsers";
-import { withSelectedCalendars, UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma, { userSelect } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+} from "@bookph/core/features/users/lib/getRoutedUsers";
+import { withSelectedCalendars, UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma, { userSelect } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
 
 import type { NewBookingEventType } from "./getEventTypesFromDB";
 

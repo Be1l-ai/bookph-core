@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useBookerStore, type CountryCode } from "@calcom/features/bookings/Booker/store";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { useBookerStore, type CountryCode } from "@bookph/core/features/bookings/Booker/store";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
 
 export type PhoneInputProps = {
   value?: string;

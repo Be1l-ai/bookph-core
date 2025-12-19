@@ -7,19 +7,19 @@ import {
   getMockBookingAttendee,
   TestData,
   addWorkflowReminders,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectBookingToBeInDatabase,
   expectSuccessfulRoundRobinReschedulingEmails,
   expectWorkflowToBeTriggered,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, vi, expect } from "vitest";
 
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { SchedulingType, BookingStatus, WorkflowMethods } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { SchedulingType, BookingStatus, WorkflowMethods } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 vi.mock("@calcom/features/bookings/lib/EventManager");
 
@@ -61,7 +61,7 @@ describe("roundRobinReassignment test", () => {
 
   test("reassign new round robin organizer", async ({ emails }) => {
     const roundRobinReassignment = (await import("./roundRobinReassignment")).default;
-    const EventManager = (await import("@calcom/features/bookings/lib/EventManager")).default;
+    const EventManager = (await import("@bookph/core/features/bookings/lib/EventManager")).default;
 
     const eventManagerSpy = vi.spyOn(EventManager.prototype as any, "reschedule");
     eventManagerSpy.mockResolvedValue({ referencesToCreate: [] });
@@ -194,7 +194,7 @@ describe("roundRobinReassignment test", () => {
   // TODO: add fixed hosts test
   test("Reassign round robin host with fixed host as organizer", async () => {
     const roundRobinReassignment = (await import("./roundRobinReassignment")).default;
-    const EventManager = (await import("@calcom/features/bookings/lib/EventManager")).default;
+    const EventManager = (await import("@bookph/core/features/bookings/lib/EventManager")).default;
 
     const eventManagerSpy = vi.spyOn(EventManager.prototype as any, "reschedule");
 

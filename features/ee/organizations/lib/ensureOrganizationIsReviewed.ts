@@ -1,4 +1,4 @@
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
+import { getOrganizationRepository } from "@bookph/core/features/ee/organizations/di/OrganizationRepository.container";
 
 /**
  * It assumes that a user can only impersonate the members of the organization he is logged in to.

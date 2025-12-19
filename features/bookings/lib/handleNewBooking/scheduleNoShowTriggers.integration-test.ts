@@ -1,12 +1,12 @@
 import { afterAll, beforeAll, describe, expect, test, vi } from "vitest";
 
-import { DailyLocationType } from "@calcom/app-store/constants";
-import { getMeetingSessionsFromRoomName } from "@calcom/features/tasker/tasks/triggerNoShow/getMeetingSessionsFromRoomName";
-import { triggerHostNoShow } from "@calcom/features/tasker/tasks/triggerNoShow/triggerHostNoShow";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
-import { prisma } from "@calcom/prisma";
-import type { Booking, User, Webhook } from "@calcom/prisma/client";
-import { TimeUnit, WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { DailyLocationType } from "@bookph/core/app-store/constants";
+import { getMeetingSessionsFromRoomName } from "@bookph/core/features/tasker/tasks/triggerNoShow/getMeetingSessionsFromRoomName";
+import { triggerHostNoShow } from "@bookph/core/features/tasker/tasks/triggerNoShow/triggerHostNoShow";
+import { sendGenericWebhookPayload } from "@bookph/core/features/webhooks/lib/sendPayload";
+import { prisma } from "@bookph/core/prisma";
+import type { Booking, User, Webhook } from "@bookph/core/prisma/client";
+import { TimeUnit, WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import { scheduleNoShowTriggers } from "./scheduleNoShowTriggers";
 

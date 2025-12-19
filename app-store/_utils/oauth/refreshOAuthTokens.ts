@@ -2,7 +2,7 @@ import {
   APP_CREDENTIAL_SHARING_ENABLED,
   CREDENTIAL_SYNC_SECRET,
   CREDENTIAL_SYNC_SECRET_HEADER_NAME,
-} from "@calcom/lib/constants";
+} from "@bookph/core/lib/constants";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const refreshOAuthTokens = async (refreshFunction: () => any, appSlug: string, userId: number | null) => {

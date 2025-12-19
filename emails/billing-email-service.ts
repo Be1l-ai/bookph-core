@@ -1,9 +1,9 @@
 import type { TFunction } from "i18next";
 
-import type BaseEmail from "@calcom/emails/templates/_base-email";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
-import type { CreditUsageType } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
+import type BaseEmail from "@bookph/core/emails/templates/_base-email";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
+import type { CreditUsageType } from "@bookph/core/prisma/enums";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
 
 import OrganizerPaymentRefundFailedEmail from "./templates/organizer-payment-refund-failed-email";
 import NoShowFeeChargedEmail from "./templates/no-show-fee-charged-email";

@@ -1,9 +1,9 @@
 import { waitUntil } from "@vercel/functions";
 
-import { UsageEvent, LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import type { IDeploymentRepository } from "@calcom/lib/server/repository/deployment.interface";
-import { Prisma } from "@calcom/prisma/client";
-import type { PrismaClient } from "@calcom/prisma/client";
+import { UsageEvent, LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import type { IDeploymentRepository } from "@bookph/core/lib/server/repository/deployment.interface";
+import { Prisma } from "@bookph/core/prisma/client";
+import type { PrismaClient } from "@bookph/core/prisma/client";
 
 class InlineDeploymentRepository implements IDeploymentRepository {
   constructor(private prisma: PrismaClient) {}

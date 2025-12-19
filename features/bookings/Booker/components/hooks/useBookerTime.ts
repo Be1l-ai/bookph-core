@@ -1,6 +1,6 @@
 import { shallow } from "zustand/shallow";
 
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
 
 import { useTimePreferences } from "../../../lib/timePreferences";
 import { getBookerTimezone } from "../../utils/getBookerTimezone";

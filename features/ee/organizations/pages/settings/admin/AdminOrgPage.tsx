@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { DropdownActions, Table } from "@bookph/ui/components/table";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { subdomainSuffix } from "../../../../organizations/lib/orgDomains";
 

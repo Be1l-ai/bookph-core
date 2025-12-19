@@ -1,17 +1,17 @@
 import type { ReactNode } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { CreateEventTypeFormValues } from "@calcom/features/eventtypes/hooks/useCreateEventType";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import type { CreateEventTypeFormValues } from "@bookph/core/features/eventtypes/hooks/useCreateEventType";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import slugify from "@bookph/core/lib/slugify";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import classNames from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { Form } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { RadioAreaGroup as RadioArea } from "@bookph/ui/components/radio";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 type props = {
   permissions: {

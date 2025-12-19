@@ -1,4 +1,4 @@
-import type { JsonValue } from "@calcom/types/Json";
+import type { JsonValue } from "@bookph/core/types/Json";
 import type { AuditActorType } from "./IAuditActorRepository";
 
 export type BookingAuditType = "RECORD_CREATED" | "RECORD_UPDATED" | "RECORD_DELETED"

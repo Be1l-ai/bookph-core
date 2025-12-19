@@ -1,23 +1,23 @@
 import type { EventStatus } from "ics";
 
-import dayjs from "@calcom/dayjs";
-import generateIcsString from "@calcom/emails/lib/generateIcsString";
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import type { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { Workflow, WorkflowStep } from "@calcom/features/ee/workflows/lib/types";
-import { preprocessNameFieldDataWithVariant } from "@calcom/features/form-builder/utils";
-import { getHideBranding } from "@calcom/features/profile/lib/hideBranding";
-import { getSubmitterEmail } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { SENDER_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import { WorkflowActions, WorkflowTemplates } from "@calcom/prisma/enums";
-import { SchedulingType, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { CalendarEvent } from "@calcom/types/Calendar";
+import dayjs from "@bookph/core/dayjs";
+import generateIcsString from "@bookph/core/emails/lib/generateIcsString";
+import { sendCustomWorkflowEmail } from "@bookph/core/emails/workflow-email-service";
+import type { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import type { Workflow, WorkflowStep } from "@bookph/core/features/ee/workflows/lib/types";
+import { preprocessNameFieldDataWithVariant } from "@bookph/core/features/form-builder/utils";
+import { getHideBranding } from "@bookph/core/features/profile/lib/hideBranding";
+import { getSubmitterEmail } from "@bookph/core/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import { SENDER_NAME, WEBSITE_URL } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { prisma } from "@bookph/core/prisma";
+import { WorkflowActions, WorkflowTemplates } from "@bookph/core/prisma/enums";
+import { SchedulingType, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import { bookingMetadataSchema } from "@bookph/core/prisma/zod-utils";
+import { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import type { WorkflowReminderRepository } from "../../repositories/WorkflowReminderRepository";
 import { isEmailAction } from "../actionHelperFunctions";
@@ -75,7 +75,7 @@ export class EmailWorkflowService {
       );
       emailAttendeeSendToOverride = seatAttendee?.attendee.email || null;
     }
-    const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+    const { CreditService } = await import("@bookph/core/features/ee/billing/credit-service");
     const creditService = new CreditService();
     const creditCheckFn = creditService.hasAvailableCredits.bind(creditService);
 

@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Select from "react-select";
 
-import { CalProvider, BookerEmbed, Router } from "@calcom/atoms";
+import { CalProvider, BookerEmbed, Router } from "@bookph/core/atoms";
 import "@calcom/atoms/globals.min.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "800"] });

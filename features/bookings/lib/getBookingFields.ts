@@ -1,19 +1,19 @@
 import type { z } from "zod";
 
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import { fieldsThatSupportLabelAsSafeHtml } from "@calcom/features/form-builder/fieldsThatSupportLabelAsSafeHtml";
-import { getFieldIdentifier } from "@calcom/features/form-builder/utils/getFieldIdentifier";
-import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@calcom/lib/bookings/SystemField";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import slugify from "@calcom/lib/slugify";
-import type { EventTypeCustomInput, EventType } from "@calcom/prisma/client";
-import { EventTypeCustomInputType } from "@calcom/prisma/enums";
+import type { Workflow } from "@bookph/core/features/ee/workflows/lib/types";
+import { fieldsThatSupportLabelAsSafeHtml } from "@bookph/core/features/form-builder/fieldsThatSupportLabelAsSafeHtml";
+import { getFieldIdentifier } from "@bookph/core/features/form-builder/utils/getFieldIdentifier";
+import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@bookph/core/lib/bookings/SystemField";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import slugify from "@bookph/core/lib/slugify";
+import type { EventTypeCustomInput, EventType } from "@bookph/core/prisma/client";
+import { EventTypeCustomInputType } from "@bookph/core/prisma/enums";
 import {
   BookingFieldTypeEnum,
   customInputSchema,
   eventTypeBookingFields,
   EventTypeMetaDataSchema,
-} from "@calcom/prisma/zod-utils";
+} from "@bookph/core/prisma/zod-utils";
 
 export type Fields = z.infer<typeof eventTypeBookingFields>;
 

@@ -1,5 +1,5 @@
-import type { AdditionalInformation } from "@calcom/types/Calendar";
-import type { EventResult } from "@calcom/types/EventManager";
+import type { AdditionalInformation } from "@bookph/core/types/Calendar";
+import type { EventResult } from "@bookph/core/types/EventManager";
 
 type ExtraAdditionalInfo = AdditionalInformation & {
   url?: string | undefined;

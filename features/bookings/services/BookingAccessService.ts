@@ -1,7 +1,7 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { BookingRepository } from "../repositories/BookingRepository";
 

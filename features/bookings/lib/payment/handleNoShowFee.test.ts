@@ -1,13 +1,13 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { PaymentServiceMap } from "@calcom/app-store/payment.services.generated";
-import { sendNoShowFeeChargedEmail } from "@calcom/emails/billing-email-service";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import { PaymentServiceMap } from "@bookph/core/app-store/payment.services.generated";
+import { sendNoShowFeeChargedEmail } from "@bookph/core/emails/billing-email-service";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
 
 import { handleNoShowFee } from "./handleNoShowFee";
 

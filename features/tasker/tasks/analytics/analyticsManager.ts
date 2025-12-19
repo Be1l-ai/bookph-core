@@ -1,7 +1,7 @@
-import { getAnalyticsService } from "@calcom/app-store/_utils/getAnalytics";
-import logger from "@calcom/lib/logger";
-import type { AnalyticsService, SendEventProps } from "@calcom/types/AnalyticsService";
-import type { CredentialPayload } from "@calcom/types/Credential";
+import { getAnalyticsService } from "@bookph/core/app-store/_utils/getAnalytics";
+import logger from "@bookph/core/lib/logger";
+import type { AnalyticsService, SendEventProps } from "@bookph/core/types/AnalyticsService";
+import type { CredentialPayload } from "@bookph/core/types/Credential";
 
 const log = logger.getSubLogger({ prefix: ["AnalyticsManager"] });
 export default class AnalyticsManager {

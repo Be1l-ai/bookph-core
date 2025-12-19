@@ -2,14 +2,14 @@
 
 import { useForm, Controller } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Form, Select, Input } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Form, Select, Input } from "@bookph/ui/components/form";
 
 import { useFilterValue, useDataTable } from "../../hooks";
 import type { FilterableColumn } from "../../lib/types";
 import { ZTextFilterValue, ColumnFilterType } from "../../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@bookph/core/types/data-table";
 import { useTextFilterOperatorOptions } from "./utils";
 
 export type TextFilterOptionsProps = {

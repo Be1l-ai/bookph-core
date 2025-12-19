@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { GetSchedulesOutput_2024_06_11 } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { GetSchedulesOutput_2024_06_11 } from "@bookph/core/platform-types";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

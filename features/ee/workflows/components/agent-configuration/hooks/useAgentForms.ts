@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
 
 import type { AgentFormValues } from "../types/schemas";
 import { agentSchema } from "../types/schemas";

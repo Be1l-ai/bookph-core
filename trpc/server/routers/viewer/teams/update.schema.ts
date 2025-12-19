@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { intervalLimitsType } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import slugify from "@calcom/lib/slugify";
+import { intervalLimitsType } from "@bookph/core/lib/intervalLimits/intervalLimitSchema";
+import type { IntervalLimit } from "@bookph/core/lib/intervalLimits/intervalLimitSchema";
+import { resizeBase64Image } from "@bookph/core/lib/server/resizeBase64Image";
+import slugify from "@bookph/core/lib/slugify";
 
 export type TUpdateInputSchema = {
   id: number;

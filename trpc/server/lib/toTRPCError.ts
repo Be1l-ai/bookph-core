@@ -1,5 +1,5 @@
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { getHttpStatusCode } from "@calcom/lib/server/getServerErrorFromUnknown";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { getHttpStatusCode } from "@bookph/core/lib/server/getServerErrorFromUnknown";
 
 import { TRPCError } from "@trpc/server";
 

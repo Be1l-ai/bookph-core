@@ -1,14 +1,14 @@
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { metadata as googleCalendarMetadata } from "@calcom/app-store/googlecalendar/_metadata";
-import { metadata as googleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
-import type { ServiceAccountKey } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { organizationRepositoryMock } from "@calcom/features/ee/organizations/__mocks__/organizationMock";
-import { SMSLockState, RRTimestampBasis } from "@calcom/prisma/enums";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+import { metadata as googleCalendarMetadata } from "@bookph/core/app-store/googlecalendar/_metadata";
+import { metadata as googleMeetMetadata } from "@bookph/core/app-store/googlevideo/_metadata";
+import type { ServiceAccountKey } from "@bookph/core/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialRepository } from "@bookph/core/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { organizationRepositoryMock } from "@bookph/core/features/ee/organizations/__mocks__/organizationMock";
+import { SMSLockState, RRTimestampBasis } from "@bookph/core/prisma/enums";
+import type { CredentialForCalendarService, CredentialPayload } from "@bookph/core/types/Credential";
 
 import {
   buildAllCredentials,

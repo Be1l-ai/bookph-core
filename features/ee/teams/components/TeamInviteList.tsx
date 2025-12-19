@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import { trackFormbricksAction } from "@calcom/features/formbricks/formbricks-client";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { trackFormbricksAction } from "@bookph/core/features/formbricks/formbricks-client";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateTeamsList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 import TeamInviteListItem from "./TeamInviteListItem";
 

@@ -1,5 +1,5 @@
-import { verifyCodeChallenge } from "@calcom/lib/pkce";
-import { generateSecret } from "@calcom/trpc/server/routers/viewer/oAuth/addClient.handler";
+import { verifyCodeChallenge } from "@bookph/core/lib/pkce";
+import { generateSecret } from "@bookph/core/trpc/server/routers/viewer/oAuth/addClient.handler";
 
 interface OAuthClient {
   clientType: "CONFIDENTIAL" | "PUBLIC";

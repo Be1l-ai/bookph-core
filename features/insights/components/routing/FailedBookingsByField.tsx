@@ -12,9 +12,9 @@ import {
   Rectangle,
 } from "recharts";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { ToggleGroup } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { ToggleGroup } from "@bookph/ui/components/form";
 
 import { useInsightsRoutingParameters } from "../../hooks/useInsightsRoutingParameters";
 import { ChartCard } from "../ChartCard";

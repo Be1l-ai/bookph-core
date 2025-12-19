@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -70,7 +70,7 @@ describe("getUserEventGroups", () => {
   } as unknown as NonNullable<
     Awaited<
       ReturnType<
-        typeof import("@calcom/features/profile/repositories/ProfileRepository").ProfileRepository.findByUpIdWithAuth
+        typeof import("@bookph/core/features/profile/repositories/ProfileRepository").ProfileRepository.findByUpIdWithAuth
       >
     >
   >;
@@ -86,7 +86,7 @@ describe("getUserEventGroups", () => {
 
   describe("Basic functionality", () => {
     it("should throw TRPCError when profile is not found", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       vi.mocked(ProfileRepository.findByUpIdWithAuth).mockResolvedValue(null);
 
       await expect(
@@ -98,7 +98,7 @@ describe("getUserEventGroups", () => {
     });
 
     it("should return user event groups when no filters are applied", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
@@ -128,11 +128,11 @@ describe("getUserEventGroups", () => {
 
   describe("Team memberships", () => {
     it("should include team events when team memberships exist", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
-      const { getResourcePermissions } = await import("@calcom/features/pbac/lib/resource-permissions");
+      const { getResourcePermissions } = await import("@bookph/core/features/pbac/lib/resource-permissions");
 
       const mockTeamMembership = {
         id: 1,
@@ -156,7 +156,7 @@ describe("getUserEventGroups", () => {
       } as unknown as NonNullable<
         Awaited<
           ReturnType<
-            typeof import("@calcom/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
+            typeof import("@bookph/core/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
           >
         >
       >[0];
@@ -190,11 +190,11 @@ describe("getUserEventGroups", () => {
 
   describe("Permissions", () => {
     it("should handle PBAC permissions correctly", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
-      const { getResourcePermissions } = await import("@calcom/features/pbac/lib/resource-permissions");
+      const { getResourcePermissions } = await import("@bookph/core/features/pbac/lib/resource-permissions");
 
       const mockTeamMembership = {
         id: 1,
@@ -218,7 +218,7 @@ describe("getUserEventGroups", () => {
       } as unknown as NonNullable<
         Awaited<
           ReturnType<
-            typeof import("@calcom/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
+            typeof import("@bookph/core/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
           >
         >
       >[0];
@@ -246,11 +246,11 @@ describe("getUserEventGroups", () => {
     });
 
     it("should fallback to role-based permissions when PBAC fails", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
-      const { getResourcePermissions } = await import("@calcom/features/pbac/lib/resource-permissions");
+      const { getResourcePermissions } = await import("@bookph/core/features/pbac/lib/resource-permissions");
 
       const mockTeamMembership = {
         id: 1,
@@ -274,7 +274,7 @@ describe("getUserEventGroups", () => {
       } as unknown as NonNullable<
         Awaited<
           ReturnType<
-            typeof import("@calcom/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
+            typeof import("@bookph/core/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
           >
         >
       >[0];
@@ -300,7 +300,7 @@ describe("getUserEventGroups", () => {
 
   describe("Organization handling", () => {
     it("should handle organization locked event types", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
@@ -315,7 +315,7 @@ describe("getUserEventGroups", () => {
       } as unknown as NonNullable<
         Awaited<
           ReturnType<
-            typeof import("@calcom/features/profile/repositories/ProfileRepository").ProfileRepository.findByUpIdWithAuth
+            typeof import("@bookph/core/features/profile/repositories/ProfileRepository").ProfileRepository.findByUpIdWithAuth
           >
         >
       >;
@@ -335,11 +335,11 @@ describe("getUserEventGroups", () => {
 
   describe("Routing forms", () => {
     it("should handle routing forms slug format", async () => {
-      const { ProfileRepository } = await import("@calcom/features/profile/repositories/ProfileRepository");
+      const { ProfileRepository } = await import("@bookph/core/features/profile/repositories/ProfileRepository");
       const { MembershipRepository } = await import(
         "@calcom/features/membership/repositories/MembershipRepository"
       );
-      const { getResourcePermissions } = await import("@calcom/features/pbac/lib/resource-permissions");
+      const { getResourcePermissions } = await import("@bookph/core/features/pbac/lib/resource-permissions");
 
       const mockTeamMembership = {
         id: 1,
@@ -363,7 +363,7 @@ describe("getUserEventGroups", () => {
       } as unknown as NonNullable<
         Awaited<
           ReturnType<
-            typeof import("@calcom/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
+            typeof import("@bookph/core/features/membership/repositories/MembershipRepository").MembershipRepository.findAllByUpIdIncludeTeam
           >
         >
       >[0];

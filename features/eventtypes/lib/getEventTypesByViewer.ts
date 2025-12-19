@@ -1,24 +1,24 @@
 import { orderBy } from "lodash";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { hasFilter } from "@calcom/features/filters/lib/hasFilter";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import logger from "@calcom/lib/logger";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import { eventTypeMetaDataSchemaWithUntypedApps } from "@calcom/prisma/zod-utils";
+import { getBookerBaseUrlSync } from "@bookph/core/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { hasFilter } from "@bookph/core/features/filters/lib/hasFilter";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import logger from "@bookph/core/lib/logger";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import { MembershipRole, SchedulingType } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
+import { eventTypeMetaDataSchemaWithUntypedApps } from "@bookph/core/prisma/zod-utils";
 
 const log = logger.getSubLogger({ prefix: ["viewer.eventTypes.getByViewer"] });
 

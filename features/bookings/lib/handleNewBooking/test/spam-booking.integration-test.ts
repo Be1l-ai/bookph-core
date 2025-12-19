@@ -9,15 +9,15 @@ import {
   mockCalendarToCrashOnGetAvailability,
   BookingLocations,
   createOrganization,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, vi } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { WatchlistType, BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { prisma } from "@bookph/core/prisma";
+import { WatchlistType, BookingStatus } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 

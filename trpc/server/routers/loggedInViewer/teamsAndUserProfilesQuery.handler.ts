@@ -1,11 +1,11 @@
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { PermissionString } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

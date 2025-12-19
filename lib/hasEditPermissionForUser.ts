@@ -1,5 +1,5 @@
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 type InputOptions = {
   ctx: {

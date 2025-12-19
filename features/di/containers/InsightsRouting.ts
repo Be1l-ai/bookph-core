@@ -1,11 +1,11 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
 import type {
   InsightsRoutingServicePublicOptions,
   InsightsRoutingServiceFilterOptions,
   InsightsRoutingBaseService,
-} from "@calcom/features/insights/services/InsightsRoutingBaseService";
-import type { InsightsRoutingService } from "@calcom/features/insights/services/InsightsRoutingDIService";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
+} from "@bookph/core/features/insights/services/InsightsRoutingBaseService";
+import type { InsightsRoutingService } from "@bookph/core/features/insights/services/InsightsRoutingDIService";
+import { prismaModule } from "@bookph/core/features/di/modules/Prisma";
 
 import { createContainer } from "../di";
 import { insightsRoutingModule } from "../modules/InsightsRouting";

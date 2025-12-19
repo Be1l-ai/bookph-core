@@ -3,7 +3,7 @@
 import { useSession } from "next-auth/react";
 import { createContext, useState } from "react";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
 
 import type { OrgTeamsType } from "../filters/OrgTeamsFilter";
 

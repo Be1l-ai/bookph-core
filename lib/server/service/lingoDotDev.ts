@@ -1,8 +1,8 @@
 import type { LocaleCode } from "@lingo.dev/_spec";
 import { LingoDotDevEngine } from "lingo.dev/sdk";
 
-import { LINGO_DOT_DEV_API_KEY } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
+import { LINGO_DOT_DEV_API_KEY } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
 
 export class LingoDotDevService {
   private static engine = new LingoDotDevEngine({

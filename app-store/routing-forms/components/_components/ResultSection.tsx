@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Icon } from "@calcom/ui/components/icon";
+import ServerTrans from "@bookph/core/lib/components/ServerTrans";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Badge } from "@bookph/ui/components/badge";
+import type { IconName } from "@bookph/ui/components/icon";
+import { Icon } from "@bookph/ui/components/icon";
 
 import type { NonRouterRoute } from "../../types/types";
 import type { MembersMatchResultType } from "./TeamMembersMatchResult";

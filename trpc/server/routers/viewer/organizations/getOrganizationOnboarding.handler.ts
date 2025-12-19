@@ -1,4 +1,4 @@
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
 
 import type { TrpcSessionUser } from "../../../types";
 

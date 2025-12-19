@@ -1,14 +1,14 @@
-import { sendScheduledEmailsAndSMS } from "@calcom/emails/email-manager";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { scheduleNoShowTriggers } from "@calcom/features/bookings/lib/handleNewBooking/scheduleNoShowTriggers";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { bookingMetadataSchema, EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { sendScheduledEmailsAndSMS } from "@bookph/core/emails/email-manager";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { scheduleNoShowTriggers } from "@bookph/core/features/bookings/lib/handleNewBooking/scheduleNoShowTriggers";
+import { isPrismaObjOrUndefined } from "@bookph/core/lib/isPrismaObj";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import { prisma } from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { bookingMetadataSchema, EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

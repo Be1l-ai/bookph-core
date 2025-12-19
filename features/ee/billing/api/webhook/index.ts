@@ -1,5 +1,5 @@
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
+import { defaultHandler } from "@bookph/core/lib/server/defaultHandler";
+import { defaultResponder } from "@bookph/core/lib/server/defaultResponder";
 
 import { stripeWebhookHandler } from "./__handler";
 

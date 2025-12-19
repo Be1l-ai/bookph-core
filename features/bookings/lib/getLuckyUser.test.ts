@@ -4,10 +4,10 @@ import prismaMock from "../../../../tests/libs/__mocks__/prismaMock";
 import { v4 as uuid } from "uuid";
 import { expect, it, describe, vi, beforeAll } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
-import { buildUser, buildBooking } from "@calcom/lib/test/builder";
-import { AttributeType, RRResetInterval, RRTimestampBasis } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import { getLuckyUserService } from "@bookph/core/features/di/containers/LuckyUser";
+import { buildUser, buildBooking } from "@bookph/core/lib/test/builder";
+import { AttributeType, RRResetInterval, RRTimestampBasis } from "@bookph/core/prisma/enums";
 
 import { getIntervalStartDate, getIntervalEndDate } from "./getLuckyUser";
 

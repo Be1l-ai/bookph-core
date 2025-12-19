@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@calcom/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 import type { TFindInputSchema } from "./find.schema";
 

@@ -1,9 +1,9 @@
 // TODO: Queries in this file are not optimized. Need to optimize them.
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { AttributeToUser } from "@calcom/prisma/client";
-import type { AttributeType } from "@calcom/prisma/enums";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import type { AttributeToUser } from "@bookph/core/prisma/client";
+import type { AttributeType } from "@bookph/core/prisma/enums";
 
 import { PrismaAttributeRepository } from "../../../server/repository/PrismaAttributeRepository";
 import { PrismaAttributeToUserRepository } from "../../../server/repository/PrismaAttributeToUserRepository";

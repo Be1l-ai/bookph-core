@@ -1,5 +1,5 @@
-import type { Webhook } from "@calcom/prisma/client";
-import type { WebhookTriggerEvents, UserPermissionRole } from "@calcom/prisma/enums";
+import type { Webhook } from "@bookph/core/prisma/client";
+import type { WebhookTriggerEvents, UserPermissionRole } from "@bookph/core/prisma/enums";
 
 import type { WebhookSubscriber } from "../dto/types";
 

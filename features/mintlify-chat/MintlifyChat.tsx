@@ -2,11 +2,11 @@
 import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import classNames from "@bookph/ui/classNames";
+import { Icon } from "@bookph/ui/components/icon";
+import { SkeletonText, SkeletonContainer } from "@bookph/ui/components/skeleton";
 
 import { getFormattedCitations, handleAiChat, optionallyAddBaseUrl } from "../mintlify-chat/util";
 

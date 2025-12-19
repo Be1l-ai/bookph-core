@@ -1,4 +1,4 @@
-import stripe from "@calcom/features/ee/payments/server/stripe";
+import stripe from "@bookph/core/features/ee/payments/server/stripe";
 
 type StripeCheckoutSessionInput = {
   checkoutSessionId?: string;

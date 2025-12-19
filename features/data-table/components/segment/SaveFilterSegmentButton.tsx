@@ -3,21 +3,21 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import posthog from "posthog-js";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { type FilterSegmentScope } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { type FilterSegmentScope } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTrigger,
-} from "@calcom/ui/components/dialog";
-import { Form, Input, Label, Select, Switch } from "@calcom/ui/components/form";
-import { RadioGroup, RadioField } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dialog";
+import { Form, Input, Label, Select, Switch } from "@bookph/ui/components/form";
+import { RadioGroup, RadioField } from "@bookph/ui/components/radio";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { useDataTable } from "../../hooks";
 

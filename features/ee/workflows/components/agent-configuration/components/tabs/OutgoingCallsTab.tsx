@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Controller } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { Label, Select } from "@calcom/ui/components/form";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import { Label, Select } from "@bookph/ui/components/form";
+import type { MultiSelectCheckboxesOptionType as Option } from "@bookph/ui/components/form";
 
 import { VoiceSelectionDialog } from "../../../VoiceSelectionDialog";
 import type { AgentFormValues } from "../../types/schemas";

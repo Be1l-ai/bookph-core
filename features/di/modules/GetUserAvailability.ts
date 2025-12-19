@@ -1,5 +1,5 @@
-import type { IUserAvailabilityService } from "@calcom/features/availability/lib/getUserAvailability";
-import { UserAvailabilityService } from "@calcom/features/availability/lib/getUserAvailability";
+import type { IUserAvailabilityService } from "@bookph/core/features/availability/lib/getUserAvailability";
+import { UserAvailabilityService } from "@bookph/core/features/availability/lib/getUserAvailability";
 
 import { createModule } from "../di";
 import { DI_TOKENS } from "../tokens";

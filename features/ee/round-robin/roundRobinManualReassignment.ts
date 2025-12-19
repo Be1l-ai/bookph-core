@@ -1,41 +1,41 @@
 import { cloneDeep } from "lodash";
 
-import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import { eventTypeAppMetadataOptionalSchema } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
+import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import { eventTypeAppMetadataOptionalSchema } from "@bookph/core/app-store/zod-utils";
+import dayjs from "@bookph/core/dayjs";
 import {
   sendReassignedEmailsAndSMS,
   sendReassignedScheduledEmailsAndSMS,
   sendReassignedUpdatedEmailsAndSMS,
-} from "@calcom/emails/email-manager";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getBookingResponsesPartialSchema } from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
+} from "@bookph/core/emails/email-manager";
+import EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import { getAllCredentialsIncludeServiceAccountKey } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getBookingResponsesPartialSchema } from "@bookph/core/features/bookings/lib/getBookingResponsesSchema";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
 import AssignmentReasonRecorder, {
   RRReassignmentType,
-} from "@calcom/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
-import { BookingLocationService } from "@calcom/features/ee/round-robin/lib/bookingLocationService";
+} from "@bookph/core/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
+import { BookingLocationService } from "@bookph/core/features/ee/round-robin/lib/bookingLocationService";
 import {
   scheduleEmailReminder,
   deleteScheduledEmailReminder,
-} from "@calcom/features/ee/workflows/lib/reminders/emailReminderManager";
-import { scheduleWorkflowReminders } from "@calcom/features/ee/workflows/lib/reminders/reminderScheduler";
-import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { SENDER_NAME } from "@calcom/lib/constants";
-import { IdempotencyKeyService } from "@calcom/lib/idempotencyKey/idempotencyKeyService";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { prisma } from "@calcom/prisma";
-import { WorkflowActions, WorkflowMethods, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { EventTypeMetadata, PlatformClientParams } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@bookph/core/features/ee/workflows/lib/reminders/emailReminderManager";
+import { scheduleWorkflowReminders } from "@bookph/core/features/ee/workflows/lib/reminders/reminderScheduler";
+import { getEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import { SENDER_NAME } from "@bookph/core/lib/constants";
+import { IdempotencyKeyService } from "@bookph/core/lib/idempotencyKey/idempotencyKeyService";
+import { isPrismaObjOrUndefined } from "@bookph/core/lib/isPrismaObj";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import { prisma } from "@bookph/core/prisma";
+import { WorkflowActions, WorkflowMethods, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import type { EventTypeMetadata, PlatformClientParams } from "@bookph/core/prisma/zod-utils";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import { handleRescheduleEventManager } from "./handleRescheduleEventManager";
 import type { BookingSelectResult } from "./utils/bookingSelect";

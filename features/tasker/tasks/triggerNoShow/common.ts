@@ -1,12 +1,12 @@
-import dayjs from "@calcom/dayjs";
-import { getHostsAndGuests } from "@calcom/features/bookings/lib/getHostsAndGuests";
-import type { Host } from "@calcom/features/bookings/lib/getHostsAndGuests";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import { getHostsAndGuests } from "@bookph/core/features/bookings/lib/getHostsAndGuests";
+import type { Host } from "@bookph/core/features/bookings/lib/getHostsAndGuests";
+import { sendGenericWebhookPayload } from "@bookph/core/features/webhooks/lib/sendPayload";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import type { TimeUnit } from "@bookph/core/prisma/enums";
+import { BookingStatus, WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import { getBooking } from "./getBooking";
 import { getMeetingSessionsFromRoomName } from "./getMeetingSessionsFromRoomName";

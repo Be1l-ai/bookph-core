@@ -39,7 +39,7 @@ const mockTeamMembers: TeamMember[] = [
 ];
 
 // Mock trpc
-vi.mock("@calcom/trpc", () => ({
+vi.mock("@bookph/core/trpc", () => ({
   trpc: {
     useUtils: () => ({
       viewer: {

@@ -1,18 +1,18 @@
 import { v4 } from "uuid";
 
-import { DailyLocationType, getHumanReadableLocationValue } from "@calcom/app-store/locations";
-import { selectOOOEntries } from "@calcom/app-store/zapier/api/subscriptions/listOOOEntries";
-import dayjs from "@calcom/dayjs";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import tasker from "@calcom/features/tasker";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import type { Prisma, Webhook, Booking, ApiKey } from "@calcom/prisma/client";
-import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import { DailyLocationType, getHumanReadableLocationValue } from "@bookph/core/app-store/locations";
+import { selectOOOEntries } from "@bookph/core/app-store/zapier/api/subscriptions/listOOOEntries";
+import dayjs from "@bookph/core/dayjs";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import tasker from "@bookph/core/features/tasker";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma, Webhook, Booking, ApiKey } from "@bookph/core/prisma/client";
+import { BookingStatus, WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import { bookingMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 const SCHEDULING_TRIGGER: WebhookTriggerEvents[] = [
   WebhookTriggerEvents.MEETING_ENDED,

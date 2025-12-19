@@ -1,14 +1,14 @@
-import type { SSOConnection } from "@calcom/ee/sso/lib/saml";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import type { SSOConnection } from "@bookph/core/ee/sso/lib/saml";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { APP_NAME } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { Label } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 export default function ConnectionInfo({
   teamId,

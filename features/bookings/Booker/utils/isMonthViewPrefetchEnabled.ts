@@ -1,4 +1,4 @@
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 export const isMonthViewPrefetchEnabled = (date: string, month: string | null) => {
   const isValidDate = dayjs(date).isValid();

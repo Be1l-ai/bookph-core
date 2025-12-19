@@ -1,7 +1,7 @@
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma, { bookingMinimalSelect } from "@calcom/prisma";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma, { bookingMinimalSelect } from "@bookph/core/prisma";
 
 const log = logger.getSubLogger({ prefix: ["trigger-no-show-handler"] });
 

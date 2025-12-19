@@ -1,7 +1,7 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma, SelectedCalendar } from "@calcom/prisma/client";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { Prisma, SelectedCalendar } from "@bookph/core/prisma/client";
 
 import { SelectedCalendarRepository } from "../SelectedCalendarRepository";
 

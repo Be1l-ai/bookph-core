@@ -1,8 +1,8 @@
 import { v4 } from "uuid";
 
-import { generateUniqueAPIKey } from "@calcom/ee/api-keys/lib/apiKeys";
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { generateUniqueAPIKey } from "@bookph/core/ee/api-keys/lib/apiKeys";
+import prisma from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import type { TrpcSessionUser } from "../../../types";
 import { checkPermissions } from "./_auth-middleware";

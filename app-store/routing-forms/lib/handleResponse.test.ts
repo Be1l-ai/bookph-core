@@ -1,10 +1,10 @@
 import "@calcom/lib/__mocks__/logger";
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
+import { findTeamMembersMatchingAttributeLogic } from "@bookph/core/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { RoutingFormResponseRepository } from "@bookph/core/lib/server/repository/formResponse";
 
 import isRouter from "../lib/isRouter";
 import routerGetCrmContactOwnerEmail from "./crmRouting/routerGetCrmContactOwnerEmail";

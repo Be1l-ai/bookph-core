@@ -1,15 +1,15 @@
 import { describe, expect, vi, beforeEach, test } from "vitest";
 
-import type { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
+import type { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import type { WorkflowReminderRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowReminderRepository";
 import {
   SchedulingType,
   TimeUnit,
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@bookph/core/prisma/enums";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import { EmailWorkflowService } from "./EmailWorkflowService";
 

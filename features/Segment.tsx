@@ -5,17 +5,17 @@ import { Query, Builder, Utils as QbUtils } from "react-awesome-query-builder";
 import type { ImmutableTree, BuilderProps } from "react-awesome-query-builder";
 import type { JsonTree } from "react-awesome-query-builder";
 
-import { buildStateFromQueryValue } from "@calcom/app-store/_utils/raqb/raqbUtils";
+import { buildStateFromQueryValue } from "@bookph/core/app-store/_utils/raqb/raqbUtils";
 import {
   withRaqbSettingsAndWidgets,
   ConfigFor,
-} from "@calcom/app-store/routing-forms/components/react-awesome-query-builder/config/uiConfig";
-import { getQueryBuilderConfigForAttributes } from "@calcom/app-store/routing-forms/lib/getQueryBuilderConfig";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { isEqual } from "@calcom/lib/isEqual";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { trpc, type RouterOutputs } from "@calcom/trpc";
-import cn from "@calcom/ui/classNames";
+} from "@bookph/core/app-store/routing-forms/components/react-awesome-query-builder/config/uiConfig";
+import { getQueryBuilderConfigForAttributes } from "@bookph/core/app-store/routing-forms/lib/getQueryBuilderConfig";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { isEqual } from "@bookph/core/lib/isEqual";
+import type { AttributesQueryValue } from "@bookph/core/lib/raqb/types";
+import { trpc, type RouterOutputs } from "@bookph/core/trpc";
+import cn from "@bookph/ui/classNames";
 
 export type Attributes = RouterOutputs["viewer"]["appRoutingForms"]["getAttributesForTeam"];
 export function useAttributes(teamId: number) {

@@ -2,8 +2,8 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 
 import { TRPCError } from "@trpc/server";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
 
 import { convertErrorWithCodeToTRPCError } from "./toTRPCError";
 

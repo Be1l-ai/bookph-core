@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import prisma from "@calcom/prisma";
+import prisma from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

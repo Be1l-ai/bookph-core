@@ -8,43 +8,43 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
-import { trackFormbricksAction } from "@calcom/features/formbricks/formbricks-client";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import { md } from "@calcom/lib/markdownIt";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import objectKeys from "@calcom/lib/objectKeys";
-import slugify from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import type { Prisma } from "@calcom/prisma/client";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button, LinkIconButton } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { getTeamUrlSync } from "@bookph/core/features/ee/organizations/lib/getTeamUrlSync";
+import { trackFormbricksAction } from "@bookph/core/features/formbricks/formbricks-client";
+import SectionBottomActions from "@bookph/core/features/settings/SectionBottomActions";
+import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useParamsWithFallback } from "@bookph/core/lib/hooks/useParamsWithFallback";
+import { md } from "@bookph/core/lib/markdownIt";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import objectKeys from "@bookph/core/lib/objectKeys";
+import slugify from "@bookph/core/lib/slugify";
+import turndown from "@bookph/core/lib/turndownService";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Button, LinkIconButton } from "@bookph/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { Editor } from "@bookph/ui/components/editor";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { ImageUploader } from "@bookph/ui/components/image-uploader";
 import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
   SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
-import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+} from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
+import { revalidateTeamDataCache } from "@bookph/core/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { revalidateEventTypesList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { revalidateTeamsList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 const regex = new RegExp("^[a-zA-Z0-9-]*$");
 

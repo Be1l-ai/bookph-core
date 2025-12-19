@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Icon } from "@bookph/ui/components/icon";
 
 export const AppDependencyComponent = ({
   appName,

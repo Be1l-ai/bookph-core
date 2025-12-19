@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import type { z } from "zod";
 
 import type { FilterValueSchema, ZFilterValue } from "../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@bookph/core/types/data-table";
 import { useDataTable } from "./useDataTable";
 
 export function useFilterValue<

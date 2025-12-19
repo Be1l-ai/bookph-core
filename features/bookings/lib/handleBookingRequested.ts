@@ -1,18 +1,18 @@
-import { sendAttendeeRequestEmailAndSMS, sendOrganizerRequestEmail } from "@calcom/emails/email-manager";
-import { getWebhookPayloadForBooking } from "@calcom/features/bookings/lib/getWebhookPayloadForBooking";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { Prisma } from "@calcom/prisma/client";
-import { WebhookTriggerEvents, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import { getAllWorkflowsFromEventType } from "@calcom/trpc/server/routers/viewer/workflows/util";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { sendAttendeeRequestEmailAndSMS, sendOrganizerRequestEmail } from "@bookph/core/emails/email-manager";
+import { getWebhookPayloadForBooking } from "@bookph/core/features/bookings/lib/getWebhookPayloadForBooking";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import type { Workflow } from "@bookph/core/features/ee/workflows/lib/types";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
+import sendPayload from "@bookph/core/features/webhooks/lib/sendOrSchedulePayload";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { WebhookTriggerEvents, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
+import { getAllWorkflowsFromEventType } from "@bookph/core/trpc/server/routers/viewer/workflows/util";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 const log = logger.getSubLogger({ prefix: ["[handleBookingRequested] book:user"] });
 

@@ -2,16 +2,16 @@ import * as RadioGroup from "@radix-ui/react-radio-group";
 import { useEffect, useRef, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import type { EventTypeSetup, SettingsToggleClassNames } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Input } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { RadioField } from "@calcom/ui/components/radio";
+import useLockedFieldsManager from "@bookph/core/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { LearnMoreLink } from "@bookph/core/features/eventtypes/components/LearnMoreLink";
+import type { EventTypeSetup, SettingsToggleClassNames } from "@bookph/core/features/eventtypes/lib/types";
+import type { FormValues } from "@bookph/core/features/eventtypes/lib/types";
+import ServerTrans from "@bookph/core/lib/components/ServerTrans";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Input } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { RadioField } from "@bookph/ui/components/radio";
 
 export type DisableReschedulingCustomClassNames = SettingsToggleClassNames & {
   radioGroupContainer?: string;

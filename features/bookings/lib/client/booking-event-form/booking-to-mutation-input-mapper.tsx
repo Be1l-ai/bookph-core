@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import { isBookingDryRun } from "@calcom/features/bookings/Booker/utils/isBookingDryRun";
-import { getRoutedTeamMemberIdsFromSearchParams } from "@calcom/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
-import { parseRecurringDates } from "@calcom/lib/parse-dates";
-import type { RoutingFormSearchParams } from "@calcom/platform-types";
+import dayjs from "@bookph/core/dayjs";
+import { isBookingDryRun } from "@bookph/core/features/bookings/Booker/utils/isBookingDryRun";
+import { getRoutedTeamMemberIdsFromSearchParams } from "@bookph/core/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
+import { parseRecurringDates } from "@bookph/core/lib/parse-dates";
+import type { RoutingFormSearchParams } from "@bookph/core/platform-types";
 
 import type { BookerEvent, BookingCreateBody, RecurringBookingCreateBody } from "../../../types";
 import type { Tracking } from "../../handleNewBooking/types";

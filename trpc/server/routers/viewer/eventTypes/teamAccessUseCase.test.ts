@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TeamAccessUseCase } from "./teamAccessUseCase";
 

@@ -5,17 +5,17 @@ import {
   TestData,
   getOrganizer,
   getScenarioData,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectWebhookToHaveBeenCalledWith } from "@calcom/web/test/utils/bookingScenario/expects";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
+import { expectWebhookToHaveBeenCalledWith } from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, vi, test, expect } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import dayjs from "@calcom/dayjs";
-import { TimeUnit } from "@calcom/prisma/enums";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { appStoreMetadata } from "@bookph/core/app-store/apps.metadata.generated";
+import dayjs from "@bookph/core/dayjs";
+import { TimeUnit } from "@bookph/core/prisma/enums";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import { calculateMaxStartTime } from "./common";
 import { getMeetingSessionsFromRoomName } from "./getMeetingSessionsFromRoomName";

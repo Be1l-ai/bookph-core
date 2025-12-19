@@ -6,36 +6,36 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
-import OrgAppearanceViewWrapper from "@calcom/features/ee/organizations/pages/settings/appearance";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import turndown from "@calcom/lib/turndownService";
-import type { Prisma } from "@calcom/prisma/client";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { LinkIconButton } from "@calcom/ui/components/button";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { BannerUploader, ImageUploader } from "@calcom/ui/components/image-uploader";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { subdomainSuffix } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import OrgAppearanceViewWrapper from "@bookph/core/features/ee/organizations/pages/settings/appearance";
+import SectionBottomActions from "@bookph/core/features/settings/SectionBottomActions";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { md } from "@bookph/core/lib/markdownIt";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import turndown from "@bookph/core/lib/turndownService";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { trpc } from "@bookph/core/trpc/react";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Button } from "@bookph/ui/components/button";
+import { LinkIconButton } from "@bookph/ui/components/button";
+import { Editor } from "@bookph/ui/components/editor";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { BannerUploader, ImageUploader } from "@bookph/ui/components/image-uploader";
 // if I include this in the above barrel import, I get a runtime error that the component is not exported.
-import { OrgBanner } from "@calcom/ui/components/organization-banner";
+import { OrgBanner } from "@bookph/ui/components/organization-banner";
 import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
   SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { useOrgBranding } from "../../../organizations/context/provider";
 

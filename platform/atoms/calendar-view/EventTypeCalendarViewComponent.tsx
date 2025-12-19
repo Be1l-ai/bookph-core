@@ -4,15 +4,15 @@ import { shallow } from "zustand/shallow";
 import {
   useBookerStoreContext,
   useInitializeBookerStoreContext,
-} from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Header } from "@calcom/features/bookings/Booker/components/Header";
-import { BookerSection } from "@calcom/features/bookings/Booker/components/Section";
-import { useAvailableTimeSlots } from "@calcom/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
-import { useBookerLayout } from "@calcom/features/bookings/Booker/components/hooks/useBookerLayout";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import { LargeCalendar } from "@calcom/features/calendar-view/LargeCalendar";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { useTimesForSchedule } from "@calcom/features/schedules/lib/use-schedule/useTimesForSchedule";
+} from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { Header } from "@bookph/core/features/bookings/Booker/components/Header";
+import { BookerSection } from "@bookph/core/features/bookings/Booker/components/Section";
+import { useAvailableTimeSlots } from "@bookph/core/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
+import { useBookerLayout } from "@bookph/core/features/bookings/Booker/components/hooks/useBookerLayout";
+import { useTimePreferences } from "@bookph/core/features/bookings/lib";
+import { LargeCalendar } from "@bookph/core/features/calendar-view/LargeCalendar";
+import { getUsernameList } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { useTimesForSchedule } from "@bookph/core/features/schedules/lib/use-schedule/useTimesForSchedule";
 
 import { formatUsername } from "../booker/BookerPlatformWrapper";
 import type {

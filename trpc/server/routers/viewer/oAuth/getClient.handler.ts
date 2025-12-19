@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@bookph/core/prisma";
 
 import type { TGetClientInputSchema } from "./getClient.schema";
 

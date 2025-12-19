@@ -1,5 +1,5 @@
-import { BookingStatus } from "@calcom/prisma/enums";
-import { type BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { type BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
 
 interface ValidateReassignmentParams {
   bookingId: number;

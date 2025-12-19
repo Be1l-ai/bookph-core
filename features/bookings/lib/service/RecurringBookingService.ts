@@ -1,7 +1,7 @@
-import type { CreateBookingMeta, CreateRecurringBookingData } from "@calcom/features/bookings/lib/dto/types";
-import type { BookingResponse } from "@calcom/features/bookings/types";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { AppsStatus } from "@calcom/types/Calendar";
+import type { CreateBookingMeta, CreateRecurringBookingData } from "@bookph/core/features/bookings/lib/dto/types";
+import type { BookingResponse } from "@bookph/core/features/bookings/types";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import type { AppsStatus } from "@bookph/core/types/Calendar";
 
 import type { IBookingService } from "../interfaces/IBookingService";
 import type { RegularBookingService } from "./RegularBookingService";

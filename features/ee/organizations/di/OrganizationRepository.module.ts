@@ -1,6 +1,6 @@
-import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@calcom/features/di/di";
-import { OrganizationRepository } from "@calcom/features/ee/organizations/repositories/OrganizationRepository";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@bookph/core/features/di/di";
+import { OrganizationRepository } from "@bookph/core/features/ee/organizations/repositories/OrganizationRepository";
+import { moduleLoader as prismaModuleLoader } from "@bookph/core/features/di/modules/Prisma";
 
 import { ORGANIZATION_DI_TOKENS } from "./tokens";
 

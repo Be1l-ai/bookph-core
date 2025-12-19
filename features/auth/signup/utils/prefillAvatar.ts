@@ -1,9 +1,9 @@
 import fetch from "node-fetch";
 
-import { uploadAvatar } from "@calcom/lib/server/avatar";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { uploadAvatar } from "@bookph/core/lib/server/avatar";
+import { resizeBase64Image } from "@bookph/core/lib/server/resizeBase64Image";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
 
 interface IPrefillAvatar {
   email: string;

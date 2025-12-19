@@ -1,6 +1,6 @@
-import { BookingStatus } from "@calcom/prisma/enums";
-import { Badge } from "@calcom/ui/components/badge";
-import { type BadgeProps } from "@calcom/ui/components/badge";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { Badge } from "@bookph/ui/components/badge";
+import { type BadgeProps } from "@bookph/ui/components/badge";
 
 import { bookingStatusToText } from "../lib/bookingStatusToText";
 

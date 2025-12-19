@@ -1,9 +1,9 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { vi, type Mock, describe, it, expect, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { Resource } from "../../domain/types/permission-registry";
 import { PermissionCheckService } from "../../services/permission-check.service";

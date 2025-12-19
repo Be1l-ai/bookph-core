@@ -1,5 +1,5 @@
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import type { RecordingReadyDTO, TranscriptionGeneratedDTO } from "../dto/types";
 import type { IRecordingWebhookService } from "../interface/services";

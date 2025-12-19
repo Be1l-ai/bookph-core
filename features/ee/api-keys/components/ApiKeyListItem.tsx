@@ -1,23 +1,23 @@
 import { useState } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog } from "@calcom/ui/components/dialog";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import dayjs from "@bookph/core/dayjs";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { Dialog } from "@bookph/ui/components/dialog";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateApiKeysList } from "@calcom/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/actions";
+} from "@bookph/ui/components/dropdown";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateApiKeysList } from "@bookph/core/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/actions";
 
 export type TApiKeys = RouterOutputs["viewer"]["apiKeys"]["list"][number];
 

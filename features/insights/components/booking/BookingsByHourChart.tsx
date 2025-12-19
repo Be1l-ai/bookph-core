@@ -11,9 +11,9 @@ import {
   Rectangle,
 } from "recharts";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
 
 import { useInsightsBookingParameters } from "../../hooks/useInsightsBookingParameters";
 import { ChartCard } from "../ChartCard";

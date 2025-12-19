@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
 import { StringChangeSchema, NumberChangeSchema } from "../common/changeSchemas";
 import { AuditActionServiceHelper } from "./AuditActionServiceHelper";
 import type { IAuditActionService, TranslationWithParams } from "./IAuditActionService";

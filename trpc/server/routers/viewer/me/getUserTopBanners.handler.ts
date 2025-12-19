@@ -1,11 +1,11 @@
 import {
   getCalendarCredentials,
   getConnectedCalendars,
-} from "@calcom/features/calendars/lib/CalendarManager";
-import { buildNonDelegationCredentials } from "@calcom/lib/delegationCredential";
-import { prisma } from "@calcom/prisma";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@bookph/core/features/calendars/lib/CalendarManager";
+import { buildNonDelegationCredentials } from "@bookph/core/lib/delegationCredential";
+import { prisma } from "@bookph/core/prisma";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { checkIfOrgNeedsUpgradeHandler } from "../organizations/checkIfOrgNeedsUpgrade.handler";
 import { getUpgradeableHandler } from "../teams/getUpgradeable.handler";

@@ -1,8 +1,8 @@
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import prisma from "@calcom/prisma";
-import type { IdentityProvider } from "@calcom/prisma/enums";
-import { CreationSource, MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import prisma from "@bookph/core/prisma";
+import type { IdentityProvider } from "@bookph/core/prisma/enums";
+import { CreationSource, MembershipRole } from "@bookph/core/prisma/enums";
 
 import {
   deriveNameFromOrgUsername,

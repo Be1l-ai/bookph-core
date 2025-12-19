@@ -1,5 +1,5 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { prisma } from "@calcom/prisma";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { prisma } from "@bookph/core/prisma";
 
 import { LegacyRoleManager } from "./legacy-role-manager.service";
 import { PBACRoleManager } from "./pbac-role-manager.service";

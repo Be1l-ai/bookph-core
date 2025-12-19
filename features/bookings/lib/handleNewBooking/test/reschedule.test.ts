@@ -18,7 +18,7 @@ import {
   getMockFailingAppStatus,
   getMockPassingAppStatus,
   getDefaultBookingFields,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectWorkflowToBeTriggered,
   expectBookingToBeInDatabase,
@@ -32,18 +32,18 @@ import {
   expectSuccessfulCalendarEventDeletionInCalendar,
   expectSuccessfulVideoMeetingDeletionInCalendar,
   expectSuccessfulRoundRobinReschedulingEmails,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, beforeEach } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { resetTestSMS } from "@calcom/lib/testSMS";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { appStoreMetadata } from "@bookph/core/app-store/apps.metadata.generated";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { resetTestSMS } from "@bookph/core/lib/testSMS";
+import { BookingStatus, SchedulingType } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 

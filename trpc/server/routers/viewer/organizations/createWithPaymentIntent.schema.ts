@@ -4,7 +4,7 @@
  */
 import type { z } from "zod";
 
-import { createOrganizationSchema } from "@calcom/features/ee/organizations/types/schemas";
+import { createOrganizationSchema } from "@bookph/core/features/ee/organizations/types/schemas";
 
 export enum BillingPeriod {
   MONTHLY = "MONTHLY",

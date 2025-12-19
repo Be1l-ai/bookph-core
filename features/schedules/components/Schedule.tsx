@@ -12,21 +12,21 @@ import type {
 import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 import { createFilter, type GroupBase, type Props } from "react-select";
 
-import type { scheduleClassNames } from "@calcom/atoms/availability/types";
-import type { ConfigType } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { defaultDayRange as DEFAULT_DAY_RANGE } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import type { TimeRange } from "@calcom/types/schedule";
-import cn from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown";
-import { Select } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import type { scheduleClassNames } from "@bookph/core/atoms/availability/types";
+import type { ConfigType } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { defaultDayRange as DEFAULT_DAY_RANGE } from "@bookph/core/lib/availability";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { weekdayNames } from "@bookph/core/lib/weekday";
+import useMeQuery from "@bookph/core/trpc/react/hooks/useMeQuery";
+import type { TimeRange } from "@bookph/core/types/schedule";
+import cn from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@bookph/ui/components/dropdown";
+import { Select } from "@bookph/ui/components/form";
+import { CheckboxField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
 
 export type { TimeRange };
 

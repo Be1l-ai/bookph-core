@@ -1,10 +1,10 @@
 import type { TFunction } from "i18next";
 
-import type { CreditCheckFn } from "@calcom/features/ee/billing/credit-service";
-import { sendOrScheduleWorkflowEmails } from "@calcom/features/ee/workflows/lib/reminders/providers/emailProvider";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import { WorkflowMethods } from "@calcom/prisma/enums";
+import type { CreditCheckFn } from "@bookph/core/features/ee/billing/credit-service";
+import { sendOrScheduleWorkflowEmails } from "@bookph/core/features/ee/workflows/lib/reminders/providers/emailProvider";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
+import { WorkflowMethods } from "@bookph/core/prisma/enums";
 
 import * as twilio from "./providers/twilioProvider";
 

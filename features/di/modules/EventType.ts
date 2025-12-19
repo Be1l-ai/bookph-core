@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
 
 import { type Container, createModule, type ModuleLoader } from "../di";
 

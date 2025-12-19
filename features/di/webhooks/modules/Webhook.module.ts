@@ -1,19 +1,19 @@
 import { createModule } from "@evyweb/ioctopus";
 
-import { BookingPayloadBuilder } from "@calcom/features/webhooks/lib/factory/BookingPayloadBuilder";
-import { FormPayloadBuilder } from "@calcom/features/webhooks/lib/factory/FormPayloadBuilder";
-import { InstantMeetingBuilder } from "@calcom/features/webhooks/lib/factory/InstantMeetingBuilder";
-import { MeetingPayloadBuilder } from "@calcom/features/webhooks/lib/factory/MeetingPayloadBuilder";
-import { OOOPayloadBuilder } from "@calcom/features/webhooks/lib/factory/OOOPayloadBuilder";
-import { RecordingPayloadBuilder } from "@calcom/features/webhooks/lib/factory/RecordingPayloadBuilder";
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import { BookingWebhookService } from "@calcom/features/webhooks/lib/service/BookingWebhookService";
-import { FormWebhookService } from "@calcom/features/webhooks/lib/service/FormWebhookService";
-import { OOOWebhookService } from "@calcom/features/webhooks/lib/service/OOOWebhookService";
-import { RecordingWebhookService } from "@calcom/features/webhooks/lib/service/RecordingWebhookService";
-import { WebhookNotificationHandler } from "@calcom/features/webhooks/lib/service/WebhookNotificationHandler";
-import { WebhookNotifier } from "@calcom/features/webhooks/lib/service/WebhookNotifier";
-import { WebhookService } from "@calcom/features/webhooks/lib/service/WebhookService";
+import { BookingPayloadBuilder } from "@bookph/core/features/webhooks/lib/factory/BookingPayloadBuilder";
+import { FormPayloadBuilder } from "@bookph/core/features/webhooks/lib/factory/FormPayloadBuilder";
+import { InstantMeetingBuilder } from "@bookph/core/features/webhooks/lib/factory/InstantMeetingBuilder";
+import { MeetingPayloadBuilder } from "@bookph/core/features/webhooks/lib/factory/MeetingPayloadBuilder";
+import { OOOPayloadBuilder } from "@bookph/core/features/webhooks/lib/factory/OOOPayloadBuilder";
+import { RecordingPayloadBuilder } from "@bookph/core/features/webhooks/lib/factory/RecordingPayloadBuilder";
+import { WebhookRepository } from "@bookph/core/features/webhooks/lib/repository/WebhookRepository";
+import { BookingWebhookService } from "@bookph/core/features/webhooks/lib/service/BookingWebhookService";
+import { FormWebhookService } from "@bookph/core/features/webhooks/lib/service/FormWebhookService";
+import { OOOWebhookService } from "@bookph/core/features/webhooks/lib/service/OOOWebhookService";
+import { RecordingWebhookService } from "@bookph/core/features/webhooks/lib/service/RecordingWebhookService";
+import { WebhookNotificationHandler } from "@bookph/core/features/webhooks/lib/service/WebhookNotificationHandler";
+import { WebhookNotifier } from "@bookph/core/features/webhooks/lib/service/WebhookNotifier";
+import { WebhookService } from "@bookph/core/features/webhooks/lib/service/WebhookService";
 
 import { SHARED_TOKENS } from "../../shared/shared.tokens";
 import { WEBHOOK_TOKENS } from "../Webhooks.tokens";

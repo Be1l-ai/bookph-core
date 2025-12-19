@@ -15,9 +15,9 @@ import {
 } from "tsdav";
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import sanitizeCalendarObject from "@calcom/lib/sanitizeCalendarObject";
-import type { Person as AttendeeInCalendarEvent } from "@calcom/types/Calendar";
+import dayjs from "@bookph/core/dayjs";
+import sanitizeCalendarObject from "@bookph/core/lib/sanitizeCalendarObject";
+import type { Person as AttendeeInCalendarEvent } from "@bookph/core/types/Calendar";
 import type {
   Calendar,
   CalendarServiceEvent,
@@ -27,8 +27,8 @@ import type {
   IntegrationCalendar,
   NewCalendarEventType,
   TeamMember,
-} from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
+} from "@bookph/core/types/Calendar";
+import type { CredentialPayload } from "@bookph/core/types/Credential";
 
 import { getLocation, getRichDescription } from "./CalEventParser";
 import { symmetricDecrypt } from "./crypto";
@@ -323,7 +323,7 @@ export default abstract class BaseCalendarService implements Calendar {
    * @returns {Promise<string | undefined>} - A Promise that resolves to the user's timezone or "Europe/London" as a default value if the timezone is not found.
    */
   getUserTimezoneFromDB = async (id: number): Promise<string | undefined> => {
-    const prisma = await import("@calcom/prisma").then((mod) => mod.default);
+    const prisma = await import("@bookph/core/prisma").then((mod) => mod.default);
     const user = await prisma.user.findUnique({
       where: {
         id,

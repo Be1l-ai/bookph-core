@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import prisma from "@calcom/prisma";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import prisma from "@bookph/core/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import removeHostsFromEventTypesHandler from "./removeHostsFromEventTypes.handler";

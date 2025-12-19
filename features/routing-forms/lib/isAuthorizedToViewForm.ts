@@ -1,5 +1,5 @@
-import type { Prisma } from "@calcom/prisma/client";
-import { userMetadata } from "@calcom/prisma/zod-utils";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { userMetadata } from "@bookph/core/prisma/zod-utils";
 
 type FormUser = {
   username: string | null;

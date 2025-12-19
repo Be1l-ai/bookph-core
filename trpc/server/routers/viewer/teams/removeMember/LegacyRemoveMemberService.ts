@@ -1,6 +1,6 @@
-import * as teamQueries from "@calcom/features/ee/teams/lib/queries";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import * as teamQueries from "@bookph/core/features/ee/teams/lib/queries";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

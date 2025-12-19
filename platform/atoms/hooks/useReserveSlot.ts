@@ -1,12 +1,12 @@
 import { useMutation } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
 import type {
   ApiResponse,
   ApiErrorResponse,
   ApiSuccessResponse,
   ReserveSlotInput_2024_04_15,
-} from "@calcom/platform-types";
+} from "@bookph/core/platform-types";
 
 import http from "../lib/http";
 

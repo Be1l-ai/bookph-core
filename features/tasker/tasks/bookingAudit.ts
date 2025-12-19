@@ -1,6 +1,6 @@
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getBookingAuditTaskConsumer } from "@calcom/features/booking-audit/di/BookingAuditTaskConsumer.container";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getBookingAuditTaskConsumer } from "@bookph/core/features/booking-audit/di/BookingAuditTaskConsumer.container";
 
 const log = logger.getSubLogger({ prefix: ["[tasker] bookingAudit"] });
 

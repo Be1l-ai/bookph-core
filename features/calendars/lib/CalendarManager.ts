@@ -1,21 +1,21 @@
 import { sortBy } from "lodash";
 
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { MeetLocationType } from "@calcom/app-store/locations";
-import getApps from "@calcom/app-store/utils";
-import dayjs from "@calcom/dayjs";
+import { getCalendar } from "@bookph/core/app-store/_utils/getCalendar";
+import { MeetLocationType } from "@bookph/core/app-store/locations";
+import getApps from "@bookph/core/app-store/utils";
+import dayjs from "@bookph/core/dayjs";
 import getCalendarsEvents, {
   getCalendarsEventsWithTimezones,
-} from "@calcom/features/calendars/lib/getCalendarsEvents";
-import { getUid } from "@calcom/lib/CalEventParser";
-import { getRichDescription } from "@calcom/lib/CalEventParser";
-import { CalendarAppDelegationCredentialError } from "@calcom/lib/CalendarAppError";
-import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@calcom/lib/constants";
-import { buildNonDelegationCredentials } from "@calcom/lib/delegationCredential";
-import { formatCalEvent } from "@calcom/lib/formatCalendarEvent";
-import logger from "@calcom/lib/logger";
-import { getPiiFreeCalendarEvent, getPiiFreeCredential } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
+} from "@bookph/core/features/calendars/lib/getCalendarsEvents";
+import { getUid } from "@bookph/core/lib/CalEventParser";
+import { getRichDescription } from "@bookph/core/lib/CalEventParser";
+import { CalendarAppDelegationCredentialError } from "@bookph/core/lib/CalendarAppError";
+import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@bookph/core/lib/constants";
+import { buildNonDelegationCredentials } from "@bookph/core/lib/delegationCredential";
+import { formatCalEvent } from "@bookph/core/lib/formatCalendarEvent";
+import logger from "@bookph/core/lib/logger";
+import { getPiiFreeCalendarEvent, getPiiFreeCredential } from "@bookph/core/lib/piiFreeData";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 import type {
   CalendarEvent,
   CalendarServiceEvent,
@@ -23,9 +23,9 @@ import type {
   IntegrationCalendar,
   NewCalendarEventType,
   SelectedCalendar,
-} from "@calcom/types/Calendar";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
-import type { EventResult } from "@calcom/types/EventManager";
+} from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService, CredentialPayload } from "@bookph/core/types/Credential";
+import type { EventResult } from "@bookph/core/types/EventManager";
 
 const log = logger.getSubLogger({ prefix: ["CalendarManager"] });
 

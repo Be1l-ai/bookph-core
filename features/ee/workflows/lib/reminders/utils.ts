@@ -1,8 +1,8 @@
-import dayjs from "@calcom/dayjs";
-import { dub } from "@calcom/features/auth/lib/dub";
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import { WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { dub } from "@bookph/core/features/auth/lib/dub";
+import { WEBSITE_URL } from "@bookph/core/lib/constants";
+import { WorkflowActions, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import { bookingMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import { IMMEDIATE_WORKFLOW_TRIGGER_EVENTS } from "../constants";
 import { getWorkflowRecipientEmail } from "../getWorkflowReminders";

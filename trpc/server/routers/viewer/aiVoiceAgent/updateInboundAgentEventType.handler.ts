@@ -1,8 +1,8 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
-import { replaceEventTypePlaceholders } from "@calcom/features/ee/workflows/components/agent-configuration/utils/promptUtils";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import { createDefaultAIPhoneServiceProvider } from "@bookph/core/features/calAIPhone";
+import { PrismaAgentRepository } from "@bookph/core/features/calAIPhone/repositories/PrismaAgentRepository";
+import { replaceEventTypePlaceholders } from "@bookph/core/features/ee/workflows/components/agent-configuration/utils/promptUtils";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TUpdateInboundAgentEventTypeInputSchema } from "./updateInboundAgentEventType.schema";

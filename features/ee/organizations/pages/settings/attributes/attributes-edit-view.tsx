@@ -4,12 +4,12 @@ import { useParams } from "next/navigation";
 import { useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateAttributesList } from "@calcom/web/app/(use-page-wrapper)/settings/organizations/(org-user-only)/members/actions";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateAttributesList } from "@bookph/core/web/app/(use-page-wrapper)/settings/organizations/(org-user-only)/members/actions";
 
 import { AttributeForm } from "./AttributesForm";
 

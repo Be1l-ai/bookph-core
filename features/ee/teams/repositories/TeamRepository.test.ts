@@ -2,7 +2,7 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import type { Team } from "@calcom/prisma/client";
+import type { Team } from "@bookph/core/prisma/client";
 
 import { getTeam, getOrg, TeamRepository } from "./TeamRepository";
 

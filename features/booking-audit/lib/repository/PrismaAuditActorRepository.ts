@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@calcom/prisma/client";
+import type { PrismaClient } from "@bookph/core/prisma/client";
 import type { IAuditActorRepository } from "./IAuditActorRepository";
 
 const SYSTEM_ACTOR_ID = "00000000-0000-0000-0000-000000000000";

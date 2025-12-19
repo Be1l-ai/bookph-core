@@ -1,6 +1,6 @@
-import type { PrismaClient } from "@calcom/prisma/client";
+import type { PrismaClient } from "@bookph/core/prisma/client";
 
-import { getBookingAuditViewerService } from "@calcom/features/booking-audit/di/BookingAuditViewerService.container";
+import { getBookingAuditViewerService } from "@bookph/core/features/booking-audit/di/BookingAuditViewerService.container";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TGetAuditLogsInputSchema } from "./getAuditLogs.schema";

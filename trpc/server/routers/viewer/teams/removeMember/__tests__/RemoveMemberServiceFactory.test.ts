@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
 
 import { LegacyRemoveMemberService } from "../LegacyRemoveMemberService";
 import { PBACRemoveMemberService } from "../PBACRemoveMemberService";

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { readonlyPrisma } from "@calcom/prisma";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { readonlyPrisma } from "@bookph/core/prisma";
 
 vi.mock("@calcom/prisma", () => ({
   readonlyPrisma: {

@@ -3,23 +3,23 @@
 import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownItem,
   DropdownMenuItem,
-} from "@calcom/ui/components/dropdown";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateAttributesList } from "@calcom/web/app/(use-page-wrapper)/settings/organizations/(org-user-only)/members/actions";
+} from "@bookph/ui/components/dropdown";
+import { Switch } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateAttributesList } from "@bookph/core/web/app/(use-page-wrapper)/settings/organizations/(org-user-only)/members/actions";
 
 import { DeleteAttributeModal } from "./DeleteAttributeModal";
 import { ListSkeleton } from "./ListSkeleton";

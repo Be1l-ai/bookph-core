@@ -1,6 +1,6 @@
 import type Stripe from "stripe";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
 
 import { getStripeCustomerIdFromUserId, stripe } from "./stripe";
 

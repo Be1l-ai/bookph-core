@@ -63,7 +63,7 @@ export * from "./zod-utils";
 // ===== USAGE EXAMPLES =====
 /*
 // Recommended usage with provider abstraction
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
+import { createDefaultAIPhoneServiceProvider } from "@bookph/core/features/calAIPhone";
 
 const aiPhoneService = createDefaultAIPhoneServiceProvider();
 
@@ -86,7 +86,7 @@ const call = await aiPhoneService.createPhoneCall({
 });
 
 // Using a specific provider
-import { createAIPhoneServiceProvider, AIPhoneServiceProviderType } from "@calcom/features/calAIPhone";
+import { createAIPhoneServiceProvider, AIPhoneServiceProviderType } from "@bookph/core/features/calAIPhone";
 
 const retellAIService = createAIPhoneServiceProvider({
   providerType: AIPhoneServiceProviderType.RETELL_AI,
@@ -97,7 +97,7 @@ const retellAIService = createAIPhoneServiceProvider({
 });
 
 // Legacy usage (still supported)
-import { RetellAIPhoneServiceProviderFactory } from "@calcom/features/calAIPhone";
+import { RetellAIPhoneServiceProviderFactory } from "@bookph/core/features/calAIPhone";
 
 const legacyService = RetellAIPhoneServiceProviderFactory.createWithConfig();
 */

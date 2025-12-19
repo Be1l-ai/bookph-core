@@ -1,5 +1,5 @@
-import { HostRepository } from "@calcom/features/host/repositories/HostRepository";
-import { prisma } from "@calcom/prisma";
+import { HostRepository } from "@bookph/core/features/host/repositories/HostRepository";
+import { prisma } from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

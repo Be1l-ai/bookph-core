@@ -2,7 +2,7 @@ import "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it } from "vitest";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 import { getTimeView, getDateRanges, formatPeriod } from "../insightsDateUtils";
 

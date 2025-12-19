@@ -1,4 +1,4 @@
-import type { DestinationCalendar } from "@calcom/prisma/client";
+import type { DestinationCalendar } from "@bookph/core/prisma/client";
 import type {
   AdditionalInformation,
   CalendarEvent,
@@ -6,7 +6,7 @@ import type {
   ExistingRecurringEvent,
   Person,
   VideoCallData,
-} from "@calcom/types/Calendar";
+} from "@bookph/core/types/Calendar";
 
 class CalendarEventClass implements CalendarEvent {
   bookerUrl?: string | undefined;

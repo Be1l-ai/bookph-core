@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { stringOrNumber } from "@calcom/prisma/zod-utils";
+import { stringOrNumber } from "@bookph/core/prisma/zod-utils";
 
 export const ZUserInputSchema = z.object({
   username: z.string(),

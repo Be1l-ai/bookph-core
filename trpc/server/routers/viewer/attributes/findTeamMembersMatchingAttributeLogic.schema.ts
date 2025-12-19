@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { zodAttributesQueryValue } from "@calcom/lib/raqb/zod";
+import { zodAttributesQueryValue } from "@bookph/core/lib/raqb/zod";
 
 export const ZFindTeamMembersMatchingAttributeLogicInputSchema = z.object({
   teamId: z.number(),

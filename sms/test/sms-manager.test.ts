@@ -1,10 +1,10 @@
 import type { TFunction } from "i18next";
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { sendSmsOrFallbackEmail } from "@calcom/features/ee/workflows/lib/reminders/messageDispatcher";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import prisma from "@calcom/prisma";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { sendSmsOrFallbackEmail } from "@bookph/core/features/ee/workflows/lib/reminders/messageDispatcher";
+import { checkSMSRateLimit } from "@bookph/core/lib/smsLockState";
+import prisma from "@bookph/core/prisma";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 import SMSManager from "../sms-manager";
 

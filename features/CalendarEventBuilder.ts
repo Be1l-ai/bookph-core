@@ -1,16 +1,16 @@
 import type { TFunction } from "i18next";
 
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat, type TimeFormat } from "@calcom/lib/timeFormat";
-import type { Attendee, BookingSeat, DestinationCalendar, Prisma, User } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { bookingResponses as bookingResponsesSchema } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent, Person, CalEventResponses, AppsStatus } from "@calcom/types/Calendar";
-import type { VideoCallData } from "@calcom/types/VideoApiAdapter";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import type { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat, type TimeFormat } from "@bookph/core/lib/timeFormat";
+import type { Attendee, BookingSeat, DestinationCalendar, Prisma, User } from "@bookph/core/prisma/client";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { bookingResponses as bookingResponsesSchema } from "@bookph/core/prisma/zod-utils";
+import type { CalendarEvent, Person, CalEventResponses, AppsStatus } from "@bookph/core/types/Calendar";
+import type { VideoCallData } from "@bookph/core/types/VideoApiAdapter";
 
 export type BookingForCalEventBuilder = NonNullable<
   Awaited<ReturnType<BookingRepository["getBookingForCalEventBuilder"]>>

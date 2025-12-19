@@ -2,10 +2,10 @@ import type { NextApiRequest } from "next";
 import type { Session } from "next-auth";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import {
   BillingPortalServiceFactory,

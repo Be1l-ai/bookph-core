@@ -1,4 +1,4 @@
-import classNames from "@calcom/ui/classNames";
+import classNames from "@bookph/ui/classNames";
 
 export const Spinner = ({ className }: { className?: string }) => (
   <div

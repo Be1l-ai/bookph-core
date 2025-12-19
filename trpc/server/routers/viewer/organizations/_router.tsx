@@ -1,6 +1,6 @@
 import type { NextApiRequest } from "next";
-import { createPhoneCallSchema } from "@calcom/features/calAIPhone/zod-utils";
-import { ZVerifyCodeInputSchema } from "@calcom/prisma/zod-utils";
+import { createPhoneCallSchema } from "@bookph/core/features/calAIPhone/zod-utils";
+import { ZVerifyCodeInputSchema } from "@bookph/core/prisma/zod-utils";
 
 import authedProcedure, {
   authedAdminProcedure,

@@ -5,7 +5,7 @@ import * as React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { vi } from "vitest";
 
-import { showToast } from "@calcom/ui/components/toast";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { FormBuilder } from "./FormBuilder";
 import {
@@ -34,7 +34,7 @@ vi.mock("next/navigation", async (importOriginal) => {
   };
 });
 
-vi.mock("@calcom/ui/components/toast", () => ({
+vi.mock("@bookph/ui/components/toast", () => ({
   showToast: vi.fn(),
 }));
 

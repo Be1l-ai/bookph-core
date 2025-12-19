@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
-import { Logo } from "@calcom/ui/components/logo";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Dialog, DialogContent } from "@bookph/ui/components/dialog";
+import { Icon, type IconName } from "@bookph/ui/components/icon";
+import { Logo } from "@bookph/ui/components/logo";
 
 import { useWelcomeModal } from "../hooks/useWelcomeModal";
 

@@ -1,12 +1,12 @@
 import { createHmac } from "crypto";
 import { compile } from "handlebars";
 
-import type { TGetTranscriptAccessLink } from "@calcom/app-store/dailyvideo/zod";
-import { getHumanReadableLocationValue } from "@calcom/app-store/locations";
-import { DelegationCredentialErrorPayloadType } from "@calcom/features/webhooks/lib/dto/types";
-import { getUTCOffsetByTimezone } from "@calcom/lib/dayjs";
-import type { Payment, Webhook } from "@calcom/prisma/client";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import type { TGetTranscriptAccessLink } from "@bookph/core/app-store/dailyvideo/zod";
+import { getHumanReadableLocationValue } from "@bookph/core/app-store/locations";
+import { DelegationCredentialErrorPayloadType } from "@bookph/core/features/webhooks/lib/dto/types";
+import { getUTCOffsetByTimezone } from "@bookph/core/lib/dayjs";
+import type { Payment, Webhook } from "@bookph/core/prisma/client";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 type ContentType = "application/json" | "application/x-www-form-urlencoded";
 

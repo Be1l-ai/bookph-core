@@ -1,6 +1,6 @@
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialRepository } from "@bookph/core/features/delegation-credentials/repositories/DelegationCredentialRepository";
 
 import { toggleDelegationCredentialEnabled } from "./toggleEnabled.handler";
 

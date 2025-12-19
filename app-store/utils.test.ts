@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import type { App } from "@calcom/types/App";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import type { App } from "@bookph/core/types/App";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import { sanitizeAppForViewer } from "./utils";
 import type { CredentialDataWithTeamName, LocationOption } from "./utils";

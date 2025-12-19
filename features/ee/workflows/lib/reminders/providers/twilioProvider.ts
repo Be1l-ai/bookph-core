@@ -2,12 +2,12 @@ import type { NextRequest } from "next/server";
 import TwilioClient from "twilio";
 import { v4 as uuidv4 } from "uuid";
 
-import { IS_API_V2_E2E, WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import { setTestSMS } from "@calcom/lib/testSMS";
-import prisma from "@calcom/prisma";
-import { SMSLockState } from "@calcom/prisma/enums";
+import { IS_API_V2_E2E, WEBAPP_URL } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { checkSMSRateLimit } from "@bookph/core/lib/smsLockState";
+import { setTestSMS } from "@bookph/core/lib/testSMS";
+import prisma from "@bookph/core/prisma";
+import { SMSLockState } from "@bookph/core/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["[twilioProvider]"] });
 

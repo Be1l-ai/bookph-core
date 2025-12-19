@@ -10,7 +10,7 @@ import {
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 import {
   DataTableWrapper,
   DataTableToolbar,
@@ -21,21 +21,21 @@ import {
   ZDateRangeFilterValue,
   DataTableFilters,
   DataTableSegment,
-} from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/core/features/data-table";
+import { useSegments } from "@bookph/core/features/data-table/hooks/useSegments";
+import SettingsHeader from "@bookph/core/features/settings/appDir/SettingsHeader";
+import ServerTrans from "@bookph/core/lib/components/ServerTrans";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Button } from "@bookph/ui/components/button";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Icon } from "@bookph/ui/components/icon";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import CreateNewOutOfOfficeEntryButton from "./CreateNewOutOfOfficeEntryButton";
 import type { BookingRedirectForm } from "./CreateOrEditOutOfOfficeModal";

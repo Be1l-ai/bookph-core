@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 
-import type { EventTypeTemplate } from "@calcom/features/eventtypes/lib/templates";
-import { EVENT_TYPE_TEMPLATES, getTemplateCategories } from "@calcom/features/eventtypes/lib/templates";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
+import type { EventTypeTemplate } from "@bookph/core/features/eventtypes/lib/templates";
+import { EVENT_TYPE_TEMPLATES, getTemplateCategories } from "@bookph/core/features/eventtypes/lib/templates";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Label } from "@bookph/ui/components/form";
 
 interface EventTypeTemplateSelectorProps {
   onSelectTemplate: (template: EventTypeTemplate) => void;

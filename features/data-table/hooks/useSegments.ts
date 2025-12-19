@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
 
 import { recalculateDateRange } from "../lib/dateRange";
 import { type UseSegments, SYSTEM_SEGMENT_PREFIX } from "../lib/types";

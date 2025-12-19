@@ -1,5 +1,5 @@
-import type { PrismaClient as PrismaClientWithExtensions } from "@calcom/prisma";
-import type { PrismaClient as PrismaClientWithoutExtensions } from "@calcom/prisma/client";
+import type { PrismaClient as PrismaClientWithExtensions } from "@bookph/core/prisma";
+import type { PrismaClient as PrismaClientWithoutExtensions } from "@bookph/core/prisma/client";
 
 import type { IDeploymentRepository } from "./deployment.interface";
 

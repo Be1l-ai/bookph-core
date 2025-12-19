@@ -1,10 +1,10 @@
 import type z from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { EventTypeCustomInput } from "@calcom/prisma/client";
+import dayjs from "@bookph/core/dayjs";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import type { EventTypeCustomInput } from "@bookph/core/prisma/client";
 
 import { bookingCreateSchemaLegacyPropsForApi } from "../bookingCreateBodySchema";
 import type { TgetBookingDataSchema } from "../getBookingDataSchema";

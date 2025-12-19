@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 
-import { APP_NAME, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
+import { APP_NAME, SUPPORT_MAIL_ADDRESS } from "@bookph/core/lib/constants";
 
 import { BaseEmailHtml, CallToAction } from "../components";
 

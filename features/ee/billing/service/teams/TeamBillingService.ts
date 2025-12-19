@@ -1,15 +1,15 @@
 import type { z } from "zod";
 
-import { getRequestedSlugError } from "@calcom/app-store/stripepayment/lib/team-billing";
-import { purchaseTeamOrOrgSubscription } from "@calcom/features/ee/teams/lib/payments";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getMetadataHelpers } from "@calcom/lib/getMetadataHelpers";
-import logger from "@calcom/lib/logger";
-import { Redirect } from "@calcom/lib/redirect";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { getRequestedSlugError } from "@bookph/core/app-store/stripepayment/lib/team-billing";
+import { purchaseTeamOrOrgSubscription } from "@bookph/core/features/ee/teams/lib/payments";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getMetadataHelpers } from "@bookph/core/lib/getMetadataHelpers";
+import logger from "@bookph/core/lib/logger";
+import { Redirect } from "@bookph/core/lib/redirect";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { teamMetadataStrictSchema } from "@bookph/core/prisma/zod-utils";
 
 // import billing from "../..";
 import type {

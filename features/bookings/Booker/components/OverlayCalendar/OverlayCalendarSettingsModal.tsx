@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { DialogContent, DialogClose } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Switch } from "@calcom/ui/components/form";
-import { ListItem, ListItemText, ListItemTitle } from "@calcom/ui/components/list";
-import { SkeletonContainer } from "@calcom/ui/components/skeleton";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { DialogContent, DialogClose } from "@bookph/ui/components/dialog";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Switch } from "@bookph/ui/components/form";
+import { ListItem, ListItemText, ListItemTitle } from "@bookph/ui/components/list";
+import { SkeletonContainer } from "@bookph/ui/components/skeleton";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
 
 import type { UseCalendarsReturnType } from "../hooks/useCalendars";
 

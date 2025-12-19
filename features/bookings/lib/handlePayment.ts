@@ -1,12 +1,12 @@
-import { PaymentServiceMap } from "@calcom/app-store/payment.services.generated";
-import type { EventTypeAppsList } from "@calcom/app-store/utils";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import type { Fields } from "@calcom/features/bookings/lib/getBookingFields";
-import { fieldTypesConfigMap } from "@calcom/features/form-builder/fieldTypes";
-import { convertToSmallestCurrencyUnit } from "@calcom/lib/currencyConversions";
-import type { AppCategories, Prisma, EventType } from "@calcom/prisma/client";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { IAbstractPaymentService } from "@calcom/types/PaymentService";
+import { PaymentServiceMap } from "@bookph/core/app-store/payment.services.generated";
+import type { EventTypeAppsList } from "@bookph/core/app-store/utils";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import type { Fields } from "@bookph/core/features/bookings/lib/getBookingFields";
+import { fieldTypesConfigMap } from "@bookph/core/features/form-builder/fieldTypes";
+import { convertToSmallestCurrencyUnit } from "@bookph/core/lib/currencyConversions";
+import type { AppCategories, Prisma, EventType } from "@bookph/core/prisma/client";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
+import type { IAbstractPaymentService } from "@bookph/core/types/PaymentService";
 
 const isPaymentService = (x: unknown): x is { PaymentService: any } =>
   !!x && typeof x === "object" && "PaymentService" in x && typeof x.PaymentService === "function";

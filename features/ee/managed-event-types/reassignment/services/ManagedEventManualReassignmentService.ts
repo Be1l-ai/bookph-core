@@ -1,45 +1,45 @@
-import { eventTypeAppMetadataOptionalSchema } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
+import { eventTypeAppMetadataOptionalSchema } from "@bookph/core/app-store/zod-utils";
+import dayjs from "@bookph/core/dayjs";
 import {
   sendReassignedEmailsAndSMS,
   sendReassignedScheduledEmailsAndSMS,
   sendReassignedUpdatedEmailsAndSMS,
-} from "@calcom/emails/email-manager";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+} from "@bookph/core/emails/email-manager";
+import EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import { getAllCredentialsIncludeServiceAccountKey } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
 import {
   BookingRepository,
   type ManagedEventReassignmentCreatedBooking,
   type ManagedEventCancellationResult,
-} from "@calcom/features/bookings/repositories/BookingRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { BookingLocationService } from "@calcom/features/ee/round-robin/lib/bookingLocationService";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import type { AdditionalInformation, CalendarEvent } from "@calcom/types/Calendar";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import logger from "@calcom/lib/logger";
-import type loggerType from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
+} from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { CalendarEventBuilder } from "@bookph/core/features/CalendarEventBuilder";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { BookingLocationService } from "@bookph/core/features/ee/round-robin/lib/bookingLocationService";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import type { AdditionalInformation, CalendarEvent } from "@bookph/core/types/Calendar";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import logger from "@bookph/core/lib/logger";
+import type loggerType from "@bookph/core/lib/logger";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
 
 import {
   ManagedEventAssignmentReasonService,
   ManagedEventReassignmentType,
-} from "@calcom/features/ee/managed-event-types/reassignment/services/ManagedEventAssignmentReasonRecorder";
+} from "@bookph/core/features/ee/managed-event-types/reassignment/services/ManagedEventAssignmentReasonRecorder";
 import {
   findTargetChildEventType,
   validateManagedEventReassignment,
   buildNewBookingPlan,
-} from "@calcom/features/ee/managed-event-types/reassignment/utils";
+} from "@bookph/core/features/ee/managed-event-types/reassignment/utils";
 
 interface ManagedEventManualReassignmentServiceDeps {
   prisma: PrismaClient;
@@ -292,7 +292,7 @@ export class ManagedEventManualReassignmentService {
       throw new Error("Original booking not found");
     }
 
-    const { getTranslation } = await import("@calcom/lib/server/i18n");
+    const { getTranslation } = await import("@bookph/core/lib/server/i18n");
     const newUserT = await getTranslation(newUser.locale ?? "en", "common");
     const originalUserT = await getTranslation(originalUser.locale ?? "en", "common");
 
@@ -358,7 +358,7 @@ export class ManagedEventManualReassignmentService {
     originalBookingFull: NonNullable<
       Awaited<ReturnType<BookingRepository["findByIdWithAttendeesPaymentAndReferences"]>>
     >;
-    originalUserT: Awaited<ReturnType<typeof import("@calcom/lib/server/i18n")["getTranslation"]>>;
+    originalUserT: Awaited<ReturnType<typeof import("@bookph/core/lib/server/i18n")["getTranslation"]>>;
     apps: ReturnType<typeof eventTypeAppMetadataOptionalSchema.parse>;
     logger: ReturnType<typeof loggerType.getSubLogger>;
   }) {
@@ -412,7 +412,7 @@ export class ManagedEventManualReassignmentService {
     logger,
   }: {
     newUser: NonNullable<Awaited<ReturnType<UserRepository["findByIdWithCredentialsAndCalendar"]>>>;
-    newUserT: Awaited<ReturnType<typeof import("@calcom/lib/server/i18n")["getTranslation"]>>;
+    newUserT: Awaited<ReturnType<typeof import("@bookph/core/lib/server/i18n")["getTranslation"]>>;
     targetEventTypeDetails: NonNullable<Awaited<ReturnType<typeof getEventTypesFromDB>>>;
     newBooking: ManagedEventReassignmentCreatedBooking;
     originalBookingFull: NonNullable<
@@ -666,9 +666,9 @@ export class ManagedEventManualReassignmentService {
     targetEventTypeDetails: NonNullable<Awaited<ReturnType<typeof getEventTypesFromDB>>>;
     parentEventType: Awaited<ReturnType<typeof findTargetChildEventType>>["parentEventType"];
     newUser: NonNullable<Awaited<ReturnType<UserRepository["findByIdWithCredentialsAndCalendar"]>>>;
-    newUserT: Awaited<ReturnType<typeof import("@calcom/lib/server/i18n")["getTranslation"]>>;
+    newUserT: Awaited<ReturnType<typeof import("@bookph/core/lib/server/i18n")["getTranslation"]>>;
     originalUser: NonNullable<Awaited<ReturnType<UserRepository["findByIdWithCredentialsAndCalendar"]>>>;
-    originalUserT: Awaited<ReturnType<typeof import("@calcom/lib/server/i18n")["getTranslation"]>>;
+    originalUserT: Awaited<ReturnType<typeof import("@bookph/core/lib/server/i18n")["getTranslation"]>>;
     bookingLocation: string | null;
     videoCallData: CalendarEvent["videoCallData"];
     additionalInformation: AdditionalInformation;

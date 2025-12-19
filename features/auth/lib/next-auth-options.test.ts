@@ -1,7 +1,7 @@
 import type { User } from "next-auth";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { IdentityProvider, UserPermissionRole } from "@calcom/prisma/enums";
+import { IdentityProvider, UserPermissionRole } from "@bookph/core/prisma/enums";
 
 import { ErrorCode } from "./ErrorCode";
 
@@ -59,7 +59,7 @@ vi.mock("@calcom/lib/env", () => ({
 }));
 
 vi.mock("@calcom/lib/constants", async (importOriginal) => {
-  const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+  const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
   return {
     ...actual,
     IS_TEAM_BILLING_ENABLED: false,

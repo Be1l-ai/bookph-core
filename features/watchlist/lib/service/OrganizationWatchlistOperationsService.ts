@@ -1,8 +1,8 @@
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import type { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { PermissionString } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import type { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import type { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { WatchlistErrors } from "../errors/WatchlistErrors";
 import type {

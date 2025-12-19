@@ -1,10 +1,10 @@
  
 import { cloneDeep } from "lodash";
 
-import { sendRescheduledEmailsAndSMS } from "@calcom/emails/email-manager";
-import type EventManager from "@calcom/features/bookings/lib/EventManager";
-import prisma from "@calcom/prisma";
-import type { AdditionalInformation, AppsStatus } from "@calcom/types/Calendar";
+import { sendRescheduledEmailsAndSMS } from "@bookph/core/emails/email-manager";
+import type EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import prisma from "@bookph/core/prisma";
+import type { AdditionalInformation, AppsStatus } from "@bookph/core/types/Calendar";
 
 import { addVideoCallDataToEvent } from "../../../handleNewBooking/addVideoCallDataToEvent";
 import type { Booking } from "../../../handleNewBooking/createBooking";

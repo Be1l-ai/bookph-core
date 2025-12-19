@@ -1,4 +1,4 @@
-import type { Brand } from "@calcom/types/utils";
+import type { Brand } from "@bookph/core/types/utils";
 
 import type { tabs } from "../lib/EmbedTabs";
 import type { useEmbedTypes } from "../lib/hooks";

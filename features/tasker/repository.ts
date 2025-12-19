@@ -1,6 +1,6 @@
-import { prisma } from "@calcom/prisma";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { prisma } from "@bookph/core/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
 
 import { type TaskTypes } from "./tasker";
 import { scanWorkflowBodySchema } from "./tasks/scanWorkflowBody";

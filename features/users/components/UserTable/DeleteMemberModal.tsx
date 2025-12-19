@@ -1,11 +1,11 @@
 import { useSession } from "next-auth/react";
 import type { Dispatch } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { UserTableAction, UserTableState } from "./types";
 

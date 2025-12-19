@@ -1,19 +1,19 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { useState, useEffect } from "react";
 
-import type { EventTypeAppSettingsComponent } from "@calcom/app-store/types";
+import type { EventTypeAppSettingsComponent } from "@bookph/core/app-store/types";
 import {
   convertToSmallestCurrencyUnit,
   convertFromSmallestToPresentableCurrencyUnit,
-} from "@calcom/lib/currencyConversions";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { RefundPolicy } from "@calcom/lib/payment/types";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { RadioField } from "@calcom/ui/components/radio";
+} from "@bookph/core/lib/currencyConversions";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { RefundPolicy } from "@bookph/core/lib/payment/types";
+import classNames from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { Select } from "@bookph/ui/components/form";
+import { CheckboxField } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { RadioField } from "@bookph/ui/components/radio";
 
 import { paymentOptions } from "../lib/constants";
 import { currencyOptions } from "../lib/currencyOptions";

@@ -6,21 +6,21 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { BillingPeriod, CreationSource, UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { Ensure } from "@calcom/types/utils";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
+import { subdomainSuffix } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import { IS_SELF_HOSTED } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import slugify from "@bookph/core/lib/slugify";
+import { BillingPeriod, CreationSource, UserPermissionRole } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import type { Ensure } from "@bookph/core/types/utils";
+import classNames from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { ToggleGroup } from "@bookph/ui/components/form";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { RadioAreaGroup as RadioArea } from "@bookph/ui/components/radio";
 
 import { useOnboarding } from "../lib/onboardingStore";
 

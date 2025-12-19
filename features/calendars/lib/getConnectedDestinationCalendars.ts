@@ -1,18 +1,18 @@
-import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
+import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
 import {
   getCalendarCredentials,
   getConnectedCalendars,
-} from "@calcom/features/calendars/lib/CalendarManager";
-import { DestinationCalendarRepository } from "@calcom/features/calendars/repositories/DestinationCalendarRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
-import { SelectedCalendarRepository } from "@calcom/lib/server/repository/selectedCalendar";
-import type { PrismaClient } from "@calcom/prisma";
-import prisma from "@calcom/prisma";
-import type { DestinationCalendar, SelectedCalendar, User } from "@calcom/prisma/client";
-import { AppCategories } from "@calcom/prisma/enums";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+} from "@bookph/core/features/calendars/lib/CalendarManager";
+import { DestinationCalendarRepository } from "@bookph/core/features/calendars/repositories/DestinationCalendarRepository";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { isDelegationCredential } from "@bookph/core/lib/delegationCredential";
+import logger from "@bookph/core/lib/logger";
+import { SelectedCalendarRepository } from "@bookph/core/lib/server/repository/selectedCalendar";
+import type { PrismaClient } from "@bookph/core/prisma";
+import prisma from "@bookph/core/prisma";
+import type { DestinationCalendar, SelectedCalendar, User } from "@bookph/core/prisma/client";
+import { AppCategories } from "@bookph/core/prisma/enums";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
 
 const log = logger.getSubLogger({ prefix: ["getConnectedDestinationCalendarsAndEnsureDefaultsInDb"] });
 

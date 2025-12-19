@@ -4,8 +4,8 @@ import {
   getOrgSlug,
   getOrgDomainConfigFromHostname,
   getOrgFullOrigin,
-} from "@calcom/features/ee/organizations/lib/orgDomains";
-import * as constants from "@calcom/lib/constants";
+} from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import * as constants from "@bookph/core/lib/constants";
 
 function setupEnvs({ WEBAPP_URL = "https://app.cal.com", WEBSITE_URL } = {}) {
   Object.defineProperty(constants, "WEBAPP_URL", { value: WEBAPP_URL });

@@ -4,17 +4,17 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import posthog from "posthog-js";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogFooter } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import slugify from "@bookph/core/lib/slugify";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { DialogFooter } from "@bookph/ui/components/dialog";
+import { Form } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { revalidateEventTypesList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { revalidateTeamsList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 import { useOrgBranding } from "../../organizations/context/provider";
 import { subdomainSuffix } from "../../organizations/lib/orgDomains";

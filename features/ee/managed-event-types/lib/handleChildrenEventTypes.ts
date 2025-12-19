@@ -1,13 +1,13 @@
 import type { DeepMockProxy } from "vitest-mock-extended";
 
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import { sendSlugReplacementEmail } from "@calcom/emails/integration-email-service";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { allManagedEventTypeProps, unlockedManagedEventTypeProps } from "@calcom/prisma/zod-utils";
-import { EventTypeSchema } from "@calcom/prisma/zod/modelSchema/EventTypeSchema";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import { sendSlugReplacementEmail } from "@bookph/core/emails/integration-email-service";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { allManagedEventTypeProps, unlockedManagedEventTypeProps } from "@bookph/core/prisma/zod-utils";
+import { EventTypeSchema } from "@bookph/core/prisma/zod/modelSchema/EventTypeSchema";
 
 interface handleChildrenEventTypesProps {
   eventTypeId: number;

@@ -2,10 +2,10 @@
  * Simplified version of legacyListMembers.handler.ts that returns basic member info.
  * Used for filtering people on /bookings.
  */
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 type ListSimpleMembersOptions = {
   ctx: {

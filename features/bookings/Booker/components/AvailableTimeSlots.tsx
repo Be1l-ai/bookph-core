@@ -1,17 +1,17 @@
 import { useCallback, useMemo, useRef } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { AvailableTimes, AvailableTimesSkeleton } from "@calcom/features/bookings";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { IUseBookingLoadingStates } from "@calcom/features/bookings/Booker/components/hooks/useBookings";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import type { Slot } from "@calcom/features/schedules/lib/use-schedule/types";
-import { useNonEmptyScheduleDays } from "@calcom/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
-import { useSlotsForAvailableDates } from "@calcom/features/schedules/lib/use-schedule/useSlotsForDate";
-import { PUBLIC_INVALIDATE_AVAILABLE_SLOTS_ON_BOOKING_FORM } from "@calcom/lib/constants";
-import { localStorage } from "@calcom/lib/webstorage";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
+import dayjs from "@bookph/core/dayjs";
+import { AvailableTimes, AvailableTimesSkeleton } from "@bookph/core/features/bookings";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import type { IUseBookingLoadingStates } from "@bookph/core/features/bookings/Booker/components/hooks/useBookings";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import type { Slot } from "@bookph/core/features/schedules/lib/use-schedule/types";
+import { useNonEmptyScheduleDays } from "@bookph/core/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
+import { useSlotsForAvailableDates } from "@bookph/core/features/schedules/lib/use-schedule/useSlotsForDate";
+import { PUBLIC_INVALIDATE_AVAILABLE_SLOTS_ON_BOOKING_FORM } from "@bookph/core/lib/constants";
+import { localStorage } from "@bookph/core/lib/webstorage";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
+import classNames from "@bookph/ui/classNames";
 
 import { AvailableTimesHeader } from "../../components/AvailableTimesHeader";
 import type { useScheduleForEventReturnType } from "../utils/event";

@@ -1,7 +1,7 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Switch } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { Switch } from "@bookph/ui/components/form";
 
 import { TroubleshooterListItemContainer } from "./TroubleshooterListItemContainer";
 

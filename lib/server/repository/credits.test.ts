@@ -2,7 +2,7 @@ import prismaMock from "../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
 
-import { CreditType } from "@calcom/prisma/enums";
+import { CreditType } from "@bookph/core/prisma/enums";
 
 import { CreditsRepository } from "./credits";
 

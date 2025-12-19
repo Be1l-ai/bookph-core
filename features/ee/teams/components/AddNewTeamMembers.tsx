@@ -6,22 +6,22 @@ import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
 import posthog from "posthog-js";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import InviteLinkSettingsModal from "@calcom/features/ee/teams/components/InviteLinkSettingsModal";
-import { MemberInvitationModalWithoutMembers } from "@calcom/features/ee/teams/components/MemberInvitationModal";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import InviteLinkSettingsModal from "@bookph/core/features/ee/teams/components/InviteLinkSettingsModal";
+import { MemberInvitationModalWithoutMembers } from "@bookph/core/features/ee/teams/components/MemberInvitationModal";
+import { APP_NAME } from "@bookph/core/lib/constants";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { UserAvatar } from "@bookph/ui/components/avatar";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
 
 type TeamMember = RouterOutputs["viewer"]["teams"]["listMembers"]["members"][number];
 

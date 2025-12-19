@@ -2,7 +2,7 @@
 
 import { type Table } from "@tanstack/react-table";
 
-import { Pagination } from "@calcom/ui/components/pagination";
+import { Pagination } from "@bookph/ui/components/pagination";
 
 import { useDataTable } from "../hooks";
 

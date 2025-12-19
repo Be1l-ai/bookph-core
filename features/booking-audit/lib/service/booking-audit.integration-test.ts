@@ -1,8 +1,8 @@
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
 import { formatInTimeZone } from "date-fns-tz";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { prisma } from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import type { BookingAuditTaskConsumer } from "./BookingAuditTaskConsumer";
 import type { BookingAuditViewerService } from "./BookingAuditViewerService";

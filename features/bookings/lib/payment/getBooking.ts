@@ -1,16 +1,16 @@
-import { enrichUserWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import { workflowSelect } from "@calcom/ee/workflows/lib/getAllWorkflows";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { HttpError as HttpCode } from "@calcom/lib/http-error";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { bookingMinimalSelect, prisma } from "@calcom/prisma";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { enrichUserWithDelegationCredentials } from "@bookph/core/app-store/delegationCredential";
+import { workflowSelect } from "@bookph/core/ee/workflows/lib/getAllWorkflows";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { HttpError as HttpCode } from "@bookph/core/lib/http-error";
+import { isPrismaObjOrUndefined } from "@bookph/core/lib/isPrismaObj";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import { bookingMinimalSelect, prisma } from "@bookph/core/prisma";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 async function getEventType(id: number) {
   return prisma.eventType.findUnique({

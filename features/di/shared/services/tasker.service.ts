@@ -1,8 +1,8 @@
 import { createModule } from "@evyweb/ioctopus";
 import type { Container } from "@evyweb/ioctopus";
 
-import tasker from "@calcom/features/tasker";
-import type { ITasker } from "@calcom/features/webhooks/lib/interface/infrastructure";
+import tasker from "@bookph/core/features/tasker";
+import type { ITasker } from "@bookph/core/features/webhooks/lib/interface/infrastructure";
 
 import { SHARED_TOKENS } from "../shared.tokens";
 

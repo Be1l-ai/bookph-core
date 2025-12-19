@@ -1,14 +1,14 @@
 import { useSearchParams } from "next/navigation";
 
-import { updateEmbedBookerState } from "@calcom/embed-core/src/embed-iframe";
-import { sdkActionManager } from "@calcom/embed-core/src/sdk-event";
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { isBookingDryRun } from "@calcom/features/bookings/Booker/utils/isBookingDryRun";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { useTimesForSchedule } from "@calcom/features/schedules/lib/use-schedule/useTimesForSchedule";
-import { getRoutedTeamMemberIdsFromSearchParams } from "@calcom/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
-import { PUBLIC_QUERY_AVAILABLE_SLOTS_INTERVAL_SECONDS } from "@calcom/lib/constants";
-import { trpc } from "@calcom/trpc/react";
+import { updateEmbedBookerState } from "@bookph/core/embed-core/src/embed-iframe";
+import { sdkActionManager } from "@bookph/core/embed-core/src/sdk-event";
+import { useBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { isBookingDryRun } from "@bookph/core/features/bookings/Booker/utils/isBookingDryRun";
+import { getUsernameList } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { useTimesForSchedule } from "@bookph/core/features/schedules/lib/use-schedule/useTimesForSchedule";
+import { getRoutedTeamMemberIdsFromSearchParams } from "@bookph/core/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
+import { PUBLIC_QUERY_AVAILABLE_SLOTS_INTERVAL_SECONDS } from "@bookph/core/lib/constants";
+import { trpc } from "@bookph/core/trpc/react";
 
 import { useApiV2AvailableSlots } from "./useApiV2AvailableSlots";
 

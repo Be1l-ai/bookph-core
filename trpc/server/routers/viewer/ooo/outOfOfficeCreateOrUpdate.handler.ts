@@ -1,17 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
 
-import { selectOOOEntries } from "@calcom/app-store/zapier/api/subscriptions/listOOOEntries";
-import dayjs from "@calcom/dayjs";
-import { sendBookingRedirectNotification } from "@calcom/emails/workflow-email-service";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import type { OOOEntryPayloadType } from "@calcom/features/webhooks/lib/sendPayload";
-import sendPayload from "@calcom/features/webhooks/lib/sendPayload";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { selectOOOEntries } from "@bookph/core/app-store/zapier/api/subscriptions/listOOOEntries";
+import dayjs from "@bookph/core/dayjs";
+import { sendBookingRedirectNotification } from "@bookph/core/emails/workflow-email-service";
+import type { GetSubscriberOptions } from "@bookph/core/features/webhooks/lib/getWebhooks";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
+import type { OOOEntryPayloadType } from "@bookph/core/features/webhooks/lib/sendPayload";
+import sendPayload from "@bookph/core/features/webhooks/lib/sendPayload";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

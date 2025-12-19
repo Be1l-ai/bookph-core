@@ -3,7 +3,7 @@
 // TODO: Bring this test back with the correct setup (no illegal imports)
 import { describe, beforeEach, vi, expect, test } from "vitest";
 
-import { BookingStatus } from "@calcom/prisma/enums";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import type { TrpcSessionUser } from "../../../types";
 import { confirmHandler } from "./confirm.handler";

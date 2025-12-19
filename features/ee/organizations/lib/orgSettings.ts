@@ -1,4 +1,4 @@
-import type { OrganizationSettings } from "@calcom/prisma/client";
+import type { OrganizationSettings } from "@bookph/core/prisma/client";
 
 type MinimumOrganizationSettings = Pick<
   OrganizationSettings,

@@ -11,17 +11,17 @@ import {
   getMockBookingAttendee,
   getGoogleCalendarCredential,
   mockCalendarToHaveNoBusySlots,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectBookingCreatedWebhookToHaveBeenFired } from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
+import { expectBookingCreatedWebhookToHaveBeenFired } from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, test, vi, expect } from "vitest";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import { getNewBookingHandler } from "../getNewBookingHandler";
 
@@ -768,7 +768,7 @@ describe("Round Robin handleNewBooking", () => {
   describe("Seated Round Robin Event", () => {
     test("For second seat booking, organizer remains the same with no team members included", async () => {
       const handleNewBooking = getNewBookingHandler();
-      const EventManager = (await import("@calcom/features/bookings/lib/EventManager")).default;
+      const EventManager = (await import("@bookph/core/features/bookings/lib/EventManager")).default;
 
       const eventManagerSpy = vi.spyOn(EventManager.prototype, "updateCalendarAttendees");
 

@@ -1,9 +1,9 @@
 import { useSession } from "next-auth/react";
 import { useState, useMemo } from "react";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
@@ -12,8 +12,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuLabel,
-} from "@calcom/ui/components/dropdown";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
+} from "@bookph/ui/components/dropdown";
+import { Icon, type IconName } from "@bookph/ui/components/icon";
 
 import { useDataTable } from "../../hooks";
 import type {

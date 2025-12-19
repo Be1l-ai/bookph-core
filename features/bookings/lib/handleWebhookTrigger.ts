@@ -1,11 +1,11 @@
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import { isEventPayload, type WebhookPayloadType } from "@calcom/features/webhooks/lib/sendPayload";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { TraceContext } from "@calcom/lib/tracing";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
+import type { GetSubscriberOptions } from "@bookph/core/features/webhooks/lib/getWebhooks";
+import sendPayload from "@bookph/core/features/webhooks/lib/sendOrSchedulePayload";
+import { isEventPayload, type WebhookPayloadType } from "@bookph/core/features/webhooks/lib/sendPayload";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import type { TraceContext } from "@bookph/core/lib/tracing";
+import { distributedTracing } from "@bookph/core/lib/tracing/factory";
 
 async function _handleWebhookTrigger(args: {
   subscriberOptions: GetSubscriberOptions;

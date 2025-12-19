@@ -2,8 +2,8 @@
 
 import type { FC } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { GOOGLE_CALENDAR } from "@calcom/platform-constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { GOOGLE_CALENDAR } from "@bookph/core/platform-constants";
 
 import type { OAuthConnectProps } from "../OAuthConnect";
 import { OAuthConnect } from "../OAuthConnect";

@@ -1,7 +1,7 @@
-import { sendVerificationCode } from "@calcom/features/ee/workflows/lib/reminders/verifyPhoneNumber";
-import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { CreditsRepository } from "@calcom/lib/server/repository/credits";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { sendVerificationCode } from "@bookph/core/features/ee/workflows/lib/reminders/verifyPhoneNumber";
+import hasKeyInMetadata from "@bookph/core/lib/hasKeyInMetadata";
+import { CreditsRepository } from "@bookph/core/lib/server/repository/credits";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

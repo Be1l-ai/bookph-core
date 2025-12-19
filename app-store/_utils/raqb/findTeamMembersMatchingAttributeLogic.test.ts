@@ -4,13 +4,13 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import {
   findTeamMembersMatchingAttributeLogic,
   TroubleshooterCase,
-} from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import { RaqbLogicResult } from "@calcom/lib/raqb/evaluateRaqbLogic";
-import * as getAttributesModule from "@calcom/lib/service/attribute/server/getAttributes";
-import type { AttributeType } from "@calcom/prisma/enums";
-import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
-import type { AttributesQueryValue, FormFieldsQueryValue } from "@calcom/routing-forms/types/types";
+} from "@bookph/core/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { RouteActionType } from "@bookph/core/app-store/routing-forms/zod";
+import { RaqbLogicResult } from "@bookph/core/lib/raqb/evaluateRaqbLogic";
+import * as getAttributesModule from "@bookph/core/lib/service/attribute/server/getAttributes";
+import type { AttributeType } from "@bookph/core/prisma/enums";
+import { RoutingFormFieldType } from "@bookph/core/routing-forms/lib/FieldTypes";
+import type { AttributesQueryValue, FormFieldsQueryValue } from "@bookph/core/routing-forms/types/types";
 
 vi.mock("@calcom/lib/service/attribute/server/getAttributes", () => {
   return {

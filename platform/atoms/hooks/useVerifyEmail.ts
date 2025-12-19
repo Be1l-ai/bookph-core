@@ -2,10 +2,10 @@ import { useMutation } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse, ApiSuccessResponseWithoutData } from "@calcom/platform-types";
+import { useBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { useDebounce } from "@bookph/core/lib/hooks/useDebounce";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse, ApiErrorResponse, ApiSuccessResponseWithoutData } from "@bookph/core/platform-types";
 
 import { useMe } from "../hooks/useMe";
 import http from "../lib/http";

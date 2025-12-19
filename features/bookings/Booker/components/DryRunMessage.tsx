@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Icon } from "@bookph/ui/components/icon";
 
 export const DryRunMessage = ({ isEmbed }: { isEmbed?: boolean }) => {
   const { t } = useLocale();

@@ -1,12 +1,12 @@
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { getAllDelegationCredentialsForUser } from "@calcom/app-store/delegationCredential";
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import type { UserAdminTeams } from "@calcom/features/users/repositories/UserRepository";
-import getInstallCountPerApp from "@calcom/lib/apps/getInstallCountPerApp";
-import prisma, { safeAppSelect, safeCredentialSelect } from "@calcom/prisma";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import type { AppFrontendPayload as App } from "@calcom/types/App";
-import type { CredentialFrontendPayload as Credential } from "@calcom/types/Credential";
+import { appStoreMetadata } from "@bookph/core/app-store/appStoreMetaData";
+import { getAllDelegationCredentialsForUser } from "@bookph/core/app-store/delegationCredential";
+import { getAppFromSlug } from "@bookph/core/app-store/utils";
+import type { UserAdminTeams } from "@bookph/core/features/users/repositories/UserRepository";
+import getInstallCountPerApp from "@bookph/core/lib/apps/getInstallCountPerApp";
+import prisma, { safeAppSelect, safeCredentialSelect } from "@bookph/core/prisma";
+import { userMetadata } from "@bookph/core/prisma/zod-utils";
+import type { AppFrontendPayload as App } from "@bookph/core/types/App";
+import type { CredentialFrontendPayload as Credential } from "@bookph/core/types/Credential";
 
 export type TDependencyData = {
   name?: string;

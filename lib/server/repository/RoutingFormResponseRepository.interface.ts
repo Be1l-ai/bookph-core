@@ -1,4 +1,4 @@
-import type { App_RoutingForms_Form, App_RoutingForms_FormResponse } from "@calcom/prisma/client";
+import type { App_RoutingForms_Form, App_RoutingForms_FormResponse } from "@bookph/core/prisma/client";
 
 export interface RoutingFormResponseRepositoryInterface {
   findByIdIncludeForm(

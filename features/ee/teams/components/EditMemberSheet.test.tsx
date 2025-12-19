@@ -2,8 +2,8 @@ import { render } from "@testing-library/react";
 import React, { type ReactNode } from "react";
 import { vi } from "vitest";
 
-import type { MemberPermissions } from "@calcom/features/users/components/UserTable/types";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { MemberPermissions } from "@bookph/core/features/users/components/UserTable/types";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { EditMemberSheet } from "./EditMemberSheet";
 import type { State, User } from "./MemberList";
@@ -15,7 +15,7 @@ vi.mock("@calcom/lib/hooks/useLocale", () => ({
   }),
 }));
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@bookph/core/trpc/react", () => ({
   trpc: {
     viewer: {
       pbac: {
@@ -96,7 +96,7 @@ vi.mock("@calcom/features/users/components/UserTable/EditSheet/SheetFooterContro
 }));
 
 // Mock other UI components
-vi.mock("@calcom/ui/components/sheet", () => ({
+vi.mock("@bookph/ui/components/sheet", () => ({
   Sheet: ({ children }: { children: ReactNode }) =>
     React.createElement("div", { "data-testid": "sheet" }, children),
   SheetContent: ({ children }: { children: ReactNode }) =>
@@ -109,17 +109,17 @@ vi.mock("@calcom/ui/components/sheet", () => ({
     React.createElement("div", { "data-testid": "sheet-footer" }, children),
 }));
 
-vi.mock("@calcom/ui/components/form", () => ({
+vi.mock("@bookph/ui/components/form", () => ({
   Form: ({ children }: { children: ReactNode }) => React.createElement("form", null, children),
   ToggleGroup: () => React.createElement("div", { "data-testid": "toggle-group" }, "ToggleGroup"),
   Select: () => React.createElement("div", { "data-testid": "select" }, "Select"),
 }));
 
-vi.mock("@calcom/ui/components/avatar", () => ({
+vi.mock("@bookph/ui/components/avatar", () => ({
   Avatar: () => React.createElement("div", { "data-testid": "avatar" }, "Avatar"),
 }));
 
-vi.mock("@calcom/ui/components/skeleton", () => ({
+vi.mock("@bookph/ui/components/skeleton", () => ({
   Skeleton: ({ children }: { children: ReactNode }) => React.createElement("div", null, children),
   Loader: () => React.createElement("div", { "data-testid": "loader" }, "Loading..."),
 }));

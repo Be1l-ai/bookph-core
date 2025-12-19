@@ -1,5 +1,5 @@
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { prisma } from "@calcom/prisma";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { prisma } from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

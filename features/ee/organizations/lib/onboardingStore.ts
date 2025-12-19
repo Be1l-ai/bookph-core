@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { create } from "zustand";
 import { persist, StorageValue } from "zustand/middleware";
 
-import { WEBAPP_URL, IS_TEAM_BILLING_ENABLED_CLIENT } from "@calcom/lib/constants";
-import { localStorage } from "@calcom/lib/webstorage";
-import { BillingPeriod, UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { WEBAPP_URL, IS_TEAM_BILLING_ENABLED_CLIENT } from "@bookph/core/lib/constants";
+import { localStorage } from "@bookph/core/lib/webstorage";
+import { BillingPeriod, UserPermissionRole } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
 
 interface OnboardingAdminStoreState {
   billingPeriod?: BillingPeriod;

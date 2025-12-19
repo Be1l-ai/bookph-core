@@ -1,9 +1,9 @@
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { HttpError } from "@calcom/lib/http-error";
-import { prisma } from "@calcom/prisma";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { prisma } from "@bookph/core/prisma";
 
 import { CredentialAccessService } from "./CredentialAccessService";
 

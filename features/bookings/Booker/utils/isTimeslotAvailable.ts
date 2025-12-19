@@ -1,4 +1,4 @@
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 import type { QuickAvailabilityCheck } from "../components/hooks/useSlots";
 import { isSlotEquivalent, isValidISOFormat } from "./isSlotEquivalent";

@@ -8,31 +8,31 @@ import { useReducer, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import AppCategoryNavigation from "@calcom/app-store/_components/AppCategoryNavigation";
-import { appKeysSchemas } from "@calcom/app-store/apps.keys-schemas.generated";
-import AppListCard from "@calcom/features/apps/components/AppListCard";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { AppCategories } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import cs from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
+import AppCategoryNavigation from "@bookph/core/app-store/_components/AppCategoryNavigation";
+import { appKeysSchemas } from "@bookph/core/app-store/apps.keys-schemas.generated";
+import AppListCard from "@bookph/core/features/apps/components/AppListCard";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { AppCategories } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import cs from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
 import {
   DialogContent,
   DialogFooter,
   DialogClose,
   ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { List } from "@calcom/ui/components/list";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dialog";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Form } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { List } from "@bookph/ui/components/list";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
 
 type App = RouterOutputs["viewer"]["apps"]["listLocal"][number];
 

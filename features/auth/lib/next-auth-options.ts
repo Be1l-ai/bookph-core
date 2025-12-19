@@ -9,40 +9,40 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 
-import { updateProfilePhotoGoogle } from "@calcom/app-store/_utils/oauth/updateProfilePhotoGoogle";
-import GoogleCalendarService from "@calcom/app-store/googlecalendar/lib/CalendarService";
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import createUsersAndConnectToOrg from "@calcom/features/ee/dsync/lib/users/createUsersAndConnectToOrg";
-import ImpersonationProvider from "@calcom/features/ee/impersonation/lib/ImpersonationProvider";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { getOrgFullOrigin, subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { clientSecretVerifier, hostedCal, isSAMLLoginEnabled } from "@calcom/features/ee/sso/lib/saml";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { isPasswordValid } from "@calcom/lib/auth/isPasswordValid";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
+import { updateProfilePhotoGoogle } from "@bookph/core/app-store/_utils/oauth/updateProfilePhotoGoogle";
+import GoogleCalendarService from "@bookph/core/app-store/googlecalendar/lib/CalendarService";
+import { LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import createUsersAndConnectToOrg from "@bookph/core/features/ee/dsync/lib/users/createUsersAndConnectToOrg";
+import ImpersonationProvider from "@bookph/core/features/ee/impersonation/lib/ImpersonationProvider";
+import { getOrganizationRepository } from "@bookph/core/features/ee/organizations/di/OrganizationRepository.container";
+import { getOrgFullOrigin, subdomainSuffix } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import { clientSecretVerifier, hostedCal, isSAMLLoginEnabled } from "@bookph/core/features/ee/sso/lib/saml";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { isPasswordValid } from "@bookph/core/lib/auth/isPasswordValid";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
 import {
   GOOGLE_CALENDAR_SCOPES,
   GOOGLE_OAUTH_SCOPES,
   HOSTED_CAL_FEATURES,
   IS_CALCOM,
-} from "@calcom/lib/constants";
-import { ENABLE_PROFILE_SWITCHER, IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { symmetricDecrypt, symmetricEncrypt } from "@calcom/lib/crypto";
-import { defaultCookies } from "@calcom/lib/default-cookies";
-import { isENVDev } from "@calcom/lib/env";
-import logger from "@calcom/lib/logger";
-import { randomString } from "@calcom/lib/random";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { hashEmail } from "@calcom/lib/server/PiiHasher";
-import { DeploymentRepository } from "@calcom/lib/server/repository/deployment";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
-import type { Membership, Team } from "@calcom/prisma/client";
-import { CreationSource } from "@calcom/prisma/enums";
-import { IdentityProvider, MembershipRole, UserPermissionRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema, userMetadata } from "@calcom/prisma/zod-utils";
+} from "@bookph/core/lib/constants";
+import { ENABLE_PROFILE_SWITCHER, IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { symmetricDecrypt, symmetricEncrypt } from "@bookph/core/lib/crypto";
+import { defaultCookies } from "@bookph/core/lib/default-cookies";
+import { isENVDev } from "@bookph/core/lib/env";
+import logger from "@bookph/core/lib/logger";
+import { randomString } from "@bookph/core/lib/random";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { hashEmail } from "@bookph/core/lib/server/PiiHasher";
+import { DeploymentRepository } from "@bookph/core/lib/server/repository/deployment";
+import slugify from "@bookph/core/lib/slugify";
+import prisma from "@bookph/core/prisma";
+import type { Membership, Team } from "@bookph/core/prisma/client";
+import { CreationSource } from "@bookph/core/prisma/enums";
+import { IdentityProvider, MembershipRole, UserPermissionRole } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema, userMetadata } from "@bookph/core/prisma/zod-utils";
 
 import { getOrgUsernameFromEmail } from "../signup/utils/getOrgUsernameFromEmail";
 import { ErrorCode } from "./ErrorCode";
@@ -222,7 +222,7 @@ export async function authorizeCredentials(
       throw new Error(ErrorCode.InternalServerError);
     }
 
-    const isValidToken = (await import("@calcom/lib/totp")).totpAuthenticatorCheck(
+    const isValidToken = (await import("@bookph/core/lib/totp")).totpAuthenticatorCheck(
       credentials.totpCode,
       secret
     );
@@ -359,7 +359,7 @@ if (isSAMLLoginEnabled) {
           return null;
         }
 
-        const { oauthController } = await (await import("@calcom/features/ee/sso/lib/jackson")).default();
+        const { oauthController } = await (await import("@bookph/core/features/ee/sso/lib/jackson")).default();
 
         // Fetch access token
         const { access_token } = await oauthController.token({

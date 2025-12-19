@@ -4,21 +4,21 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import BrandColorsForm from "@calcom/features/ee/components/BrandColorsForm";
-import { AppearanceSkeletonLoader } from "@calcom/features/ee/components/CommonSkeletonLoaders";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { APP_NAME } from "@calcom/lib/constants";
-import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import BrandColorsForm from "@bookph/core/features/ee/components/BrandColorsForm";
+import { AppearanceSkeletonLoader } from "@bookph/core/features/ee/components/CommonSkeletonLoaders";
+import SectionBottomActions from "@bookph/core/features/settings/SectionBottomActions";
+import { APP_NAME } from "@bookph/core/lib/constants";
+import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useParamsWithFallback } from "@bookph/core/lib/hooks/useParamsWithFallback";
+import { trpc } from "@bookph/core/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { Form } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateTeamDataCache } from "@bookph/core/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
 
 import ThemeLabel from "../../../settings/ThemeLabel";
 

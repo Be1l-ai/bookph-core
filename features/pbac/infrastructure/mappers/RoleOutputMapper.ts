@@ -1,4 +1,4 @@
-import type { Role as PrismaRole, RolePermission as PrismaRolePermission } from "@calcom/prisma/client";
+import type { Role as PrismaRole, RolePermission as PrismaRolePermission } from "@bookph/core/prisma/client";
 
 import type { Role, RolePermission } from "../../domain/models/Role";
 

@@ -1,13 +1,13 @@
-import dayjs from "@calcom/dayjs";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
+import dayjs from "@bookph/core/dayjs";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
 import {
   WorkflowTriggerEvents,
   WorkflowTemplates,
   WorkflowActions,
   WorkflowMethods,
-} from "@calcom/prisma/enums";
+} from "@bookph/core/prisma/enums";
 
 import { isAttendeeAction } from "../actionHelperFunctions";
 import { IMMEDIATE_WORKFLOW_TRIGGER_EVENTS } from "../constants";

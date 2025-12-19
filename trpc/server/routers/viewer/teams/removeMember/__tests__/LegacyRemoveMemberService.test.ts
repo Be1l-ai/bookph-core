@@ -1,9 +1,9 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import * as teamQueries from "@calcom/features/ee/teams/lib/queries";
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import * as teamQueries from "@bookph/core/features/ee/teams/lib/queries";
+import { TeamService } from "@bookph/core/features/ee/teams/services/teamService";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { LegacyRemoveMemberService } from "../LegacyRemoveMemberService";
 

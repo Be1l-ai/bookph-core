@@ -1,6 +1,6 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { Resource } from "../domain/types/permission-registry";
 import type { PermissionString } from "../domain/types/permission-registry";

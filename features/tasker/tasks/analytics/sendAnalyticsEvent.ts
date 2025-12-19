@@ -1,6 +1,6 @@
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import AnalyticsManager from "./analyticsManager";
 import { sendAnalyticsEventSchema } from "./schema";

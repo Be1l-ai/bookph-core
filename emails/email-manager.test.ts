@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
 
 import { shouldSkipAttendeeEmailWithSettings, fetchOrganizationEmailSettings } from "./email-manager";
 

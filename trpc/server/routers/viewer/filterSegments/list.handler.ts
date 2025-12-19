@@ -1,6 +1,6 @@
-import { FilterSegmentRepository } from "@calcom/features/data-table/repositories/filterSegment";
-import type { TListFilterSegmentsInputSchema } from "@calcom/features/data-table/repositories/filterSegment.type";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { FilterSegmentRepository } from "@bookph/core/features/data-table/repositories/filterSegment";
+import type { TListFilterSegmentsInputSchema } from "@bookph/core/features/data-table/repositories/filterSegment.type";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 export const listHandler = async ({
   ctx,

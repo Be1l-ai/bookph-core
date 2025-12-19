@@ -1,4 +1,4 @@
-import { ErrorCode } from "@calcom/lib/errorCodes";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
 
 export class ErrorWithCode extends Error {
   code: ErrorCode;

@@ -1,41 +1,41 @@
 import type { z } from "zod";
 
-import { isSMSOrWhatsappAction } from "@calcom/ee/workflows/lib/actionHelperFunctions";
-import { getAllWorkflows } from "@calcom/ee/workflows/lib/getAllWorkflows";
-import { scheduleAIPhoneCall } from "@calcom/ee/workflows/lib/reminders/aiPhoneCallManager";
-import { scheduleEmailReminder } from "@calcom/ee/workflows/lib/reminders/emailReminderManager";
-import { scheduleSMSReminder } from "@calcom/ee/workflows/lib/reminders/smsReminderManager";
-import emailRatingTemplate from "@calcom/ee/workflows/lib/reminders/templates/emailRatingTemplate";
-import emailReminderTemplate from "@calcom/ee/workflows/lib/reminders/templates/emailReminderTemplate";
-import { scheduleWhatsappReminder } from "@calcom/ee/workflows/lib/reminders/whatsappReminderManager";
-import type { Workflow as WorkflowType } from "@calcom/ee/workflows/lib/types";
+import { isSMSOrWhatsappAction } from "@bookph/core/ee/workflows/lib/actionHelperFunctions";
+import { getAllWorkflows } from "@bookph/core/ee/workflows/lib/getAllWorkflows";
+import { scheduleAIPhoneCall } from "@bookph/core/ee/workflows/lib/reminders/aiPhoneCallManager";
+import { scheduleEmailReminder } from "@bookph/core/ee/workflows/lib/reminders/emailReminderManager";
+import { scheduleSMSReminder } from "@bookph/core/ee/workflows/lib/reminders/smsReminderManager";
+import emailRatingTemplate from "@bookph/core/ee/workflows/lib/reminders/templates/emailRatingTemplate";
+import emailReminderTemplate from "@bookph/core/ee/workflows/lib/reminders/templates/emailReminderTemplate";
+import { scheduleWhatsappReminder } from "@bookph/core/ee/workflows/lib/reminders/whatsappReminderManager";
+import type { Workflow as WorkflowType } from "@bookph/core/ee/workflows/lib/types";
 import {
   getSmsReminderNumberField,
   getSmsReminderNumberSource,
   getAIAgentCallPhoneNumberField,
   getAIAgentCallPhoneNumberSource,
-} from "@calcom/features/bookings/lib/getBookingFields";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { removeBookingField, upsertBookingField } from "@calcom/features/eventtypes/lib/bookingFieldsManager";
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@calcom/lib/bookings/SystemField";
-import { SENDER_ID, SENDER_NAME } from "@calcom/lib/constants";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import type { Workflow } from "@calcom/prisma/client";
-import type { Prisma, WorkflowStep } from "@calcom/prisma/client";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import { WorkflowTemplates, WorkflowType as PrismaWorkflowType } from "@calcom/prisma/enums";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { BookingStatus, MembershipRole, WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { CalEventResponses } from "@calcom/types/Calendar";
+} from "@bookph/core/features/bookings/lib/getBookingFields";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { removeBookingField, upsertBookingField } from "@bookph/core/features/eventtypes/lib/bookingFieldsManager";
+import type { PermissionString } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@bookph/core/lib/bookings/SystemField";
+import { SENDER_ID, SENDER_NAME } from "@bookph/core/lib/constants";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@bookph/core/lib/getTeamIdFromEventType";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import prisma from "@bookph/core/prisma";
+import type { Workflow } from "@bookph/core/prisma/client";
+import type { Prisma, WorkflowStep } from "@bookph/core/prisma/client";
+import type { TimeUnit } from "@bookph/core/prisma/enums";
+import { WorkflowTemplates, WorkflowType as PrismaWorkflowType } from "@bookph/core/prisma/enums";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { BookingStatus, MembershipRole, WorkflowActions, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
+import type { CalEventResponses } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

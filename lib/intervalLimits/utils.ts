@@ -1,6 +1,6 @@
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import type { EventBusyDetails } from "@calcom/types/Calendar";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import type { EventBusyDetails } from "@bookph/core/types/Calendar";
 
 import type { IntervalLimitUnit } from "./intervalLimitSchema";
 

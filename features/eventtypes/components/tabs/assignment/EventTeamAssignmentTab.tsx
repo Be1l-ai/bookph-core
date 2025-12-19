@@ -6,15 +6,15 @@ import { Controller, useFormContext, useWatch } from "react-hook-form";
 import type { Options } from "react-select";
 import { v4 as uuidv4 } from "uuid";
 
-import type { AddMembersWithSwitchCustomClassNames } from "@calcom/features/eventtypes/components/AddMembersWithSwitch";
+import type { AddMembersWithSwitchCustomClassNames } from "@bookph/core/features/eventtypes/components/AddMembersWithSwitch";
 import AddMembersWithSwitch, {
   mapUserToValue,
-} from "@calcom/features/eventtypes/components/AddMembersWithSwitch";
-import AssignAllTeamMembers from "@calcom/features/eventtypes/components/AssignAllTeamMembers";
-import type { ChildrenEventTypeSelectCustomClassNames } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
-import ChildrenEventTypeSelect from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
-import { sortHosts } from "@calcom/features/eventtypes/components/HostEditDialogs";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
+} from "@bookph/core/features/eventtypes/components/AddMembersWithSwitch";
+import AssignAllTeamMembers from "@bookph/core/features/eventtypes/components/AssignAllTeamMembers";
+import type { ChildrenEventTypeSelectCustomClassNames } from "@bookph/core/features/eventtypes/components/ChildrenEventTypeSelect";
+import ChildrenEventTypeSelect from "@bookph/core/features/eventtypes/components/ChildrenEventTypeSelect";
+import { sortHosts } from "@bookph/core/features/eventtypes/components/HostEditDialogs";
+import { LearnMoreLink } from "@bookph/core/features/eventtypes/components/LearnMoreLink";
 import type {
   FormValues,
   TeamMember,
@@ -22,18 +22,18 @@ import type {
   Host,
   SelectClassNames,
   SettingsToggleClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { RRTimestampBasis, SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/core/features/eventtypes/lib/types";
+import ServerTrans from "@bookph/core/lib/components/ServerTrans";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { RRTimestampBasis, SchedulingType } from "@bookph/core/prisma/enums";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { Label } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { RadioAreaGroup as RadioArea } from "@bookph/ui/components/radio";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { EditWeightsForAllTeamMembers } from "../../EditWeightsForAllTeamMembers";
 import WeightDescription from "../../WeightDescription";

@@ -1,5 +1,5 @@
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { getReplyToHeader } from "@bookph/core/lib/getReplyToHeader";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 import renderEmail from "../src/renderEmail";
 import AttendeeScheduledEmail from "./attendee-scheduled-email";

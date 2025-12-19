@@ -5,7 +5,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@calcom/ui/components/table";
+} from "@bookph/ui/components/table";
 
 interface DataTableSkeletonProps {
   columns: number;

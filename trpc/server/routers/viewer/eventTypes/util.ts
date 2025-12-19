@@ -1,15 +1,15 @@
 import { z } from "zod";
 
-import type { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import prisma from "@calcom/prisma";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { PeriodType } from "@calcom/prisma/enums";
-import type { CustomInputSchema } from "@calcom/prisma/zod-utils";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import type { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import type { PermissionString } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import prisma from "@bookph/core/prisma";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
+import { PeriodType } from "@bookph/core/prisma/enums";
+import type { CustomInputSchema } from "@bookph/core/prisma/zod-utils";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

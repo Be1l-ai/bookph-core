@@ -1,6 +1,6 @@
 import type { z } from "zod";
 
-import { createEventTypeInput } from "@calcom/features/eventtypes/lib/types";
+import { createEventTypeInput } from "@bookph/core/features/eventtypes/lib/types";
 
 export const ZCreateInputSchema = createEventTypeInput;
 

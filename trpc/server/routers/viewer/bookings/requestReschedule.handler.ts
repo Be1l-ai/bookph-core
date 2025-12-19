@@ -1,36 +1,36 @@
 import type { TFunction } from "i18next";
 
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { getDelegationCredentialOrRegularCredential } from "@calcom/app-store/delegationCredential";
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { sendRequestRescheduleEmailAndSMS } from "@calcom/emails/email-manager";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { deleteMeeting } from "@calcom/features/conferencing/lib/videoClient";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
+import { getCalendar } from "@bookph/core/app-store/_utils/getCalendar";
+import { getDelegationCredentialOrRegularCredential } from "@bookph/core/app-store/delegationCredential";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import dayjs from "@bookph/core/dayjs";
+import { sendRequestRescheduleEmailAndSMS } from "@bookph/core/emails/email-manager";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { deleteMeeting } from "@bookph/core/features/conferencing/lib/videoClient";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
 import {
   deleteWebhookScheduledTriggers,
   cancelNoShowTasksForBooking,
-} from "@calcom/features/webhooks/lib/scheduleTrigger";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import { CalendarEventBuilder } from "@calcom/lib/builders/CalendarEvent/builder";
-import { CalendarEventDirector } from "@calcom/lib/builders/CalendarEvent/director";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { BookingWebhookFactory } from "@calcom/lib/server/service/BookingWebhookFactory";
-import { prisma } from "@calcom/prisma";
-import type { BookingReference, EventType } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { Person } from "@calcom/types/Calendar";
+} from "@bookph/core/features/webhooks/lib/scheduleTrigger";
+import sendPayload from "@bookph/core/features/webhooks/lib/sendOrSchedulePayload";
+import { CalendarEventBuilder } from "@bookph/core/lib/builders/CalendarEvent/builder";
+import { CalendarEventDirector } from "@bookph/core/lib/builders/CalendarEvent/director";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@bookph/core/lib/getTeamIdFromEventType";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { BookingWebhookFactory } from "@bookph/core/lib/server/service/BookingWebhookFactory";
+import { prisma } from "@bookph/core/prisma";
+import type { BookingReference, EventType } from "@bookph/core/prisma/client";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
+import type { Person } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,101 +1,101 @@
 import short, { uuid } from "short-uuid";
 import { v5 as uuidv5 } from "uuid";
 
-import processExternalId from "@calcom/app-store/_utils/calendars/processExternalId";
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
+import processExternalId from "@bookph/core/app-store/_utils/calendars/processExternalId";
+import { getPaymentAppData } from "@bookph/core/app-store/_utils/payments/getPaymentAppData";
 import {
   enrichHostsWithDelegationCredentials,
   getFirstDelegationConferencingCredentialAppLocation,
-} from "@calcom/app-store/delegationCredential";
-import { metadata as GoogleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
+} from "@bookph/core/app-store/delegationCredential";
+import { metadata as GoogleMeetMetadata } from "@bookph/core/app-store/googlevideo/_metadata";
 import {
   getLocationValueForDB,
   MeetLocationType,
   OrganizerDefaultConferencingAppType,
-} from "@calcom/app-store/locations";
-import { getAppFromSlug } from "@calcom/app-store/utils";
+} from "@bookph/core/app-store/locations";
+import { getAppFromSlug } from "@bookph/core/app-store/utils";
 import {
   eventTypeMetaDataSchemaWithTypedApps,
   eventTypeAppMetadataOptionalSchema,
-} from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { scheduleMandatoryReminder } from "@calcom/ee/workflows/lib/reminders/scheduleMandatoryReminder";
-import getICalUID from "@calcom/emails/lib/getICalUID";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
-import { verifyCodeUnAuthenticated } from "@calcom/features/auth/lib/verifyCodeUnAuthenticated";
-import EventManager, { placeholderCreatedEvent } from "@calcom/features/bookings/lib/EventManager";
-import type { BookingDataSchemaGetter } from "@calcom/features/bookings/lib/dto/types";
+} from "@bookph/core/app-store/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { scheduleMandatoryReminder } from "@bookph/core/ee/workflows/lib/reminders/scheduleMandatoryReminder";
+import getICalUID from "@bookph/core/emails/lib/getICalUID";
+import { CalendarEventBuilder } from "@bookph/core/features/CalendarEventBuilder";
+import { verifyCodeUnAuthenticated } from "@bookph/core/features/auth/lib/verifyCodeUnAuthenticated";
+import EventManager, { placeholderCreatedEvent } from "@bookph/core/features/bookings/lib/EventManager";
+import type { BookingDataSchemaGetter } from "@bookph/core/features/bookings/lib/dto/types";
 import type {
   CreateRegularBookingData,
   CreateBookingMeta,
   BookingHandlerInput,
-} from "@calcom/features/bookings/lib/dto/types";
-import type { CheckBookingAndDurationLimitsService } from "@calcom/features/bookings/lib/handleNewBooking/checkBookingAndDurationLimits";
-import { handlePayment } from "@calcom/features/bookings/lib/handlePayment";
-import { handleWebhookTrigger } from "@calcom/features/bookings/lib/handleWebhookTrigger";
-import { isEventTypeLoggingEnabled } from "@calcom/features/bookings/lib/isEventTypeLoggingEnabled";
-import { BookingEventHandlerService } from "@calcom/features/bookings/lib/onBookingEvents/BookingEventHandlerService";
-import type { BookingRescheduledPayload } from "@calcom/features/bookings/lib/onBookingEvents/types.d";
-import { BookingEmailAndSmsTasker } from "@calcom/features/bookings/lib/tasker/BookingEmailAndSmsTasker";
-import { getSpamCheckService } from "@calcom/features/di/watchlist/containers/SpamCheckService.container";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import AssignmentReasonRecorder from "@calcom/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { getEventName, updateHostInEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { getFullName } from "@calcom/features/form-builder/utils";
-import type { HashedLinkService } from "@calcom/features/hashedLink/lib/service/HashedLinkService";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { handleAnalyticsEvents } from "@calcom/features/tasker/tasks/analytics/handleAnalyticsEvents";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { UsersRepository } from "@calcom/features/users/users.repository";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
+} from "@bookph/core/features/bookings/lib/dto/types";
+import type { CheckBookingAndDurationLimitsService } from "@bookph/core/features/bookings/lib/handleNewBooking/checkBookingAndDurationLimits";
+import { handlePayment } from "@bookph/core/features/bookings/lib/handlePayment";
+import { handleWebhookTrigger } from "@bookph/core/features/bookings/lib/handleWebhookTrigger";
+import { isEventTypeLoggingEnabled } from "@bookph/core/features/bookings/lib/isEventTypeLoggingEnabled";
+import { BookingEventHandlerService } from "@bookph/core/features/bookings/lib/onBookingEvents/BookingEventHandlerService";
+import type { BookingRescheduledPayload } from "@bookph/core/features/bookings/lib/onBookingEvents/types.d";
+import { BookingEmailAndSmsTasker } from "@bookph/core/features/bookings/lib/tasker/BookingEmailAndSmsTasker";
+import { getSpamCheckService } from "@bookph/core/features/di/watchlist/containers/SpamCheckService.container";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import AssignmentReasonRecorder from "@bookph/core/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { getUsernameList } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { getEventName, updateHostInEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { getFullName } from "@bookph/core/features/form-builder/utils";
+import type { HashedLinkService } from "@bookph/core/features/hashedLink/lib/service/HashedLinkService";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { handleAnalyticsEvents } from "@bookph/core/features/tasker/tasks/analytics/handleAnalyticsEvents";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { UsersRepository } from "@bookph/core/features/users/users.repository";
+import type { GetSubscriberOptions } from "@bookph/core/features/webhooks/lib/getWebhooks";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
 import {
   deleteWebhookScheduledTriggers,
   cancelNoShowTasksForBooking,
   scheduleTrigger,
-} from "@calcom/features/webhooks/lib/scheduleTrigger";
-import type { EventPayloadType, EventTypeInfo } from "@calcom/features/webhooks/lib/sendPayload";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { groupHostsByGroupId } from "@calcom/lib/bookings/hostGroupUtils";
-import { shouldIgnoreContactOwner } from "@calcom/lib/bookings/routing/utils";
-import { DEFAULT_GROUP_ID, ENABLE_ASYNC_TASKER } from "@calcom/lib/constants";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { extractBaseEmail } from "@calcom/lib/extract-base-email";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import { HttpError } from "@calcom/lib/http-error";
-import { criticalLogger } from "@calcom/lib/logger.server";
-import { getPiiFreeCalendarEvent, getPiiFreeEventType } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getServerErrorFromUnknown } from "@calcom/lib/server/getServerErrorFromUnknown";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
-import type { PrismaClient } from "@calcom/prisma";
-import type { DestinationCalendar, Prisma, User, AssignmentReasonEnum } from "@calcom/prisma/client";
+} from "@bookph/core/features/webhooks/lib/scheduleTrigger";
+import type { EventPayloadType, EventTypeInfo } from "@bookph/core/features/webhooks/lib/sendPayload";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import { groupHostsByGroupId } from "@bookph/core/lib/bookings/hostGroupUtils";
+import { shouldIgnoreContactOwner } from "@bookph/core/lib/bookings/routing/utils";
+import { DEFAULT_GROUP_ID, ENABLE_ASYNC_TASKER } from "@bookph/core/lib/constants";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { extractBaseEmail } from "@bookph/core/lib/extract-base-email";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@bookph/core/lib/getTeamIdFromEventType";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { criticalLogger } from "@bookph/core/lib/logger.server";
+import { getPiiFreeCalendarEvent, getPiiFreeEventType } from "@bookph/core/lib/piiFreeData";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getServerErrorFromUnknown } from "@bookph/core/lib/server/getServerErrorFromUnknown";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import { distributedTracing } from "@bookph/core/lib/tracing/factory";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { DestinationCalendar, Prisma, User, AssignmentReasonEnum } from "@bookph/core/prisma/client";
 import {
   BookingStatus,
   SchedulingType,
   WebhookTriggerEvents,
   WorkflowTriggerEvents,
   CreationSource,
-} from "@calcom/prisma/enums";
-import { userMetadata as userMetadataSchema } from "@calcom/prisma/zod-utils";
-import { getAllWorkflowsFromEventType } from "@calcom/trpc/server/routers/viewer/workflows/util";
+} from "@bookph/core/prisma/enums";
+import { userMetadata as userMetadataSchema } from "@bookph/core/prisma/zod-utils";
+import { getAllWorkflowsFromEventType } from "@bookph/core/trpc/server/routers/viewer/workflows/util";
 import type {
   AdditionalInformation,
   AppsStatus,
   CalendarEvent,
   CalEventResponses,
-} from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
-import type { EventResult, PartialReference } from "@calcom/types/EventManager";
+} from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
+import type { EventResult, PartialReference } from "@bookph/core/types/EventManager";
 
 import type { BookingRepository } from "../../repositories/BookingRepository";
 import { BookingActionMap, BookingEmailSmsHandler, type BookingActionType } from "../BookingEmailSmsHandler";

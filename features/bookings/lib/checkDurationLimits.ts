@@ -1,11 +1,11 @@
-import dayjs from "@calcom/dayjs";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getErrorFromUnknown } from "@calcom/lib/errors";
-import { HttpError } from "@calcom/lib/http-error";
-import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit, IntervalLimitKey } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import { parseDurationLimit } from "@calcom/lib/intervalLimits/isDurationLimits";
-import prisma from "@calcom/prisma";
+import dayjs from "@bookph/core/dayjs";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { getErrorFromUnknown } from "@bookph/core/lib/errors";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@bookph/core/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit, IntervalLimitKey } from "@bookph/core/lib/intervalLimits/intervalLimitSchema";
+import { parseDurationLimit } from "@bookph/core/lib/intervalLimits/isDurationLimits";
+import prisma from "@bookph/core/prisma";
 
 export async function checkDurationLimits(
   durationLimits: IntervalLimit,

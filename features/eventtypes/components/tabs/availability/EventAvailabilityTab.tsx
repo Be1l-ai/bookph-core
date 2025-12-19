@@ -5,35 +5,35 @@ import { Controller, useFormContext } from "react-hook-form";
 import type { OptionProps, SingleValueProps } from "react-select";
 import { components } from "react-select";
 
-import type { GetAllSchedulesByUserIdQueryType } from "@calcom/atoms/event-types/wrappers/EventAvailabilityTabWebWrapper";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import dayjs from "@calcom/dayjs";
-import { SelectSkeletonLoader } from "@calcom/features/availability/components/SkeletonLoader";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { TeamMembers } from "@calcom/features/eventtypes/components/EventType";
+import type { GetAllSchedulesByUserIdQueryType } from "@bookph/core/atoms/event-types/wrappers/EventAvailabilityTabWebWrapper";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import dayjs from "@bookph/core/dayjs";
+import { SelectSkeletonLoader } from "@bookph/core/features/availability/components/SkeletonLoader";
+import useLockedFieldsManager from "@bookph/core/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import type { TeamMembers } from "@bookph/core/features/eventtypes/components/EventType";
 import type {
   AvailabilityOption,
   FormValues,
   EventTypeSetup,
   Host,
   SelectClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import CheckboxField from "@calcom/features/form/components/CheckboxField";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import { weekStartNum } from "@calcom/lib/weekstart";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Spinner } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+} from "@bookph/core/features/eventtypes/lib/types";
+import CheckboxField from "@bookph/core/features/form/components/CheckboxField";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { weekdayNames } from "@bookph/core/lib/weekday";
+import { weekStartNum } from "@bookph/core/lib/weekstart";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { Label } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { Spinner } from "@bookph/ui/components/icon";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
 
 export type ScheduleQueryData = RouterOutputs["viewer"]["availability"]["schedule"]["get"];
 

@@ -1,4 +1,4 @@
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
 
 import { TRPCError } from "@trpc/server";
 

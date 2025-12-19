@@ -12,37 +12,37 @@ import React, {
 } from "react";
 import { Controller, useFieldArray, useForm, useFormContext, useWatch } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { BookerStoreProvider } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { TimezoneSelect as WebTimezoneSelect } from "@calcom/features/components/timezone-select";
+import dayjs from "@bookph/core/dayjs";
+import { BookerStoreProvider } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { TimezoneSelect as WebTimezoneSelect } from "@bookph/core/features/components/timezone-select";
 import type {
   BulkUpdatParams,
   EventTypes,
-} from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { BulkEditDefaultForEventsModal } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import DateOverrideInputDialog from "@calcom/features/schedules/components/DateOverrideInputDialog";
-import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
+} from "@bookph/core/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { BulkEditDefaultForEventsModal } from "@bookph/core/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import DateOverrideInputDialog from "@bookph/core/features/schedules/components/DateOverrideInputDialog";
+import DateOverrideList from "@bookph/core/features/schedules/components/DateOverrideList";
 import WebSchedule, {
   ScheduleComponent as PlatformSchedule,
-} from "@calcom/features/schedules/components/Schedule";
-import WebShell from "@calcom/features/shell/Shell";
-import { availabilityAsString } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { sortAvailabilityStrings } from "@calcom/lib/weekstart";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import type { TimeRange, WorkingHours } from "@calcom/types/schedule";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { VerticalDivider } from "@calcom/ui/components/divider";
-import { EditableHeading } from "@calcom/ui/components/editable-heading";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText, SelectSkeletonLoader, Skeleton } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/core/features/schedules/components/Schedule";
+import WebShell from "@bookph/core/features/shell/Shell";
+import { availabilityAsString } from "@bookph/core/lib/availability";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { sortAvailabilityStrings } from "@bookph/core/lib/weekstart";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import type { TimeRange, WorkingHours } from "@bookph/core/types/schedule";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { VerticalDivider } from "@bookph/ui/components/divider";
+import { EditableHeading } from "@bookph/ui/components/editable-heading";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { SkeletonText, SelectSkeletonLoader, Skeleton } from "@bookph/ui/components/skeleton";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { Shell as PlatformShell } from "../src/components/ui/shell";
 import { cn } from "../src/lib/utils";

@@ -3,16 +3,16 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo } from "react";
 
-import SkeletonLoaderTeamList from "@calcom/features/ee/teams/components/SkeletonloaderTeamList";
-import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import SkeletonLoaderTeamList from "@bookph/core/features/ee/teams/components/SkeletonloaderTeamList";
+import { APP_NAME, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Label } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { UpgradeTip } from "../../../tips";
 import TeamList from "./TeamList";

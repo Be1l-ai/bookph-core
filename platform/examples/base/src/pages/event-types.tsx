@@ -4,14 +4,14 @@ import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import { useState, useRef, useCallback } from "react";
 
-import type { EventSettingsFromRef } from "@calcom/atoms";
+import type { EventSettingsFromRef } from "@bookph/core/atoms";
 import {
   useEventTypes,
   useTeamEventTypes,
   useTeams,
   EventTypeSettings,
   CreateEventType,
-} from "@calcom/atoms";
+} from "@bookph/core/atoms";
 
 const inter = Inter({ subsets: ["latin"] });
 

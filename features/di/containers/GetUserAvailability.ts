@@ -1,7 +1,7 @@
-import type { UserAvailabilityService } from "@calcom/features/availability/lib/getUserAvailability";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { redisModule } from "@calcom/features/redis/di/redisModule";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
+import type { UserAvailabilityService } from "@bookph/core/features/availability/lib/getUserAvailability";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { redisModule } from "@bookph/core/features/redis/di/redisModule";
+import { prismaModule } from "@bookph/core/features/di/modules/Prisma";
 
 import { createContainer } from "../di";
 import { bookingRepositoryModule } from "../modules/Booking";

@@ -1,5 +1,5 @@
-import type { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
 
 export const bookingSelect = {
   uid: true,

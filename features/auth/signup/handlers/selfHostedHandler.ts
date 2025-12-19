@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 
-import { checkPremiumUsername } from "@calcom/ee/common/lib/checkPremiumUsername";
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { createOrUpdateMemberships } from "@calcom/features/auth/signup/utils/createOrUpdateMemberships";
-import { validateAndGetCorrectedUsernameAndEmail } from "@calcom/features/auth/signup/utils/validateUsername";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { IS_PREMIUM_USERNAME_ENABLED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { isUsernameReservedDueToMigration } from "@calcom/lib/server/username";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { signupSchema } from "@calcom/prisma/zod-utils";
+import { checkPremiumUsername } from "@bookph/core/ee/common/lib/checkPremiumUsername";
+import { sendEmailVerification } from "@bookph/core/features/auth/lib/verifyEmail";
+import { createOrUpdateMemberships } from "@bookph/core/features/auth/signup/utils/createOrUpdateMemberships";
+import { validateAndGetCorrectedUsernameAndEmail } from "@bookph/core/features/auth/signup/utils/validateUsername";
+import { hashPassword } from "@bookph/core/lib/auth/hashPassword";
+import { IS_PREMIUM_USERNAME_ENABLED } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { isUsernameReservedDueToMigration } from "@bookph/core/lib/server/username";
+import slugify from "@bookph/core/lib/slugify";
+import prisma from "@bookph/core/prisma";
+import { IdentityProvider } from "@bookph/core/prisma/enums";
+import { signupSchema } from "@bookph/core/prisma/zod-utils";
 
 import { joinAnyChildTeamOnOrgInvite } from "../utils/organization";
 import { prefillAvatar } from "../utils/prefillAvatar";

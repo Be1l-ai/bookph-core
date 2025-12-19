@@ -1,8 +1,8 @@
 import type { z } from "zod";
 
-import getFieldIdentifier from "@calcom/app-store/routing-forms/lib/getFieldIdentifier";
-import { getFieldResponseForJsonLogic } from "@calcom/app-store/routing-forms/lib/transformResponse";
-import type { FormResponse } from "@calcom/app-store/routing-forms/types/types";
+import getFieldIdentifier from "@bookph/core/app-store/routing-forms/lib/getFieldIdentifier";
+import { getFieldResponseForJsonLogic } from "@bookph/core/app-store/routing-forms/lib/transformResponse";
+import type { FormResponse } from "@bookph/core/app-store/routing-forms/types/types";
 
 import type { zodFields } from "../zod";
 

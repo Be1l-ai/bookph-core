@@ -1,12 +1,12 @@
-import { EventTypeAppCard } from "@calcom/app-store/_components/EventTypeAppCardInterface";
+import { EventTypeAppCard } from "@bookph/core/app-store/_components/EventTypeAppCardInterface";
 import type {
   EventTypeApp,
   EventTypeForAppCard,
-} from "@calcom/app-store/_components/EventTypeAppCardInterface";
-import type { EventTypeAppsList } from "@calcom/app-store/utils";
-import useAppsData from "@calcom/features/apps/hooks/useAppsData";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+} from "@bookph/core/app-store/_components/EventTypeAppCardInterface";
+import type { EventTypeAppsList } from "@bookph/core/app-store/utils";
+import useAppsData from "@bookph/core/features/apps/hooks/useAppsData";
+import type { EventTypeSetupProps } from "@bookph/core/features/eventtypes/lib/types";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
 
 import { StripeConnect } from "../../connect/stripe/StripeConnect";
 import { useCheck } from "../../hooks/stripe/useCheck";

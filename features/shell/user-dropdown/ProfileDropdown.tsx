@@ -1,11 +1,11 @@
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 
-import { ENABLE_PROFILE_SWITCHER } from "@calcom/lib/constants";
-import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
-import { trpc } from "@calcom/trpc";
-import { Avatar } from "@calcom/ui/components/avatar";
-import classNames from "@calcom/ui/classNames";
+import { ENABLE_PROFILE_SWITCHER } from "@bookph/core/lib/constants";
+import { useRefreshData } from "@bookph/core/lib/hooks/useRefreshData";
+import { trpc } from "@bookph/core/trpc";
+import { Avatar } from "@bookph/ui/components/avatar";
+import classNames from "@bookph/ui/classNames";
 import {
   Dropdown,
   DropdownItem,
@@ -13,8 +13,8 @@ import {
   DropdownMenuItem,
   DropdownMenuPortal,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@bookph/ui/components/dropdown";
+import { Icon } from "@bookph/ui/components/icon";
 
 export function ProfileDropdown() {
   const { update, data: sessionData } = useSession();

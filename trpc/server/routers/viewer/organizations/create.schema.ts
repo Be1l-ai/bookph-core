@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-import { emailSchema } from "@calcom/lib/emailSchema";
-import slugify from "@calcom/lib/slugify";
-import { CreationSource } from "@calcom/prisma/enums";
+import { emailSchema } from "@bookph/core/lib/emailSchema";
+import slugify from "@bookph/core/lib/slugify";
+import { CreationSource } from "@bookph/core/prisma/enums";
 
 export enum BillingPeriod {
   MONTHLY = "MONTHLY",

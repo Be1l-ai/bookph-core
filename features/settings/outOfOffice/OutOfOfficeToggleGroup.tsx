@@ -3,9 +3,9 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
 
-import { useCompatSearchParams } from "@calcom/embed-core/src/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Select, ToggleGroup } from "@calcom/ui/components/form";
+import { useCompatSearchParams } from "@bookph/core/embed-core/src/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Select, ToggleGroup } from "@bookph/ui/components/form";
 
 export enum OutOfOfficeTab {
   MINE = "mine",

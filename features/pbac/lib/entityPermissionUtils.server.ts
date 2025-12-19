@@ -1,5 +1,5 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 export type Entity = {
   userId: number | null;

@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import { WorkflowContactType } from "@calcom/prisma/enums";
+import prisma from "@bookph/core/prisma";
+import { WorkflowContactType } from "@bookph/core/prisma/enums";
 
 export class WorkflowOptOutContactRepository {
   static async addPhoneNumber(phoneNumber: string) {

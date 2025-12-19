@@ -1,12 +1,12 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { Props } from "react-select";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Icon } from "@calcom/ui/components/icon";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Icon } from "@bookph/ui/components/icon";
+import { Label } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
 
 export type CheckedUserSelectOption = {
   avatar: string;

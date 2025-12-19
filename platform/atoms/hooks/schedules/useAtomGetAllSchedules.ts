@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse } from "@calcom/platform-types";
-import type { GetAvailabilityListHandlerReturn } from "@calcom/trpc/server/routers/viewer/availability/list.handler";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse } from "@bookph/core/platform-types";
+import type { GetAvailabilityListHandlerReturn } from "@bookph/core/trpc/server/routers/viewer/availability/list.handler";
 
 import http from "../../lib/http";
 import { useAtomsContext } from "../useAtomsContext";

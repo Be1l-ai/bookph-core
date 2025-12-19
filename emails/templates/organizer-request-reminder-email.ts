@@ -1,5 +1,5 @@
-import { EMAIL_FROM_NAME } from "@calcom/lib/constants";
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
+import { EMAIL_FROM_NAME } from "@bookph/core/lib/constants";
+import { getReplyToHeader } from "@bookph/core/lib/getReplyToHeader";
 
 import renderEmail from "../src/renderEmail";
 import OrganizerRequestEmail from "./organizer-request-email";

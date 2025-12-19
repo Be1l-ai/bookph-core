@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { PriceIcon } from "@calcom/features/bookings/components/event-meta/PriceIcon";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
-import { type IconName } from "@calcom/ui/components/icon";
+import { getPaymentAppData } from "@bookph/core/app-store/_utils/payments/getPaymentAppData";
+import { useBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { PriceIcon } from "@bookph/core/features/bookings/components/event-meta/PriceIcon";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Icon } from "@bookph/ui/components/icon";
+import { type IconName } from "@bookph/ui/components/icon";
 
 import { EventDetailBlocks } from "../../types";
 import { AvailableEventLocations } from "./AvailableEventLocations";

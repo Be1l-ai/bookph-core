@@ -1,12 +1,12 @@
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { findUserToBeOrgOwner } from "@calcom/features/ee/organizations/lib/server/orgCreationUtils";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { Team, User } from "@calcom/prisma/client";
-import { orgOnboardingInvitedMembersSchema, orgOnboardingTeamsSchema } from "@calcom/prisma/zod-utils";
+import { getOrganizationRepository } from "@bookph/core/features/ee/organizations/di/OrganizationRepository.container";
+import { findUserToBeOrgOwner } from "@bookph/core/features/ee/organizations/lib/server/orgCreationUtils";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
+import { IS_SELF_HOSTED } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import type { Team, User } from "@bookph/core/prisma/client";
+import { orgOnboardingInvitedMembersSchema, orgOnboardingTeamsSchema } from "@bookph/core/prisma/zod-utils";
 
 import { BaseOnboardingService } from "../onboarding/BaseOnboardingService";
 import type {

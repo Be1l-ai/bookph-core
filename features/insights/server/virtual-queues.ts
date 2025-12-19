@@ -1,5 +1,5 @@
-import { readonlyPrisma as prisma } from "@calcom/prisma";
-import { getSerializableForm } from "@calcom/routing-forms/lib/getSerializableForm";
+import { readonlyPrisma as prisma } from "@bookph/core/prisma";
+import { getSerializableForm } from "@bookph/core/routing-forms/lib/getSerializableForm";
 
 class VirtualQueuesInsights {
   static async getUserRelevantTeamRoutingForms({ userId }: { userId: number }) {

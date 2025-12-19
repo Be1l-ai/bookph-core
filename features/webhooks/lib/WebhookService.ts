@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import getWebhooks from "./getWebhooks";
 import type { GetSubscriberOptions, GetWebhooksReturnType } from "./getWebhooks";

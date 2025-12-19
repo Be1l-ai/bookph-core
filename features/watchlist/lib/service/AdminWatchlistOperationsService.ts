@@ -1,7 +1,7 @@
-import logger from "@calcom/lib/logger";
-import type { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import type { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import { BookingReportStatus } from "@calcom/prisma/enums";
+import logger from "@bookph/core/lib/logger";
+import type { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import type { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import { BookingReportStatus } from "@bookph/core/prisma/enums";
 
 import { WatchlistErrors } from "../errors/WatchlistErrors";
 import type {

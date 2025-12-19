@@ -1,10 +1,10 @@
-import type { Dayjs } from "@calcom/dayjs";
-import { sendOrganizationAdminNoSlotsNotification } from "@calcom/emails/organization-email-service";
-import type { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import type { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { IRedisService } from "@calcom/features/redis/IRedisService";
-import { IS_PRODUCTION, WEBAPP_URL } from "@calcom/lib/constants";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import type { Dayjs } from "@bookph/core/dayjs";
+import { sendOrganizationAdminNoSlotsNotification } from "@bookph/core/emails/organization-email-service";
+import type { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import type { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import type { IRedisService } from "@bookph/core/features/redis/IRedisService";
+import { IS_PRODUCTION, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
 
 type EventDetails = {
   username: string;

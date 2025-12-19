@@ -1,7 +1,7 @@
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { prisma } from "@calcom/prisma";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getBillingProviderService } from "@bookph/core/ee/billing/di/containers/Billing";
+import { prisma } from "@bookph/core/prisma";
+import { userMetadata } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

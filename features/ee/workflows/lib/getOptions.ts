@@ -1,7 +1,7 @@
 import type { TFunction } from "i18next";
 
-import type { WorkflowActions } from "@calcom/prisma/enums";
-import { WorkflowTemplates, WorkflowTriggerEvents } from "@calcom/prisma/enums";
+import type { WorkflowActions } from "@bookph/core/prisma/enums";
+import { WorkflowTemplates, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
 
 import {
   isSMSOrWhatsappAction,

@@ -1,5 +1,5 @@
-import type { Team } from "@calcom/prisma/client";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import type { Team } from "@bookph/core/prisma/client";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 export const getParsedTeam = <T extends { metadata: Team["metadata"] }>(team: T) => {
   const metadata = teamMetadataSchema.parse(team.metadata);

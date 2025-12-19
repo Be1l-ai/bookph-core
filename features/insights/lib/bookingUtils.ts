@@ -1,7 +1,7 @@
-import { ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import { type ColumnFilter } from "@calcom/features/data-table/lib/types";
-import { isDateRangeFilterValue } from "@calcom/features/data-table/lib/utils";
-import type { FilterType } from "@calcom/types/data-table";
+import { ColumnFilterType } from "@bookph/core/features/data-table/lib/types";
+import { type ColumnFilter } from "@bookph/core/features/data-table/lib/types";
+import { isDateRangeFilterValue } from "@bookph/core/features/data-table/lib/utils";
+import type { FilterType } from "@bookph/core/types/data-table";
 
 export function extractDateRangeFromColumnFilters(columnFilters?: ColumnFilter[]) {
   if (!columnFilters) throw new Error("No date range filter found");

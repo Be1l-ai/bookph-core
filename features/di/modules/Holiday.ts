@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { PrismaHolidayRepository } from "@calcom/features/holidays/repositories/PrismaHolidayRepository";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { PrismaHolidayRepository } from "@bookph/core/features/holidays/repositories/PrismaHolidayRepository";
 
 import { type Container, createModule } from "../di";
 

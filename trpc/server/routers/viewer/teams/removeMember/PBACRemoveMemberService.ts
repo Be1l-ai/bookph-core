@@ -1,8 +1,8 @@
-import * as teamQueries from "@calcom/features/ee/teams/lib/queries";
-import { PermissionMapper } from "@calcom/features/pbac/domain/mappers/PermissionMapper";
-import { Resource, CustomAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import * as teamQueries from "@bookph/core/features/ee/teams/lib/queries";
+import { PermissionMapper } from "@bookph/core/features/pbac/domain/mappers/PermissionMapper";
+import { Resource, CustomAction } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

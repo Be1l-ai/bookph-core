@@ -3,14 +3,14 @@ import startCase from "lodash/startCase";
 import { useMemo } from "react";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { ColumnFilterType } from "@calcom/features/data-table";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import dayjs from "@bookph/core/dayjs";
+import { ColumnFilterType } from "@bookph/core/features/data-table";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useCopy } from "@bookph/core/lib/hooks/useCopy";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { RoutingFormFieldType } from "@bookph/core/routing-forms/lib/FieldTypes";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
 
 import { BookedByCell } from "../components/BookedByCell";
 import { BookingAtCell } from "../components/BookingAtCell";

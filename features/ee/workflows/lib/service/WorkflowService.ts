@@ -1,22 +1,22 @@
-import dayjs from "@calcom/dayjs";
-import { getAllWorkflows } from "@calcom/ee/workflows/lib/getAllWorkflows";
-import type { ScheduleWorkflowRemindersArgs } from "@calcom/ee/workflows/lib/reminders/reminderScheduler";
-import { scheduleWorkflowReminders } from "@calcom/ee/workflows/lib/reminders/reminderScheduler";
-import type { timeUnitLowerCase } from "@calcom/ee/workflows/lib/reminders/smsReminderManager";
-import type { Workflow, WorkflowStep } from "@calcom/ee/workflows/lib/types";
-import type { CreditCheckFn } from "@calcom/features/ee/billing/credit-service";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { getHideBranding } from "@calcom/features/profile/lib/hideBranding";
-import { tasker } from "@calcom/features/tasker";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import { WorkflowTriggerEvents, WorkflowType, WorkflowMethods } from "@calcom/prisma/enums";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/routing-forms/lib/formSubmissionUtils";
-import { CalendarEvent } from "@calcom/types/Calendar";
+import dayjs from "@bookph/core/dayjs";
+import { getAllWorkflows } from "@bookph/core/ee/workflows/lib/getAllWorkflows";
+import type { ScheduleWorkflowRemindersArgs } from "@bookph/core/ee/workflows/lib/reminders/reminderScheduler";
+import { scheduleWorkflowReminders } from "@bookph/core/ee/workflows/lib/reminders/reminderScheduler";
+import type { timeUnitLowerCase } from "@bookph/core/ee/workflows/lib/reminders/smsReminderManager";
+import type { Workflow, WorkflowStep } from "@bookph/core/ee/workflows/lib/types";
+import type { CreditCheckFn } from "@bookph/core/features/ee/billing/credit-service";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { WorkflowReminderRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowReminderRepository";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { getHideBranding } from "@bookph/core/features/profile/lib/hideBranding";
+import { tasker } from "@bookph/core/features/tasker";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import logger from "@bookph/core/lib/logger";
+import { prisma } from "@bookph/core/prisma";
+import { WorkflowTriggerEvents, WorkflowType, WorkflowMethods } from "@bookph/core/prisma/enums";
+import type { TimeUnit } from "@bookph/core/prisma/enums";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@bookph/core/routing-forms/lib/formSubmissionUtils";
+import { CalendarEvent } from "@bookph/core/types/Calendar";
 
 // TODO (Sean): Move most of the logic migrated in 16861 to this service
 export class WorkflowService {

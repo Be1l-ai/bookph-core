@@ -1,6 +1,6 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import { ToggleGroup } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { TimeFormat } from "@bookph/core/lib/timeFormat";
+import { ToggleGroup } from "@bookph/ui/components/form";
 
 import { useTimePreferences } from "../lib";
 

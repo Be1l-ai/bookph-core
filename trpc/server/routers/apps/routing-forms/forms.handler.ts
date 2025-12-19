@@ -1,18 +1,18 @@
 import type { z } from "zod";
 
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import type { zodFields, zodRoutes } from "@calcom/app-store/routing-forms/zod";
-import { hasFilter } from "@calcom/features/filters/lib/hasFilter";
+import { getSerializableForm } from "@bookph/core/app-store/routing-forms/lib/getSerializableForm";
+import type { zodFields, zodRoutes } from "@bookph/core/app-store/routing-forms/zod";
+import { hasFilter } from "@bookph/core/features/filters/lib/hasFilter";
 import {
   entityPrismaWhereClause,
   canEditEntity,
-} from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { entries } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@bookph/core/features/pbac/lib/entityPermissionUtils.server";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { entries } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TFormSchema } from "./forms.schema";
 

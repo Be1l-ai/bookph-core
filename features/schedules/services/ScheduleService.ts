@@ -1,10 +1,10 @@
-import { getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import { hasEditPermissionForUserID } from "@calcom/lib/hasEditPermissionForUser";
-import { HttpError } from "@calcom/lib/http-error";
-import { transformScheduleToAvailabilityForAtom } from "@calcom/lib/schedules/transformers/for-atom";
-import type { PrismaClient } from "@calcom/prisma";
-import type { TUpdateInputSchema } from "@calcom/trpc/server/routers/viewer/availability/schedule/update.schema";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getAvailabilityFromSchedule } from "@bookph/core/lib/availability";
+import { hasEditPermissionForUserID } from "@bookph/core/lib/hasEditPermissionForUser";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { transformScheduleToAvailabilityForAtom } from "@bookph/core/lib/schedules/transformers/for-atom";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { TUpdateInputSchema } from "@bookph/core/trpc/server/routers/viewer/availability/schedule/update.schema";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { ScheduleRepository } from "../repositories/ScheduleRepository";
 

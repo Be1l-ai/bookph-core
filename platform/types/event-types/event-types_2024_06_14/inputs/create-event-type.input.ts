@@ -20,7 +20,7 @@ import {
   ArrayUnique,
 } from "class-validator";
 
-import { SchedulingType } from "@calcom/platform-enums";
+import { SchedulingType } from "@bookph/core/platform-enums";
 
 import { RequiresAtLeastOnePropertyWhenNotDisabled } from "../../../utils/RequiresOneOfPropertiesWhenNotDisabled";
 import { BookerActiveBookingsLimit_2024_06_14 } from "./booker-active-booking-limit.input";

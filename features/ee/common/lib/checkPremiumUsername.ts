@@ -1,5 +1,5 @@
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import slugify from "@calcom/lib/slugify";
+import { WEBSITE_URL } from "@bookph/core/lib/constants";
+import slugify from "@bookph/core/lib/slugify";
 
 interface ResponseUsernameApi {
   available: boolean;

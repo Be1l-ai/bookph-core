@@ -1,18 +1,18 @@
 import { v4 as uuidv4 } from "uuid";
 
-import { whereClauseForOrgWithSlugOrRequestedSlug } from "@calcom/ee/organizations/lib/orgDomains";
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { DATABASE_CHUNK_SIZE } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getParsedTeam } from "@calcom/lib/server/repository/teamUtils";
-import prisma from "@calcom/prisma";
-import type { User as PrismaUser } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { Team } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import type { UpId, UserAsPersonalProfile, UserProfile } from "@calcom/types/UserProfile";
+import { whereClauseForOrgWithSlugOrRequestedSlug } from "@bookph/core/ee/organizations/lib/orgDomains";
+import { getOrgUsernameFromEmail } from "@bookph/core/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { DATABASE_CHUNK_SIZE } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getParsedTeam } from "@bookph/core/lib/server/repository/teamUtils";
+import prisma from "@bookph/core/prisma";
+import type { User as PrismaUser } from "@bookph/core/prisma/client";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { Team } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { userMetadata } from "@bookph/core/prisma/zod-utils";
+import type { UpId, UserAsPersonalProfile, UserProfile } from "@bookph/core/types/UserProfile";
 
 const userSelect = {
   name: true,

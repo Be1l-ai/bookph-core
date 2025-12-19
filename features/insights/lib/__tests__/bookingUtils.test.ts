@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { ColumnFilterType, type ColumnFilter } from "@calcom/features/data-table/lib/types";
+import { ColumnFilterType, type ColumnFilter } from "@bookph/core/features/data-table/lib/types";
 
 import { extractDateRangeFromColumnFilters, replaceDateRangeColumnFilter } from "../bookingUtils";
 

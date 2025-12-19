@@ -1,10 +1,10 @@
 import type { z } from "zod";
 
-import { entityPrismaWhereClause } from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { App_RoutingForms_Form } from "@calcom/prisma/client";
-import { RoutingFormSettings } from "@calcom/prisma/zod-utils";
+import { entityPrismaWhereClause } from "@bookph/core/features/pbac/lib/entityPermissionUtils.server";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import type { App_RoutingForms_Form } from "@bookph/core/prisma/client";
+import { RoutingFormSettings } from "@bookph/core/prisma/zod-utils";
 
 import type { SerializableForm, SerializableFormTeamMembers } from "../types/types";
 import type { zodRoutesView, zodFieldsView } from "../zod";
@@ -25,7 +25,7 @@ export async function getSerializableForm<TForm extends App_RoutingForms_Form>({
   form: TForm;
   withDeletedFields?: boolean;
 }) {
-  const prisma = (await import("@calcom/prisma")).default;
+  const prisma = (await import("@bookph/core/prisma")).default;
   const routesParsed = zodRoutes.safeParse(form.routes);
   if (!routesParsed.success) {
     log.error("Error parsing routes", safeStringify({ error: routesParsed.error, routes: form.routes }));

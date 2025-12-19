@@ -1,9 +1,9 @@
 import { describe, expect, vi, beforeEach } from "vitest";
 
-import { scheduleWorkflowReminders } from "@calcom/features/ee/workflows/lib/reminders/reminderScheduler";
-import { tasker } from "@calcom/features/tasker";
-import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { scheduleWorkflowReminders } from "@bookph/core/features/ee/workflows/lib/reminders/reminderScheduler";
+import { tasker } from "@bookph/core/features/tasker";
+import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 import { WorkflowService } from "./WorkflowService";
 

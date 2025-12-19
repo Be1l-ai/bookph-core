@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { AppCategories } from "@calcom/prisma/enums";
+import { AppCategories } from "@bookph/core/prisma/enums";
 
 export const ZIntegrationsInputSchema = z.object({
   variant: z.string().optional(),

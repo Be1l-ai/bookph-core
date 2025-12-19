@@ -1,8 +1,8 @@
-import dayjs from "@calcom/dayjs";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
+import dayjs from "@bookph/core/dayjs";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { prisma } from "@bookph/core/prisma";
 
 const ONBOARDING_INTRODUCED_AT = dayjs("September 1 2021").toISOString();
 

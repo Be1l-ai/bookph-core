@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 import type { z } from "zod";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse } from "@calcom/platform-types";
-import type { bookingCancelSchema } from "@calcom/prisma/zod-utils";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse, ApiErrorResponse } from "@bookph/core/platform-types";
+import type { bookingCancelSchema } from "@bookph/core/prisma/zod-utils";
 
 import http from "../../lib/http";
 

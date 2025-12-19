@@ -1,4 +1,4 @@
-import type { ManagedEventReassignmentService } from "@calcom/features/ee/managed-event-types/reassignment/services/ManagedEventReassignmentService";
+import type { ManagedEventReassignmentService } from "@bookph/core/features/ee/managed-event-types/reassignment/services/ManagedEventReassignmentService";
 
 import { createContainer } from "../di";
 import { moduleLoader as managedEventReassignmentServiceModuleLoader } from "../modules/ManagedEventReassignment";

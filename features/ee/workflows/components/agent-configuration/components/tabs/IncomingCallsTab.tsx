@@ -1,15 +1,15 @@
 import { useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Label, Select } from "@calcom/ui/components/form";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { PhoneNumberSubscriptionStatus } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { Label, Select } from "@bookph/ui/components/form";
+import type { MultiSelectCheckboxesOptionType as Option } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { FormValues } from "../../../../pages/workflow";
 import { VoiceSelectionDialog } from "../../../VoiceSelectionDialog";

@@ -11,7 +11,7 @@ import type {
   ZodTypeAny,
 } from "zod";
 
-import { EventTypeCustomInputType } from "@calcom/prisma/enums";
+import { EventTypeCustomInputType } from "@bookph/core/prisma/enums";
 
 import type { Prisma } from "./client";
 

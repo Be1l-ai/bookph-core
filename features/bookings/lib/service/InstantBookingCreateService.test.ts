@@ -9,11 +9,11 @@ import {
   mockSuccessfulVideoMeetingCreation,
   mockCalendarToHaveNoBusySlots,
   mockNoTranslations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { BookingStatus } from "@calcom/prisma/enums";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import { getInstantBookingCreateService } from "../../di/InstantBookingCreateService.container";
 import type { CreateInstantBookingData } from "../dto/types";

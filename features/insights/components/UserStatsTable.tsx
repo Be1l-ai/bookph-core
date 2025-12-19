@@ -1,8 +1,8 @@
 "use client";
 
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Avatar } from "@calcom/ui/components/avatar";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Avatar } from "@bookph/ui/components/avatar";
 
 import { ChartCardItem } from "./ChartCard";
 

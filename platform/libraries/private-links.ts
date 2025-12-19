@@ -1,3 +1,3 @@
-export { generateHashedLink } from "@calcom/lib/generateHashedLink";
-export { isLinkExpired } from "@calcom/lib/hashedLinksUtils";
-export { HashedLinkService } from "@calcom/features/hashedLink/lib/service/HashedLinkService";
+export { generateHashedLink } from "@bookph/core/lib/generateHashedLink";
+export { isLinkExpired } from "@bookph/core/lib/hashedLinksUtils";
+export { HashedLinkService } from "@bookph/core/features/hashedLink/lib/service/HashedLinkService";

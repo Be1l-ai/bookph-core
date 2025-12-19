@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 
-import { Badge } from "@calcom/ui/components/badge";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Badge } from "@bookph/ui/components/badge";
+import type { IconName } from "@bookph/ui/components/icon";
+import { Icon } from "@bookph/ui/components/icon";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 type DisplayInfoType = {
   label: string;

@@ -15,17 +15,17 @@ import {
   getScenarioData,
   mockCalendarToHaveNoBusySlots,
   BookingLocations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectBookingToBeInDatabase } from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
+import { expectBookingToBeInDatabase } from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import type { Request, Response } from "express";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, expect, beforeEach, vi, test } from "vitest";
 
-import { resetTestEmails } from "@calcom/lib/testEmails";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { resetTestEmails } from "@bookph/core/lib/testEmails";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 

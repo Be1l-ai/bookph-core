@@ -2,8 +2,8 @@ import type { AxiosError } from "axios";
 import { useState, useEffect } from "react";
 import { usePrevious } from "react-use";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse } from "@bookph/core/platform-types";
 
 import http from "../lib/http";
 

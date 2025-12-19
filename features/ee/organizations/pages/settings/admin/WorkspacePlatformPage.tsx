@@ -6,18 +6,18 @@ import type { SubmitHandler } from "react-hook-form";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc, type RouterOutputs } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { serviceAccountKeySchema } from "@bookph/core/prisma/zod-utils";
+import { trpc, type RouterOutputs } from "@bookph/core/trpc";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
+import { Form } from "@bookph/ui/components/form";
+import { TextAreaField } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { DropdownActions, Table } from "@bookph/ui/components/table";
+import { showToast } from "@bookph/ui/components/toast";
 
 const { Body, Cell, ColumnTitle, Header, Row } = Table;
 

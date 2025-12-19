@@ -15,7 +15,7 @@ import {
   Validate,
 } from "class-validator";
 
-import { SlotFormat } from "@calcom/platform-enums";
+import { SlotFormat } from "@bookph/core/platform-enums";
 
 @ValidatorConstraint({ name: "routingFormResponseIdValidator", async: false })
 class RoutingFormResponseIdValidator implements ValidatorConstraintInterface {

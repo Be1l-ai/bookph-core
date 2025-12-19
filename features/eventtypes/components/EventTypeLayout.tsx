@@ -1,17 +1,17 @@
 import { useMemo, useState, Suspense } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@calcom/features/embed/EventTypeEmbed";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import WebShell from "@calcom/features/shell/Shell";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { VerticalDivider } from "@calcom/ui/components/divider";
+import useLockedFieldsManager from "@bookph/core/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@bookph/core/features/embed/EventTypeEmbed";
+import type { FormValues } from "@bookph/core/features/eventtypes/lib/types";
+import type { EventTypeSetupProps } from "@bookph/core/features/eventtypes/lib/types";
+import WebShell from "@bookph/core/features/shell/Shell";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
+import { VerticalDivider } from "@bookph/ui/components/divider";
 import {
   DropdownMenuSeparator,
   Dropdown,
@@ -19,15 +19,15 @@ import {
   DropdownMenuItem,
   DropdownItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Label } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { HorizontalTabs, VerticalTabs } from "@calcom/ui/components/navigation";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/ui/components/dropdown";
+import { Label } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { HorizontalTabs, VerticalTabs } from "@bookph/ui/components/navigation";
+import type { VerticalTabItemProps } from "@bookph/ui/components/navigation";
+import { Skeleton } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { Shell as PlatformShell } from "../../../platform/atoms/src/components/ui/shell";
 import { DeleteDialog } from "./dialogs/DeleteDialog";

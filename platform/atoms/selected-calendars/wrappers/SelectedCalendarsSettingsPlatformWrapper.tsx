@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-import type { ICalendarSwitchProps } from "@calcom/features/calendars/CalendarSwitch";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { CALENDARS } from "@calcom/platform-constants";
-import { QueryCell } from "@calcom/trpc/components/QueryCell";
-import cn from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { AppListCard } from "@calcom/ui/components/app-list-card";
-import type { ButtonProps } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
-import { CalendarSwitchComponent } from "@calcom/ui/components/calendar-switch";
-import { DisconnectIntegrationComponent } from "@calcom/ui/components/disconnect-calendar-integration";
-import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown";
-import { Switch } from "@calcom/ui/components/form";
-import { List } from "@calcom/ui/components/list";
+import type { ICalendarSwitchProps } from "@bookph/core/features/calendars/CalendarSwitch";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { CALENDARS } from "@bookph/core/platform-constants";
+import { QueryCell } from "@bookph/core/trpc/components/QueryCell";
+import cn from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { AppListCard } from "@bookph/ui/components/app-list-card";
+import type { ButtonProps } from "@bookph/ui/components/button";
+import { Button } from "@bookph/ui/components/button";
+import { CalendarSwitchComponent } from "@bookph/ui/components/calendar-switch";
+import { DisconnectIntegrationComponent } from "@bookph/ui/components/disconnect-calendar-integration";
+import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@bookph/ui/components/dropdown";
+import { Switch } from "@bookph/ui/components/form";
+import { List } from "@bookph/ui/components/list";
 
 import * as Connect from "../../connect";
 import { AppleConnect } from "../../connect/apple/AppleConnect";

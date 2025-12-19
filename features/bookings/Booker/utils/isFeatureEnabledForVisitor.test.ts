@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { getCookie } from "@calcom/lib/cookie";
+import { getCookie } from "@bookph/core/lib/cookie";
 
 import { isVisitorWithinPercentage } from "./isFeatureEnabledForVisitor";
 

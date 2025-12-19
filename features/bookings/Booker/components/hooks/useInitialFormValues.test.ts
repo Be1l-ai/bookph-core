@@ -4,7 +4,7 @@
 import { cleanup, renderHook, waitFor } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import type { BookerEvent } from "@calcom/features/bookings/types";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
 
 import { useInitialFormValues } from "./useInitialFormValues";
 

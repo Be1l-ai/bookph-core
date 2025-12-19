@@ -1,11 +1,11 @@
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { showToast } from "@calcom/ui/components/toast";
+import { useBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { useDebounce } from "@bookph/core/lib/hooks/useDebounce";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { showToast } from "@bookph/ui/components/toast";
 
 export interface IUseVerifyEmailProps {
   email: string;

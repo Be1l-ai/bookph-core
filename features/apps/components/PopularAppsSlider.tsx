@@ -1,5 +1,5 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AppFrontendPayload as App } from "@calcom/types/App";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { AppFrontendPayload as App } from "@bookph/core/types/App";
 
 import { AppCard } from "./AppCard";
 import { Slider } from "./Slider";

@@ -1,25 +1,25 @@
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { CreditCheckFn } from "@calcom/features/ee/billing/credit-service";
+import { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import type { CreditCheckFn } from "@bookph/core/features/ee/billing/credit-service";
 import {
   isAttendeeAction,
   isSMSAction,
   isSMSOrWhatsappAction,
   isWhatsappAction,
   isCalAIAction,
-} from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { isEmailAction } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { EmailWorkflowService } from "@calcom/features/ee/workflows/lib/service/EmailWorkflowService";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { Workflow, WorkflowStep } from "@calcom/features/ee/workflows/lib/types";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
-import { formatCalEventExtended } from "@calcom/lib/formatCalendarEvent";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import { prisma } from "@calcom/prisma";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@bookph/core/features/ee/workflows/lib/actionHelperFunctions";
+import { isEmailAction } from "@bookph/core/features/ee/workflows/lib/actionHelperFunctions";
+import { EmailWorkflowService } from "@bookph/core/features/ee/workflows/lib/service/EmailWorkflowService";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import type { Workflow, WorkflowStep } from "@bookph/core/features/ee/workflows/lib/types";
+import { WorkflowReminderRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowReminderRepository";
+import { formatCalEventExtended } from "@bookph/core/lib/formatCalendarEvent";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { checkSMSRateLimit } from "@bookph/core/lib/smsLockState";
+import { prisma } from "@bookph/core/prisma";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { WorkflowActions, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import type { FormSubmissionData } from "../types";
 import type { BookingInfo } from "../types";

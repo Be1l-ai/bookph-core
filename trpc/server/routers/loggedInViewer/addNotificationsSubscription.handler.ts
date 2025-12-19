@@ -1,8 +1,8 @@
-import { subscriptionSchema } from "@calcom/features/instant-meeting/schema";
-import { sendNotification } from "@calcom/features/notifications/sendNotification";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { subscriptionSchema } from "@bookph/core/features/instant-meeting/schema";
+import { sendNotification } from "@bookph/core/features/notifications/sendNotification";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

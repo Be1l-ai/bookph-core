@@ -1,8 +1,8 @@
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
+import { constantsScenarios } from "@bookph/core/lib/__mocks__/constants";
 
 import { describe, it, vi, expect, beforeEach } from "vitest";
 
-import { getBrand } from "@calcom/features/ee/organizations/lib/getBrand";
+import { getBrand } from "@bookph/core/features/ee/organizations/lib/getBrand";
 
 import { buildEventUrlFromBooking } from "./buildEventUrlFromBooking";
 

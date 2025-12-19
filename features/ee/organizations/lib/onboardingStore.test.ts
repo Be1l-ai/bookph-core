@@ -7,16 +7,16 @@ import { useSession } from "next-auth/react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
 
 import { useOnboardingStore, useOnboarding } from "./onboardingStore";
 
 // Mock all dependencies
 vi.mock("next-auth/react");
 vi.mock("next/navigation");
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@bookph/core/trpc/react", () => ({
   trpc: {
     viewer: {
       organizations: {

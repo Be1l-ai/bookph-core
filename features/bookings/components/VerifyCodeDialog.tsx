@@ -2,14 +2,14 @@ import type { Dispatch, SetStateAction } from "react";
 import { useCallback, useEffect, useState } from "react";
 import useDigitInput from "react-digit-input";
 
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@calcom/ui/components/dialog";
-import { Input } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@bookph/ui/components/dialog";
+import { Input } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
 
 export const VerifyCodeDialog = ({
   isOpenDialog,

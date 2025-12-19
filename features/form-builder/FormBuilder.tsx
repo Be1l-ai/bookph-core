@@ -5,21 +5,21 @@ import { Controller, useFieldArray, useForm, useFormContext } from "react-hook-f
 import type { z } from "zod";
 import { ZodError } from "zod";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import { getCurrencySymbol } from "@calcom/lib/currencyConversions";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import { markdownToSafeHTMLClient } from "@calcom/lib/markdownToSafeHTMLClient";
-import turndown from "@calcom/lib/turndownService";
-import { excludeOrRequireEmailSchema } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { ToggleGroup } from "@calcom/ui/components/form";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { LearnMoreLink } from "@bookph/core/features/eventtypes/components/LearnMoreLink";
+import { getCurrencySymbol } from "@bookph/core/lib/currencyConversions";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { md } from "@bookph/core/lib/markdownIt";
+import { markdownToSafeHTMLClient } from "@bookph/core/lib/markdownToSafeHTMLClient";
+import turndown from "@bookph/core/lib/turndownService";
+import { excludeOrRequireEmailSchema } from "@bookph/core/prisma/zod-utils";
+import classNames from "@bookph/ui/classNames";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@bookph/ui/components/dialog";
+import { Editor } from "@bookph/ui/components/editor";
+import { ToggleGroup } from "@bookph/ui/components/form";
 import {
   Switch,
   CheckboxField,
@@ -28,9 +28,9 @@ import {
   Input,
   InputField,
   Label,
-} from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { fieldTypesConfigMap } from "./fieldTypes";
 import { fieldsThatSupportLabelAsSafeHtml } from "./fieldsThatSupportLabelAsSafeHtml";

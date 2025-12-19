@@ -3,15 +3,15 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import { useCallback } from "react";
 
-import type { API_VERSIONS_ENUM } from "@calcom/platform-constants";
-import { IconSprites } from "@calcom/ui/components/icon";
-import deTranslations from "@calcom/web/public/static/locales/de/common.json";
-import enTranslations from "@calcom/web/public/static/locales/en/common.json";
-import esTranslations from "@calcom/web/public/static/locales/es/common.json";
-import frTranslations from "@calcom/web/public/static/locales/fr/common.json";
-import itTranslations from "@calcom/web/public/static/locales/it/common.json";
-import nlTranslations from "@calcom/web/public/static/locales/nl/common.json";
-import ptBrTranslations from "@calcom/web/public/static/locales/pt-BR/common.json";
+import type { API_VERSIONS_ENUM } from "@bookph/core/platform-constants";
+import { IconSprites } from "@bookph/ui/components/icon";
+import deTranslations from "@bookph/core/web/public/static/locales/de/common.json";
+import enTranslations from "@bookph/core/web/public/static/locales/en/common.json";
+import esTranslations from "@bookph/core/web/public/static/locales/es/common.json";
+import frTranslations from "@bookph/core/web/public/static/locales/fr/common.json";
+import itTranslations from "@bookph/core/web/public/static/locales/it/common.json";
+import nlTranslations from "@bookph/core/web/public/static/locales/nl/common.json";
+import ptBrTranslations from "@bookph/core/web/public/static/locales/pt-BR/common.json";
 
 import { AtomsContext } from "../hooks/useAtomsContext";
 import { useMe } from "../hooks/useMe";

@@ -5,8 +5,8 @@ import type { ReactElement } from "react";
 import { vi } from "vitest";
 import type { StoreApi } from "zustand";
 
-import dayjs from "@calcom/dayjs";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
 
 import { BookerStoreContext } from "../BookerStoreProvider";
 import type { BookerStore } from "../store";

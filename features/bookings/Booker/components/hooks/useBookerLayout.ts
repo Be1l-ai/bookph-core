@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { shallow } from "zustand/shallow";
 
-import { useEmbedType, useEmbedUiConfig, useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import type { BookerLayouts } from "@calcom/prisma/zod-utils";
-import { defaultBookerLayoutSettings } from "@calcom/prisma/zod-utils";
+import { useEmbedType, useEmbedUiConfig, useIsEmbed } from "@bookph/core/embed-core/embed-iframe";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import useMediaQuery from "@bookph/core/lib/hooks/useMediaQuery";
+import type { BookerLayouts } from "@bookph/core/prisma/zod-utils";
+import { defaultBookerLayoutSettings } from "@bookph/core/prisma/zod-utils";
 
 import { extraDaysConfig } from "../../config";
 import type { BookerLayout } from "../../types";

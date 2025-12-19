@@ -1,28 +1,28 @@
 import { createContainer } from "@evyweb/ioctopus";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { moduleLoader as loggerModuleLoader } from "@calcom/features/di/shared/services/logger.service";
-import { taskerServiceModule } from "@calcom/features/di/shared/services/tasker.service";
-import { SHARED_TOKENS } from "@calcom/features/di/shared/shared.tokens";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { moduleLoader as loggerModuleLoader } from "@bookph/core/features/di/shared/services/logger.service";
+import { taskerServiceModule } from "@bookph/core/features/di/shared/services/tasker.service";
+import { SHARED_TOKENS } from "@bookph/core/features/di/shared/shared.tokens";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
 import {
   createWatchlistFeature,
   type WatchlistFeature,
-} from "@calcom/features/watchlist/lib/facade/WatchlistFeature";
-import type { IGlobalWatchlistRepository } from "@calcom/features/watchlist/lib/interface/IWatchlistRepositories";
-import type { IOrganizationWatchlistRepository } from "@calcom/features/watchlist/lib/interface/IWatchlistRepositories";
-import { AdminWatchlistOperationsService } from "@calcom/features/watchlist/lib/service/AdminWatchlistOperationsService";
-import { AdminWatchlistQueryService } from "@calcom/features/watchlist/lib/service/AdminWatchlistQueryService";
-import type { GlobalBlockingService } from "@calcom/features/watchlist/lib/service/GlobalBlockingService";
-import type { OrganizationBlockingService } from "@calcom/features/watchlist/lib/service/OrganizationBlockingService";
-import { OrganizationWatchlistOperationsService } from "@calcom/features/watchlist/lib/service/OrganizationWatchlistOperationsService";
-import { OrganizationWatchlistQueryService } from "@calcom/features/watchlist/lib/service/OrganizationWatchlistQueryService";
-import type { WatchlistAuditService } from "@calcom/features/watchlist/lib/service/WatchlistAuditService";
-import type { WatchlistService } from "@calcom/features/watchlist/lib/service/WatchlistService";
-import { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import { prisma } from "@calcom/prisma";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+} from "@bookph/core/features/watchlist/lib/facade/WatchlistFeature";
+import type { IGlobalWatchlistRepository } from "@bookph/core/features/watchlist/lib/interface/IWatchlistRepositories";
+import type { IOrganizationWatchlistRepository } from "@bookph/core/features/watchlist/lib/interface/IWatchlistRepositories";
+import { AdminWatchlistOperationsService } from "@bookph/core/features/watchlist/lib/service/AdminWatchlistOperationsService";
+import { AdminWatchlistQueryService } from "@bookph/core/features/watchlist/lib/service/AdminWatchlistQueryService";
+import type { GlobalBlockingService } from "@bookph/core/features/watchlist/lib/service/GlobalBlockingService";
+import type { OrganizationBlockingService } from "@bookph/core/features/watchlist/lib/service/OrganizationBlockingService";
+import { OrganizationWatchlistOperationsService } from "@bookph/core/features/watchlist/lib/service/OrganizationWatchlistOperationsService";
+import { OrganizationWatchlistQueryService } from "@bookph/core/features/watchlist/lib/service/OrganizationWatchlistQueryService";
+import type { WatchlistAuditService } from "@bookph/core/features/watchlist/lib/service/WatchlistAuditService";
+import type { WatchlistService } from "@bookph/core/features/watchlist/lib/service/WatchlistService";
+import { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import { prisma } from "@bookph/core/prisma";
+import { moduleLoader as prismaModuleLoader } from "@bookph/core/features/di/modules/Prisma";
 
 import { WATCHLIST_DI_TOKENS } from "../Watchlist.tokens";
 import { watchlistModule } from "../modules/Watchlist.module";

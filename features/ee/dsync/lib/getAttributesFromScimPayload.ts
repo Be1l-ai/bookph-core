@@ -1,8 +1,8 @@
 import type { DirectorySyncEvent } from "@boxyhq/saml-jackson";
 
-import { DIRECTORY_IDS_TO_LOG } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { DIRECTORY_IDS_TO_LOG } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 const log = logger.getSubLogger({ prefix: ["getAttributesFromScimPayload"] });
 

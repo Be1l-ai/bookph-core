@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 
-import type { Prisma } from "@calcom/prisma/client";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import { _getLocationValuesForDb } from "../getLocationValuesForDb";
 

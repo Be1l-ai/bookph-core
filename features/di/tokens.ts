@@ -1,7 +1,7 @@
-import { BOOKING_DI_TOKENS } from "@calcom/features/bookings/di/tokens";
-import { BOOKING_AUDIT_DI_TOKENS } from "@calcom/features/booking-audit/di/tokens";
-import { HASHED_LINK_DI_TOKENS } from "@calcom/features/hashedLink/di/tokens";
-import { ORGANIZATION_DI_TOKENS } from "@calcom/features/ee/organizations/di/tokens";
+import { BOOKING_DI_TOKENS } from "@bookph/core/features/bookings/di/tokens";
+import { BOOKING_AUDIT_DI_TOKENS } from "@bookph/core/features/booking-audit/di/tokens";
+import { HASHED_LINK_DI_TOKENS } from "@bookph/core/features/hashedLink/di/tokens";
+import { ORGANIZATION_DI_TOKENS } from "@bookph/core/features/ee/organizations/di/tokens";
 import { WATCHLIST_DI_TOKENS } from "./watchlist/Watchlist.tokens";
 
 export const DI_TOKENS = {

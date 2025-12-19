@@ -1,12 +1,12 @@
 import { describe, expect, it, vi, beforeEach, type Mock } from "vitest";
 
-import * as teamQueries from "@calcom/features/ee/teams/lib/queries";
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { PermissionMapper } from "@calcom/features/pbac/domain/mappers/PermissionMapper";
-import { Resource, CustomAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import * as teamQueries from "@bookph/core/features/ee/teams/lib/queries";
+import { TeamService } from "@bookph/core/features/ee/teams/services/teamService";
+import { PermissionMapper } from "@bookph/core/features/pbac/domain/mappers/PermissionMapper";
+import { Resource, CustomAction } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { PBACRemoveMemberService } from "../PBACRemoveMemberService";
 

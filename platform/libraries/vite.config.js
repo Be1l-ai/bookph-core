@@ -209,7 +209,7 @@ export default defineConfig({
       "../server/i18n": path.resolve(__dirname, "./i18n.ts"),
       "@": path.resolve(__dirname, "./src"),
       "@calcom/lib": path.resolve(__dirname, "../../lib"),
-      "@calcom/trpc": resolve("../../trpc"),
+      "@bookph/core/trpc": resolve("../../trpc"),
       "lru-cache": resolve("../../../node_modules/lru-cache/dist/cjs/index.js"),
       "@calcom/prisma/client/runtime/library": resolve("../../prisma/client/runtime/library"),
       "@calcom/prisma/client": resolve("../../prisma/client"),

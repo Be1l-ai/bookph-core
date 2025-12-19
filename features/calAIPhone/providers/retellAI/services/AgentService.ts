@@ -1,14 +1,14 @@
 import { isValidPhoneNumber } from "libphonenumber-js/max";
 import { v4 as uuidv4 } from "uuid";
 
-import { replaceEventTypePlaceholders } from "@calcom/features/ee/workflows/components/agent-configuration/utils/promptUtils";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@calcom/lib/constants";
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { PrismaApiKeyRepository } from "@calcom/lib/server/repository/PrismaApiKeyRepository";
-import prisma from "@calcom/prisma";
+import { replaceEventTypePlaceholders } from "@bookph/core/features/ee/workflows/components/agent-configuration/utils/promptUtils";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@bookph/core/lib/constants";
+import { timeZoneSchema } from "@bookph/core/lib/dayjs/timeZone.schema";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { PrismaApiKeyRepository } from "@bookph/core/lib/server/repository/PrismaApiKeyRepository";
+import prisma from "@bookph/core/prisma";
 
 import type {
   AIPhoneServiceUpdateModelParams,

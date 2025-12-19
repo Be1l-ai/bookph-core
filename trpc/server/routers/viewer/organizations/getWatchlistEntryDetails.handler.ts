@@ -1,5 +1,5 @@
-import { getOrganizationWatchlistQueryService } from "@calcom/features/di/watchlist/containers/watchlist";
-import { WatchlistError, WatchlistErrorCode } from "@calcom/features/watchlist/lib/errors/WatchlistErrors";
+import { getOrganizationWatchlistQueryService } from "@bookph/core/features/di/watchlist/containers/watchlist";
+import { WatchlistError, WatchlistErrorCode } from "@bookph/core/features/watchlist/lib/errors/WatchlistErrors";
 
 import { TRPCError } from "@trpc/server";
 

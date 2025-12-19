@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { VerificationTokenRepository } from "@calcom/lib/server/repository/verificationToken";
+import { VerificationTokenRepository } from "@bookph/core/lib/server/repository/verificationToken";
 
 import { VerificationTokenService } from "../VerificationTokenService";
 

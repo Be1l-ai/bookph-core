@@ -1,10 +1,10 @@
-import createUsersAndConnectToOrg from "@calcom/features/ee/dsync/lib/users/createUsersAndConnectToOrg";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { HOSTED_CAL_FEATURES } from "@calcom/lib/constants";
-import type { PrismaClient } from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
+import createUsersAndConnectToOrg from "@bookph/core/features/ee/dsync/lib/users/createUsersAndConnectToOrg";
+import { getOrganizationRepository } from "@bookph/core/features/ee/organizations/di/OrganizationRepository.container";
+import { HOSTED_CAL_FEATURES } from "@bookph/core/lib/constants";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { IdentityProvider } from "@bookph/core/prisma/enums";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
 
 import jackson from "./jackson";
 import { tenantPrefix, samlProductID } from "./saml";

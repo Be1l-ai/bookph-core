@@ -1,5 +1,5 @@
-import { ErrorWithCode } from "@calcom/lib/errors";
-import type { PrismaClient } from "@calcom/prisma";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 import { BookingRepository } from "../repositories/BookingRepository";
 import { BookingAccessService } from "./BookingAccessService";

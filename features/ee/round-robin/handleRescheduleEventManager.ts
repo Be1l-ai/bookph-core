@@ -1,19 +1,19 @@
-import { metadata as GoogleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
-import { MeetLocationType } from "@calcom/app-store/locations";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import type { EventType } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getVideoCallDetails } from "@calcom/features/bookings/lib/handleNewBooking/getVideoCallDetails";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import type { EventManagerInitParams } from "@calcom/features/bookings/lib/EventManager";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { BookingReferenceRepository } from "@calcom/lib/server/repository/bookingReference";
-import { prisma } from "@calcom/prisma";
-import type { DestinationCalendar } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { CalendarEvent, AdditionalInformation } from "@calcom/types/Calendar";
-import getICalUID from "@calcom/emails/lib/getICalUID";
+import { metadata as GoogleMeetMetadata } from "@bookph/core/app-store/googlevideo/_metadata";
+import { MeetLocationType } from "@bookph/core/app-store/locations";
+import { getAllCredentialsIncludeServiceAccountKey } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import type { EventType } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getVideoCallDetails } from "@bookph/core/features/bookings/lib/handleNewBooking/getVideoCallDetails";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import type { EventManagerInitParams } from "@bookph/core/features/bookings/lib/EventManager";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { BookingReferenceRepository } from "@bookph/core/lib/server/repository/bookingReference";
+import { prisma } from "@bookph/core/prisma";
+import type { DestinationCalendar } from "@bookph/core/prisma/client";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { CalendarEvent, AdditionalInformation } from "@bookph/core/types/Calendar";
+import getICalUID from "@bookph/core/emails/lib/getICalUID";
 
 type InitParams = {
   user: {

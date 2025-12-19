@@ -1,4 +1,4 @@
-import type { Prisma } from "@calcom/prisma/client";
+import type { Prisma } from "@bookph/core/prisma/client";
 
 export const bookingMinimalSelect = {
   id: true,

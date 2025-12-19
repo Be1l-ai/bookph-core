@@ -1,14 +1,14 @@
 import { z } from "zod";
 
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { emailSchema } from "@calcom/lib/emailSchema";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { findTeamMembersMatchingAttributeLogic } from "@bookph/core/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { emailSchema } from "@bookph/core/lib/emailSchema";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import { RoutingFormResponseRepository } from "@bookph/core/lib/server/repository/formResponse";
+import { prisma } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
 
 import isRouter from "../lib/isRouter";
 import routerGetCrmContactOwnerEmail from "./crmRouting/routerGetCrmContactOwnerEmail";

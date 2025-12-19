@@ -1,4 +1,4 @@
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
 import type { IAuditActionService } from "../actions/IAuditActionService";
 import type { BookingAuditAction } from "../repository/IBookingAuditRepository";
 

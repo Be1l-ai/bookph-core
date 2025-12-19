@@ -1,6 +1,6 @@
 "use client";
 
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@bookph/core/types/data-table";
 
 import { useDataTable } from "../../hooks";
 import type { FilterableColumn } from "../../lib/types";

@@ -3,11 +3,11 @@ import { usePathname } from "next/navigation";
 import type { MouseEvent } from "react";
 import { useEffect, useState } from "react";
 
-import { ROADMAP, DESKTOP_APP_LINK } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
+import { ROADMAP, DESKTOP_APP_LINK } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import useMeQuery from "@bookph/core/trpc/react/hooks/useMeQuery";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
 import {
   Dropdown,
   DropdownItem,
@@ -16,10 +16,10 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@bookph/ui/components/dropdown";
+import { Icon } from "@bookph/ui/components/icon";
 // TODO (Platform): we shouldnt be importing from web here
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
+import { useGetUserAttributes } from "@bookph/core/web/components/settings/platform/hooks/useGetUserAttributes";
 
 import FreshChatProvider from "../../ee/support/lib/freshchat/FreshChatProvider";
 

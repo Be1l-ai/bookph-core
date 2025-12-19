@@ -6,16 +6,16 @@ import type { Dispatch, ReactElement, ReactNode, SetStateAction } from "react";
 import React, { cloneElement } from "react";
 import { Toaster } from "sonner";
 
-import { useRedirectToLoginIfUnauthenticated } from "@calcom/features/auth/lib/hooks/useRedirectToLoginIfUnauthenticated";
-import { useRedirectToOnboardingIfNeeded } from "@calcom/features/auth/lib/hooks/useRedirectToOnboardingIfNeeded";
-import { useFormbricks } from "@calcom/features/formbricks/formbricks-client";
-import { KBarContent, KBarRoot } from "@calcom/features/kbar/Kbar";
-import TimezoneChangeDialog from "@calcom/features/settings/TimezoneChangeDialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { ErrorBoundary } from "@calcom/ui/components/errorBoundary";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { useRedirectToLoginIfUnauthenticated } from "@bookph/core/features/auth/lib/hooks/useRedirectToLoginIfUnauthenticated";
+import { useRedirectToOnboardingIfNeeded } from "@bookph/core/features/auth/lib/hooks/useRedirectToOnboardingIfNeeded";
+import { useFormbricks } from "@bookph/core/features/formbricks/formbricks-client";
+import { KBarContent, KBarRoot } from "@bookph/core/features/kbar/Kbar";
+import TimezoneChangeDialog from "@bookph/core/features/settings/TimezoneChangeDialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { ErrorBoundary } from "@bookph/ui/components/errorBoundary";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
 
 import { DynamicModals } from "./DynamicModals";
 import { SideBarContainer } from "./SideBar";

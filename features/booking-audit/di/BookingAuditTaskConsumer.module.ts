@@ -1,9 +1,9 @@
-import { BookingAuditTaskConsumer } from "@calcom/features/booking-audit/lib/service/BookingAuditTaskConsumer";
-import { BOOKING_AUDIT_DI_TOKENS } from "@calcom/features/booking-audit/di/tokens";
-import { moduleLoader as bookingAuditRepositoryModuleLoader } from "@calcom/features/booking-audit/di/BookingAuditRepository.module";
-import { moduleLoader as auditActorRepositoryModuleLoader } from "@calcom/features/booking-audit/di/AuditActorRepository.module";
-import { moduleLoader as featuresRepositoryModuleLoader } from "@calcom/features/di/modules/Features";
-import { moduleLoader as userRepositoryModuleLoader } from "@calcom/features/di/modules/User";
+import { BookingAuditTaskConsumer } from "@bookph/core/features/booking-audit/lib/service/BookingAuditTaskConsumer";
+import { BOOKING_AUDIT_DI_TOKENS } from "@bookph/core/features/booking-audit/di/tokens";
+import { moduleLoader as bookingAuditRepositoryModuleLoader } from "@bookph/core/features/booking-audit/di/BookingAuditRepository.module";
+import { moduleLoader as auditActorRepositoryModuleLoader } from "@bookph/core/features/booking-audit/di/AuditActorRepository.module";
+import { moduleLoader as featuresRepositoryModuleLoader } from "@bookph/core/features/di/modules/Features";
+import { moduleLoader as userRepositoryModuleLoader } from "@bookph/core/features/di/modules/User";
 
 import { createModule, bindModuleToClassOnToken } from "../../di/di";
 

@@ -2,24 +2,24 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues, PrivateLinkWithOptions } from "@calcom/features/eventtypes/lib/types";
-import { generateHashedLink } from "@calcom/lib/generateHashedLink";
-import { isLinkExpired as utilsIsLinkExpired } from "@calcom/lib/hashedLinksUtils";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { TextField } from "@calcom/ui/components/form";
-import { DatePicker } from "@calcom/ui/components/form";
-import { NumberInput } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import dayjs from "@bookph/core/dayjs";
+import type { EventTypeSetupProps } from "@bookph/core/features/eventtypes/lib/types";
+import type { FormValues, PrivateLinkWithOptions } from "@bookph/core/features/eventtypes/lib/types";
+import { generateHashedLink } from "@bookph/core/lib/generateHashedLink";
+import { isLinkExpired as utilsIsLinkExpired } from "@bookph/core/lib/hashedLinksUtils";
+import { useCopy } from "@bookph/core/lib/hooks/useCopy";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { Dialog, DialogContent } from "@bookph/ui/components/dialog";
+import { TextField } from "@bookph/ui/components/form";
+import { DatePicker } from "@bookph/ui/components/form";
+import { NumberInput } from "@bookph/ui/components/form";
+import { RadioAreaGroup as RadioArea } from "@bookph/ui/components/radio";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 export const MultiplePrivateLinksController = ({
   team,

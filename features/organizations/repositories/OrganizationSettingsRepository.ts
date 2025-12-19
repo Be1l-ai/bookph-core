@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@calcom/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 export class OrganizationSettingsRepository {
   constructor(private prismaClient: PrismaClient) {}

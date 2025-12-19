@@ -2,13 +2,13 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import dayjs from "@calcom/dayjs";
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import { WorkflowActions, WorkflowMethods } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import prisma from "@bookph/core/prisma";
+import { WorkflowActions, WorkflowMethods } from "@bookph/core/prisma/enums";
 
 import { getWhatsappTemplateFunction, isAttendeeAction } from "../lib/actionHelperFunctions";
 import type { PartialWorkflowReminder } from "../lib/getWorkflowReminders";

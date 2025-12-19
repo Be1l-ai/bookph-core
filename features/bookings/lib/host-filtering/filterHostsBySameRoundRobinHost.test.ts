@@ -1,7 +1,7 @@
 import type { Mock } from "vitest";
 import { describe, expect, it, vi, afterEach } from "vitest";
 
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
+import type { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
 
 import { FilterHostsService } from "./filterHostsBySameRoundRobinHost";
 

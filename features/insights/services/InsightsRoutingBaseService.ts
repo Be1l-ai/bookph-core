@@ -1,22 +1,22 @@
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { makeSqlCondition } from "@calcom/features/data-table/lib/server";
-import type { FilterValue, TextFilterValue, TypedColumnFilter } from "@calcom/features/data-table/lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import dayjs from "@bookph/core/dayjs";
+import { makeSqlCondition } from "@bookph/core/features/data-table/lib/server";
+import type { FilterValue, TextFilterValue, TypedColumnFilter } from "@bookph/core/features/data-table/lib/types";
+import type { FilterType } from "@bookph/core/types/data-table";
 import {
   isMultiSelectFilterValue,
   isTextFilterValue,
   isNumberFilterValue,
   isSingleSelectFilterValue,
-} from "@calcom/features/data-table/lib/utils";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import type { DateRange } from "@calcom/features/insights/server/insightsDateUtils";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import type { BookingStatus } from "@calcom/prisma/enums";
-import { MembershipRole } from "@calcom/prisma/enums";
+} from "@bookph/core/features/data-table/lib/utils";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import type { DateRange } from "@bookph/core/features/insights/server/insightsDateUtils";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import type { BookingStatus } from "@bookph/core/prisma/enums";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 export const insightsRoutingServiceOptionsSchema = z.discriminatedUnion("scope", [
   z.object({

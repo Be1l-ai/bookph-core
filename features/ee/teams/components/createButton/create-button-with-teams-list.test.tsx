@@ -33,7 +33,7 @@ const runtimeMock = async (data: Array<any>) => {
       },
     },
   };
-  const mockedLib = (await import("@calcom/trpc/react")) as any;
+  const mockedLib = (await import("@bookph/core/trpc/react")) as any;
   mockedLib.trpc = updatedTrpc;
 };
 const renderCreateButton = (
@@ -46,11 +46,11 @@ describe("Create Button Tests", () => {
   describe("Create Button Tests With Valid Team", () => {
     beforeAll(async () => {
       // INFO: This needs to be here before the other calls to runtimeMock. For some reason,
-      // when we moved this file from @calcom/ui, the imports started breaking, resulting in
+      // when we moved this file from @bookph/ui, the imports started breaking, resulting in
       // errors of "Cannot set property 'trpc' of [object Module] which has only a getter"
       // TODO: Update this pattern to be more consistent. Using this direct mocking in the
       // functions below breaks some tests.
-      vi.mock("@calcom/trpc/react", () => ({
+      vi.mock("@bookph/core/trpc/react", () => ({
         trpc: {
           viewer: {
             loggedInViewerRouter: {

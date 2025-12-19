@@ -1,7 +1,7 @@
-import type { DateRange } from "@calcom/features/schedules/lib/date-ranges";
-import { intersect } from "@calcom/features/schedules/lib/date-ranges";
-import { DEFAULT_GROUP_ID } from "@calcom/lib/constants";
-import { SchedulingType } from "@calcom/prisma/enums";
+import type { DateRange } from "@bookph/core/features/schedules/lib/date-ranges";
+import { intersect } from "@bookph/core/features/schedules/lib/date-ranges";
+import { DEFAULT_GROUP_ID } from "@bookph/core/lib/constants";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 import { filterRedundantDateRanges } from "./date-range-utils/filterRedundantDateRanges";
 import { mergeOverlappingDateRanges } from "./date-range-utils/mergeOverlappingDateRanges";

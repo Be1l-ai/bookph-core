@@ -5,16 +5,16 @@ import type { Time } from "ical.js";
 import type { Frequency } from "rrule";
 import type z from "zod";
 
-import type { bookingResponse } from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import type { TimeFormat } from "@calcom/lib/timeFormat";
+import type { bookingResponse } from "@bookph/core/features/bookings/lib/getBookingResponsesSchema";
+import type { TimeFormat } from "@bookph/core/lib/timeFormat";
 import type {
   BookingSeat,
   DestinationCalendar,
   Prisma,
   SelectedCalendar as _SelectedCalendar,
-} from "@calcom/prisma/client";
-import type { SchedulingType } from "@calcom/prisma/enums";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+} from "@bookph/core/prisma/client";
+import type { SchedulingType } from "@bookph/core/prisma/enums";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import type { Ensure } from "./utils";
 
@@ -134,7 +134,7 @@ export interface RecurringEvent {
   tzid?: string | undefined;
 }
 
-export type { IntervalLimit, IntervalLimitUnit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
+export type { IntervalLimit, IntervalLimitUnit } from "@bookph/core/lib/intervalLimits/intervalLimitSchema";
 
 export type AppsStatus = {
   appName: string;

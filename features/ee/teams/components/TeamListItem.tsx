@@ -2,24 +2,24 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import InviteLinkSettingsModal from "@calcom/ee/teams/components/InviteLinkSettingsModal";
-import { MemberInvitationModalWithoutMembers } from "@calcom/ee/teams/components/MemberInvitationModal";
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import InviteLinkSettingsModal from "@bookph/core/ee/teams/components/InviteLinkSettingsModal";
+import { MemberInvitationModalWithoutMembers } from "@bookph/core/ee/teams/components/MemberInvitationModal";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { getTeamUrlSync } from "@bookph/core/features/ee/organizations/lib/getTeamUrlSync";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useRefreshData } from "@bookph/core/lib/hooks/useRefreshData";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
+import { DialogTrigger, ConfirmationDialogContent } from "@bookph/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -27,10 +27,10 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+} from "@bookph/ui/components/dropdown";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
+import { revalidateTeamsList } from "@bookph/core/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 import { TeamRole } from "./TeamPill";
 

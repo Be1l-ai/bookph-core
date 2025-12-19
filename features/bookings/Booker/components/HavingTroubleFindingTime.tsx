@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { BOOKER_NUMBER_OF_DAYS_TO_LOAD } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Icon } from "@calcom/ui/components/icon";
+import { BOOKER_NUMBER_OF_DAYS_TO_LOAD } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Icon } from "@bookph/ui/components/icon";
 
 type Props = {
   onButtonClick: () => void;

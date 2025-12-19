@@ -3,10 +3,10 @@ import type { DateArray, ParticipationRole, EventStatus, ParticipationStatus } f
 import { createEvent } from "ics";
 import { RRule } from "rrule";
 
-import { getRichDescription } from "@calcom/lib/CalEventParser";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@calcom/lib/constants";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { getRichDescription } from "@bookph/core/lib/CalEventParser";
+import { getVideoCallUrlFromCalEvent } from "@bookph/core/lib/CalEventParser";
+import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@bookph/core/lib/constants";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 export enum BookingAction {
   Create = "create",

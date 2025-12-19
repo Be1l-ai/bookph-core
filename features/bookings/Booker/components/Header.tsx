@@ -1,19 +1,19 @@
 import { useCallback, useMemo } from "react";
 import { shallow } from "zustand/shallow";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import dayjs from "@calcom/dayjs";
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useInitializeWeekStart } from "@calcom/features/bookings/Booker/components/hooks/useInitializeWeekStart";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import dayjs from "@bookph/core/dayjs";
+import { useIsEmbed } from "@bookph/core/embed-core/embed-iframe";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useInitializeWeekStart } from "@bookph/core/features/bookings/Booker/components/hooks/useInitializeWeekStart";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
+import { ToggleGroup } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { TimeFormatToggle } from "../../components/TimeFormatToggle";
 import type { BookerLayout } from "../types";

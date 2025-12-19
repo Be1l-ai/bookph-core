@@ -1,7 +1,7 @@
 import { Retell } from "retell-sdk";
 import { describe, it, expect, beforeEach, vi, beforeAll } from "vitest";
 
-import logger from "@calcom/lib/logger";
+import logger from "@bookph/core/lib/logger";
 
 import type {
   CreateLLMRequest,

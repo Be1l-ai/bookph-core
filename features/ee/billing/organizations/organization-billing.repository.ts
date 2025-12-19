@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@bookph/core/prisma";
 
 import type { OrganizationBillingRepository as IOrganizationBillingRepository } from "./organization-billing.repository.interface";
 

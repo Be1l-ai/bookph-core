@@ -1,5 +1,5 @@
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { WebhookRepository } from "@bookph/core/features/webhooks/lib/repository/WebhookRepository";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TGetInputSchema } from "./get.schema";
 

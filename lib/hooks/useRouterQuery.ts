@@ -1,4 +1,4 @@
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
 
 /**
  * An alternative to Object.fromEntries that allows duplicate keys.

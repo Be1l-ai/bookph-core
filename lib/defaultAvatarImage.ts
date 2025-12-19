@@ -1,4 +1,4 @@
-import type { Team } from "@calcom/prisma/client";
+import type { Team } from "@bookph/core/prisma/client";
 
 /**
  * Given an avatar URL and a name, return the appropriate avatar URL. In the

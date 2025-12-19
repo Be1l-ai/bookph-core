@@ -3,10 +3,10 @@ import prismaMock from "../../../tests/libs/__mocks__/prismaMock";
 
 import { vi, describe, it, beforeAll, afterAll, expect, beforeEach, afterEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import * as CalcomEmails from "@calcom/emails/organization-email-service";
-import { getNoSlotsNotificationService } from "@calcom/features/di/containers/NoSlotsNotification";
-import { RedisService } from "@calcom/features/redis/RedisService";
+import dayjs from "@bookph/core/dayjs";
+import * as CalcomEmails from "@bookph/core/emails/organization-email-service";
+import { getNoSlotsNotificationService } from "@bookph/core/features/di/containers/NoSlotsNotification";
+import { RedisService } from "@bookph/core/features/redis/RedisService";
 
 vi.mock("@calcom/features/redis/RedisService", () => {
   const mockedRedis = vi.fn();

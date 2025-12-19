@@ -1,11 +1,11 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
 import type {
   InsightsBookingServicePublicOptions,
   InsightsBookingServiceFilterOptions,
   InsightsBookingBaseService,
-} from "@calcom/features/insights/services/InsightsBookingBaseService";
-import type { InsightsBookingService } from "@calcom/features/insights/services/InsightsBookingDIService";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
+} from "@bookph/core/features/insights/services/InsightsBookingBaseService";
+import type { InsightsBookingService } from "@bookph/core/features/insights/services/InsightsBookingDIService";
+import { prismaModule } from "@bookph/core/features/di/modules/Prisma";
 
 import { createContainer } from "../di";
 import { insightsBookingModule } from "../modules/InsightsBooking";

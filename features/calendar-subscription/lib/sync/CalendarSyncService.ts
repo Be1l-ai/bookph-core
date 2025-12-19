@@ -1,7 +1,7 @@
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { CalendarSubscriptionEventItem } from "@calcom/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import type { CalendarSubscriptionEventItem } from "@bookph/core/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
+import logger from "@bookph/core/lib/logger";
+import type { SelectedCalendar } from "@bookph/core/prisma/client";
 
 const log = logger.getSubLogger({ prefix: ["CalendarSyncService"] });
 

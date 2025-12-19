@@ -1,8 +1,8 @@
 import { z } from "zod";
-import type { Tasker } from "@calcom/features/tasker/tasker";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
+import type { Tasker } from "@bookph/core/features/tasker/tasker";
+import { IS_PRODUCTION } from "@bookph/core/lib/constants";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import type { ISimpleLogger } from "@bookph/core/features/di/shared/services/logger.service";
 
 import type { Actor } from "../../../bookings/lib/types/actor";
 import type { BookingAuditAction, BookingAuditTaskProducerActionData } from "../types/bookingAuditTask";

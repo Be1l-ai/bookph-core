@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-import { BASE_URL, IS_PRODUCTION } from "@calcom/lib/constants";
+import { BASE_URL, IS_PRODUCTION } from "@bookph/core/lib/constants";
 
 import EmailCommonDivider from "./EmailCommonDivider";
 import Row from "./Row";

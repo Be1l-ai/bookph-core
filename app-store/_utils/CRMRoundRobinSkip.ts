@@ -1,11 +1,11 @@
 import type { z } from "zod";
 
-import type { EventTypeAppMetadataSchema } from "@calcom/app-store/zod-utils";
-import CrmManager from "@calcom/features/crmManager/crmManager";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import type { EventTypeAppMetadataSchema } from "@bookph/core/app-store/zod-utils";
+import CrmManager from "@bookph/core/features/crmManager/crmManager";
+import logger from "@bookph/core/lib/logger";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
 
 export async function getCRMContactOwnerForRRLeadSkip(
   bookerEmail: string,

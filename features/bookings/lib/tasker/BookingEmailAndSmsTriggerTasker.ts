@@ -1,4 +1,4 @@
-import type { ITaskerDependencies } from "@calcom/lib/tasker/types";
+import type { ITaskerDependencies } from "@bookph/core/lib/tasker/types";
 
 import { IBookingEmailAndSmsTasker } from "./types";
 

@@ -1,4 +1,4 @@
-import type { TrackingData } from "@calcom/lib/tracking";
+import type { TrackingData } from "@bookph/core/lib/tracking";
 
 import type {
   AIPhoneServiceProvider,

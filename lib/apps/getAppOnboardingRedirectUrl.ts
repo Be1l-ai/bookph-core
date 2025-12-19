@@ -1,4 +1,4 @@
-import { AppOnboardingSteps } from "@calcom/lib/apps/appOnboardingSteps";
+import { AppOnboardingSteps } from "@bookph/core/lib/apps/appOnboardingSteps";
 
 import { getAppOnboardingUrl } from "./getAppOnboardingUrl";
 

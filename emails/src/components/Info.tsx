@@ -1,4 +1,4 @@
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
 
 const Spacer = () => <p style={{ height: 6 }} />;
 

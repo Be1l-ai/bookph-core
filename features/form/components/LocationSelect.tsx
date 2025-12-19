@@ -1,12 +1,12 @@
 import type { GroupBase, Props, SingleValue } from "react-select";
 import { components } from "react-select";
 
-import type { EventLocationType } from "@calcom/app-store/locations";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import invertLogoOnDark from "@calcom/lib/invertLogoOnDark";
-import { Select } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import classNames from "@calcom/ui/classNames";
+import type { EventLocationType } from "@bookph/core/app-store/locations";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import invertLogoOnDark from "@bookph/core/lib/invertLogoOnDark";
+import { Select } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import classNames from "@bookph/ui/classNames";
 
 export type LocationSelectCustomClassNames = {
   optionIcon?: string;

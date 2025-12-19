@@ -1,26 +1,26 @@
 import { z } from "zod";
 
-import type { WorkflowType } from "@calcom/ee/workflows/components/WorkflowListPage";
-import { FORM_TRIGGER_WORKFLOW_EVENTS } from "@calcom/ee/workflows/lib/constants";
-import { deleteScheduledAIPhoneCall } from "@calcom/ee/workflows/lib/reminders/aiPhoneCallManager";
-import { deleteScheduledEmailReminder } from "@calcom/ee/workflows/lib/reminders/emailReminderManager";
-import { deleteScheduledSMSReminder } from "@calcom/ee/workflows/lib/reminders/smsReminderManager";
-import type { WorkflowStep } from "@calcom/ee/workflows/lib/types";
-import { hasFilter } from "@calcom/features/filters/lib/hasFilter";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import type { WorkflowType } from "@bookph/core/ee/workflows/components/WorkflowListPage";
+import { FORM_TRIGGER_WORKFLOW_EVENTS } from "@bookph/core/ee/workflows/lib/constants";
+import { deleteScheduledAIPhoneCall } from "@bookph/core/ee/workflows/lib/reminders/aiPhoneCallManager";
+import { deleteScheduledEmailReminder } from "@bookph/core/ee/workflows/lib/reminders/emailReminderManager";
+import { deleteScheduledSMSReminder } from "@bookph/core/ee/workflows/lib/reminders/smsReminderManager";
+import type { WorkflowStep } from "@bookph/core/ee/workflows/lib/types";
+import { hasFilter } from "@bookph/core/features/filters/lib/hasFilter";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
 import {
   MembershipRole,
   TimeUnit,
   WorkflowTriggerEvents,
   WorkflowType as PrismaWorkflowType,
-} from "@calcom/prisma/enums";
-import { WorkflowMethods } from "@calcom/prisma/enums";
-import type { TFilteredListInputSchema } from "@calcom/trpc/server/routers/viewer/workflows/filteredList.schema";
-import type { TGetVerifiedEmailsInputSchema } from "@calcom/trpc/server/routers/viewer/workflows/getVerifiedEmails.schema";
-import type { TGetVerifiedNumbersInputSchema } from "@calcom/trpc/server/routers/viewer/workflows/getVerifiedNumbers.schema";
+} from "@bookph/core/prisma/enums";
+import { WorkflowMethods } from "@bookph/core/prisma/enums";
+import type { TFilteredListInputSchema } from "@bookph/core/trpc/server/routers/viewer/workflows/filteredList.schema";
+import type { TGetVerifiedEmailsInputSchema } from "@bookph/core/trpc/server/routers/viewer/workflows/getVerifiedEmails.schema";
+import type { TGetVerifiedNumbersInputSchema } from "@bookph/core/trpc/server/routers/viewer/workflows/getVerifiedNumbers.schema";
 
 export const ZGetInputSchema = z.object({
   id: z.number(),

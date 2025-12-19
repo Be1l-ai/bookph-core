@@ -1,4 +1,4 @@
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 export const IS_EUROPE = dayjs.tz.guess()?.indexOf("Europe") !== -1;
 export const DEFAULT_TIMEZONE = "Asia/Manila";

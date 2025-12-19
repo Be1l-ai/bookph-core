@@ -3,21 +3,21 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import { availabilityAsString } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { sortAvailabilityStrings } from "@calcom/lib/weekstart";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { availabilityAsString } from "@bookph/core/lib/availability";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { sortAvailabilityStrings } from "@bookph/core/lib/weekstart";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dropdown";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
 
 export function ScheduleListItem({
   schedule,

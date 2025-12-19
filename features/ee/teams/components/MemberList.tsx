@@ -17,7 +17,7 @@ import { useQueryState, parseAsBoolean } from "nuqs";
 import { useMemo, useReducer, useRef, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
 import {
   DataTableProvider,
   DataTableToolbar,
@@ -28,25 +28,25 @@ import {
   useFetchMoreOnBottomReached,
   useColumnFilters,
   convertFacetedValuesToMap,
-} from "@calcom/features/data-table";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { DynamicLink } from "@calcom/features/users/components/UserTable/BulkActions/DynamicLink";
-import type { MemberPermissions } from "@calcom/features/users/components/UserTable/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+} from "@bookph/core/features/data-table";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import { DynamicLink } from "@bookph/core/features/users/components/UserTable/BulkActions/DynamicLink";
+import type { MemberPermissions } from "@bookph/core/features/users/components/UserTable/types";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
 import {
   DialogContent,
   DialogFooter,
   DialogClose,
   ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
+} from "@bookph/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -55,10 +55,10 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@bookph/ui/components/dropdown";
+import { Checkbox } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import DeleteBulkTeamMembers from "./DeleteBulkTeamMembers";
 import { EditMemberSheet } from "./EditMemberSheet";

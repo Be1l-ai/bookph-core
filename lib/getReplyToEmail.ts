@@ -1,4 +1,4 @@
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 /**
  * Returns the reply-to email address to use, with fallback to organizer's email

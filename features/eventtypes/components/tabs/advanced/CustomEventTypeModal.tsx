@@ -3,15 +3,15 @@ import type { SubmitHandler } from "react-hook-form";
 import { FormProvider } from "react-hook-form";
 import { useForm, useFormContext } from "react-hook-form";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getEventName, validateCustomEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import type { InputClassNames } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { TextField } from "@calcom/ui/components/form";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import type { EventNameObjectType } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { getEventName, validateCustomEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import type { InputClassNames } from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
+import { TextField } from "@bookph/ui/components/form";
 
 interface FormValues {
   customEventName: string;

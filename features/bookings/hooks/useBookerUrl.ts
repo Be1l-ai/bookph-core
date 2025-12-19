@@ -1,5 +1,5 @@
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { WEBAPP_URL, WEBSITE_URL } from "@calcom/lib/constants";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import { WEBAPP_URL, WEBSITE_URL } from "@bookph/core/lib/constants";
 
 export const useBookerUrl = () => {
   const orgBranding = useOrgBranding();

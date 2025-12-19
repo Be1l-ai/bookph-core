@@ -1,6 +1,6 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
-import prisma from "@calcom/prisma";
+import { createDefaultAIPhoneServiceProvider } from "@bookph/core/features/calAIPhone";
+import { PrismaPhoneNumberRepository } from "@bookph/core/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
+import prisma from "@bookph/core/prisma";
 
 import type { LazyModule, SWHMap } from "./__handler";
 import { HttpCode } from "./__handler";

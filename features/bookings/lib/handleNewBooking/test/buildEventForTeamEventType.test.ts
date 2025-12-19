@@ -1,7 +1,7 @@
 // or wherever it's from
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
-import { SchedulingType } from "@calcom/prisma/enums";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 import { buildEventForTeamEventType } from "../../service/RegularBookingService";
 

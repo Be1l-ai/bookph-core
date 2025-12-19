@@ -1,7 +1,7 @@
 import { v5 as uuidv5 } from "uuid";
 
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { Prisma } from "@bookph/core/prisma/client";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 function generateIdempotencyKey({
   startTime,

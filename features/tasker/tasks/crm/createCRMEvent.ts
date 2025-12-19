@@ -1,11 +1,11 @@
-import { appDataSchemas } from "@calcom/app-store/apps.schemas.generated";
-import { RetryableError } from "@calcom/lib/crmManager/errors";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import { appDataSchemas } from "@bookph/core/app-store/apps.schemas.generated";
+import { RetryableError } from "@bookph/core/lib/crmManager/errors";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
 
 import buildCalendarEvent from "./lib/buildCalendarEvent";
 import { createCRMEventSchema } from "./schema";
@@ -191,7 +191,7 @@ export async function createCRMEvent(payload: string): Promise<void> {
           continue;
         }
 
-        const CrmManager = (await import("@calcom/features/crmManager/crmManager")).default;
+        const CrmManager = (await import("@bookph/core/features/crmManager/crmManager")).default;
 
         const crm = new CrmManager(crmCredential, app);
 

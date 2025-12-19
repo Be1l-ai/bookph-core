@@ -5,13 +5,13 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { Ensure } from "@calcom/types/utils";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Label, TextField, ToggleGroup, Form } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import type { Ensure } from "@bookph/core/types/utils";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { Label, TextField, ToggleGroup, Form } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { UserPermissionRole } from "../../../../prisma/enums";
 

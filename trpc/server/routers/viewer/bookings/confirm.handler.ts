@@ -1,38 +1,38 @@
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import type { LocationObject } from "@calcom/app-store/locations";
-import { getLocationValueForDB } from "@calcom/app-store/locations";
-import { sendDeclinedEmailsAndSMS } from "@calcom/emails/email-manager";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { handleConfirmation } from "@calcom/features/bookings/lib/handleConfirmation";
-import { handleWebhookTrigger } from "@calcom/features/bookings/lib/handleWebhookTrigger";
-import { processPaymentRefund } from "@calcom/features/bookings/lib/payment/processPaymentRefund";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { workflowSelect } from "@calcom/features/ee/workflows/lib/getAllWorkflows";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import type { EventPayloadType, EventTypeInfo } from "@calcom/features/webhooks/lib/sendPayload";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { PrismaOrgMembershipRepository } from "@calcom/lib/server/repository/PrismaOrgMembershipRepository";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { TraceContext } from "@calcom/lib/tracing";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import type { LocationObject } from "@bookph/core/app-store/locations";
+import { getLocationValueForDB } from "@bookph/core/app-store/locations";
+import { sendDeclinedEmailsAndSMS } from "@bookph/core/emails/email-manager";
+import { getAllCredentialsIncludeServiceAccountKey } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { handleConfirmation } from "@bookph/core/features/bookings/lib/handleConfirmation";
+import { handleWebhookTrigger } from "@bookph/core/features/bookings/lib/handleWebhookTrigger";
+import { processPaymentRefund } from "@bookph/core/features/bookings/lib/payment/processPaymentRefund";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { workflowSelect } from "@bookph/core/features/ee/workflows/lib/getAllWorkflows";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import type { GetSubscriberOptions } from "@bookph/core/features/webhooks/lib/getWebhooks";
+import type { EventPayloadType, EventTypeInfo } from "@bookph/core/features/webhooks/lib/sendPayload";
+import getOrgIdFromMemberOrTeamId from "@bookph/core/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@bookph/core/lib/getTeamIdFromEventType";
+import { isPrismaObjOrUndefined } from "@bookph/core/lib/isPrismaObj";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { PrismaOrgMembershipRepository } from "@bookph/core/lib/server/repository/PrismaOrgMembershipRepository";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import type { TraceContext } from "@bookph/core/lib/tracing";
+import { prisma } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
 import {
   BookingStatus,
   MembershipRole,
   WebhookTriggerEvents,
   WorkflowTriggerEvents,
   UserPermissionRole,
-} from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import { getAllWorkflowsFromEventType } from "@calcom/trpc/server/routers/viewer/workflows/util";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@bookph/core/prisma/enums";
+import type { EventTypeMetadata } from "@bookph/core/prisma/zod-utils";
+import { getAllWorkflowsFromEventType } from "@bookph/core/trpc/server/routers/viewer/workflows/util";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

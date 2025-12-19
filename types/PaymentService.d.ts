@@ -1,5 +1,5 @@
-import type { Payment, Prisma, Booking, PaymentOption } from "@calcom/prisma/client";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { Payment, Prisma, Booking, PaymentOption } from "@bookph/core/prisma/client";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 export interface PaymentApp {
   lib?: {

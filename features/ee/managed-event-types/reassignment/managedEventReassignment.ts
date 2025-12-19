@@ -1,4 +1,4 @@
-import { getManagedEventReassignmentService } from "@calcom/features/di/containers/ManagedEventReassignment";
+import { getManagedEventReassignmentService } from "@bookph/core/features/di/containers/ManagedEventReassignment";
 
 interface ManagedEventReassignmentParams {
   bookingId: number;

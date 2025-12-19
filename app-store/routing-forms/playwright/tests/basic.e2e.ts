@@ -1,12 +1,12 @@
 import type { Locator, Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import { AttributeType, MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import type { Fixtures } from "@calcom/web/playwright/lib/fixtures";
-import { test } from "@calcom/web/playwright/lib/fixtures";
-import { selectInteractions } from "@calcom/web/playwright/lib/pageObject";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { prisma } from "@bookph/core/prisma";
+import { AttributeType, MembershipRole, SchedulingType } from "@bookph/core/prisma/enums";
+import type { Fixtures } from "@bookph/core/web/playwright/lib/fixtures";
+import { test } from "@bookph/core/web/playwright/lib/fixtures";
+import { selectInteractions } from "@bookph/core/web/playwright/lib/pageObject";
 import {
   confirmBooking,
   getEmailsReceivedByUser,
@@ -14,7 +14,7 @@ import {
   selectFirstAvailableTimeSlotNextMonth,
   testEmail,
   testName,
-} from "@calcom/web/playwright/lib/testUtils";
+} from "@bookph/core/web/playwright/lib/testUtils";
 
 import {
   addForm,

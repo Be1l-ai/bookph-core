@@ -2,16 +2,16 @@
 
 import { useReducer } from "react";
 
-import { AppList } from "@calcom/features/apps/components/AppList";
-import DisconnectIntegrationModal from "@calcom/features/apps/components/DisconnectIntegrationModal";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import { AppList } from "@bookph/core/features/apps/components/AppList";
+import DisconnectIntegrationModal from "@bookph/core/features/apps/components/DisconnectIntegrationModal";
+import SettingsHeader from "@bookph/core/features/settings/appDir/SettingsHeader";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { SkeletonText, SkeletonContainer } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
 
 export type UpdateUsersDefaultConferencingAppParams = {
   appSlug: string;

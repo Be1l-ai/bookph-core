@@ -1,6 +1,6 @@
-import { handleNoShowFee } from "@calcom/features/bookings/lib/payment/handleNoShowFee";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { PrismaClient } from "@calcom/prisma";
+import { handleNoShowFee } from "@bookph/core/features/bookings/lib/payment/handleNoShowFee";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

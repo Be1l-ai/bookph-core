@@ -3,22 +3,22 @@ import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import type { Options } from "react-select";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
 import type {
   FormValues,
   Host,
   InputClassNames,
   SelectClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import { groupHostsByGroupId, getHostsFromOtherGroups } from "@calcom/lib/bookings/hostGroupUtils";
-import { DEFAULT_GROUP_ID } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+} from "@bookph/core/features/eventtypes/lib/types";
+import { groupHostsByGroupId, getHostsFromOtherGroups } from "@bookph/core/lib/bookings/hostGroupUtils";
+import { DEFAULT_GROUP_ID } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
+import { Label } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
 
 import type { CheckedSelectOption } from "./CheckedTeamSelect";
 import WeightDescription from "./WeightDescription";

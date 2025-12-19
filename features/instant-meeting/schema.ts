@@ -1,3 +1,3 @@
-import { instantMeetingSubscriptionSchema as subscriptionSchema } from "@calcom/features/bookings/lib/dto/schema";
+import { instantMeetingSubscriptionSchema as subscriptionSchema } from "@bookph/core/features/bookings/lib/dto/schema";
 
 export { subscriptionSchema };

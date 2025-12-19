@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import type { OptionProps, SingleValueProps } from "react-select";
 import { components } from "react-select";
 
-import type { SelectClassNames } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Select } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import type { SelectClassNames } from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { Select } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
 
 interface Props {
   onChange: (value: { externalId: string; integration: string }) => void;

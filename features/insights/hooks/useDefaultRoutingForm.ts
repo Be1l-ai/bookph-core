@@ -1,8 +1,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { trpc } from "@calcom/trpc";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { trpc } from "@bookph/core/trpc";
 
 export function useDefaultRoutingForm({
   userId,

@@ -1,19 +1,19 @@
-import type { LocationObject } from "@calcom/app-store/locations";
-import { workflowSelect } from "@calcom/ee/workflows/lib/getAllWorkflows";
-import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
-import type { DefaultEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import { userSelect } from "@calcom/prisma/selects/user";
+import type { LocationObject } from "@bookph/core/app-store/locations";
+import { workflowSelect } from "@bookph/core/ee/workflows/lib/getAllWorkflows";
+import { getBookingFieldsWithSystemFields } from "@bookph/core/features/bookings/lib/getBookingFields";
+import type { DefaultEvent } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { withSelectedCalendars } from "@bookph/core/features/users/repositories/UserRepository";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
+import { userSelect } from "@bookph/core/prisma/selects/user";
 import {
   EventTypeMetaDataSchema,
   customInputSchema,
   rrSegmentQueryValueSchema,
-} from "@calcom/prisma/zod-utils";
+} from "@bookph/core/prisma/zod-utils";
 
 const getEventTypesFromDBSelect = {
   id: true,

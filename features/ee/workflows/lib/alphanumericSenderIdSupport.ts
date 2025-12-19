@@ -1,4 +1,4 @@
-import { SENDER_ID } from "@calcom/lib/constants";
+import { SENDER_ID } from "@bookph/core/lib/constants";
 
 export function getSenderId(phoneNumber?: string | null, sender?: string | null) {
   const isAlphanumericSenderIdSupported = !noAlphanumericSenderIdSupport.find(

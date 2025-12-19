@@ -1,8 +1,8 @@
-import type { JsonValue } from "@calcom/types/Json";
+import type { JsonValue } from "@bookph/core/types/Json";
 
-import logger from "@calcom/lib/logger";
-import type { IFeaturesRepository } from "@calcom/features/flags/features.repository.interface";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import type { IFeaturesRepository } from "@bookph/core/features/flags/features.repository.interface";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
 
 import type { Actor } from "../../../bookings/lib/types/actor";
 import type { BookingAuditTaskBasePayload } from "../types/bookingAuditTask";
@@ -10,7 +10,7 @@ import { BookingAuditTaskBaseSchema } from "../types/bookingAuditTask";
 import { BookingAuditActionServiceRegistry, type AuditActionData } from "./BookingAuditActionServiceRegistry";
 import type { IBookingAuditRepository, BookingAuditType, BookingAuditAction } from "../repository/IBookingAuditRepository";
 import type { IAuditActorRepository } from "../repository/IAuditActorRepository";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 interface BookingAuditTaskConsumerDeps {
     bookingAuditRepository: IBookingAuditRepository;
@@ -178,7 +178,7 @@ export class BookingAuditTaskConsumer {
         taskId: string
     ): Promise<void> {
         try {
-            const { Task } = await import("@calcom/features/tasker/repository");
+            const { Task } = await import("@bookph/core/features/tasker/repository");
 
             const updatedPayload = { ...payload, data: latestData };
 

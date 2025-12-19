@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import type { BookerState } from "@calcom/features/bookings/Booker/types";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import type { BookerState } from "@bookph/core/features/bookings/Booker/types";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
 
 import { useTimesForSchedule } from "./useTimesForSchedule";
 

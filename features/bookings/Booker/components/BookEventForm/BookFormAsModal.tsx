@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import React from "react";
 
-import { useEventTypeById } from "@calcom/atoms/hooks/event-types/private/useEventTypeById";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { DialogContent } from "@calcom/ui/components/dialog";
+import { useEventTypeById } from "@bookph/core/atoms/hooks/event-types/private/useEventTypeById";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Badge } from "@bookph/ui/components/badge";
+import { DialogContent } from "@bookph/ui/components/dialog";
 
 import { getDurationFormatted } from "../../../components/event-meta/Duration";
 import { FromTime } from "../../utils/dates";

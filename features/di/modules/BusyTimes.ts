@@ -1,5 +1,5 @@
-import type { IBusyTimesService } from "@calcom/features/busyTimes/services/getBusyTimes";
-import { BusyTimesService } from "@calcom/features/busyTimes/services/getBusyTimes";
+import type { IBusyTimesService } from "@bookph/core/features/busyTimes/services/getBusyTimes";
+import { BusyTimesService } from "@bookph/core/features/busyTimes/services/getBusyTimes";
 
 import { createModule } from "../di";
 import { DI_TOKENS } from "../tokens";

@@ -1,8 +1,8 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import { checkIfEmailIsBlockedInWatchlistController } from "@calcom/features/watchlist/operations/check-if-email-in-watchlist.controller";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { CreationSource } from "@calcom/prisma/enums";
+import { checkIfEmailIsBlockedInWatchlistController } from "@bookph/core/features/watchlist/operations/check-if-email-in-watchlist.controller";
+import { hashPassword } from "@bookph/core/lib/auth/hashPassword";
+import { CreationSource } from "@bookph/core/prisma/enums";
 
 import { UserCreationService } from "./userCreationService";
 

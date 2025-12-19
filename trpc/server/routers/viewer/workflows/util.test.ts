@@ -1,8 +1,8 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
 
 import { isAuthorized } from "./util";
 

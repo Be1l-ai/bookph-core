@@ -4,7 +4,7 @@ import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import { useEffect, useRef } from "react";
 
-import { useGeo } from "@calcom/web/app/GeoContext";
+import { useGeo } from "@bookph/core/web/app/GeoContext";
 
 function Provider({ children }: { children: React.ReactNode }) {
   // BookPH: PostHog telemetry disabled for AGPLv3 self-hosted version

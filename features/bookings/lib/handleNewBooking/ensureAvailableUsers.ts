@@ -1,18 +1,18 @@
 import type { Logger } from "tslog";
 
-import dayjs from "@calcom/dayjs";
-import type { Dayjs } from "@calcom/dayjs";
-import { checkForConflicts } from "@calcom/features/bookings/lib/conflictChecker/checkForConflicts";
-import { getBusyTimesService } from "@calcom/features/di/containers/BusyTimes";
-import { getUserAvailabilityService } from "@calcom/features/di/containers/GetUserAvailability";
-import { buildDateRanges } from "@calcom/features/schedules/lib/date-ranges";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
-import { parseDurationLimit } from "@calcom/lib/intervalLimits/isDurationLimits";
-import { getPiiFreeUser } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import prisma from "@calcom/prisma";
+import dayjs from "@bookph/core/dayjs";
+import type { Dayjs } from "@bookph/core/dayjs";
+import { checkForConflicts } from "@bookph/core/features/bookings/lib/conflictChecker/checkForConflicts";
+import { getBusyTimesService } from "@bookph/core/features/di/containers/BusyTimes";
+import { getUserAvailabilityService } from "@bookph/core/features/di/containers/GetUserAvailability";
+import { buildDateRanges } from "@bookph/core/features/schedules/lib/date-ranges";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { parseBookingLimit } from "@bookph/core/lib/intervalLimits/isBookingLimits";
+import { parseDurationLimit } from "@bookph/core/lib/intervalLimits/isDurationLimits";
+import { getPiiFreeUser } from "@bookph/core/lib/piiFreeData";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import prisma from "@bookph/core/prisma";
 
 import type { getEventTypeResponse } from "./getEventTypesFromDB";
 import type { BookingType } from "./originalRescheduledBookingUtils";

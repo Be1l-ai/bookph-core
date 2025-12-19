@@ -4,10 +4,10 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import { trpc } from "@calcom/trpc/react";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useParamsWithFallback } from "@bookph/core/lib/hooks/useParamsWithFallback";
+import { trpc } from "@bookph/core/trpc/react";
 
 import InviteLinkSettingsModal from "../components/InviteLinkSettingsModal";
 import { MemberInvitationModalWithoutMembers } from "../components/MemberInvitationModal";

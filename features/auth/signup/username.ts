@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
-import notEmpty from "@calcom/lib/notEmpty";
-import { isPremiumUserName, generateUsernameSuggestion } from "@calcom/lib/server/username";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
+import notEmpty from "@bookph/core/lib/notEmpty";
+import { isPremiumUserName, generateUsernameSuggestion } from "@bookph/core/lib/server/username";
+import slugify from "@bookph/core/lib/slugify";
+import prisma from "@bookph/core/prisma";
 
 export type RequestWithUsernameStatus = NextApiRequest & {
   usernameStatus: {

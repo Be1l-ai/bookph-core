@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import { RRTimestampBasis } from "@calcom/prisma/enums";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { prisma } from "@bookph/core/prisma";
+import { RRTimestampBasis } from "@bookph/core/prisma/enums";
 
 import type { TrpcSessionUser } from "../../../types";
 import { updateHandler } from "./update.handler";

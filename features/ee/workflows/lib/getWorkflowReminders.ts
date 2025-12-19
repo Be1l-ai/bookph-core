@@ -1,8 +1,8 @@
-import dayjs from "@calcom/dayjs";
-import prisma from "@calcom/prisma";
-import type { EventType, User, WorkflowReminder, WorkflowStep } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import { WorkflowMethods } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import prisma from "@bookph/core/prisma";
+import type { EventType, User, WorkflowReminder, WorkflowStep } from "@bookph/core/prisma/client";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { WorkflowMethods } from "@bookph/core/prisma/enums";
 
 type PartialWorkflowStep =
   | (Partial<WorkflowStep> & {

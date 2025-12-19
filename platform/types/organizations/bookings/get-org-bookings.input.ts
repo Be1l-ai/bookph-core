@@ -2,7 +2,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Transform } from "class-transformer";
 import { ArrayMinSize, IsArray, IsNumber, IsOptional } from "class-validator";
 
-import { GetBookingsInput_2024_08_13 } from "@calcom/platform-types";
+import { GetBookingsInput_2024_08_13 } from "@bookph/core/platform-types";
 
 export class GetOrganizationsBookingsInput extends GetBookingsInput_2024_08_13 {
   @IsArray()

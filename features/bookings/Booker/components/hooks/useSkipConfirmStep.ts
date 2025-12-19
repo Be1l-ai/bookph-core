@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import type { UseBookingFormReturnType } from "@calcom/features/bookings/Booker/components/hooks/useBookingForm";
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { getBookingResponsesSchemaWithOptionalChecks } from "@calcom/features/bookings/lib/getBookingResponsesSchema";
+import type { UseBookingFormReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useBookingForm";
+import { useBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { getBookingResponsesSchemaWithOptionalChecks } from "@bookph/core/features/bookings/lib/getBookingResponsesSchema";
 
 import type { BookerEvent } from "../../../types";
 import type { BookerState } from "../../types";

@@ -1,5 +1,5 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { prisma } from "@calcom/prisma";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { prisma } from "@bookph/core/prisma";
 
 import type { IRemoveMemberService } from "./IRemoveMemberService";
 import { LegacyRemoveMemberService } from "./LegacyRemoveMemberService";

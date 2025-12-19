@@ -4,15 +4,15 @@ import { useState } from "react";
 import {
   FilterCheckboxField,
   FilterCheckboxFieldsContainer,
-} from "@calcom/features/filters/components/TeamsFilter";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Divider } from "@calcom/ui/components/divider";
-import { FilterSearchField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { AnimatedPopover } from "@calcom/ui/components/popover";
+} from "@bookph/core/features/filters/components/TeamsFilter";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Divider } from "@bookph/ui/components/divider";
+import { FilterSearchField } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { AnimatedPopover } from "@bookph/ui/components/popover";
 
 import { useInsightsOrgTeams } from "../hooks/useInsightsOrgTeams";
 

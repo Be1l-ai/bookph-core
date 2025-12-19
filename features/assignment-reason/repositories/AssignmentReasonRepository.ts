@@ -1,6 +1,6 @@
-import logger from "@calcom/lib/logger";
-import type { AssignmentReason, AssignmentReasonEnum } from "@calcom/prisma/client";
-import type { PrismaClient } from "@calcom/prisma";
+import logger from "@bookph/core/lib/logger";
+import type { AssignmentReason, AssignmentReasonEnum } from "@bookph/core/prisma/client";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 const log = logger.getSubLogger({ prefix: ["AssignmentReasonRepository"] });
 

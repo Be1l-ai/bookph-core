@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { eventTypeMetaDataSchemaWithoutApps } from "@calcom/prisma/zod-utils";
+import { eventTypeMetaDataSchemaWithoutApps } from "@bookph/core/prisma/zod-utils";
 
 import { appDataSchemas } from "./apps.schemas.generated";
 

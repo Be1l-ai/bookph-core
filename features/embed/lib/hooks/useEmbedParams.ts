@@ -1,4 +1,4 @@
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
 
 import type { EmbedType } from "../../types";
 import { useEmbedDialogCtx } from "./useEmbedDialogCtx";

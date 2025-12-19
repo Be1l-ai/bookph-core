@@ -1,7 +1,7 @@
-import { PrismaAuditActorRepository } from "@calcom/features/booking-audit/lib/repository/PrismaAuditActorRepository";
-import { BOOKING_AUDIT_DI_TOKENS } from "@calcom/features/booking-audit/di/tokens";
-import { bindModuleToClassOnToken } from "@calcom/features/di/di";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+import { PrismaAuditActorRepository } from "@bookph/core/features/booking-audit/lib/repository/PrismaAuditActorRepository";
+import { BOOKING_AUDIT_DI_TOKENS } from "@bookph/core/features/booking-audit/di/tokens";
+import { bindModuleToClassOnToken } from "@bookph/core/features/di/di";
+import { moduleLoader as prismaModuleLoader } from "@bookph/core/features/di/modules/Prisma";
 import { createModule } from "../../di/di";
 
 export const auditActorRepositoryModule = createModule();

@@ -1,18 +1,18 @@
 import { default as cloneDeep } from "lodash/cloneDeep";
 import type { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import type BaseEmail from "@calcom/emails/templates/_base-email";
-import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import { OrganizationSettingsRepository } from "@calcom/features/organizations/repositories/OrganizationSettingsRepository";
-import { formatCalEvent } from "@calcom/lib/formatCalendarEvent";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { prisma } from "@calcom/prisma";
-import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import dayjs from "@bookph/core/dayjs";
+import type BaseEmail from "@bookph/core/emails/templates/_base-email";
+import type { EventNameObjectType } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { getEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { OrganizationSettingsRepository } from "@bookph/core/features/organizations/repositories/OrganizationSettingsRepository";
+import { formatCalEvent } from "@bookph/core/lib/formatCalendarEvent";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import { prisma } from "@bookph/core/prisma";
+import type { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 import AwaitingPaymentSMS from "../sms/attendee/awaiting-payment-sms";
 import CancelledSeatSMS from "../sms/attendee/cancelled-seat-sms";

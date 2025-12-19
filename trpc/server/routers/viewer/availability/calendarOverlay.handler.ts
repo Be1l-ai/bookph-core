@@ -1,8 +1,8 @@
-import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { getBusyCalendarTimes } from "@calcom/features/calendars/lib/CalendarManager";
-import { prisma } from "@calcom/prisma";
-import type { EventBusyDate } from "@calcom/types/Calendar";
+import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import dayjs from "@bookph/core/dayjs";
+import { getBusyCalendarTimes } from "@bookph/core/features/calendars/lib/CalendarManager";
+import { prisma } from "@bookph/core/prisma";
+import type { EventBusyDate } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

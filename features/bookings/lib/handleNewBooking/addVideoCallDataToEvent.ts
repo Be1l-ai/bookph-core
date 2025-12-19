@@ -1,5 +1,5 @@
-import type { BookingReference } from "@calcom/prisma/client";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { BookingReference } from "@bookph/core/prisma/client";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 /** Updates the evt object with video call data found from booking references
  *

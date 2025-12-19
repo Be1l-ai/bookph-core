@@ -2,18 +2,18 @@ import type { JsonGroup, JsonItem, JsonRule, JsonTree } from "react-awesome-quer
 import type { Config } from "react-awesome-query-builder";
 import { Utils as QbUtils } from "react-awesome-query-builder";
 
-import { getQueryBuilderConfigForAttributes } from "@calcom/app-store/routing-forms/lib/getQueryBuilderConfig";
-import type { LocalRoute } from "@calcom/app-store/routing-forms/types/types";
-import { resolveQueryValue } from "@calcom/lib/raqb/resolveQueryValue";
-import type { dynamicFieldValueOperands } from "@calcom/lib/raqb/types";
-import { caseInsensitive } from "@calcom/lib/raqb/utils";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { getQueryBuilderConfigForAttributes } from "@bookph/core/app-store/routing-forms/lib/getQueryBuilderConfig";
+import type { LocalRoute } from "@bookph/core/app-store/routing-forms/types/types";
+import { resolveQueryValue } from "@bookph/core/lib/raqb/resolveQueryValue";
+import type { dynamicFieldValueOperands } from "@bookph/core/lib/raqb/types";
+import { caseInsensitive } from "@bookph/core/lib/raqb/utils";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 import type {
   AttributeOptionValueWithType,
   AttributeOptionValue,
   Attribute,
-} from "@calcom/lib/service/attribute/server/getAttributes";
-import { AttributeType } from "@calcom/prisma/enums";
+} from "@bookph/core/lib/service/attribute/server/getAttributes";
+import { AttributeType } from "@bookph/core/prisma/enums";
 
 function ensureArray(value: string | string[]) {
   return typeof value === "string" ? [value] : value;

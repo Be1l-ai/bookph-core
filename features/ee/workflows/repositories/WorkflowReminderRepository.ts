@@ -1,6 +1,6 @@
-// import { prisma as this.prismaClient } from "@calcom/prisma";
-import type { PrismaClient } from "@calcom/prisma";
-import { WorkflowMethods } from "@calcom/prisma/enums";
+// import { prisma as this.prismaClient } from "@bookph/core/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { WorkflowMethods } from "@bookph/core/prisma/enums";
 
 export class WorkflowReminderRepository {
   constructor(private prismaClient: PrismaClient) {}

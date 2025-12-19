@@ -1,10 +1,10 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import { deleteDomain } from "@bookph/core/lib/domainManager/organization";
 
 import { TeamService } from "./teamService";
 
@@ -64,7 +64,7 @@ describe("TeamService", () => {
   beforeEach(async () => {
     database.clear();
     
-    const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+    const { getTeamBillingServiceFactory } = await import("@bookph/core/ee/billing/di/containers/Billing");
     vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
       findAndInit: vi.fn().mockImplementation(async (teamId) => {
         const teamSpecificBilling = {

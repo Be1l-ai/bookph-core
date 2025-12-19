@@ -1,17 +1,17 @@
 import { type TFunction } from "i18next";
 
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { isOrganisationOwner } from "@calcom/lib/server/queries/organisations";
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { CreationSource } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getTeamBillingServiceFactory } from "@bookph/core/ee/billing/di/containers/Billing";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { isOrganisationOwner } from "@bookph/core/lib/server/queries/organisations";
+import prisma from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { CreationSource } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

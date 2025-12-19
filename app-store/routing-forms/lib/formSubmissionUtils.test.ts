@@ -1,20 +1,20 @@
 import "@calcom/lib/__mocks__/logger";
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
 
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import type { GetWebhooksReturnType } from "@calcom/features/webhooks/lib/getWebhooks";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import type { Workflow } from "@bookph/core/features/ee/workflows/lib/types";
+import type { GetWebhooksReturnType } from "@bookph/core/features/webhooks/lib/getWebhooks";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
+import { sendGenericWebhookPayload } from "@bookph/core/features/webhooks/lib/sendPayload";
 import {
   WebhookTriggerEvents,
   WorkflowTriggerEvents,
   WorkflowActions,
   WorkflowTemplates,
   TimeUnit,
-} from "@calcom/prisma/enums";
+} from "@bookph/core/prisma/enums";
 
 import type { FormResponse, Field } from "../types/types";
 import { _onFormSubmission } from "./formSubmissionUtils";

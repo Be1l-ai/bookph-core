@@ -1,4 +1,4 @@
-import type { BookingStatus } from "@calcom/prisma/enums";
+import type { BookingStatus } from "@bookph/core/prisma/enums";
 import { z } from "zod";
 
 import { BookingStatusChangeSchema } from "../common/changeSchemas";

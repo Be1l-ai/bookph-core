@@ -12,9 +12,9 @@
  */
 import type { z } from "zod";
 
-import { CREDENTIAL_SYNC_ENDPOINT } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { CREDENTIAL_SYNC_ENDPOINT } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import type { AxiosLikeResponseToFetchResponse } from "./AxiosLikeResponseToFetchResponse";
 import type { OAuth2TokenResponseInDbWhenExistsSchema, OAuth2UniversalSchema } from "./universalSchema";

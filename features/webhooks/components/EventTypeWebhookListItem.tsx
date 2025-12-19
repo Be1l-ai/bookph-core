@@ -1,11 +1,11 @@
 "use client";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
@@ -13,11 +13,11 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/event-types/[type]/actions";
+} from "@bookph/ui/components/dropdown";
+import { Switch } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
+import { revalidateEventTypeEditPage } from "@bookph/core/web/app/(use-page-wrapper)/event-types/[type]/actions";
 
 type WebhookProps = {
   id: string;

@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useState, useEffect, useRef, useMemo } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { Host, TeamMember } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { buttonClasses } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import type { Host, TeamMember } from "@bookph/core/features/eventtypes/lib/types";
+import ServerTrans from "@bookph/core/lib/components/ServerTrans";
+import { downloadAsCsv } from "@bookph/core/lib/csvUtils";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { AttributesQueryValue } from "@bookph/core/lib/raqb/types";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { buttonClasses } from "@bookph/ui/components/button";
+import { Button } from "@bookph/ui/components/button";
+import { TextField } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
 import {
   Sheet,
   SheetBody,
@@ -22,8 +22,8 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/sheet";
+import { showToast } from "@bookph/ui/components/toast";
 
 import {
   useTeamMembersWithSegment,

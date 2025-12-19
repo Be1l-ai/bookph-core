@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import logger from "@calcom/lib/logger";
+import logger from "@bookph/core/lib/logger";
 
 import { getTeamBillingDataRepository, getTeamBillingServiceFactory } from "../../di/containers/Billing";
 import type { SWHMap } from "./__handler";

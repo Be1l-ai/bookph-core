@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Command, CommandList, CommandItem } from "@calcom/ui/components/command";
-import { Icon } from "@calcom/ui/components/icon";
-import { Popover, PopoverTrigger, PopoverContent } from "@calcom/ui/components/popover";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Command, CommandList, CommandItem } from "@bookph/ui/components/command";
+import { Icon } from "@bookph/ui/components/icon";
+import { Popover, PopoverTrigger, PopoverContent } from "@bookph/ui/components/popover";
 
 export type DateTarget = "startTime" | "createdAt";
 

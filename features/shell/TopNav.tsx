@@ -1,11 +1,11 @@
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { KBarTrigger } from "@calcom/features/kbar/Kbar";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Icon } from "@calcom/ui/components/icon";
-import { Logo } from "@calcom/ui/components/logo";
+import { useIsEmbed } from "@bookph/core/embed-core/embed-iframe";
+import { KBarTrigger } from "@bookph/core/features/kbar/Kbar";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Icon } from "@bookph/ui/components/icon";
+import { Logo } from "@bookph/ui/components/logo";
 
 import { UserDropdown } from "./user-dropdown/UserDropdown";
 

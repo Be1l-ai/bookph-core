@@ -1,13 +1,13 @@
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import type { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import type { ISimpleLogger } from "@bookph/core/features/di/shared/services/logger.service";
 
 import { BookingAuditActionServiceRegistry } from "./BookingAuditActionServiceRegistry";
 import type { IBookingAuditRepository, BookingAuditWithActor, BookingAuditAction, BookingAuditType } from "../repository/IBookingAuditRepository";
 import type { AuditActorType } from "../repository/IAuditActorRepository";
 import type { TranslationWithParams } from "../actions/IAuditActionService";
 import { RescheduledAuditActionService } from "../actions/RescheduledAuditActionService";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
+import { IS_PRODUCTION } from "@bookph/core/lib/constants";
 
 interface BookingAuditViewerServiceDeps {
     bookingAuditRepository: IBookingAuditRepository;

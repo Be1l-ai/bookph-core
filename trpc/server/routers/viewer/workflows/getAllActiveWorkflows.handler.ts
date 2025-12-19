@@ -1,8 +1,8 @@
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { addPermissionsToWorkflows } from "@calcom/features/workflows/repositories/WorkflowPermissionsRepository";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { addPermissionsToWorkflows } from "@bookph/core/features/workflows/repositories/WorkflowPermissionsRepository";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

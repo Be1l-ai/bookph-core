@@ -1,6 +1,6 @@
-import type { BusyTimesService } from "@calcom/features/busyTimes/services/getBusyTimes";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
+import type { BusyTimesService } from "@bookph/core/features/busyTimes/services/getBusyTimes";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { prismaModule } from "@bookph/core/features/di/modules/Prisma";
 
 import { createContainer } from "../di";
 import { bookingRepositoryModule } from "../modules/Booking";

@@ -1,11 +1,11 @@
-import dayjs from "@calcom/dayjs";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { refreshCredentials } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/refreshCredentials";
-import { HttpError } from "@calcom/lib/http-error";
-import { PrismaOrgMembershipRepository } from "@calcom/lib/server/repository/PrismaOrgMembershipRepository";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { Person } from "@calcom/types/Calendar";
+import dayjs from "@bookph/core/dayjs";
+import EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import { refreshCredentials } from "@bookph/core/features/bookings/lib/getAllCredentialsForUsersOnEvent/refreshCredentials";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { PrismaOrgMembershipRepository } from "@bookph/core/lib/server/repository/PrismaOrgMembershipRepository";
+import prisma from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import type { Person } from "@bookph/core/types/Calendar";
 
 import type { createLoggerWithEventDetails } from "../../handleNewBooking/logger";
 import type {

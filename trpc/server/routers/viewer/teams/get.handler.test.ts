@@ -1,7 +1,7 @@
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { getTeamWithoutMembers } from "@calcom/features/ee/teams/lib/queries";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
+import { getTeamWithoutMembers } from "@bookph/core/features/ee/teams/lib/queries";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
 
 import type { TrpcSessionUser } from "../../../types";
 import getTeam from "./get.handler";

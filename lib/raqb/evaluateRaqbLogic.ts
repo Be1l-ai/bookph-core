@@ -2,7 +2,7 @@
 
 import { Utils as QbUtils, type JsonTree } from "react-awesome-query-builder";
 
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import jsonLogic from "./jsonLogic";
 

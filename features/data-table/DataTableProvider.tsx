@@ -6,7 +6,7 @@ import isEqual from "lodash/isEqual";
 import { useQueryState } from "nuqs";
 import { useState, createContext, useCallback, useEffect, useRef, useMemo } from "react";
 
-import { useElementByClassName } from "@calcom/lib/hooks/useElementByClassName";
+import { useElementByClassName } from "@bookph/core/lib/hooks/useElementByClassName";
 
 import { useSegmentsNoop } from "./hooks/useSegmentsNoop";
 import {

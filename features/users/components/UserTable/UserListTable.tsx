@@ -9,7 +9,7 @@ import { useMemo, useReducer, useState } from "react";
 import { createPortal } from "react-dom";
 import posthog from "posthog-js";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
 import {
   DataTableProvider,
   DataTableWrapper,
@@ -21,25 +21,25 @@ import {
   ColumnFilterType,
   convertFacetedValuesToMap,
   useDataTable,
-} from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
+} from "@bookph/core/features/data-table";
+import { useSegments } from "@bookph/core/features/data-table/hooks/useSegments";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
 import {
   generateCsvRawForMembersTable,
   generateHeaderFromReactTable,
-} from "@calcom/features/users/lib/UserListTableUtils";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
+} from "@bookph/core/features/users/lib/UserListTableUtils";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { downloadAsCsv } from "@bookph/core/lib/csvUtils";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Badge } from "@bookph/ui/components/badge";
+import { Checkbox } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
+import { useGetUserAttributes } from "@bookph/core/web/components/settings/platform/hooks/useGetUserAttributes";
 
 import { DeleteBulkUsers } from "./BulkActions/DeleteBulkUsers";
 import { DynamicLink } from "./BulkActions/DynamicLink";

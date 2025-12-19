@@ -4,12 +4,12 @@ import { useMemo, useState } from "react";
 import type { ITimezoneOption, ITimezone, Props as SelectProps } from "react-timezone-select";
 import BaseSelect from "react-timezone-select";
 
-import { CALCOM_VERSION } from "@calcom/lib/constants";
-import { filterBySearchText, addTimezonesToDropdown, handleOptionLabel } from "@calcom/lib/timezone";
-import type { Timezones } from "@calcom/lib/timezone";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { getReactSelectProps, inputStyles } from "@calcom/ui/components/form";
+import { CALCOM_VERSION } from "@bookph/core/lib/constants";
+import { filterBySearchText, addTimezonesToDropdown, handleOptionLabel } from "@bookph/core/lib/timezone";
+import type { Timezones } from "@bookph/core/lib/timezone";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { getReactSelectProps, inputStyles } from "@bookph/ui/components/form";
 
 const SELECT_SEARCH_DATA: Timezones = [
   { label: "Manila", timezone: "Asia/Manila" },

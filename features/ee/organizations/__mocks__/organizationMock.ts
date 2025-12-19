@@ -1,7 +1,7 @@
 import { vi, beforeEach } from "vitest";
 import { mockDeep, mockReset } from "vitest-mock-extended";
 
-import type { OrganizationRepository } from "@calcom/features/ee/organizations/repositories/OrganizationRepository";
+import type { OrganizationRepository } from "@bookph/core/features/ee/organizations/repositories/OrganizationRepository";
 
 const mockedSingleton = mockDeep<OrganizationRepository>();
 

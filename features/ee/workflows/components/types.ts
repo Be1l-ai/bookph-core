@@ -1,4 +1,4 @@
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
 
 export type CallData = RouterOutputs["viewer"]["aiVoiceAgent"]["listCalls"]["calls"][number];
 

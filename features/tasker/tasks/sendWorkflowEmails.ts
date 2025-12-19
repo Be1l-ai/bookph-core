@@ -1,12 +1,12 @@
 import { z } from "zod";
 
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import { EmailWorkflowService } from "@calcom/features/ee/workflows/lib/service/EmailWorkflowService";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
-import { prisma } from "@calcom/prisma";
+import { sendCustomWorkflowEmail } from "@bookph/core/emails/workflow-email-service";
+import { CalendarEventBuilder } from "@bookph/core/features/CalendarEventBuilder";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import { EmailWorkflowService } from "@bookph/core/features/ee/workflows/lib/service/EmailWorkflowService";
+import { WorkflowReminderRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowReminderRepository";
+import { prisma } from "@bookph/core/prisma";
 
 export const ZSendWorkflowEmailsSchemaEager = z.object({
   to: z.array(z.string()),

@@ -4,13 +4,13 @@ import type { IntercomBootProps, IntercomProps } from "react-use-intercom";
 import { useIntercom as useIntercomLib } from "react-use-intercom";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { useHasTeamPlan, useHasPaidPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { useFlagMap } from "@calcom/features/flags/context/provider";
-import { WEBAPP_URL, WEBSITE_URL } from "@calcom/lib/constants";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { localStorage } from "@calcom/lib/webstorage";
-import { trpc } from "@calcom/trpc/react";
+import dayjs from "@bookph/core/dayjs";
+import { useHasTeamPlan, useHasPaidPlan } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import { useFlagMap } from "@bookph/core/features/flags/context/provider";
+import { WEBAPP_URL, WEBSITE_URL } from "@bookph/core/lib/constants";
+import useMediaQuery from "@bookph/core/lib/hooks/useMediaQuery";
+import { localStorage } from "@bookph/core/lib/webstorage";
+import { trpc } from "@bookph/core/trpc/react";
 
 export const isInterComEnabled = z.string().min(1).safeParse(process.env.NEXT_PUBLIC_INTERCOM_APP_ID).success;
 

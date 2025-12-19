@@ -1,11 +1,11 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import type { DestinationCalendar } from "@calcom/prisma/client";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import { symmetricDecrypt } from "@bookph/core/lib/crypto";
+import type { DestinationCalendar } from "@bookph/core/prisma/client";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import EventManager from "./EventManager";
 

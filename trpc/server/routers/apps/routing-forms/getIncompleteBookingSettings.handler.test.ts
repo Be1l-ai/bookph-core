@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import { TRPCError } from "@trpc/server";
 import getIncompleteBookingSettingsHandler from "./getIncompleteBookingSettings.handler";

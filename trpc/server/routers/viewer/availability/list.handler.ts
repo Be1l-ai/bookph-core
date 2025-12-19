@@ -1,5 +1,5 @@
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import { prisma } from "@calcom/prisma";
+import { ScheduleRepository } from "@bookph/core/features/schedules/repositories/ScheduleRepository";
+import { prisma } from "@bookph/core/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 

@@ -1,9 +1,9 @@
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { ListBookingReportsFilters } from "@calcom/lib/server/repository/bookingReport.interface";
-import type { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import type { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import type { PrismaClient } from "@calcom/prisma";
-import type { WatchlistType, WatchlistSource } from "@calcom/prisma/enums";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import type { ListBookingReportsFilters } from "@bookph/core/lib/server/repository/bookingReport.interface";
+import type { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import type { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { WatchlistType, WatchlistSource } from "@bookph/core/prisma/enums";
 
 import { WatchlistErrors } from "../errors/WatchlistErrors";
 

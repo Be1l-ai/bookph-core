@@ -1,2 +1,2 @@
-export { updateHandler as updateWorkflow } from "@calcom/trpc/server/routers/viewer/workflows/update.handler";
-export type { TUpdateInputSchema } from "@calcom/trpc/server/routers/viewer/workflows/update.schema";
+export { updateHandler as updateWorkflow } from "@bookph/core/trpc/server/routers/viewer/workflows/update.handler";
+export type { TUpdateInputSchema } from "@bookph/core/trpc/server/routers/viewer/workflows/update.schema";

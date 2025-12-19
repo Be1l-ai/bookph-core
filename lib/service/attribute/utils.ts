@@ -1,8 +1,8 @@
 /**
  * Utility functions for attribute service. Shared across server and client.
  */
-import slugify from "@calcom/lib/slugify";
-import { AttributeType } from "@calcom/prisma/enums";
+import slugify from "@bookph/core/lib/slugify";
+import { AttributeType } from "@bookph/core/prisma/enums";
 
 import type { AttributeOptionAssignment, BulkAttributeAssigner } from "./types";
 

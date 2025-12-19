@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
 
 import { getAbsoluteEventTypeRedirectUrl } from "../getEventTypeRedirectUrl";
 

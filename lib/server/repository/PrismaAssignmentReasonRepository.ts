@@ -1,4 +1,4 @@
-import prisma from "@calcom/prisma";
+import prisma from "@bookph/core/prisma";
 
 export class PrismaAssignmentReasonRepository {
   static async findLatestReasonFromBookingUid(bookingUid: string) {

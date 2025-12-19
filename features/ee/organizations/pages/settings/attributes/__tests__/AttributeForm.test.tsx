@@ -5,7 +5,7 @@ import React from "react";
 import type { Mock } from "vitest";
 import { vi } from "vitest";
 
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@bookph/ui/components/button";
 
 import { AttributeForm } from "../AttributesForm";
 

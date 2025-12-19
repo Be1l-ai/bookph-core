@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 
-import type { BookingCreateBody } from "@calcom/features/bookings/lib/bookingCreateBodySchema";
-import type { BookingResponse } from "@calcom/features/bookings/types";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@calcom/platform-types";
+import type { BookingCreateBody } from "@bookph/core/features/bookings/lib/bookingCreateBodySchema";
+import type { BookingResponse } from "@bookph/core/features/bookings/types";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@bookph/core/platform-types";
 
 import http from "../../lib/http";
 

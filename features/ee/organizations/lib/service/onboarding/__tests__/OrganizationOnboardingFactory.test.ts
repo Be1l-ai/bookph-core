@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import { UserPermissionRole } from "@calcom/prisma/enums";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
 
 const mockRegularUser = {
   id: 1,
@@ -33,7 +33,7 @@ describe("OrganizationOnboardingFactory", () => {
   describe("create", () => {
     it("should return BillingEnabledOrgOnboardingService for regular user when billing is enabled", async () => {
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: true,
@@ -48,7 +48,7 @@ describe("OrganizationOnboardingFactory", () => {
 
     it("should return BillingEnabledOrgOnboardingService for admin on hosted (billing enabled)", async () => {
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: true,
@@ -63,7 +63,7 @@ describe("OrganizationOnboardingFactory", () => {
 
     it("should return SelfHostedOrganizationOnboardingService for admin when IS_TEAM_BILLING_ENABLED is false", async () => {
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: false,
@@ -79,7 +79,7 @@ describe("OrganizationOnboardingFactory", () => {
 
     it("should return SelfHostedOrganizationOnboardingService for regular user when IS_TEAM_BILLING_ENABLED is false", async () => {
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: false,
@@ -97,7 +97,7 @@ describe("OrganizationOnboardingFactory", () => {
       process.env.NEXT_PUBLIC_IS_E2E = "1";
 
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: true,
@@ -113,7 +113,7 @@ describe("OrganizationOnboardingFactory", () => {
 
     it("should return BillingEnabledOrgOnboardingService when billing is enabled for regular user", async () => {
       vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-        const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+        const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
         return {
           ...actual,
           IS_TEAM_BILLING_ENABLED: true,
@@ -183,7 +183,7 @@ describe("OrganizationOnboardingFactory", () => {
         }
 
         vi.doMock("@calcom/lib/constants", async (importOriginal) => {
-          const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+          const actual = await importOriginal<typeof import("@bookph/core/lib/constants")>();
           return {
             ...actual,
             IS_TEAM_BILLING_ENABLED: isBillingEnabled,

@@ -3,13 +3,13 @@ import type { GetServerSidePropsContext, NextApiRequest } from "next";
 import type { AuthOptions, Session } from "next-auth";
 import { getToken } from "next-auth/jwt";
 
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { DeploymentRepository } from "@calcom/lib/server/repository/deployment";
-import prisma from "@calcom/prisma";
+import { LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { DeploymentRepository } from "@bookph/core/lib/server/repository/deployment";
+import prisma from "@bookph/core/prisma";
 
 const log = logger.getSubLogger({ prefix: ["getServerSession"] });
 /**

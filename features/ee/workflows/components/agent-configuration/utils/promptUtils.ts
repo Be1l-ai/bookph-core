@@ -1,5 +1,5 @@
 // Utility functions for prompt display and restoration
-import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@calcom/lib/constants";
+import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@bookph/core/lib/constants";
 
 export const cleanPromptForDisplay = (prompt: string): string => {
   if (!prompt) return prompt;

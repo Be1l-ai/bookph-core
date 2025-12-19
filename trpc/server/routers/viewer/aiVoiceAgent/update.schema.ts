@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import type { Language } from "@calcom/features/calAIPhone/providers/retellAI/types";
+import type { Language } from "@bookph/core/features/calAIPhone/providers/retellAI/types";
 
 const languageSchema = z.enum([
   "en-US",

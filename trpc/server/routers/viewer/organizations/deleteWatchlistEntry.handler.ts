@@ -1,7 +1,7 @@
-import { getOrganizationWatchlistOperationsService } from "@calcom/features/di/watchlist/containers/watchlist";
-import { WatchlistError, WatchlistErrorCode } from "@calcom/features/watchlist/lib/errors/WatchlistErrors";
-import { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import { prisma } from "@calcom/prisma";
+import { getOrganizationWatchlistOperationsService } from "@bookph/core/features/di/watchlist/containers/watchlist";
+import { WatchlistError, WatchlistErrorCode } from "@bookph/core/features/watchlist/lib/errors/WatchlistErrors";
+import { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import { prisma } from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

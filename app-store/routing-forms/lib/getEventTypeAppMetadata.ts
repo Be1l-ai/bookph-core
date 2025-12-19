@@ -1,5 +1,5 @@
-import type { Prisma } from "@calcom/prisma/client";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
 
 import { enabledAppSlugs } from "./enabledApps";
 

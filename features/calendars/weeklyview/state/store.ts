@@ -2,8 +2,8 @@ import React from "react";
 import { createStore, useStore } from "zustand";
 import type { StoreApi } from "zustand";
 
-import dayjs from "@calcom/dayjs";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
+import dayjs from "@bookph/core/dayjs";
+import { CURRENT_TIMEZONE } from "@bookph/core/lib/timezoneConstants";
 
 import type {
   CalendarComponentProps,

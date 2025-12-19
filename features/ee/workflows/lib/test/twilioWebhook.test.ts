@@ -1,9 +1,9 @@
 import { describe, beforeEach, vi, test, expect } from "vitest";
 
-import { CreditUsageType } from "@calcom/prisma/enums";
+import { CreditUsageType } from "@bookph/core/prisma/enums";
 
 vi.mock("@calcom/lib/constants", async () => {
-  const actual = await vi.importActual<typeof import("@calcom/lib/constants")>("@calcom/lib/constants");
+  const actual = await vi.importActual<typeof import("@bookph/core/lib/constants")>("@calcom/lib/constants");
   return {
     ...actual,
     IS_SMS_CREDITS_ENABLED: true,

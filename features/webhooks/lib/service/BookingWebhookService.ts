@@ -1,6 +1,6 @@
-import dayjs from "@calcom/dayjs";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import type { TimeUnit } from "@bookph/core/prisma/enums";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import type {
   BookingCreatedDTO,

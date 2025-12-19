@@ -4,9 +4,9 @@ import {
   ENTERPRISE_SLUGS,
   PLATFORM_ENTERPRISE_SLUGS,
   PLATFORM_PLANS_MAP,
-} from "@calcom/features/ee/billing/constants";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
-import type { JsonValue } from "@calcom/types/Json";
+} from "@bookph/core/features/ee/billing/constants";
+import { teamMetadataStrictSchema } from "@bookph/core/prisma/zod-utils";
+import type { JsonValue } from "@bookph/core/types/Json";
 
 export class BillingPlanService {
   async getUserPlanByMemberships(

@@ -1,7 +1,7 @@
 import { describe, it, vi, expect, beforeAll, afterAll, afterEach } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
+import { prisma } from "@bookph/core/prisma";
+import { BookingStatus, SchedulingType } from "@bookph/core/prisma/enums";
 
 const mockEventManagerCreate = vi.fn().mockResolvedValue({ referencesToCreate: [] });
 const mockEventManagerDelete = vi.fn().mockResolvedValue({});
@@ -26,7 +26,7 @@ const mockEventManager = async () => {
 };
 
 const mockEmails = async () => {
-  const emails = await import("@calcom/emails/email-manager");
+  const emails = await import("@bookph/core/emails/email-manager");
   vi.spyOn(emails, "sendReassignedScheduledEmailsAndSMS").mockResolvedValue(undefined);
   vi.spyOn(emails, "sendReassignedEmailsAndSMS").mockResolvedValue(undefined);
   vi.spyOn(emails, "sendReassignedUpdatedEmailsAndSMS").mockResolvedValue(undefined);
@@ -339,7 +339,7 @@ describe("managedEventReassignment - Integration Tests", () => {
 
   it("should call email functions when emailsEnabled is true", async () => {
     const managedEventReassignment = (await import("./managedEventReassignment")).default;
-    const emails = await import("@calcom/emails/email-manager");
+    const emails = await import("@bookph/core/emails/email-manager");
 
     const user1 = await createTestUser({
       email: "user1-email@test.com",

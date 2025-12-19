@@ -2,23 +2,23 @@ import posthog from "posthog-js";
 import { useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@calcom/lib/constants";
-import { formatPhoneNumber } from "@calcom/lib/formatPhoneNumber";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@bookph/core/lib/constants";
+import { formatPhoneNumber } from "@bookph/core/lib/formatPhoneNumber";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { PhoneNumberSubscriptionStatus } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dropdown";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { FormValues } from "../../../../pages/workflow";
 import { TestPhoneCallDialog } from "../../../TestPhoneCallDialog";

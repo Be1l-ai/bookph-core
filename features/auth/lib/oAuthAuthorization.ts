@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
-import prisma from "@calcom/prisma";
-import type { OAuthTokenPayload } from "@calcom/types/oauth";
+import prisma from "@bookph/core/prisma";
+import type { OAuthTokenPayload } from "@bookph/core/types/oauth";
 
 export default async function isAuthorized(token: string, requiredScopes: string[] = []) {
   let decodedToken: OAuthTokenPayload;

@@ -1,13 +1,13 @@
 import { setUser as SentrySetUser } from "@sentry/nextjs";
 import type { Session } from "next-auth";
 
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import { teamMetadataSchema, userMetadata } from "@calcom/prisma/zod-utils";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import { teamMetadataSchema, userMetadata } from "@bookph/core/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 
@@ -91,7 +91,7 @@ export type UserFromSession = Awaited<ReturnType<typeof getUserFromSession>>;
 
 export const getSession = async (ctx: TRPCContextInner) => {
   const { req } = ctx;
-  const { getServerSession } = await import("@calcom/features/auth/lib/getServerSession");
+  const { getServerSession } = await import("@bookph/core/features/auth/lib/getServerSession");
   return req ? await getServerSession({ req }) : null;
 };
 

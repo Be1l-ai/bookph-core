@@ -1,7 +1,7 @@
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import type { BillingPeriod } from "@calcom/prisma/enums";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { prisma } from "@bookph/core/prisma";
+import type { BillingPeriod } from "@bookph/core/prisma/enums";
 
 type OnboardingId = string;
 

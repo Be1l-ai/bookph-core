@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import z from "zod";
 
-import { getCustomerAndCheckoutSession } from "@calcom/app-store/stripepayment/lib/getCustomerAndCheckoutSession";
-import sendVerificationRequest from "@calcom/features/auth/lib/sendVerificationRequest";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { VerificationTokenService } from "@calcom/lib/server/service/VerificationTokenService";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { getCustomerAndCheckoutSession } from "@bookph/core/app-store/stripepayment/lib/getCustomerAndCheckoutSession";
+import sendVerificationRequest from "@bookph/core/features/auth/lib/sendVerificationRequest";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { defaultHandler } from "@bookph/core/lib/server/defaultHandler";
+import { defaultResponder } from "@bookph/core/lib/server/defaultResponder";
+import { VerificationTokenService } from "@bookph/core/lib/server/service/VerificationTokenService";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
 
 const querySchema = z.object({
   callbackUrl: z.string().transform((url) => {

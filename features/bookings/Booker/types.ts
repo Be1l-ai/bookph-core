@@ -1,15 +1,15 @@
 import type React from "react";
 
-import type { UseBookerLayoutType } from "@calcom/features/bookings/Booker/components/hooks/useBookerLayout";
-import type { UseBookingFormReturnType } from "@calcom/features/bookings/Booker/components/hooks/useBookingForm";
-import type { UseBookingsReturnType } from "@calcom/features/bookings/Booker/components/hooks/useBookings";
-import type { UseCalendarsReturnType } from "@calcom/features/bookings/Booker/components/hooks/useCalendars";
-import type { UseSlotsReturnType } from "@calcom/features/bookings/Booker/components/hooks/useSlots";
-import type { UseVerifyCodeReturnType } from "@calcom/features/bookings/Booker/components/hooks/useVerifyCode";
-import type { UseVerifyEmailReturnType } from "@calcom/features/bookings/Booker/components/hooks/useVerifyEmail";
-import type { useScheduleForEventReturnType } from "@calcom/features/bookings/Booker/utils/event";
-import type { BookerEventQuery } from "@calcom/features/bookings/types";
-import type { IntlSupportedTimeZones } from "@calcom/lib/timeZones";
+import type { UseBookerLayoutType } from "@bookph/core/features/bookings/Booker/components/hooks/useBookerLayout";
+import type { UseBookingFormReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useBookingForm";
+import type { UseBookingsReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useBookings";
+import type { UseCalendarsReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useCalendars";
+import type { UseSlotsReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useSlots";
+import type { UseVerifyCodeReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useVerifyCode";
+import type { UseVerifyEmailReturnType } from "@bookph/core/features/bookings/Booker/components/hooks/useVerifyEmail";
+import type { useScheduleForEventReturnType } from "@bookph/core/features/bookings/Booker/utils/event";
+import type { BookerEventQuery } from "@bookph/core/features/bookings/types";
+import type { IntlSupportedTimeZones } from "@bookph/core/lib/timeZones";
 
 import type { GetBookingType } from "../lib/get-booking";
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { BookingDateInPastError, isTimeOutOfBounds } from "@calcom/lib/isOutOfBounds";
+import { BookingDateInPastError, isTimeOutOfBounds } from "@bookph/core/lib/isOutOfBounds";
 
 import { TRPCError } from "@trpc/server";
 

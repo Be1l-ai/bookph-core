@@ -1,4 +1,4 @@
-import type { Payment } from "@calcom/prisma/client";
+import type { Payment } from "@bookph/core/prisma/client";
 
 function hasStringProp<T extends string>(x: unknown, key: T): x is { [key in T]: string } {
   return !!x && typeof x === "object" && key in x;

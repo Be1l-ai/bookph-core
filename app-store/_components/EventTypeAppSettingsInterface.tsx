@@ -1,4 +1,4 @@
-import { EventTypeSettingsMap } from "@calcom/app-store/apps.browser.generated";
+import { EventTypeSettingsMap } from "@bookph/core/app-store/apps.browser.generated";
 
 import type { EventTypeAppSettingsComponentProps } from "../types";
 import { DynamicComponent } from "./DynamicComponent";

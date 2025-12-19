@@ -2,17 +2,17 @@ import type { Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
 
-import { ensureOrganizationIsReviewed } from "@calcom/ee/organizations/lib/ensureOrganizationIsReviewed";
-import { getOrgFullOrigin, subdomainSuffix } from "@calcom/ee/organizations/lib/orgDomains";
-import { getSession } from "@calcom/features/auth/lib/getSession";
-import { getSpecificPermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import prisma from "@calcom/prisma";
-import type { User } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { Membership } from "@calcom/prisma/client";
-import { MembershipRole, UserPermissionRole } from "@calcom/prisma/enums";
-import type { OrgProfile, PersonalProfile, UserAsPersonalProfile } from "@calcom/types/UserProfile";
+import { ensureOrganizationIsReviewed } from "@bookph/core/ee/organizations/lib/ensureOrganizationIsReviewed";
+import { getOrgFullOrigin, subdomainSuffix } from "@bookph/core/ee/organizations/lib/orgDomains";
+import { getSession } from "@bookph/core/features/auth/lib/getSession";
+import { getSpecificPermissions } from "@bookph/core/features/pbac/lib/resource-permissions";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import prisma from "@bookph/core/prisma";
+import type { User } from "@bookph/core/prisma/client";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { Membership } from "@bookph/core/prisma/client";
+import { MembershipRole, UserPermissionRole } from "@bookph/core/prisma/enums";
+import type { OrgProfile, PersonalProfile, UserAsPersonalProfile } from "@bookph/core/types/UserProfile";
 
 import { Resource, CustomAction } from "../../../pbac/domain/types/permission-registry";
 

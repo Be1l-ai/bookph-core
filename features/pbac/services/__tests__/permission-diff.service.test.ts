@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import type { RolePermission } from "@calcom/prisma/client";
+import type { RolePermission } from "@bookph/core/prisma/client";
 
 import type { PermissionString } from "../../domain/types/permission-registry";
 import { PermissionDiffService } from "../permission-diff.service";

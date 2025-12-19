@@ -1,5 +1,5 @@
-import dayjs from "@calcom/dayjs";
-import { daysInMonth, yyyymmdd } from "@calcom/lib/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { daysInMonth, yyyymmdd } from "@bookph/core/lib/dayjs";
 
 // calculate the available dates in the month:
 // *) Intersect with included dates.

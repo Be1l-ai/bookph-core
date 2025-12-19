@@ -1,14 +1,14 @@
-import { ensureOrganizationIsReviewed } from "@calcom/ee/organizations/lib/ensureOrganizationIsReviewed";
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { RoleManagementError } from "@calcom/features/pbac/domain/errors/role-management.error";
-import { RoleManagementFactory } from "@calcom/features/pbac/services/role-management.factory";
-import { checkRegularUsername } from "@calcom/features/profile/lib/checkRegularUsername";
-import { uploadAvatar } from "@calcom/lib/server/avatar";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { ensureOrganizationIsReviewed } from "@bookph/core/ee/organizations/lib/ensureOrganizationIsReviewed";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { RoleManagementError } from "@bookph/core/features/pbac/domain/errors/role-management.error";
+import { RoleManagementFactory } from "@bookph/core/features/pbac/services/role-management.factory";
+import { checkRegularUsername } from "@bookph/core/features/profile/lib/checkRegularUsername";
+import { uploadAvatar } from "@bookph/core/lib/server/avatar";
+import { resizeBase64Image } from "@bookph/core/lib/server/resizeBase64Image";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

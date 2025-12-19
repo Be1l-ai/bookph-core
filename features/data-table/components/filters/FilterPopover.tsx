@@ -1,11 +1,11 @@
  
 import startCase from "lodash/startCase";
 
-import type { FilterType } from "@calcom/types/data-table";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
+import type { FilterType } from "@bookph/core/types/data-table";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import type { IconName } from "@bookph/ui/components/icon";
+import { Popover, PopoverContent, PopoverTrigger } from "@bookph/ui/components/popover";
 
 import { useFilterValue } from "../../hooks";
 import { type FilterableColumn, type FilterValue, ZFilterValue, ColumnFilterType } from "../../lib/types";

@@ -1,19 +1,19 @@
-import emailReminderTemplate from "@calcom/ee/workflows/lib/reminders/templates/emailReminderTemplate";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { SENDER_NAME } from "@calcom/lib/constants";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { PrismaClient } from "@calcom/prisma";
-import { prisma } from "@calcom/prisma";
-import type { Workflow } from "@calcom/prisma/client";
+import emailReminderTemplate from "@bookph/core/ee/workflows/lib/reminders/templates/emailReminderTemplate";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { SENDER_NAME } from "@bookph/core/lib/constants";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { prisma } from "@bookph/core/prisma";
+import type { Workflow } from "@bookph/core/prisma/client";
 import {
   MembershipRole,
   TimeUnit,
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

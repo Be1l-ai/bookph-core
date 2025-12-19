@@ -1,6 +1,6 @@
-import { BillingPlanService } from "@calcom/features/ee/billing/domain/billing-plans";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { prisma } from "@calcom/prisma";
+import { BillingPlanService } from "@bookph/core/features/ee/billing/domain/billing-plans";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { prisma } from "@bookph/core/prisma";
 
 type HasTeamPlanOptions = {
   ctx: {

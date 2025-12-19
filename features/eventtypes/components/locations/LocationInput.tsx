@@ -1,11 +1,11 @@
 import { useFormContext, Controller } from "react-hook-form";
 
-import type { EventLocationType } from "@calcom/app-store/locations";
-import PhoneInput from "@calcom/features/components/phone-input";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { TextField } from "@calcom/ui/components/form";
+import type { EventLocationType } from "@bookph/core/app-store/locations";
+import PhoneInput from "@bookph/core/features/components/phone-input";
+import type { FormValues } from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { TextField } from "@bookph/ui/components/form";
 
 import type { LocationInputCustomClassNames } from "./types";
 

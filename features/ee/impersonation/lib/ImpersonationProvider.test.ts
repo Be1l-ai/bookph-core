@@ -1,8 +1,8 @@
 import type { Session } from "next-auth";
 import { describe, expect, it, vi } from "vitest";
 
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import {
   parseTeamId,

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { timeZoneSchema } from "@bookph/core/lib/dayjs/timeZone.schema";
+import { teamMetadataStrictSchema } from "@bookph/core/prisma/zod-utils";
 
 export const ZUpdateInputSchema = z.object({
   name: z.string().optional(),

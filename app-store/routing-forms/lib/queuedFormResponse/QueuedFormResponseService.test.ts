@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import type logger from "@calcom/lib/logger";
+import type logger from "@bookph/core/lib/logger";
 
 import type { QueuedFormResponseRepositoryInterface } from "./QueuedFormResponseRepository.interface";
 import { QueuedFormResponseService } from "./QueuedFormResponseService";

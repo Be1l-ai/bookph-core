@@ -2,12 +2,12 @@
 import { cloneDeep } from "lodash";
 import { uuid } from "short-uuid";
 
-import { sendRescheduledEmailsAndSMS } from "@calcom/emails/email-manager";
-import type EventManager from "@calcom/features/bookings/lib/EventManager";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { sendRescheduledEmailsAndSMS } from "@bookph/core/emails/email-manager";
+import type EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { HttpError } from "@bookph/core/lib/http-error";
+import prisma from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import { addVideoCallDataToEvent } from "../../../handleNewBooking/addVideoCallDataToEvent";
 import { findBookingQuery } from "../../../handleNewBooking/findBookingQuery";

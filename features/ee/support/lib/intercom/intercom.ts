@@ -1,4 +1,4 @@
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 export interface Contact extends CreateContact {
   id: string;

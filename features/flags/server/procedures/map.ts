@@ -1,6 +1,6 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import prisma from "@calcom/prisma";
-import publicProcedure from "@calcom/trpc/server/procedures/publicProcedure";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import prisma from "@bookph/core/prisma";
+import publicProcedure from "@bookph/core/trpc/server/procedures/publicProcedure";
 
 /**
  * TRPC procedure that returns a map of all feature flags and their enabled status.

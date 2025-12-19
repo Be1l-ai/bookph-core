@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useEmbedStyles } from "@calcom/embed-core/embed-iframe";
-import type { IFromUser, IToUser } from "@calcom/features/availability/lib/getUserAvailability";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { getAvailableDatesInMonth } from "@calcom/features/calendars/lib/getAvailableDatesInMonth";
-import { daysInMonth, yyyymmdd } from "@calcom/lib/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import type { PeriodData } from "@calcom/types/Event";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { useEmbedStyles } from "@bookph/core/embed-core/embed-iframe";
+import type { IFromUser, IToUser } from "@bookph/core/features/availability/lib/getUserAvailability";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { getAvailableDatesInMonth } from "@bookph/core/features/calendars/lib/getAvailableDatesInMonth";
+import { daysInMonth, yyyymmdd } from "@bookph/core/lib/dayjs";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { weekdayNames } from "@bookph/core/lib/weekday";
+import type { PeriodData } from "@bookph/core/types/Event";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import NoAvailabilityDialog from "./NoAvailabilityDialog";
 

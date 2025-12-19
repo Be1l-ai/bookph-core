@@ -1,6 +1,6 @@
 import type { NextApiResponse } from "next";
 
-import logger from "@calcom/lib/logger";
+import logger from "@bookph/core/lib/logger";
 
 import { getStripeCustomerIdFromUserId } from "../../customer";
 import stripe from "../../server";

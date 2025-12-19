@@ -1,12 +1,12 @@
 import { createInstance } from "i18next";
 import type { i18n as I18nInstance } from "i18next";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { fetchWithTimeout } from "@calcom/lib/fetchWithTimeout";
-import logger from "@calcom/lib/logger";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { fetchWithTimeout } from "@bookph/core/lib/fetchWithTimeout";
+import logger from "@bookph/core/lib/logger";
 
 /* eslint-disable @typescript-eslint/no-require-imports */
-const { i18n } = require("@calcom/config/next-i18next.config");
+const { i18n } = require("@bookph/core/config/next-i18next.config");
 const path = require("path");
 const translationsPath = path.resolve(__dirname, "../../../../apps/web/public/static/locales/en/common.json");
 const englishTranslations: Record<string, string> = require(translationsPath);

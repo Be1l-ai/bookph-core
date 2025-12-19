@@ -2,9 +2,9 @@ import { calendar_v3 } from "@googleapis/calendar";
 import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { bookTimeSlot, selectSecondAvailableTimeSlotNextMonth } from "@calcom/web/playwright/lib/testUtils";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { bookTimeSlot, selectSecondAvailableTimeSlotNextMonth } from "@bookph/core/web/playwright/lib/testUtils";
 
 import metadata from "../_metadata";
 import GoogleCalendarService from "../lib/CalendarService";

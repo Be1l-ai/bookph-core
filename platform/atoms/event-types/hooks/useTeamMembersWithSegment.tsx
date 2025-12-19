@@ -1,16 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 
-import type { Host, TeamMember } from "@calcom/features/eventtypes/lib/types";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import type { Host, TeamMember } from "@bookph/core/features/eventtypes/lib/types";
+import type { AttributesQueryValue } from "@bookph/core/lib/raqb/types";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
 import type {
   ApiResponse,
   ApiSuccessResponse,
   TeamMemberDto,
   FindTeamMembersMatchingAttributeOutputDto,
-} from "@calcom/platform-types";
-import { trpc } from "@calcom/trpc/react";
+} from "@bookph/core/platform-types";
+import { trpc } from "@bookph/core/trpc/react";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

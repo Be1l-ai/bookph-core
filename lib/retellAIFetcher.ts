@@ -1,4 +1,4 @@
-import { handleErrorsJson } from "@calcom/lib/errors";
+import { handleErrorsJson } from "@bookph/core/lib/errors";
 
 export const fetcher = async (endpoint: string, init?: RequestInit | undefined) => {
   return fetch(`https://api.retellai.com${endpoint}`, {

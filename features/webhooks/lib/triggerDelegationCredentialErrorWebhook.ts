@@ -1,8 +1,8 @@
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { DelegationCredentialErrorPayloadType } from "@calcom/features/webhooks/lib/dto/types";
-import type { CalendarAppDelegationCredentialError } from "@calcom/lib/CalendarAppError";
-import logger from "@calcom/lib/logger";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { DelegationCredentialRepository } from "@bookph/core/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialErrorPayloadType } from "@bookph/core/features/webhooks/lib/dto/types";
+import type { CalendarAppDelegationCredentialError } from "@bookph/core/lib/CalendarAppError";
+import logger from "@bookph/core/lib/logger";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import { WebhookRepository } from "./repository/WebhookRepository";
 import sendPayload from "./sendPayload";

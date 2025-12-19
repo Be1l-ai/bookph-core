@@ -3,17 +3,17 @@
 import { useRouter } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useHasTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RecordingItemSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import type { PartialReference } from "@calcom/types/EventManager";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@calcom/ui/components/dialog";
+import dayjs from "@bookph/core/dayjs";
+import { useHasTeamPlan } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { RecordingItemSchema } from "@bookph/core/prisma/zod-utils";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import type { PartialReference } from "@bookph/core/types/EventManager";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@bookph/ui/components/dialog";
 
 import RecordingListSkeleton from "./components/RecordingListSkeleton";
 

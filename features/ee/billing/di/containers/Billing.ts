@@ -1,4 +1,4 @@
-import { createContainer } from "@calcom/features/di/di";
+import { createContainer } from "@bookph/core/features/di/di";
 
 import type { ITeamBillingDataRepository } from "../../repository/teamBillingData/ITeamBillingDataRepository";
 import type { StripeBillingService } from "../../service/billingProvider/StripeBillingService";

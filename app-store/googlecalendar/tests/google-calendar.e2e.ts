@@ -1,12 +1,12 @@
 import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
-import dayjs from "@calcom/dayjs";
-import { APP_CREDENTIAL_SHARING_ENABLED } from "@calcom/lib/constants";
-import prisma from "@calcom/prisma";
-import type { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
-import { test } from "@calcom/web/playwright/lib/fixtures";
-import { selectSecondAvailableTimeSlotNextMonth } from "@calcom/web/playwright/lib/testUtils";
+import dayjs from "@bookph/core/dayjs";
+import { APP_CREDENTIAL_SHARING_ENABLED } from "@bookph/core/lib/constants";
+import prisma from "@bookph/core/prisma";
+import type { CredentialForCalendarServiceWithEmail } from "@bookph/core/types/Credential";
+import { test } from "@bookph/core/web/playwright/lib/fixtures";
+import { selectSecondAvailableTimeSlotNextMonth } from "@bookph/core/web/playwright/lib/testUtils";
 
 import metadata from "../_metadata";
 import GoogleCalendarService from "../lib/CalendarService";

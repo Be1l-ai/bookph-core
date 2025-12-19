@@ -1,12 +1,12 @@
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
-import { getPiiFreeSelectedCalendar, getPiiFreeCredential } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { performance } from "@calcom/lib/server/perfObserver";
-import type { EventBusyDate, SelectedCalendar } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import { getCalendar } from "@bookph/core/app-store/_utils/getCalendar";
+import { symmetricDecrypt } from "@bookph/core/lib/crypto";
+import { isDelegationCredential } from "@bookph/core/lib/delegationCredential";
+import logger from "@bookph/core/lib/logger";
+import { getPiiFreeSelectedCalendar, getPiiFreeCredential } from "@bookph/core/lib/piiFreeData";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { performance } from "@bookph/core/lib/server/perfObserver";
+import type { EventBusyDate, SelectedCalendar } from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 const log = logger.getSubLogger({ prefix: ["getCalendarsEvents"] });
 

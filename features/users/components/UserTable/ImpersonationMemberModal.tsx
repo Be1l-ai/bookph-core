@@ -1,10 +1,10 @@
 import { signIn, useSession } from "next-auth/react";
 import type { Dispatch } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
 
 import type { UserTableAction, UserTableState } from "./types";
 

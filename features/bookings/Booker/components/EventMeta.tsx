@@ -3,19 +3,19 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo } from "react";
 import { shallow } from "zustand/shallow";
 
-import { Timezone as PlatformTimezoneSelect } from "@calcom/atoms/timezone";
-import { EventDetails, EventMembers, EventMetaSkeleton, EventTitle } from "@calcom/features/bookings";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { Timezone } from "@calcom/features/bookings/Booker/types";
-import { SeatsAvailabilityText } from "@calcom/features/bookings/components/SeatsAvailabilityText";
-import { EventMetaBlock } from "@calcom/features/bookings/components/event-meta/Details";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTMLClient } from "@calcom/lib/markdownToSafeHTMLClient";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import type { EventTypeTranslation } from "@calcom/prisma/client";
-import { EventTypeAutoTranslatedField } from "@calcom/prisma/enums";
+import { Timezone as PlatformTimezoneSelect } from "@bookph/core/atoms/timezone";
+import { EventDetails, EventMembers, EventMetaSkeleton, EventTitle } from "@bookph/core/features/bookings";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import type { Timezone } from "@bookph/core/features/bookings/Booker/types";
+import { SeatsAvailabilityText } from "@bookph/core/features/bookings/components/SeatsAvailabilityText";
+import { EventMetaBlock } from "@bookph/core/features/bookings/components/event-meta/Details";
+import { useTimePreferences } from "@bookph/core/features/bookings/lib";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { markdownToSafeHTMLClient } from "@bookph/core/lib/markdownToSafeHTMLClient";
+import { CURRENT_TIMEZONE } from "@bookph/core/lib/timezoneConstants";
+import type { EventTypeTranslation } from "@bookph/core/prisma/client";
+import { EventTypeAutoTranslatedField } from "@bookph/core/prisma/enums";
 
 import i18nConfigration from "../../../../../i18n.json";
 import { fadeInUp } from "../config";
@@ -24,7 +24,7 @@ import { ScrollableWithGradients } from "./ScrollableWithGradients";
 import { useBookerTime } from "./hooks/useBookerTime";
 
 const WebTimezoneSelect = dynamic(
-  () => import("@calcom/features/components/timezone-select").then((mod) => mod.TimezoneSelect),
+  () => import("@bookph/core/features/components/timezone-select").then((mod) => mod.TimezoneSelect),
   {
     ssr: false,
   }

@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@bookph/core/prisma";
 import type {
   Booking,
   EventType,
@@ -7,8 +7,8 @@ import type {
   Credential,
   DestinationCalendar,
   User,
-} from "@calcom/prisma/client";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
+} from "@bookph/core/prisma/client";
+import { MembershipRole, SchedulingType } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

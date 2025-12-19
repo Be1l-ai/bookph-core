@@ -1,6 +1,6 @@
 import type { DefaultSeoProps, NextSeoProps } from "next-seo";
 
-import { APP_NAME, SEO_IMG_DEFAULT, SEO_IMG_OGIMG } from "@calcom/lib/constants";
+import { APP_NAME, SEO_IMG_DEFAULT, SEO_IMG_OGIMG } from "@bookph/core/lib/constants";
 
 import type { AppImageProps, MeetingImageProps } from "./OgImages";
 

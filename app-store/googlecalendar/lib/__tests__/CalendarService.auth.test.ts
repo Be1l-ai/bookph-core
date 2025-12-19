@@ -17,7 +17,7 @@ import {
 import { expect, test, beforeEach, vi, describe } from "vitest";
 import "vitest-fetch-mock";
 
-import type { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
+import type { CredentialForCalendarServiceWithEmail } from "@bookph/core/types/Credential";
 
 import CalendarService from "../CalendarService";
 import {

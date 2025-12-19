@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { ActorSchema } from "@calcom/features/bookings/lib/types/actor";
+import { ActorSchema } from "@bookph/core/features/bookings/lib/types/actor";
 import { CreatedAuditActionService } from "../actions/CreatedAuditActionService";
 import { RescheduledAuditActionService } from "../actions/RescheduledAuditActionService";
 import { AcceptedAuditActionService } from "../actions/AcceptedAuditActionService";

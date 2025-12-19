@@ -1,14 +1,14 @@
-import { moduleLoader as bookingEventHandlerModuleLoader } from "@calcom/features/bookings/di/BookingEventHandlerService.module";
-import { RegularBookingService } from "@calcom/features/bookings/lib/service/RegularBookingService";
-import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@calcom/features/di/di";
-import { moduleLoader as bookingRepositoryModuleLoader } from "@calcom/features/di/modules/Booking";
-import { moduleLoader as checkBookingAndDurationLimitsModuleLoader } from "@calcom/features/di/modules/CheckBookingAndDurationLimits";
-import { moduleLoader as featuresRepositoryModuleLoader } from "@calcom/features/di/modules/Features";
-import { moduleLoader as luckyUserServiceModuleLoader } from "@calcom/features/di/modules/LuckyUser";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
-import { moduleLoader as userRepositoryModuleLoader } from "@calcom/features/di/modules/User";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { moduleLoader as hashedLinkServiceModuleLoader } from "@calcom/features/hashedLink/di/HashedLinkService.module";
+import { moduleLoader as bookingEventHandlerModuleLoader } from "@bookph/core/features/bookings/di/BookingEventHandlerService.module";
+import { RegularBookingService } from "@bookph/core/features/bookings/lib/service/RegularBookingService";
+import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@bookph/core/features/di/di";
+import { moduleLoader as bookingRepositoryModuleLoader } from "@bookph/core/features/di/modules/Booking";
+import { moduleLoader as checkBookingAndDurationLimitsModuleLoader } from "@bookph/core/features/di/modules/CheckBookingAndDurationLimits";
+import { moduleLoader as featuresRepositoryModuleLoader } from "@bookph/core/features/di/modules/Features";
+import { moduleLoader as luckyUserServiceModuleLoader } from "@bookph/core/features/di/modules/LuckyUser";
+import { moduleLoader as prismaModuleLoader } from "@bookph/core/features/di/modules/Prisma";
+import { moduleLoader as userRepositoryModuleLoader } from "@bookph/core/features/di/modules/User";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { moduleLoader as hashedLinkServiceModuleLoader } from "@bookph/core/features/hashedLink/di/HashedLinkService.module";
 
 import { moduleLoader as bookingEmailAndSmsTaskerModuleLoader } from "./tasker/BookingEmailAndSmsTasker.module";
 

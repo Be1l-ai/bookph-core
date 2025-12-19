@@ -1,6 +1,6 @@
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { addPermissionsToWorkflow } from "@calcom/features/workflows/repositories/WorkflowPermissionsRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { addPermissionsToWorkflow } from "@bookph/core/features/workflows/repositories/WorkflowPermissionsRepository";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

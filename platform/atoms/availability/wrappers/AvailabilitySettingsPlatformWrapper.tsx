@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import { forwardRef, useRef } from "react";
 
-import type { ScheduleLabelsType } from "@calcom/features/schedules/components/Schedule";
-import type { UpdateScheduleResponse } from "@calcom/features/schedules/services/ScheduleService";
-import type { ApiErrorResponse, ApiResponse, UpdateScheduleInput_2024_06_11 } from "@calcom/platform-types";
+import type { ScheduleLabelsType } from "@bookph/core/features/schedules/components/Schedule";
+import type { UpdateScheduleResponse } from "@bookph/core/features/schedules/services/ScheduleService";
+import type { ApiErrorResponse, ApiResponse, UpdateScheduleInput_2024_06_11 } from "@bookph/core/platform-types";
 
 import { useAtomSchedule } from "../../hooks/schedules/useAtomSchedule";
 import { useAtomUpdateSchedule } from "../../hooks/schedules/useAtomUpdateSchedule";

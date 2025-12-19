@@ -1,22 +1,22 @@
 import { lookup } from "dns";
 
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { isNotACompanyEmail } from "@calcom/ee/organizations/lib/server/orgCreationUtils";
-import { sendAdminOrganizationNotification, sendOrganizationCreationEmail } from "@calcom/emails/organization-email-service";
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
+import { getOrgFullOrigin } from "@bookph/core/ee/organizations/lib/orgDomains";
+import { isNotACompanyEmail } from "@bookph/core/ee/organizations/lib/server/orgCreationUtils";
+import { sendAdminOrganizationNotification, sendOrganizationCreationEmail } from "@bookph/core/emails/organization-email-service";
+import { sendEmailVerification } from "@bookph/core/features/auth/lib/verifyEmail";
+import { getOrganizationRepository } from "@bookph/core/features/ee/organizations/di/OrganizationRepository.container";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@bookph/core/lib/availability";
 import {
   RESERVED_SUBDOMAINS,
   ORG_SELF_SERVE_ENABLED,
   ORG_MINIMUM_PUBLISHED_TEAMS_SELF_SERVE,
   WEBAPP_URL,
-} from "@calcom/lib/constants";
-import { createDomain } from "@calcom/lib/domainManager/organization";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+} from "@bookph/core/lib/constants";
+import { createDomain } from "@bookph/core/lib/domainManager/organization";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { prisma } from "@bookph/core/prisma";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

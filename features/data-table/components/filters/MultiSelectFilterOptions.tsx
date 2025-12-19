@@ -3,7 +3,7 @@
 import { useDataTable } from "../../hooks";
 import type { FilterableColumn } from "../../lib/types";
 import { ZMultiSelectFilterValue, ColumnFilterType } from "../../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@bookph/core/types/data-table";
 import { BaseSelectFilterOptions } from "./BaseSelectFilterOptions";
 
 export type MultiSelectFilterOptionsProps = {

@@ -1,25 +1,25 @@
 import { keyBy } from "lodash";
 import type { GetServerSidePropsContext, NextApiResponse } from "next";
 
-import { getPremiumMonthlyPlanPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { sendChangeOfEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { checkUsername } from "@calcom/features/profile/lib/checkUsername";
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { uploadAvatar } from "@calcom/lib/server/avatar";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import slugify from "@calcom/lib/slugify";
-import { validateBookerLayouts } from "@calcom/lib/validateBookerLayouts";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { userMetadata as userMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getPremiumMonthlyPlanPriceId } from "@bookph/core/app-store/stripepayment/lib/utils";
+import { getBillingProviderService } from "@bookph/core/ee/billing/di/containers/Billing";
+import { sendChangeOfEmailVerification } from "@bookph/core/features/auth/lib/verifyEmail";
+import { updateNewTeamMemberEventTypes } from "@bookph/core/features/ee/teams/lib/queries";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { checkUsername } from "@bookph/core/features/profile/lib/checkUsername";
+import { ScheduleRepository } from "@bookph/core/features/schedules/repositories/ScheduleRepository";
+import hasKeyInMetadata from "@bookph/core/lib/hasKeyInMetadata";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { uploadAvatar } from "@bookph/core/lib/server/avatar";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { resizeBase64Image } from "@bookph/core/lib/server/resizeBase64Image";
+import slugify from "@bookph/core/lib/slugify";
+import { validateBookerLayouts } from "@bookph/core/lib/validateBookerLayouts";
+import { prisma } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import { userMetadata as userMetadataSchema } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

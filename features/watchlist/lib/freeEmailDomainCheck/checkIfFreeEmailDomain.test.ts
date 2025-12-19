@@ -24,7 +24,7 @@ describe("checkIfFreeEmailDomain", () => {
     expect(await checkIfFreeEmailDomain({ email: "test@" })).toBe(true);
   });
   test("If free email domain in watchlist, should return true", async () => {
-    const { getWatchlistFeature } = await import("@calcom/features/di/watchlist/containers/watchlist");
+    const { getWatchlistFeature } = await import("@bookph/core/features/di/watchlist/containers/watchlist");
     const getWatchlistFeatureMock = getWatchlistFeature as Mock;
 
     const result = await checkIfFreeEmailDomain({ email: "test@freedomain.com" });
@@ -38,7 +38,7 @@ describe("checkIfFreeEmailDomain", () => {
   });
 
   test("If non-free email domain, should return false", async () => {
-    const { getWatchlistFeature } = await import("@calcom/features/di/watchlist/containers/watchlist");
+    const { getWatchlistFeature } = await import("@bookph/core/features/di/watchlist/containers/watchlist");
     const getWatchlistFeatureMock = getWatchlistFeature as Mock;
 
     getWatchlistFeatureMock.mockReturnValueOnce({

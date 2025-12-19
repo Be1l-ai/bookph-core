@@ -1,7 +1,7 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Label } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
 
 interface VoiceSelectorProps {
   selectedVoiceId?: string;

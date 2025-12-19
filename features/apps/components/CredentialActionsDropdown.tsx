@@ -2,19 +2,19 @@
 
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Dialog } from "@calcom/ui/components/dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { Dialog } from "@bookph/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dropdown";
+import { showToast } from "@bookph/ui/components/toast";
 
 interface CredentialActionsDropdownProps {
   credentialId: number;

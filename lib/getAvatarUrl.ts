@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { AVATAR_FALLBACK, CAL_URL } from "@calcom/lib/constants";
-import type { User } from "@calcom/prisma/client";
+import { AVATAR_FALLBACK, CAL_URL } from "@bookph/core/lib/constants";
+import type { User } from "@bookph/core/prisma/client";
 
 /**
  * Gives an organization aware avatar url for a user

@@ -3,11 +3,11 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { SkeletonLoader } from "@calcom/features/apps/components/SkeletonLoader";
-import { HOSTED_CAL_FEATURES } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import { SkeletonLoader } from "@bookph/core/features/apps/components/SkeletonLoader";
+import { HOSTED_CAL_FEATURES } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { showToast } from "@bookph/ui/components/toast";
 
 import ConfigureDirectorySync from "../components/ConfigureDirectorySync";
 

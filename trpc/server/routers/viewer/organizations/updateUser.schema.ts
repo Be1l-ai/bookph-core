@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { timeZoneSchema } from "@bookph/core/lib/dayjs/timeZone.schema";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { assignUserToAttributeSchema } from "../attributes/assignUserToAttribute.schema";
 

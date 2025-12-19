@@ -1,8 +1,8 @@
 import { describe, expect, beforeEach, afterEach, it } from "vitest";
 
-import prisma from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
+import prisma from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 describe("RoutingFormResponseField", () => {
   let userId: number;

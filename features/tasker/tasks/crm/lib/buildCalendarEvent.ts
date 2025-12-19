@@ -1,8 +1,8 @@
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { addVideoCallDataToEvent } from "@calcom/features/bookings/lib/handleNewBooking/addVideoCallDataToEvent";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { addVideoCallDataToEvent } from "@bookph/core/features/bookings/lib/handleNewBooking/addVideoCallDataToEvent";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 const buildCalendarEvent: (bookingUid: string) => Promise<CalendarEvent> = async (bookingUid: string) => {
   const booking = await prisma.booking.findUnique({

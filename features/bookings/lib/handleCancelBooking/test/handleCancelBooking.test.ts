@@ -9,18 +9,18 @@ import {
   mockSuccessfulVideoMeetingCreation,
   TestData,
   getDate,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectBookingCancelledWebhookToHaveBeenFired,
   expectWorkflowToBeTriggered,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, vi } from "vitest";
 
-import { processPaymentRefund } from "@calcom/features/bookings/lib/payment/processPaymentRefund";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { processPaymentRefund } from "@bookph/core/features/bookings/lib/payment/processPaymentRefund";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 vi.mock("@calcom/features/bookings/lib/payment/processPaymentRefund", () => ({
   processPaymentRefund: vi.fn(),
@@ -30,7 +30,7 @@ describe("Cancel Booking", () => {
   setupAndTeardown();
 
   test("Should trigger BOOKING_CANCELLED webhook and workflow", async ({ emails }) => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -157,7 +157,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should call processPaymentRefund", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -287,7 +287,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should successfully cancel round robin team event when host is also an attendee with workflow emails", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const organizer = getOrganizer({
       name: "Host Organizer",
@@ -437,7 +437,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should block cancelling past bookings", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -506,7 +506,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should block canceling bookings without a cancellation reason when cancelledBy is set to the host", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -574,7 +574,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should not charge cancellation fee when organizer cancels booking", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -686,7 +686,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should not charge cancellation fee when team admin cancels booking", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -812,7 +812,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should charge cancellation fee when attendee cancels within time threshold", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",
@@ -929,7 +929,7 @@ describe("Cancel Booking", () => {
   });
 
   test("Should trigger BOOKING_CANCELLED webhook with username and usernameInOrg for organization bookings", async () => {
-    const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking")).default;
+    const handleCancelBooking = (await import("@bookph/core/features/bookings/lib/handleCancelBooking")).default;
 
     const booker = getBooker({
       email: "booker@example.com",

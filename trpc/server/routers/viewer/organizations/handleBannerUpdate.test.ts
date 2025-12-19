@@ -10,8 +10,8 @@ vi.mock("@calcom/lib/server/resizeBase64Image", () => ({
   resizeBase64Image: vi.fn((input) => input),
 }));
 
-const { uploadLogo } = await import("@calcom/lib/server/avatar");
-const { resizeBase64Image } = await import("@calcom/lib/server/resizeBase64Image");
+const { uploadLogo } = await import("@bookph/core/lib/server/avatar");
+const { resizeBase64Image } = await import("@bookph/core/lib/server/resizeBase64Image");
 
 describe("getBannerUrl", () => {
   const mockTeamId = 123;

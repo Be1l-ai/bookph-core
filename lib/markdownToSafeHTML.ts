@@ -1,6 +1,6 @@
 import sanitizeHtml from "sanitize-html";
 
-import { md } from "@calcom/lib/markdownIt";
+import { md } from "@bookph/core/lib/markdownIt";
 
 if (typeof window !== "undefined") {
   // Markdown parser is heavy - should only run server-side for performance

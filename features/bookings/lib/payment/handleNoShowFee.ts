@@ -1,18 +1,18 @@
-import { PaymentServiceMap } from "@calcom/app-store/payment.services.generated";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { sendNoShowFeeChargedEmail } from "@calcom/emails/billing-email-service";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { IAbstractPaymentService } from "@calcom/types/PaymentService";
+import { PaymentServiceMap } from "@bookph/core/app-store/payment.services.generated";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { sendNoShowFeeChargedEmail } from "@bookph/core/emails/billing-email-service";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
+import type { IAbstractPaymentService } from "@bookph/core/types/PaymentService";
 
 export const handleNoShowFee = async ({
   booking,

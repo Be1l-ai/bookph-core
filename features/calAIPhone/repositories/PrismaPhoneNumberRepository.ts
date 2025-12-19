@@ -1,6 +1,6 @@
-import { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
+import { PrismaClient } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import { PhoneNumberSubscriptionStatus } from "@bookph/core/prisma/enums";
 
 interface _PhoneNumberRawResult {
   id: number;

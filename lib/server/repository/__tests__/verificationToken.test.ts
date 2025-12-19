@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { VerificationToken } from "@calcom/prisma/client";
+import type { VerificationToken } from "@bookph/core/prisma/client";
 
 import { VerificationTokenRepository } from "../verificationToken";
 

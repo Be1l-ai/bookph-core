@@ -2,11 +2,11 @@
 
 import { useRouter } from "next/navigation";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-import { TopBanner } from "@calcom/ui/components/top-banner";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { showToast } from "@bookph/ui/components/toast";
+import { TopBanner } from "@bookph/ui/components/top-banner";
 
 export type TeamsUpgradeBannerProps = {
   data: RouterOutputs["viewer"]["me"]["getUserTopBanners"]["teamUpgradeBanner"];

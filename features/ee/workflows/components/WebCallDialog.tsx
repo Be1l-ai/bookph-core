@@ -3,15 +3,15 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import type { UseFormReturn } from "react-hook-form";
 import type { RetellWebClient } from "retell-client-js-sdk";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter } from "@bookph/ui/components/dialog";
+import { Icon } from "@bookph/ui/components/icon";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { getEventTypeIdForCalAiTest } from "../lib/actionHelperFunctions";
 import type { FormValues } from "../pages/workflow";

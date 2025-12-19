@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import type { FindDetailedScheduleByIdReturnType } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse } from "@calcom/platform-types";
+import type { FindDetailedScheduleByIdReturnType } from "@bookph/core/features/schedules/repositories/ScheduleRepository";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse } from "@bookph/core/platform-types";
 
 import http from "../../lib/http";
 import { useAtomsContext } from "../useAtomsContext";

@@ -1,12 +1,12 @@
 import short from "short-uuid";
 import { v5 as uuidv5 } from "uuid";
-import dayjs from "@calcom/dayjs";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { IdempotencyKeyService } from "@calcom/lib/idempotencyKey/idempotencyKeyService";
-import { APP_NAME } from "@calcom/lib/constants";
+import dayjs from "@bookph/core/dayjs";
+import type { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { getEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { IdempotencyKeyService } from "@bookph/core/lib/idempotencyKey/idempotencyKeyService";
+import { APP_NAME } from "@bookph/core/lib/constants";
 
 const translator = short();
 
@@ -16,7 +16,7 @@ interface BuildNewBookingPlanParams {
   >;
   targetEventTypeDetails: NonNullable<Awaited<ReturnType<typeof getEventTypesFromDB>>>;
   newUser: NonNullable<Awaited<ReturnType<UserRepository["findByIdWithCredentialsAndCalendar"]>>>;
-  newUserT: Awaited<ReturnType<typeof import("@calcom/lib/server/i18n")["getTranslation"]>>;
+  newUserT: Awaited<ReturnType<typeof import("@bookph/core/lib/server/i18n")["getTranslation"]>>;
   reassignedById: number;
 }
 

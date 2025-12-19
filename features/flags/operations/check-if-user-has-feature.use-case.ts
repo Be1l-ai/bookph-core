@@ -1,7 +1,7 @@
 import { startSpan } from "@sentry/nextjs";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { prisma } from "@calcom/prisma";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { prisma } from "@bookph/core/prisma";
 
 /**
  * Use Cases represent individual operations, like "Create Feature" or "Sign In" or "Toggle Feature".

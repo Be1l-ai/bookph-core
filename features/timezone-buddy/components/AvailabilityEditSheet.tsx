@@ -1,20 +1,20 @@
 import { useFieldArray, useForm, useFormContext } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import DateOverrideInputDialog from "@calcom/features/schedules/components/DateOverrideInputDialog";
-import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
-import Schedule from "@calcom/features/schedules/components/Schedule";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import type { Schedule as ScheduleType, TimeRange, WorkingHours } from "@calcom/types/schedule";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
+import dayjs from "@bookph/core/dayjs";
+import { TimezoneSelect } from "@bookph/core/features/components/timezone-select";
+import DateOverrideInputDialog from "@bookph/core/features/schedules/components/DateOverrideInputDialog";
+import DateOverrideList from "@bookph/core/features/schedules/components/DateOverrideList";
+import Schedule from "@bookph/core/features/schedules/components/Schedule";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { HttpError } from "@bookph/core/lib/http-error";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import useMeQuery from "@bookph/core/trpc/react/hooks/useMeQuery";
+import type { Schedule as ScheduleType, TimeRange, WorkingHours } from "@bookph/core/types/schedule";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
 import {
   Sheet,
   SheetBody,
@@ -23,8 +23,8 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/sheet";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { SliderUser } from "./AvailabilitySliderTable";
 

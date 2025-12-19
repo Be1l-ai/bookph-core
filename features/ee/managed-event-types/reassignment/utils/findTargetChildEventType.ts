@@ -1,7 +1,7 @@
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { SchedulingType } from "@calcom/prisma/enums";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import type { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 interface FindTargetChildEventTypeParams {
   bookingId: number;

@@ -1,5 +1,5 @@
-import type { Workflow } from "@calcom/prisma/client";
-import { isAuthorized } from "@calcom/trpc/server/routers/viewer/workflows/util";
+import type { Workflow } from "@bookph/core/prisma/client";
+import { isAuthorized } from "@bookph/core/trpc/server/routers/viewer/workflows/util";
 
 export interface WorkflowPermissions {
   canView: boolean;

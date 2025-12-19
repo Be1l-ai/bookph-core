@@ -1,8 +1,8 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import prisma from "@calcom/prisma";
-import type { Team, User } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import prisma from "@bookph/core/prisma";
+import type { Team, User } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TeamService } from "./teamService";
 
@@ -956,7 +956,7 @@ describe("TeamService.removeMembers Integration Tests", () => {
 
   describe("Common Behaviors and Edge Cases", () => {
     it("should call TeamBillingService.updateQuantity for each team", async () => {
-      const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+      const { getTeamBillingServiceFactory } = await import("@bookph/core/ee/billing/di/containers/Billing");
 
       await TeamService.removeMembers({
         teamIds: [regularTeamTestData.team.id],

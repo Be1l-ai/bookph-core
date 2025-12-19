@@ -2,12 +2,12 @@ import { serialize } from "cookie";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuid } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { MINUTES_TO_BOOK } from "@calcom/lib/constants";
-import { PrismaSelectedSlotRepository } from "@calcom/lib/server/repository/PrismaSelectedSlotRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { MINUTES_TO_BOOK } from "@bookph/core/lib/constants";
+import { PrismaSelectedSlotRepository } from "@bookph/core/lib/server/repository/PrismaSelectedSlotRepository";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

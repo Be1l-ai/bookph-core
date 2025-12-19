@@ -1,5 +1,5 @@
-import { subdomainSuffix } from "@calcom/ee/organizations/lib/orgDomains";
-import logger from "@calcom/lib/logger";
+import { subdomainSuffix } from "@bookph/core/ee/organizations/lib/orgDomains";
+import logger from "@bookph/core/lib/logger";
 
 import { deleteDnsRecord, addDnsRecord } from "./deploymentServices/cloudflare";
 import {

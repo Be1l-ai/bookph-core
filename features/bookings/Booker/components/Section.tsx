@@ -2,8 +2,8 @@ import type { MotionProps } from "framer-motion";
 import { m } from "framer-motion";
 import { forwardRef } from "react";
 
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import classNames from "@calcom/ui/classNames";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import classNames from "@bookph/ui/classNames";
 
 import type { BookerAreas, BookerLayout } from "../types";
 

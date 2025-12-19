@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { SUCCESS_STATUS, V2_ENDPOINTS } from "@calcom/platform-constants";
-import type { PublicEventType } from "@calcom/features/eventtypes/lib/getPublicEvent";
-import type { ApiResponse } from "@calcom/platform-types";
+import { getUsernameList } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { SUCCESS_STATUS, V2_ENDPOINTS } from "@bookph/core/platform-constants";
+import type { PublicEventType } from "@bookph/core/features/eventtypes/lib/getPublicEvent";
+import type { ApiResponse } from "@bookph/core/platform-types";
 
 import http from "../../../lib/http";
 import { useAtomsContext } from "../../../hooks/useAtomsContext";

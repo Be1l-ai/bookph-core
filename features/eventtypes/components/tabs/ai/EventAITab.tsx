@@ -1,4 +1,4 @@
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
+import type { EventTypeSetupProps } from "@bookph/core/features/eventtypes/lib/types";
 
 import AIEventController from "./AIEventController";
 

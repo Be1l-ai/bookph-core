@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 import {
   getDateRangeFromPreset,

@@ -2,22 +2,22 @@ import { format } from "date-fns";
 import type { Dayjs } from "dayjs";
 import { useState, useEffect, useCallback } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button, buttonClasses } from "@calcom/ui/components/button";
+import dayjs from "@bookph/core/dayjs";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { CURRENT_TIMEZONE } from "@bookph/core/lib/timezoneConstants";
+import classNames from "@bookph/ui/classNames";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button, buttonClasses } from "@bookph/ui/components/button";
 import {
   Command,
   CommandList,
   CommandItem,
   CommandGroup,
   CommandSeparator,
-} from "@calcom/ui/components/command";
-import { DateRangePicker } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
+} from "@bookph/ui/components/command";
+import { DateRangePicker } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { Popover, PopoverContent, PopoverTrigger } from "@bookph/ui/components/popover";
 
 import { useDataTable, useFilterValue } from "../../hooks";
 import {
@@ -33,7 +33,7 @@ import {
 import { preserveLocalTime } from "../../lib/preserveLocalTime";
 import type { FilterableColumn, DateRangeFilterOptions } from "../../lib/types";
 import { ZDateRangeFilterValue, ColumnFilterType } from "../../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@bookph/core/types/data-table";
 import { useFilterPopoverOpen } from "./useFilterPopoverOpen";
 
 type DateRangeFilterProps = {

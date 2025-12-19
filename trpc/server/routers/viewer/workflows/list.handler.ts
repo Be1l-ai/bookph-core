@@ -1,12 +1,12 @@
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import type { WorkflowType } from "@calcom/features/ee/workflows/components/WorkflowListPage";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-// import dayjs from "@calcom/dayjs";
-// import { getErrorFromUnknown } from "@calcom/lib/errors";
-import { addPermissionsToWorkflows } from "@calcom/features/workflows/repositories/WorkflowPermissionsRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import type { WorkflowType } from "@bookph/core/features/ee/workflows/components/WorkflowListPage";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+// import dayjs from "@bookph/core/dayjs";
+// import { getErrorFromUnknown } from "@bookph/core/lib/errors";
+import { addPermissionsToWorkflows } from "@bookph/core/features/workflows/repositories/WorkflowPermissionsRepository";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TListInputSchema } from "./list.schema";
 

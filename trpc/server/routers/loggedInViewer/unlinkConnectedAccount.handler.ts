@@ -1,7 +1,7 @@
 import type { GetServerSidePropsContext, NextApiResponse } from "next";
 
-import { prisma } from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
+import { prisma } from "@bookph/core/prisma";
+import { IdentityProvider } from "@bookph/core/prisma/enums";
 
 type UpdateProfileOptions = {
   ctx: {
@@ -17,7 +17,7 @@ type UpdateProfileOptions = {
 const unlinkConnectedAccount = async ({ ctx }: UpdateProfileOptions) => {
   const { user } = ctx;
   // Unlink the account
-  const CalComAdapter = (await import("@calcom/features/auth/lib/next-auth-custom-adapter")).default;
+  const CalComAdapter = (await import("@bookph/core/features/auth/lib/next-auth-custom-adapter")).default;
   const calcomAdapter = CalComAdapter(prisma);
   const provider = user.identityProvider.toLocaleLowerCase();
   // If it fails to delete, don't stop because the users login data might not be present

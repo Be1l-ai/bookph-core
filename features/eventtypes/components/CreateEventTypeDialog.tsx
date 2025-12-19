@@ -2,19 +2,19 @@ import { isValidPhoneNumber } from "libphonenumber-js/max";
 import { useRouter } from "next/navigation";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { TeamEventTypeForm } from "@calcom/features/ee/teams/components/TeamEventTypeForm";
-import { useCreateEventType } from "@calcom/features/eventtypes/hooks/useCreateEventType";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import type { EventType } from "@calcom/prisma/client";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import { TeamEventTypeForm } from "@bookph/core/features/ee/teams/components/TeamEventTypeForm";
+import { useCreateEventType } from "@bookph/core/features/eventtypes/hooks/useCreateEventType";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useTypedQuery } from "@bookph/core/lib/hooks/useTypedQuery";
+import type { EventType } from "@bookph/core/prisma/client";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
+import { showToast } from "@bookph/ui/components/toast";
 
 import CreateEventTypeForm from "./CreateEventTypeForm";
 

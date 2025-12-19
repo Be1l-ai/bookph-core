@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { BookingReportReason } from "@calcom/prisma/enums";
+import { BookingReportReason } from "@bookph/core/prisma/enums";
 
 export const ZReportBookingInputSchema = z.object({
   bookingUid: z.string(),

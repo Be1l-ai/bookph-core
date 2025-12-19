@@ -7,9 +7,9 @@ import {
   ZOOM,
   GOOGLE_MEET,
   OFFICE_365_VIDEO,
-} from "@calcom/platform-constants";
-import type { ApiErrorResponse, ApiResponse } from "@calcom/platform-types";
-import type { App } from "@calcom/types/App";
+} from "@bookph/core/platform-constants";
+import type { ApiErrorResponse, ApiResponse } from "@bookph/core/platform-types";
+import type { App } from "@bookph/core/types/App";
 
 import { useAtomsContext } from "../../../hooks/useAtomsContext";
 import http from "../../../lib/http";

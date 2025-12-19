@@ -7,10 +7,10 @@
  *   pass teams and invitedMembers directly to `intentToCreateOrg`
  * - The new endpoint returns checkoutUrl directly in the response
  */
-import { OrganizationPaymentService } from "@calcom/features/ee/organizations/lib/OrganizationPaymentService";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { OrganizationPaymentService } from "@bookph/core/features/ee/organizations/lib/OrganizationPaymentService";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import { TRPCError } from "@trpc/server";
 

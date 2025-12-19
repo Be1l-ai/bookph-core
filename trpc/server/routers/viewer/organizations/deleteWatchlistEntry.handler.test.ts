@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { WatchlistErrors } from "@calcom/features/watchlist/lib/errors/WatchlistErrors";
-import { WatchlistType, WatchlistAction } from "@calcom/prisma/enums";
+import { WatchlistErrors } from "@bookph/core/features/watchlist/lib/errors/WatchlistErrors";
+import { WatchlistType, WatchlistAction } from "@bookph/core/prisma/enums";
 
 import { deleteWatchlistEntryHandler } from "./deleteWatchlistEntry.handler";
 
@@ -40,7 +40,7 @@ describe("deleteWatchlistEntryHandler", () => {
     const { getOrganizationWatchlistOperationsService } = await import(
       "@calcom/features/di/watchlist/containers/watchlist"
     );
-    const { WatchlistRepository } = await import("@calcom/lib/server/repository/watchlist.repository");
+    const { WatchlistRepository } = await import("@bookph/core/lib/server/repository/watchlist.repository");
 
     vi.mocked(getOrganizationWatchlistOperationsService).mockReturnValue(mockService as never);
     vi.mocked(WatchlistRepository).mockImplementation(() => mockWatchlistRepo as never);

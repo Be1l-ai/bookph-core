@@ -3,10 +3,10 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import type { z } from "zod";
 
-import { scheduleWorkflowReminders } from "@calcom/ee/workflows/lib/reminders/reminderScheduler";
-import type { ZTriggerFormSubmittedNoEventWorkflowPayloadSchema } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWorkflow";
-import { triggerFormSubmittedNoEventWorkflow } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWorkflow";
-import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@calcom/prisma/enums";
+import { scheduleWorkflowReminders } from "@bookph/core/ee/workflows/lib/reminders/reminderScheduler";
+import type { ZTriggerFormSubmittedNoEventWorkflowPayloadSchema } from "@bookph/core/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWorkflow";
+import { triggerFormSubmittedNoEventWorkflow } from "@bookph/core/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWorkflow";
+import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@bookph/core/prisma/enums";
 
 import { shouldTriggerFormSubmittedNoEvent } from "./formSubmissionValidation";
 

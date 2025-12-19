@@ -1,8 +1,8 @@
-import { verifyCodeUnAuthenticated } from "@calcom/features/auth/lib/verifyCodeUnAuthenticated";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { extractBaseEmail } from "@calcom/lib/extract-base-email";
-import prisma from "@calcom/prisma";
+import { verifyCodeUnAuthenticated } from "@bookph/core/features/auth/lib/verifyCodeUnAuthenticated";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { extractBaseEmail } from "@bookph/core/lib/extract-base-email";
+import prisma from "@bookph/core/prisma";
 
 export const checkIfBookerEmailIsBlocked = async ({
   bookerEmail,

@@ -1,4 +1,4 @@
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
+import { defaultHandler } from "@bookph/core/lib/server/defaultHandler";
 
 export default defaultHandler({
   GET: import("./_getAdd"),

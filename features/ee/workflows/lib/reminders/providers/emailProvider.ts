@@ -1,6 +1,6 @@
-import type { WorkflowEmailData } from "@calcom/emails/templates/workflow-email";
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import tasker from "@calcom/features/tasker";
+import type { WorkflowEmailData } from "@bookph/core/emails/templates/workflow-email";
+import { sendCustomWorkflowEmail } from "@bookph/core/emails/workflow-email-service";
+import tasker from "@bookph/core/features/tasker";
 
 type EmailData = Omit<WorkflowEmailData, "to"> & {
   to: string[];

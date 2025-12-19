@@ -1,7 +1,7 @@
-import { getCRMContactOwnerForRRLeadSkip } from "@calcom/app-store/_utils/CRMRoundRobinSkip";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { prisma } from "@calcom/prisma";
-import { SchedulingType } from "@calcom/prisma/enums";
+import { getCRMContactOwnerForRRLeadSkip } from "@bookph/core/app-store/_utils/CRMRoundRobinSkip";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { prisma } from "@bookph/core/prisma";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 import type { LocalRoute } from "../../types/types";
 import { enabledAppSlugs } from "../enabledApps";
@@ -58,7 +58,7 @@ export default async function routerGetCrmContactOwnerEmail({
     if (!routingOptions) continue;
     // See if any options are true
     if (Object.values(routingOptions).some((option) => option === true)) {
-      const appBookingFormHandler = (await import("@calcom/app-store/routing-forms/appBookingFormHandler"))
+      const appBookingFormHandler = (await import("@bookph/core/app-store/routing-forms/appBookingFormHandler"))
         .default;
       const appHandler = appBookingFormHandler[appSlug as keyof typeof appBookingFormHandler];
 

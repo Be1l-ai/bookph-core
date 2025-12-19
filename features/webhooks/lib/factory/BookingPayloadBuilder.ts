@@ -1,6 +1,6 @@
-import { getUTCOffsetByTimezone } from "@calcom/lib/dayjs";
-import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { getUTCOffsetByTimezone } from "@bookph/core/lib/dayjs";
+import { BookingStatus, WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import type { EventTypeInfo, BookingWebhookEventDTO } from "../dto/types";
 import type { WebhookPayload } from "./types";

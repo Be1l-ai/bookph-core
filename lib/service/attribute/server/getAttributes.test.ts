@@ -2,8 +2,8 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, beforeEach } from "vitest";
 
-import type { AttributeOption } from "@calcom/prisma/client";
-import { AttributeType, MembershipRole } from "@calcom/prisma/enums";
+import type { AttributeOption } from "@bookph/core/prisma/client";
+import { AttributeType, MembershipRole } from "@bookph/core/prisma/enums";
 
 import type { Attribute } from "./getAttributes";
 import { getAttributesForTeam, getAttributesAssignmentData, getUsersAttributes } from "./getAttributes";

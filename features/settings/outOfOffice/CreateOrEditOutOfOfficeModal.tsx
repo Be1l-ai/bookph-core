@@ -1,25 +1,25 @@
 import { useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { useHasTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { UpgradeTeamsBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { DateRangePicker, TextArea, Input, Checkbox } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import dayjs from "@bookph/core/dayjs";
+import { useHasTeamPlan } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useDebounce } from "@bookph/core/lib/hooks/useDebounce";
+import { useInViewObserver } from "@bookph/core/lib/hooks/useInViewObserver";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import useMeQuery from "@bookph/core/trpc/react/hooks/useMeQuery";
+import classNames from "@bookph/ui/classNames";
+import { Alert } from "@bookph/ui/components/alert";
+import { UpgradeTeamsBadge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader } from "@bookph/ui/components/dialog";
+import { DateRangePicker, TextArea, Input, Checkbox } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { OutOfOfficeTab } from "./OutOfOfficeToggleGroup";
 

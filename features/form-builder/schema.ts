@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { fieldSchema, fieldTypeEnum, variantsConfigSchema, type FieldType } from "@calcom/prisma/zod-utils";
+import { fieldSchema, fieldTypeEnum, variantsConfigSchema, type FieldType } from "@bookph/core/prisma/zod-utils";
 
 import { fieldTypesConfigMap } from "./fieldTypes";
 import { preprocessNameFieldDataWithVariant } from "./utils";

@@ -7,18 +7,18 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { uuid } from "short-uuid";
 
-import { deriveOrgNameFromEmail } from "@calcom/ee/organizations/components/CreateANewOrganizationForm";
-import { deriveSlugFromEmail } from "@calcom/ee/organizations/components/CreateANewOrganizationForm";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { CreationSource } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { Ensure } from "@calcom/types/utils";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
+import { deriveOrgNameFromEmail } from "@bookph/core/ee/organizations/components/CreateANewOrganizationForm";
+import { deriveSlugFromEmail } from "@bookph/core/ee/organizations/components/CreateANewOrganizationForm";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import slugify from "@bookph/core/lib/slugify";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
+import { CreationSource } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import type { Ensure } from "@bookph/core/types/utils";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { TextField } from "@bookph/ui/components/form";
+import { Form } from "@bookph/ui/components/form";
 
 export const CreateANewPlatformForm = () => {
   const session = useSession();

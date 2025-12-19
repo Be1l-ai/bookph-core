@@ -1,8 +1,8 @@
 import { createModule } from "@evyweb/ioctopus";
 import { Logger } from "tslog";
 
-import { bindModuleToClassOnToken, type ModuleLoader } from "@calcom/features/di/di";
-import { loggerConfig } from "@calcom/lib/logger";
+import { bindModuleToClassOnToken, type ModuleLoader } from "@bookph/core/features/di/di";
+import { loggerConfig } from "@bookph/core/lib/logger";
 
 import { SHARED_TOKENS } from "../shared.tokens";
 

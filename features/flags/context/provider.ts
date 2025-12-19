@@ -31,7 +31,7 @@ export function useFlagMap() {
  * you can render the FeatureProvider at the top of your Next.js pages, like so:
  *
  * ```ts
- * import { useFlags } from "@calcom/features/flags/hooks/useFlag"
+ * import { useFlags } from "@bookph/core/features/flags/hooks/useFlag"
  * import { FeatureProvider, useFlagMap } from @calcom/features/flags/context/provider"
  *
  * export default function YourPage () {

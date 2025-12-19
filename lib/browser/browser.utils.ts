@@ -1,4 +1,4 @@
-import { sdkActionManager } from "@calcom/embed-core/embed-iframe";
+import { sdkActionManager } from "@bookph/core/embed-core/embed-iframe";
 
 type BrowserInfo = {
   url: string;

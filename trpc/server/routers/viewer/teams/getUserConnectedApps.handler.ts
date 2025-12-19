@@ -1,8 +1,8 @@
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { AppCategories } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getAppFromSlug } from "@bookph/core/app-store/utils";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { AppCategories } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TGetUserConnectedAppsInputSchema } from "./getUserConnectedApps.schema";
 

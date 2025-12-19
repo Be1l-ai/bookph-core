@@ -1,4 +1,4 @@
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 export interface GetSubscribersOptions {
   userId?: number | null;

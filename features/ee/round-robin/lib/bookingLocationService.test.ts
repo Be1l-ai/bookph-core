@@ -15,7 +15,7 @@ vi.mock("@calcom/app-store/locations", async () => {
   };
 });
 
-const { getAppFromSlug } = await import("@calcom/app-store/utils");
+const { getAppFromSlug } = await import("@bookph/core/app-store/utils");
 
 describe("BookingLocationService", () => {
   beforeEach(() => {

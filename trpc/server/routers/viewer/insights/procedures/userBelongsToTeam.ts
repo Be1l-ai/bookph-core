@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
-import authedProcedure from "@calcom/trpc/server/procedures/authedProcedure";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import authedProcedure from "@bookph/core/trpc/server/procedures/authedProcedure";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { PrismaClient } from "@calcom/prisma";
+import { PrismaClient } from "@bookph/core/prisma";
 
 import { ScheduleRepository } from "./ScheduleRepository";
 

@@ -1,20 +1,20 @@
-import { createFallbackRoute } from "@calcom/app-store/routing-forms/lib/createFallbackRoute";
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import { isFallbackRoute } from "@calcom/app-store/routing-forms/lib/isFallbackRoute";
-import isRouter from "@calcom/app-store/routing-forms/lib/isRouter";
-import isRouterLinkedField from "@calcom/app-store/routing-forms/lib/isRouterLinkedField";
-import type { SerializableForm } from "@calcom/app-store/routing-forms/types/types";
-import { zodFields, zodRouterRoute, zodRoutes } from "@calcom/app-store/routing-forms/zod";
+import { createFallbackRoute } from "@bookph/core/app-store/routing-forms/lib/createFallbackRoute";
+import { getSerializableForm } from "@bookph/core/app-store/routing-forms/lib/getSerializableForm";
+import { isFallbackRoute } from "@bookph/core/app-store/routing-forms/lib/isFallbackRoute";
+import isRouter from "@bookph/core/app-store/routing-forms/lib/isRouter";
+import isRouterLinkedField from "@bookph/core/app-store/routing-forms/lib/isRouterLinkedField";
+import type { SerializableForm } from "@bookph/core/app-store/routing-forms/types/types";
+import { zodFields, zodRouterRoute, zodRoutes } from "@bookph/core/app-store/routing-forms/zod";
 import {
   entityPrismaWhereClause,
   canEditEntity,
-} from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import type { App_RoutingForms_Form } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@bookph/core/features/pbac/lib/entityPermissionUtils.server";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { App_RoutingForms_Form } from "@bookph/core/prisma/client";
+import { Prisma } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

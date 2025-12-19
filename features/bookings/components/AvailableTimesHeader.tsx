@@ -1,12 +1,12 @@
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { nameOfDay } from "@calcom/lib/weekday";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { nameOfDay } from "@bookph/core/lib/weekday";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
+import classNames from "@bookph/ui/classNames";
 
 import { TimeFormatToggle } from "./TimeFormatToggle";
 

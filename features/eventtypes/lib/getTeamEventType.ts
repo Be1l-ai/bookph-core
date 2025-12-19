@@ -1,5 +1,5 @@
-import { getSlugOrRequestedSlug } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { prisma } from "@calcom/prisma";
+import { getSlugOrRequestedSlug } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import { prisma } from "@bookph/core/prisma";
 
 import { getPublicEventSelect } from "./getPublicEvent";
 

@@ -5,23 +5,23 @@ import { usePathname, useRouter as useAppRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { z } from "zod";
 
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import type { ChildrenEventType } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
-import { EventType as EventTypeComponent } from "@calcom/features/eventtypes/components/EventType";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import { EventPermissionProvider } from "@calcom/features/pbac/client/context/EventPermissionContext";
-import { useWorkflowPermission } from "@calcom/features/pbac/client/hooks/useEventPermission";
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import { HttpError } from "@calcom/lib/http-error";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateTeamEventTypeCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
-import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/event-types/[type]/actions";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import type { ChildrenEventType } from "@bookph/core/features/eventtypes/components/ChildrenEventTypeSelect";
+import { EventType as EventTypeComponent } from "@bookph/core/features/eventtypes/components/EventType";
+import type { EventTypeSetupProps } from "@bookph/core/features/eventtypes/lib/types";
+import { EventPermissionProvider } from "@bookph/core/features/pbac/client/context/EventPermissionContext";
+import { useWorkflowPermission } from "@bookph/core/features/pbac/client/hooks/useEventPermission";
+import { WEBSITE_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useTypedQuery } from "@bookph/core/lib/hooks/useTypedQuery";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc/react";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import useMeQuery from "@bookph/core/trpc/react/hooks/useMeQuery";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateTeamEventTypeCache } from "@bookph/core/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { revalidateEventTypeEditPage } from "@bookph/core/web/app/(use-page-wrapper)/event-types/[type]/actions";
 
 import { TRPCClientError } from "@trpc/react-query";
 
@@ -45,11 +45,11 @@ type EventPermissions = {
 };
 
 const ManagedEventTypeDialog = dynamic(
-  () => import("@calcom/features/eventtypes/components/dialogs/ManagedEventDialog")
+  () => import("@bookph/core/features/eventtypes/components/dialogs/ManagedEventDialog")
 );
 
 const AssignmentWarningDialog = dynamic(
-  () => import("@calcom/features/eventtypes/components/dialogs/AssignmentWarningDialog")
+  () => import("@bookph/core/features/eventtypes/components/dialogs/AssignmentWarningDialog")
 );
 
 const EventSetupTab = dynamic(() =>
@@ -76,7 +76,7 @@ const EventAdvancedTab = dynamic(() =>
 );
 
 const EventInstantTab = dynamic(() =>
-  import("@calcom/features/eventtypes/components/tabs/instant/EventInstantTab").then(
+  import("@bookph/core/features/eventtypes/components/tabs/instant/EventInstantTab").then(
     (mod) => mod.EventInstantTab
   )
 );
@@ -87,21 +87,21 @@ const EventRecurringTab = dynamic(() =>
 );
 
 const EventAppsTab = dynamic(() =>
-  import("@calcom/features/eventtypes/components/tabs/apps/EventAppsTab").then((mod) => mod.EventAppsTab)
+  import("@bookph/core/features/eventtypes/components/tabs/apps/EventAppsTab").then((mod) => mod.EventAppsTab)
 );
 
 const EventWorkflowsTab = dynamic(
-  () => import("@calcom/features/eventtypes/components/tabs/workflows/EventWorkfowsTab")
+  () => import("@bookph/core/features/eventtypes/components/tabs/workflows/EventWorkfowsTab")
 );
 
 const EventWebhooksTab = dynamic(() =>
-  import("@calcom/features/eventtypes/components/tabs/webhooks/EventWebhooksTab").then(
+  import("@bookph/core/features/eventtypes/components/tabs/webhooks/EventWebhooksTab").then(
     (mod) => mod.EventWebhooksTab
   )
 );
 
 const EventAITab = dynamic(() =>
-  import("@calcom/features/eventtypes/components/tabs/ai/EventAITab").then((mod) => mod.EventAITab)
+  import("@bookph/core/features/eventtypes/components/tabs/ai/EventAITab").then((mod) => mod.EventAITab)
 );
 
 export type EventTypeWebWrapperProps = {

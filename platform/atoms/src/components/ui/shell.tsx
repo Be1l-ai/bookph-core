@@ -1,4 +1,4 @@
-import type { LayoutProps } from "@calcom/features/shell/Shell";
+import type { LayoutProps } from "@bookph/core/features/shell/Shell";
 
 import { cn } from "../../lib/utils";
 

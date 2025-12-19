@@ -4,16 +4,16 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import type { Options, Props } from "react-select";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { SelectClassNames } from "@calcom/features/eventtypes/lib/types";
-import { getHostsFromOtherGroups } from "@calcom/lib/bookings/hostGroupUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Select } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import type { SelectClassNames } from "@bookph/core/features/eventtypes/lib/types";
+import { getHostsFromOtherGroups } from "@bookph/core/lib/bookings/hostGroupUtils";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Button } from "@bookph/ui/components/button";
+import { Select } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import type { PriorityDialogCustomClassNames, WeightDialogCustomClassNames } from "./HostEditDialogs";
 import { PriorityDialog, WeightDialog } from "./HostEditDialogs";

@@ -1,8 +1,8 @@
-import dayjs from "@calcom/dayjs";
-import { sendPasswordResetEmail } from "@calcom/emails/auth-email-service";
-import { PASSWORD_RESET_EXPIRY_HOURS } from "@calcom/features/auth/lib/passwordResetRequest";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
+import dayjs from "@bookph/core/dayjs";
+import { sendPasswordResetEmail } from "@bookph/core/emails/auth-email-service";
+import { PASSWORD_RESET_EXPIRY_HOURS } from "@bookph/core/features/auth/lib/passwordResetRequest";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { prisma } from "@bookph/core/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TAdminPasswordResetSchema } from "./sendPasswordReset.schema";

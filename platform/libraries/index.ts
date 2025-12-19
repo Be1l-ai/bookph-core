@@ -1,28 +1,28 @@
-import { getBookingForReschedule } from "@calcom/features/bookings/lib/get-booking";
-import getAllUserBookings from "@calcom/features/bookings/lib/getAllUserBookings";
-import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
-import getBookingInfo from "@calcom/features/bookings/lib/getBookingInfo";
-import handleCancelBooking from "@calcom/features/bookings/lib/handleCancelBooking";
-import { getClientSecretFromPayment } from "@calcom/features/ee/payments/pages/getClientSecretFromPayment";
-import { getTeamMemberEmailForResponseOrContactUsingUrlQuery } from "@calcom/features/ee/teams/lib/getTeamMemberEmailFromCrm";
+import { getBookingForReschedule } from "@bookph/core/features/bookings/lib/get-booking";
+import getAllUserBookings from "@bookph/core/features/bookings/lib/getAllUserBookings";
+import { getBookingFieldsWithSystemFields } from "@bookph/core/features/bookings/lib/getBookingFields";
+import getBookingInfo from "@bookph/core/features/bookings/lib/getBookingInfo";
+import handleCancelBooking from "@bookph/core/features/bookings/lib/handleCancelBooking";
+import { getClientSecretFromPayment } from "@bookph/core/features/ee/payments/pages/getClientSecretFromPayment";
+import { getTeamMemberEmailForResponseOrContactUsingUrlQuery } from "@bookph/core/features/ee/teams/lib/getTeamMemberEmailFromCrm";
 import {
   verifyPhoneNumber,
   sendVerificationCode,
-} from "@calcom/features/ee/workflows/lib/reminders/verifyPhoneNumber";
-import { handleCreatePhoneCall } from "@calcom/features/handleCreatePhoneCall";
-import handleMarkNoShow from "@calcom/features/handleMarkNoShow";
-import { getRoutedUrl } from "@calcom/features/routing-forms/lib/getRoutedUrl";
-import { symmetricEncrypt, symmetricDecrypt } from "@calcom/lib/crypto";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import { paymentDataSelect } from "@calcom/prisma/selects/payment";
-import { createNewUsersConnectToOrgIfExists } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
+} from "@bookph/core/features/ee/workflows/lib/reminders/verifyPhoneNumber";
+import { handleCreatePhoneCall } from "@bookph/core/features/handleCreatePhoneCall";
+import handleMarkNoShow from "@bookph/core/features/handleMarkNoShow";
+import { getRoutedUrl } from "@bookph/core/features/routing-forms/lib/getRoutedUrl";
+import { symmetricEncrypt, symmetricDecrypt } from "@bookph/core/lib/crypto";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { credentialForCalendarServiceSelect } from "@bookph/core/prisma/selects/credential";
+import { paymentDataSelect } from "@bookph/core/prisma/selects/payment";
+import { createNewUsersConnectToOrgIfExists } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/utils";
 
-export { slugify } from "@calcom/lib/slugify";
+export { slugify } from "@bookph/core/lib/slugify";
 export { getBookingForReschedule };
 
-export type { EventBusyDate } from "@calcom/types/Calendar";
+export type { EventBusyDate } from "@bookph/core/types/Calendar";
 
 export {
   CreationSource,
@@ -35,24 +35,24 @@ export {
   WorkflowTriggerEvents,
   WorkflowActions,
   WorkflowTemplates,
-} from "@calcom/prisma/enums";
+} from "@bookph/core/prisma/enums";
 
-export { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
+export { getUsernameList } from "@bookph/core/features/eventtypes/lib/defaultEvents";
 
 export { handleMarkNoShow };
 export { handleCreatePhoneCall };
 
-export { getConnectedDestinationCalendarsAndEnsureDefaultsInDb } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
+export { getConnectedDestinationCalendarsAndEnsureDefaultsInDb } from "@bookph/core/features/calendars/lib/getConnectedDestinationCalendars";
 
-export { getBusyCalendarTimes } from "@calcom/features/calendars/lib/CalendarManager";
+export { getBusyCalendarTimes } from "@bookph/core/features/calendars/lib/CalendarManager";
 
-export type { BookingCreateBody, BookingResponse } from "@calcom/features/bookings/types";
-export { HttpError } from "@calcom/lib/http-error";
+export type { BookingCreateBody, BookingResponse } from "@bookph/core/features/bookings/types";
+export { HttpError } from "@bookph/core/lib/http-error";
 
-export { MINUTES_TO_BOOK, ENABLE_ASYNC_TASKER } from "@calcom/lib/constants";
+export { MINUTES_TO_BOOK, ENABLE_ASYNC_TASKER } from "@bookph/core/lib/constants";
 
-export { cityTimezonesHandler } from "@calcom/features/cityTimezones/cityTimezonesHandler";
-export type { CityTimezones } from "@calcom/features/cityTimezones/cityTimezonesHandler";
+export { cityTimezonesHandler } from "@bookph/core/features/cityTimezones/cityTimezonesHandler";
+export type { CityTimezones } from "@bookph/core/features/cityTimezones/cityTimezonesHandler";
 
 export { TRPCError } from "@trpc/server";
 export { createNewUsersConnectToOrgIfExists };
@@ -61,29 +61,29 @@ export { getAllUserBookings };
 export { getBookingInfo };
 export { handleCancelBooking };
 
-export { userMetadata, bookingMetadataSchema, teamMetadataSchema } from "@calcom/prisma/zod-utils";
+export { userMetadata, bookingMetadataSchema, teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
-export { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
+export { parseBookingLimit } from "@bookph/core/lib/intervalLimits/isBookingLimits";
 
-export { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-export { dynamicEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
+export { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+export { dynamicEvent } from "@bookph/core/features/eventtypes/lib/defaultEvents";
 
 export { symmetricEncrypt, symmetricDecrypt };
 
 export { getTranslation };
 
-export { roundRobinReassignment } from "@calcom/features/ee/round-robin/roundRobinReassignment";
-export { roundRobinManualReassignment } from "@calcom/features/ee/round-robin/roundRobinManualReassignment";
+export { roundRobinReassignment } from "@bookph/core/features/ee/round-robin/roundRobinReassignment";
+export { roundRobinManualReassignment } from "@bookph/core/features/ee/round-robin/roundRobinManualReassignment";
 
-export { ErrorCode } from "@calcom/lib/errorCodes";
+export { ErrorCode } from "@bookph/core/lib/errorCodes";
 
-export { validateCustomEventName } from "@calcom/features/eventtypes/lib/eventNaming";
+export { validateCustomEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
 
 export type TeamQuery = Prisma.TeamGetPayload<{
   select: {
     id: true;
     credentials: {
-      select: typeof import("@calcom/prisma/selects/credential").credentialForCalendarServiceSelect;
+      select: typeof import("@bookph/core/prisma/selects/credential").credentialForCalendarServiceSelect;
     };
     name: true;
     logoUrl: true;
@@ -99,36 +99,36 @@ export { credentialForCalendarServiceSelect };
 export { paymentDataSelect };
 export { getClientSecretFromPayment };
 
-export { confirmHandler as confirmBookingHandler } from "@calcom/trpc/server/routers/viewer/bookings/confirm.handler";
-export { groupMembershipAttributes } from "@calcom/trpc/server/routers/viewer/attributes/getByUserId.handler";
-export type { GroupedAttribute } from "@calcom/trpc/server/routers/viewer/attributes/getByUserId.handler";
+export { confirmHandler as confirmBookingHandler } from "@bookph/core/trpc/server/routers/viewer/bookings/confirm.handler";
+export { groupMembershipAttributes } from "@bookph/core/trpc/server/routers/viewer/attributes/getByUserId.handler";
+export type { GroupedAttribute } from "@bookph/core/trpc/server/routers/viewer/attributes/getByUserId.handler";
 export { getBookingFieldsWithSystemFields };
 
 export { getRoutedUrl };
 
 export { getTeamMemberEmailForResponseOrContactUsingUrlQuery };
 
-export { SelectedCalendarRepository } from "@calcom/lib/server/repository/selectedCalendar";
-export { encryptServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
-export { createHandler as createApiKeyHandler } from "@calcom/trpc/server/routers/viewer/apiKeys/create.handler";
-export { getCalendarLinks } from "@calcom/features/bookings/lib/getCalendarLinks";
+export { SelectedCalendarRepository } from "@bookph/core/lib/server/repository/selectedCalendar";
+export { encryptServiceAccountKey } from "@bookph/core/lib/server/serviceAccountKey";
+export { createHandler as createApiKeyHandler } from "@bookph/core/trpc/server/routers/viewer/apiKeys/create.handler";
+export { getCalendarLinks } from "@bookph/core/features/bookings/lib/getCalendarLinks";
 
-export { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-export type { TFindTeamMembersMatchingAttributeLogicInputSchema } from "@calcom/trpc/server/routers/viewer/attributes/findTeamMembersMatchingAttributeLogic.schema";
-export { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
+export { findTeamMembersMatchingAttributeLogic } from "@bookph/core/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+export type { TFindTeamMembersMatchingAttributeLogicInputSchema } from "@bookph/core/trpc/server/routers/viewer/attributes/findTeamMembersMatchingAttributeLogic.schema";
+export { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
 
 export { verifyPhoneNumber, sendVerificationCode };
 
-export { verifyCodeUnAuthenticated } from "@calcom/features/auth/lib/verifyCodeUnAuthenticated";
+export { verifyCodeUnAuthenticated } from "@bookph/core/features/auth/lib/verifyCodeUnAuthenticated";
 
-export { verifyCode as verifyCodeAuthenticated } from "@calcom/trpc/server/routers/viewer/organizations/verifyCode.handler";
+export { verifyCode as verifyCodeAuthenticated } from "@bookph/core/trpc/server/routers/viewer/organizations/verifyCode.handler";
 
-export { sendEmailVerificationByCode } from "@calcom/features/auth/lib/verifyEmail";
+export { sendEmailVerificationByCode } from "@bookph/core/features/auth/lib/verifyEmail";
 
-export { checkEmailVerificationRequired } from "@calcom/trpc/server/routers/publicViewer/checkIfUserEmailVerificationRequired.handler";
+export { checkEmailVerificationRequired } from "@bookph/core/trpc/server/routers/publicViewer/checkIfUserEmailVerificationRequired.handler";
 
-export { TeamService } from "@calcom/features/ee/teams/services/teamService";
+export { TeamService } from "@bookph/core/features/ee/teams/services/teamService";
 
-export { BookingAccessService } from "@calcom/features/bookings/services/BookingAccessService";
-export { getTasker } from "@calcom/features/tasker/tasker-factory";
-export type { Tasker } from "@calcom/features/tasker/tasker";
+export { BookingAccessService } from "@bookph/core/features/bookings/services/BookingAccessService";
+export { getTasker } from "@bookph/core/features/tasker/tasker-factory";
+export type { Tasker } from "@bookph/core/features/tasker/tasker";

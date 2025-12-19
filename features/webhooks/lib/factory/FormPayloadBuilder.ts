@@ -1,5 +1,5 @@
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@bookph/core/app-store/routing-forms/lib/formSubmissionUtils";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import type { FormSubmittedDTO, FormSubmittedNoEventDTO } from "../dto/types";
 import type { WebhookPayload } from "./types";

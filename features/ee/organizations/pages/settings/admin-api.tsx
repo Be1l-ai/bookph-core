@@ -1,11 +1,11 @@
 "use client";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { UpgradeTip } from "@calcom/features/tips";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { Icon } from "@calcom/ui/components/icon";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { UpgradeTip } from "@bookph/core/features/tips";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { ButtonGroup } from "@bookph/ui/components/buttonGroup";
+import { Icon } from "@bookph/ui/components/icon";
 
 export const AdminAPIView = () => {
   const { t } = useLocale();

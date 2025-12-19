@@ -1,6 +1,6 @@
-import jackson from "@calcom/features/ee/sso/lib/jackson";
-import { canAccessOrganization } from "@calcom/features/ee/sso/lib/saml";
-import prisma from "@calcom/prisma";
+import jackson from "@bookph/core/features/ee/sso/lib/jackson";
+import { canAccessOrganization } from "@bookph/core/features/ee/sso/lib/saml";
+import prisma from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

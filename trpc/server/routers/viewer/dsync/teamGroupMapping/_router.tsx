@@ -1,5 +1,5 @@
-import authedOrgAdminProcedure from "@calcom/trpc/server/procedures/authedProcedure";
-import { router } from "@calcom/trpc/server/trpc";
+import authedOrgAdminProcedure from "@bookph/core/trpc/server/procedures/authedProcedure";
+import { router } from "@bookph/core/trpc/server/trpc";
 
 import { ZCreateInputSchema } from "./create.schema";
 import { ZDeleteInputSchema } from "./delete.schema";

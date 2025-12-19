@@ -1,7 +1,7 @@
 import { describe, it, vi, expect, beforeEach } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

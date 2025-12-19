@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { ZTextFilterValue } from "@calcom/features/data-table/lib/types";
+import { ZTextFilterValue } from "@bookph/core/features/data-table/lib/types";
 
 export const ZGetInputSchema = z.object({
   filters: z.object({

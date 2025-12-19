@@ -1,5 +1,5 @@
-import type { Prisma } from "@calcom/prisma/client";
-import type { BillingPeriod, CreationSource } from "@calcom/prisma/enums";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { BillingPeriod, CreationSource } from "@bookph/core/prisma/enums";
 
 export type TeamInput = {
   id: number;

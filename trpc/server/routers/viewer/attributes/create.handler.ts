@@ -1,10 +1,10 @@
-import { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getResourcePermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
-import type { Attribute } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { Resource } from "@bookph/core/features/pbac/domain/types/permission-registry";
+import { getResourcePermissions } from "@bookph/core/features/pbac/lib/resource-permissions";
+import slugify from "@bookph/core/lib/slugify";
+import prisma from "@bookph/core/prisma";
+import type { Attribute } from "@bookph/core/prisma/client";
+import { Prisma } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

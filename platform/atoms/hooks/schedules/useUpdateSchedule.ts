@@ -1,9 +1,9 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { V2_ENDPOINTS } from "@calcom/platform-constants";
-import type { ApiResponse, UpdateScheduleInput_2024_06_11, ApiErrorResponse } from "@calcom/platform-types";
-import type { ScheduleOutput_2024_06_11 } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import { V2_ENDPOINTS } from "@bookph/core/platform-constants";
+import type { ApiResponse, UpdateScheduleInput_2024_06_11, ApiErrorResponse } from "@bookph/core/platform-types";
+import type { ScheduleOutput_2024_06_11 } from "@bookph/core/platform-types";
 
 import http from "../../lib/http";
 import { QUERY_KEY as ScheduleQueryKey } from "./useSchedule";

@@ -1,9 +1,9 @@
-import type { BookingAuditProducerService } from "@calcom/features/booking-audit/lib/service/BookingAuditProducerService.interface";
-import type { HashedLinkService } from "@calcom/features/hashedLink/lib/service/HashedLinkService";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import type { BookingAuditProducerService } from "@bookph/core/features/booking-audit/lib/service/BookingAuditProducerService.interface";
+import type { HashedLinkService } from "@bookph/core/features/hashedLink/lib/service/HashedLinkService";
+import type { ISimpleLogger } from "@bookph/core/features/di/shared/services/logger.service";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 import type { Actor } from "../types/actor";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
+import { IS_PRODUCTION } from "@bookph/core/lib/constants";
 
 import type { BookingCreatedPayload, BookingRescheduledPayload } from "./types";
 

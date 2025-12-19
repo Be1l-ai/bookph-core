@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { BookerStoreProvider } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { yyyymmdd } from "@calcom/lib/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { WorkingHours } from "@calcom/types/schedule";
-import cs from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogHeader, DialogTrigger, DialogClose } from "@calcom/ui/components/dialog";
-import { Switch } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { BookerStoreProvider } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { yyyymmdd } from "@bookph/core/lib/dayjs";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { WorkingHours } from "@bookph/core/types/schedule";
+import cs from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogHeader, DialogTrigger, DialogClose } from "@bookph/ui/components/dialog";
+import { Switch } from "@bookph/ui/components/form";
+import { Form } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 import DatePicker from "../../calendars/DatePicker";
 import type { TimeRange } from "./Schedule";

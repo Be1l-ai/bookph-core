@@ -1,27 +1,27 @@
 import md5 from "md5";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { makeSqlCondition } from "@calcom/features/data-table/lib/server";
-import { ZColumnFilter } from "@calcom/features/data-table/lib/types";
-import { type ColumnFilter } from "@calcom/features/data-table/lib/types";
+import dayjs from "@bookph/core/dayjs";
+import { makeSqlCondition } from "@bookph/core/features/data-table/lib/server";
+import { ZColumnFilter } from "@bookph/core/features/data-table/lib/types";
+import { type ColumnFilter } from "@bookph/core/features/data-table/lib/types";
 import {
   isSingleSelectFilterValue,
   isMultiSelectFilterValue,
   isTextFilterValue,
   isNumberFilterValue,
   isDateRangeFilterValue,
-} from "@calcom/features/data-table/lib/utils";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { extractDateRangeFromColumnFilters } from "@calcom/features/insights/lib/bookingUtils";
-import type { DateRange } from "@calcom/features/insights/server/insightsDateUtils";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { SYSTEM_PHONE_FIELDS } from "@calcom/lib/bookings/SystemField";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
+} from "@bookph/core/features/data-table/lib/utils";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { extractDateRangeFromColumnFilters } from "@bookph/core/features/insights/lib/bookingUtils";
+import type { DateRange } from "@bookph/core/features/insights/server/insightsDateUtils";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { SYSTEM_PHONE_FIELDS } from "@bookph/core/lib/bookings/SystemField";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { Prisma } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { eventTypeBookingFields } from "@bookph/core/prisma/zod-utils";
 
 // Utility function to build user hash map with avatar URL fallback
 export const buildHashMapForUsers = <

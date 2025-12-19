@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
+import { HttpError } from "@bookph/core/lib/http-error";
+import prisma from "@bookph/core/prisma";
 
 import { decodeOAuthState } from "../oauth/decodeOAuthState";
 import { throwIfNotHaveAdminAccessToTeam } from "../throwIfNotHaveAdminAccessToTeam";

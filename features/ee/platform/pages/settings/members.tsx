@@ -1,12 +1,12 @@
 "use client";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { UserListTable } from "@calcom/features/users/components/UserTable/UserListTable";
-import type { UserListTableProps } from "@calcom/features/users/components/UserTable/UserListTable";
-import { UserListTableSkeleton } from "@calcom/features/users/components/UserTable/UserListTableSkeleton";
-import NoPlatformPlan from "@calcom/web/components/settings/platform/dashboard/NoPlatformPlan";
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
-import { PlatformPricing } from "@calcom/web/components/settings/platform/pricing/platform-pricing/index";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import { UserListTable } from "@bookph/core/features/users/components/UserTable/UserListTable";
+import type { UserListTableProps } from "@bookph/core/features/users/components/UserTable/UserListTable";
+import { UserListTableSkeleton } from "@bookph/core/features/users/components/UserTable/UserListTableSkeleton";
+import NoPlatformPlan from "@bookph/core/web/components/settings/platform/dashboard/NoPlatformPlan";
+import { useGetUserAttributes } from "@bookph/core/web/components/settings/platform/hooks/useGetUserAttributes";
+import { PlatformPricing } from "@bookph/core/web/components/settings/platform/pricing/platform-pricing/index";
 
 const PlatformMembersView = (props: Omit<UserListTableProps, "facetedTeamValues" | "attributes">) => {
   const { isUserLoading, isUserBillingDataLoading, isPlatformUser, isPaidUser, userBillingData, userOrgId } =

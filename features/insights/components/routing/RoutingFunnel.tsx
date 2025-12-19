@@ -1,8 +1,8 @@
 "use client";
 
-import { useInsightsRoutingParameters } from "@calcom/features/insights/hooks/useInsightsRoutingParameters";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
+import { useInsightsRoutingParameters } from "@bookph/core/features/insights/hooks/useInsightsRoutingParameters";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
 
 import { useToggleableLegend } from "../../hooks/useToggleableLegend";
 import { ChartCard } from "../ChartCard";

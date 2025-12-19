@@ -1,4 +1,4 @@
-import type { BookingHandlerInput } from "@calcom/features/bookings/lib/dto/types";
+import type { BookingHandlerInput } from "@bookph/core/features/bookings/lib/dto/types";
 
 async function handler(input: BookingHandlerInput) {
   const { getRegularBookingService } = await import(

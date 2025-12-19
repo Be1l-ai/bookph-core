@@ -1,12 +1,12 @@
-import { CalendarSubscriptionService } from "@calcom/features/calendar-subscription/lib/CalendarSubscriptionService";
-import { CalendarCacheEventRepository } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventRepository";
-import { CalendarCacheEventService } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventService";
-import { CalendarCacheWrapper } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheWrapper";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import type { Calendar } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import { CalendarSubscriptionService } from "@bookph/core/features/calendar-subscription/lib/CalendarSubscriptionService";
+import { CalendarCacheEventRepository } from "@bookph/core/features/calendar-subscription/lib/cache/CalendarCacheEventRepository";
+import { CalendarCacheEventService } from "@bookph/core/features/calendar-subscription/lib/cache/CalendarCacheEventService";
+import { CalendarCacheWrapper } from "@bookph/core/features/calendar-subscription/lib/cache/CalendarCacheWrapper";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import logger from "@bookph/core/lib/logger";
+import { prisma } from "@bookph/core/prisma";
+import type { Calendar } from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import { CalendarServiceMap } from "../calendar.services.generated";
 

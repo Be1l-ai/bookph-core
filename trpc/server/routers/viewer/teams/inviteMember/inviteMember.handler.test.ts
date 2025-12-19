@@ -9,12 +9,12 @@ import {
   inviteMemberutilsScenarios as inviteMemberUtilsScenarios,
   default as inviteMemberUtilsMock,
 } from "./__mocks__/inviteMemberUtils";
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
+import { constantsScenarios } from "@bookph/core/lib/__mocks__/constants";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import type { Profile } from "@calcom/prisma/client";
-import { IdentityProvider, MembershipRole } from "@calcom/prisma/enums";
+import type { Profile } from "@bookph/core/prisma/client";
+import { IdentityProvider, MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

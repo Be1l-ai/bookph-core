@@ -1,8 +1,8 @@
-import getCrm from "@calcom/app-store/_utils/getCrm";
-import logger from "@calcom/lib/logger";
-import type { CalendarEvent, CalEventResponses } from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { CRM, ContactCreateInput } from "@calcom/types/CrmService";
+import getCrm from "@bookph/core/app-store/_utils/getCrm";
+import logger from "@bookph/core/lib/logger";
+import type { CalendarEvent, CalEventResponses } from "@bookph/core/types/Calendar";
+import type { CredentialPayload } from "@bookph/core/types/Credential";
+import type { CRM, ContactCreateInput } from "@bookph/core/types/CrmService";
 
 const log = logger.getSubLogger({ prefix: ["CrmManager"] });
 export default class CrmManager {

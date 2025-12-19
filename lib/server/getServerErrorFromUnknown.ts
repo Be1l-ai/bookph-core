@@ -1,9 +1,9 @@
 import type { ZodIssue } from "zod";
 import { ZodError } from "zod";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { Prisma } from "@calcom/prisma/client";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { Prisma } from "@bookph/core/prisma/client";
 
 import { HttpError } from "../http-error";
 import { redactError } from "../redactError";

@@ -1,14 +1,14 @@
-import { enrichUsersWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import type { LuckyUserService } from "@calcom/features/bookings/lib/getLuckyUser";
-import { ensureAvailableUsers } from "@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { SchedulingType } from "@calcom/prisma/enums";
+import { enrichUsersWithDelegationCredentials } from "@bookph/core/app-store/delegationCredential";
+import dayjs from "@bookph/core/dayjs";
+import type { LuckyUserService } from "@bookph/core/features/bookings/lib/getLuckyUser";
+import { ensureAvailableUsers } from "@bookph/core/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IsFixedAwareUser } from "@bookph/core/features/bookings/lib/handleNewBooking/types";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 import { managedEventManualReassignment } from "../managedEventManualReassignment";
 import { validateManagedEventReassignment } from "../utils";

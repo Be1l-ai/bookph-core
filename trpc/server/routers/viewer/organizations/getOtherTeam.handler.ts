@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import prisma from "@calcom/prisma";
+import { markdownToSafeHTML } from "@bookph/core/lib/markdownToSafeHTML";
+import prisma from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

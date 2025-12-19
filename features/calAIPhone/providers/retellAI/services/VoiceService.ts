@@ -1,5 +1,5 @@
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
 
 import type { RetellAIRepository, RetellVoice } from "../types";
 

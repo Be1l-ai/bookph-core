@@ -1,9 +1,9 @@
 "use client";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import classNames from "@calcom/ui/classNames";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import classNames from "@bookph/ui/classNames";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
 
 import { useInsightsBookingParameters } from "../../hooks/useInsightsBookingParameters";
 import { ChartCard } from "../ChartCard";

@@ -1,9 +1,9 @@
 import { shallow } from "zustand/shallow";
 
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useSchedule } from "@calcom/features/schedules/lib/use-schedule/useSchedule";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { trpc } from "@calcom/trpc/react";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useSchedule } from "@bookph/core/features/schedules/lib/use-schedule/useSchedule";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { trpc } from "@bookph/core/trpc/react";
 
 import { useBookerTime } from "../components/hooks/useBookerTime";
 

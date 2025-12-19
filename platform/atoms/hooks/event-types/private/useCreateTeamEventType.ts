@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calcom/platform-constants";
-import type { ApiResponse, ApiSuccessResponse } from "@calcom/platform-types";
-import type { CreateTeamEventTypeInput_2024_06_14 } from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@bookph/core/platform-constants";
+import type { ApiResponse, ApiSuccessResponse } from "@bookph/core/platform-types";
+import type { CreateTeamEventTypeInput_2024_06_14 } from "@bookph/core/platform-types";
+import type { EventType } from "@bookph/core/prisma/client";
 
 import http from "../../../lib/http";
 import { useAtomsContext } from "../../useAtomsContext";

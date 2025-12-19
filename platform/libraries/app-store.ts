@@ -1,39 +1,39 @@
-import getEnabledAppsFromCredentials from "@calcom/app-store/_utils/getEnabledAppsFromCredentials";
-import getApps from "@calcom/app-store/utils";
-import handleDeleteCredential from "@calcom/features/credentials/handleDeleteCredential";
-import addDelegationCredential from "@calcom/trpc/server/routers/viewer/delegationCredential/add.handler";
+import getEnabledAppsFromCredentials from "@bookph/core/app-store/_utils/getEnabledAppsFromCredentials";
+import getApps from "@bookph/core/app-store/utils";
+import handleDeleteCredential from "@bookph/core/features/credentials/handleDeleteCredential";
+import addDelegationCredential from "@bookph/core/trpc/server/routers/viewer/delegationCredential/add.handler";
 
-export type { TDependencyData } from "@calcom/app-store/_appRegistry";
+export type { TDependencyData } from "@bookph/core/app-store/_appRegistry";
 
-export type { CredentialOwner } from "@calcom/app-store/types";
-export { CalendarService as IcsFeedCalendarService } from "@calcom/app-store/ics-feedcalendar/lib";
-export { getAppFromSlug } from "@calcom/app-store/utils";
-export type { CredentialDataWithTeamName, LocationOption } from "@calcom/app-store/utils";
+export type { CredentialOwner } from "@bookph/core/app-store/types";
+export { CalendarService as IcsFeedCalendarService } from "@bookph/core/app-store/ics-feedcalendar/lib";
+export { getAppFromSlug } from "@bookph/core/app-store/utils";
+export type { CredentialDataWithTeamName, LocationOption } from "@bookph/core/app-store/utils";
 
-export { CalendarService } from "@calcom/app-store/applecalendar/lib";
+export { CalendarService } from "@bookph/core/app-store/applecalendar/lib";
 
 export { getApps };
 
 export { handleDeleteCredential };
 
-export type { App } from "@calcom/types/App";
+export type { App } from "@bookph/core/types/App";
 
 export { getEnabledAppsFromCredentials };
 
-export { getConnectedApps } from "@calcom/app-store/_utils/getConnectedApps";
+export { getConnectedApps } from "@bookph/core/app-store/_utils/getConnectedApps";
 
-export type { TServiceAccountKeySchema } from "@calcom/prisma/zod-utils";
+export type { TServiceAccountKeySchema } from "@bookph/core/prisma/zod-utils";
 
-export type { ConnectedApps } from "@calcom/app-store/_utils/getConnectedApps";
+export type { ConnectedApps } from "@bookph/core/app-store/_utils/getConnectedApps";
 
-export type { AppsStatus } from "@calcom/types/Calendar";
+export type { AppsStatus } from "@bookph/core/types/Calendar";
 
-export type { CredentialPayload } from "@calcom/types/Credential";
+export type { CredentialPayload } from "@bookph/core/types/Credential";
 
 export { addDelegationCredential };
 
-export { enrichUserWithDelegationConferencingCredentialsWithoutOrgId } from "@calcom/app-store/delegationCredential";
-export { toggleDelegationCredentialEnabled } from "@calcom/trpc/server/routers/viewer/delegationCredential/toggleEnabled.handler";
+export { enrichUserWithDelegationConferencingCredentialsWithoutOrgId } from "@bookph/core/app-store/delegationCredential";
+export { toggleDelegationCredentialEnabled } from "@bookph/core/trpc/server/routers/viewer/delegationCredential/toggleEnabled.handler";
 export {
   CalendarAppError,
   CalendarAppDelegationCredentialInvalidGrantError,
@@ -41,9 +41,9 @@ export {
   CalendarAppDelegationCredentialConfigurationError,
   CalendarAppDelegationCredentialClientIdNotAuthorizedError,
   CalendarAppDelegationCredentialNotSetupError,
-} from "@calcom/lib/CalendarAppError";
+} from "@bookph/core/lib/CalendarAppError";
 
-export { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
+export { DelegationCredentialRepository } from "@bookph/core/features/delegation-credentials/repositories/DelegationCredentialRepository";
 
-export { OAuth2UniversalSchema } from "@calcom/app-store/_utils/oauth/universalSchema";
-export { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
+export { OAuth2UniversalSchema } from "@bookph/core/app-store/_utils/oauth/universalSchema";
+export { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";

@@ -1,5 +1,5 @@
-import { getDefaultEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { withReporting } from "@calcom/lib/sentryWrapper";
+import { getDefaultEvent } from "@bookph/core/features/eventtypes/lib/defaultEvents";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
 
 import { getBookingFieldsWithSystemFields } from "../getBookingFields";
 import { getEventTypesFromDB } from "./getEventTypesFromDB";

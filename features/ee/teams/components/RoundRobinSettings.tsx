@@ -2,16 +2,16 @@
 
 import { useForm } from "react-hook-form";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { RRResetInterval, RRTimestampBasis } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { checkAdminOrOwner } from "@bookph/core/features/auth/lib/checkAdminOrOwner";
+import SectionBottomActions from "@bookph/core/features/settings/SectionBottomActions";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { RRResetInterval, RRTimestampBasis } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { Form } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
+import { revalidateTeamDataCache } from "@bookph/core/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
 
 import RoundRobinResetInterval from "./RoundRobinResetInterval";
 import RoundRobinTimestampBasis from "./RoundRobinTimestampBasis";

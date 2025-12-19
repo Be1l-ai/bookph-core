@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type Stripe from "stripe";
 
-import { getPremiumMonthlyPlanPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { checkPremiumUsername } from "@calcom/features/ee/common/lib/checkPremiumUsername";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getTrackingFromCookies } from "@calcom/lib/tracking";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { getPremiumMonthlyPlanPriceId } from "@bookph/core/app-store/stripepayment/lib/utils";
+import { getServerSession } from "@bookph/core/features/auth/lib/getServerSession";
+import { checkPremiumUsername } from "@bookph/core/features/ee/common/lib/checkPremiumUsername";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getTrackingFromCookies } from "@bookph/core/lib/tracking";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
 
 import { getStripeCustomerIdFromUserId } from "../lib/customer";
 import stripe from "../lib/server";

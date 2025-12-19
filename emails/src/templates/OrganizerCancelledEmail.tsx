@@ -1,4 +1,4 @@
-import { SchedulingType } from "@calcom/prisma/enums";
+import { SchedulingType } from "@bookph/core/prisma/enums";
 
 import { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";
 

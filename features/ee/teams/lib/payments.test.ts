@@ -2,8 +2,8 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { BillingPeriod } from "@calcom/prisma/zod-utils";
+import stripe from "@bookph/core/features/ee/payments/server/stripe";
+import { BillingPeriod } from "@bookph/core/prisma/zod-utils";
 
 import {
   getTeamWithPaymentMetadata,

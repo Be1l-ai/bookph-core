@@ -1,5 +1,5 @@
-import { verifyCodeUnAuthenticated } from "@calcom/features/auth/lib/verifyCodeUnAuthenticated";
-import type { ZVerifyCodeInputSchema } from "@calcom/prisma/zod-utils";
+import { verifyCodeUnAuthenticated } from "@bookph/core/features/auth/lib/verifyCodeUnAuthenticated";
+import type { ZVerifyCodeInputSchema } from "@bookph/core/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

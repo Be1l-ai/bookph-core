@@ -1,22 +1,22 @@
 import { randomBytes } from "crypto";
 
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { deleteWorkfowRemindersOfRemovedMember } from "@calcom/features/ee/teams/lib/deleteWorkflowRemindersOfRemovedMember";
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
-import logger from "@calcom/lib/logger";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { prisma } from "@calcom/prisma";
-import type { Membership } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getTeamBillingServiceFactory } from "@bookph/core/ee/billing/di/containers/Billing";
+import { deleteWorkfowRemindersOfRemovedMember } from "@bookph/core/features/ee/teams/lib/deleteWorkflowRemindersOfRemovedMember";
+import { updateNewTeamMemberEventTypes } from "@bookph/core/features/ee/teams/lib/queries";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import { OnboardingPathService } from "@bookph/core/features/onboarding/lib/onboarding-path.service";
+import { createAProfileForAnExistingUser } from "@bookph/core/features/profile/lib/createAProfileForAnExistingUser";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { deleteDomain } from "@bookph/core/lib/domainManager/organization";
+import logger from "@bookph/core/lib/logger";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import { prisma } from "@bookph/core/prisma";
+import type { Membership } from "@bookph/core/prisma/client";
+import { Prisma } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["TeamService"] });
 

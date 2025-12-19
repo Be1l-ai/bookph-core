@@ -1,10 +1,10 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { WorkflowActions } from "@calcom/prisma/enums";
+import { createDefaultAIPhoneServiceProvider } from "@bookph/core/features/calAIPhone";
+import { WorkflowRepository } from "@bookph/core/features/ee/workflows/repositories/WorkflowRepository";
+import { WorkflowActions } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

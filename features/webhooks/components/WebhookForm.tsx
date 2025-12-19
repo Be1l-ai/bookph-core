@@ -3,20 +3,20 @@
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { TimeTimeUnitInput } from "@calcom/features/ee/workflows/components/TimeTimeUnitInput";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { TimeUnit } from "@calcom/prisma/enums";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Select } from "@calcom/ui/components/form";
-import { TextArea } from "@calcom/ui/components/form";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
+import { TimeTimeUnitInput } from "@bookph/core/features/ee/workflows/components/TimeTimeUnitInput";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { TimeUnit } from "@bookph/core/prisma/enums";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { Select } from "@bookph/ui/components/form";
+import { TextArea } from "@bookph/ui/components/form";
+import { ToggleGroup } from "@bookph/ui/components/form";
+import { Form } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
 
 import SectionBottomActions from "../../settings/SectionBottomActions";
 import customTemplate, { hasTemplateIntegration } from "../lib/integrationTemplate";

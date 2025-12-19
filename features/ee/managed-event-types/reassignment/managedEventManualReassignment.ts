@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@bookph/core/prisma";
 
 import type { ManagedEventManualReassignmentParams } from "./services/ManagedEventManualReassignmentService";
 import { createManagedEventManualReassignmentService } from "./services/container";

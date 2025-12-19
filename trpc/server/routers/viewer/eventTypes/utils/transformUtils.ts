@@ -1,9 +1,9 @@
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { getBookerBaseUrlSync } from "@bookph/core/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { getPlaceholderAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@bookph/core/lib/getAvatarUrl";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import type { TeamPermissions } from "./permissionUtils";
 

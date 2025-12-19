@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Form, TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import { Button } from "@bookph/ui/components/button";
+import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@bookph/ui/components/dialog";
+import { Form, TextField } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { FilterSegmentOutput } from "../../lib/types";
 

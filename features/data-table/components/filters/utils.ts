@@ -1,4 +1,4 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
 
 import { type TextFilterOperator, textFilterOperators } from "../../lib/types";
 import type { TextFilterOperatorOption, NumberFilterOperatorOption } from "./types";

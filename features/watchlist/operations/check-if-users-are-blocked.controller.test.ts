@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import { WatchlistType } from "@calcom/prisma/enums";
+import { WatchlistType } from "@bookph/core/prisma/enums";
 
 import type { SpanFn } from "../lib/telemetry";
 import { checkIfUsersAreBlocked } from "./check-if-users-are-blocked.controller";
@@ -28,7 +28,7 @@ const mockWatchlistFeature = {
 describe("checkIfUsersAreBlocked", () => {
   beforeEach(async () => {
     vi.clearAllMocks();
-    const { getWatchlistFeature } = await import("@calcom/features/di/watchlist/containers/watchlist");
+    const { getWatchlistFeature } = await import("@bookph/core/features/di/watchlist/containers/watchlist");
     vi.mocked(getWatchlistFeature).mockResolvedValue(mockWatchlistFeature as never);
   });
 

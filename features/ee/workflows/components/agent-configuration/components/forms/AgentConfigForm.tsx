@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { AddVariablesDropdown } from "@calcom/ui/components/editor";
-import { Input, Label, TextArea } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { AddVariablesDropdown } from "@bookph/ui/components/editor";
+import { Input, Label, TextArea } from "@bookph/ui/components/form";
 
 import { DYNAMIC_TEXT_VARIABLES } from "../../../../lib/constants";
 import type { AgentFormValues } from "../../types/schemas";

@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 

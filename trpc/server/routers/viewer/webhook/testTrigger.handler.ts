@@ -1,7 +1,7 @@
-import type { EventPayloadType } from "@calcom/features/webhooks/lib/sendPayload";
-import sendPayload from "@calcom/features/webhooks/lib/sendPayload";
-import { getErrorFromUnknown } from "@calcom/lib/errors";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import type { EventPayloadType } from "@bookph/core/features/webhooks/lib/sendPayload";
+import sendPayload from "@bookph/core/features/webhooks/lib/sendPayload";
+import { getErrorFromUnknown } from "@bookph/core/lib/errors";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
 
 import type { TTestTriggerInputSchema } from "./testTrigger.schema";
 

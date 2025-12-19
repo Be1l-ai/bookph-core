@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-import { PaymentForm } from "@calcom/atoms";
+import { PaymentForm } from "@bookph/core/atoms";
 
 const inter = Inter({ subsets: ["latin"] });
 

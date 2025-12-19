@@ -3,24 +3,24 @@
 import { useState } from "react";
 import { useForm, Controller, useFormContext } from "react-hook-form";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { ServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SelectField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { DropdownActions } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { ServiceAccountKey } from "@bookph/core/lib/server/serviceAccountKey";
+import { serviceAccountKeySchema } from "@bookph/core/prisma/zod-utils";
+import { trpc } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
+import { InfoBadge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Form } from "@bookph/ui/components/form";
+import { TextAreaField } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { SelectField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { SkeletonContainer, SkeletonText } from "@bookph/ui/components/skeleton";
+import { DropdownActions } from "@bookph/ui/components/table";
+import { showToast } from "@bookph/ui/components/toast";
 
 interface DelegationItemProps {
   delegation: {

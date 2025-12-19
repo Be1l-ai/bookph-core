@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import type { CredentialPayload } from "@calcom/types/Credential";
+import logger from "@bookph/core/lib/logger";
+import type { CredentialPayload } from "@bookph/core/types/Credential";
 
 import { CrmServiceMap } from "../crm.apps.generated";
 

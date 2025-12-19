@@ -1,13 +1,13 @@
 import type { NextApiResponse } from "next";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getSafeRedirectUrl } from "@bookph/core/lib/getSafeRedirectUrl";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import stripe from "../../server";
 

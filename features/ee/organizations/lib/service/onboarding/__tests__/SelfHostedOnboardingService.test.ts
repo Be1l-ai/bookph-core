@@ -2,12 +2,12 @@ import prismock from "../../../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import * as constants from "@calcom/lib/constants";
-import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@calcom/prisma/enums";
-import { createTeamsHandler } from "@calcom/trpc/server/routers/viewer/organizations/createTeams.handler";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+import { LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
+import * as constants from "@bookph/core/lib/constants";
+import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@bookph/core/prisma/enums";
+import { createTeamsHandler } from "@bookph/core/trpc/server/routers/viewer/organizations/createTeams.handler";
+import { inviteMembersWithNoInviterPermissionCheck } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 import { SelfHostedOrganizationOnboardingService } from "../SelfHostedOnboardingService";
 import type { CreateOnboardingIntentInput, OrganizationOnboardingData } from "../types";
@@ -28,11 +28,11 @@ vi.mock("@calcom/emails/email-manager", () => ({
   sendOrganizationCreationEmail: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
+vi.mock("@bookph/core/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
   inviteMembersWithNoInviterPermissionCheck: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
+vi.mock("@bookph/core/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
   createTeamsHandler: vi.fn(),
 }));
 

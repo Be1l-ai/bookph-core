@@ -2,19 +2,19 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import dayjs from "@calcom/dayjs";
-import { bulkShortenLinks } from "@calcom/ee/workflows/lib/reminders/utils";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { isAttendeeAction } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { scheduleSmsOrFallbackEmail } from "@calcom/features/ee/workflows/lib/reminders/messageDispatcher";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import { WorkflowActions, WorkflowMethods, WorkflowTemplates } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { bulkShortenLinks } from "@bookph/core/ee/workflows/lib/reminders/utils";
+import { getCalEventResponses } from "@bookph/core/features/bookings/lib/getCalEventResponses";
+import { BookingSeatRepository } from "@bookph/core/features/bookings/repositories/BookingSeatRepository";
+import { CreditService } from "@bookph/core/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@bookph/core/features/ee/organizations/lib/getBookerUrlServer";
+import { isAttendeeAction } from "@bookph/core/features/ee/workflows/lib/actionHelperFunctions";
+import { scheduleSmsOrFallbackEmail } from "@bookph/core/features/ee/workflows/lib/reminders/messageDispatcher";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import prisma from "@bookph/core/prisma";
+import { WorkflowActions, WorkflowMethods, WorkflowTemplates } from "@bookph/core/prisma/enums";
+import { bookingMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import { getSenderId } from "../lib/alphanumericSenderIdSupport";
 import type { PartialWorkflowReminder } from "../lib/getWorkflowReminders";

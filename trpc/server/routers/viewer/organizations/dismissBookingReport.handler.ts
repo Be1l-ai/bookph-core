@@ -1,7 +1,7 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

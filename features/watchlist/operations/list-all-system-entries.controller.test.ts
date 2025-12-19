@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import { WatchlistType, WatchlistAction, WatchlistSource } from "@calcom/prisma/enums";
+import { WatchlistType, WatchlistAction, WatchlistSource } from "@bookph/core/prisma/enums";
 
 import type { SpanFn } from "../lib/telemetry";
 import { listAllSystemEntriesController } from "./list-all-system-entries.controller";
@@ -23,7 +23,7 @@ const mockWatchlistFeature: Partial<
 describe("listAllSystemEntriesController", () => {
   beforeEach(async () => {
     vi.clearAllMocks();
-    const { getWatchlistFeature } = await import("@calcom/features/di/watchlist/containers/watchlist");
+    const { getWatchlistFeature } = await import("@bookph/core/features/di/watchlist/containers/watchlist");
     vi.mocked(getWatchlistFeature).mockResolvedValue(
       mockWatchlistFeature as ReturnType<typeof getWatchlistFeature>
     );

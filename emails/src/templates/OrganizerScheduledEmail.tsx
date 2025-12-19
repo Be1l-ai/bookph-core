@@ -1,5 +1,5 @@
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 import { BaseScheduledEmail } from "./BaseScheduledEmail";
 

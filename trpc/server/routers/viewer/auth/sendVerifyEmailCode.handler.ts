@@ -1,9 +1,9 @@
 import type { NextApiRequest } from "next";
 
-import { sendEmailVerificationByCode } from "@calcom/features/auth/lib/verifyEmail";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import getIP from "@calcom/lib/getIP";
-import { hashEmail, piiHasher } from "@calcom/lib/server/PiiHasher";
+import { sendEmailVerificationByCode } from "@bookph/core/features/auth/lib/verifyEmail";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
+import getIP from "@bookph/core/lib/getIP";
+import { hashEmail, piiHasher } from "@bookph/core/lib/server/PiiHasher";
 
 import type { TRPCContext } from "../../../createContext";
 import type { TSendVerifyEmailCodeSchema } from "./sendVerifyEmailCode.schema";

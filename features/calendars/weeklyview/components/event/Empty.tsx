@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import classNames from "@calcom/ui/classNames";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { useTimePreferences } from "@bookph/core/features/bookings/lib";
+import classNames from "@bookph/ui/classNames";
 
 import { OutOfOfficeInSlots } from "../../../../bookings/Booker/components/OutOfOfficeInSlots";
 import { useCalendarStore } from "../../state/store";

@@ -1,9 +1,9 @@
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { isOrganisationAdmin, isOrganisationOwner } from "@calcom/lib/server/queries/organisations";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { isOrganisationAdmin, isOrganisationOwner } from "@bookph/core/lib/server/queries/organisations";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { RoleManagementError, RoleManagementErrorCode } from "../../domain/errors/role-management.error";
 import { DEFAULT_ROLE_IDS } from "../../lib/constants";

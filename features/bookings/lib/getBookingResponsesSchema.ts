@@ -1,11 +1,11 @@
 import { isValidPhoneNumber } from "libphonenumber-js/max";
 import z from "zod";
 
-import type { ALL_VIEWS } from "@calcom/features/form-builder/schema";
-import { fieldTypesSchemaMap } from "@calcom/features/form-builder/schema";
-import { dbReadResponseSchema } from "@calcom/lib/dbReadResponseSchema";
-import type { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
-import { bookingResponses, emailSchemaRefinement } from "@calcom/prisma/zod-utils";
+import type { ALL_VIEWS } from "@bookph/core/features/form-builder/schema";
+import { fieldTypesSchemaMap } from "@bookph/core/features/form-builder/schema";
+import { dbReadResponseSchema } from "@bookph/core/lib/dbReadResponseSchema";
+import type { eventTypeBookingFields } from "@bookph/core/prisma/zod-utils";
+import { bookingResponses, emailSchemaRefinement } from "@bookph/core/prisma/zod-utils";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type View = ALL_VIEWS | (string & {});

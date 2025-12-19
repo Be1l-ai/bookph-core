@@ -1,6 +1,6 @@
-import { getWhereClauseForAttributeOptionsManagedByCalcom } from "@calcom/lib/service/attribute/server/utils";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
+import { getWhereClauseForAttributeOptionsManagedByCalcom } from "@bookph/core/lib/service/attribute/server/utils";
+import slugify from "@bookph/core/lib/slugify";
+import prisma from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

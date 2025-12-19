@@ -1,6 +1,6 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
+import { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

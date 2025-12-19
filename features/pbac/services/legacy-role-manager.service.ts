@@ -1,8 +1,8 @@
-import { isTeamOwner } from "@calcom/features/ee/teams/lib/queries";
-import { isOrganisationAdmin, isOrganisationOwner } from "@calcom/lib/server/queries/organisations";
-import { prisma } from "@calcom/prisma";
-import type { Membership } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { isTeamOwner } from "@bookph/core/features/ee/teams/lib/queries";
+import { isOrganisationAdmin, isOrganisationOwner } from "@bookph/core/lib/server/queries/organisations";
+import { prisma } from "@bookph/core/prisma";
+import type { Membership } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { RoleManagementError, RoleManagementErrorCode } from "../domain/errors/role-management.error";
 import type { IRoleManager } from "./role-manager.interface";

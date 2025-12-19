@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { emailSchema } from "@calcom/lib/emailSchema";
+import { emailSchema } from "@bookph/core/lib/emailSchema";
 
 export const ZResendInvitationInputSchema = z.object({
   teamId: z.number(),

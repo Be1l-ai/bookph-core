@@ -7,7 +7,7 @@
 import { expect, test } from "vitest";
 
 // This import may show up as an error in your IDE, but it's fine because typings are available only after embed-react is built.
-import { getCalApi } from "@calcom/embed-react";
+import { getCalApi } from "@bookph/core/embed-react";
 
 const api = getCalApi();
 

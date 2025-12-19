@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 const DisableTeamImpersonation = ({
   teamId,

@@ -1,8 +1,8 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { SubscriptionStatus } from "@calcom/ee/billing/repository/billing/IBillingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { prisma } from "@calcom/prisma";
+import { SubscriptionStatus } from "@bookph/core/ee/billing/repository/billing/IBillingRepository";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import { prisma } from "@bookph/core/prisma";
 
 import { skipTeamTrialsHandler } from "./skipTeamTrials.handler";
 

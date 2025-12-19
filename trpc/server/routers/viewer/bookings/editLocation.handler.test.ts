@@ -3,8 +3,8 @@
 // TODO: Bring this test back with the correct setup (no illegal imports)
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { prisma } from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
 
 import {
   editLocationHandler,

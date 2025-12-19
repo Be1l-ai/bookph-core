@@ -3,17 +3,17 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useState } from "react";
 import { useFormContext, Controller } from "react-hook-form";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useHasTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { CalVideoSettings as CalVideoSettingsType } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { UpgradeTeamsBadge } from "@calcom/ui/components/badge";
-import { TextField } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { useHasTeamPlan } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import type { FormValues } from "@bookph/core/features/eventtypes/lib/types";
+import type { CalVideoSettings as CalVideoSettingsType } from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { UpgradeTeamsBadge } from "@bookph/ui/components/badge";
+import { TextField } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import LocationSettingsContainer from "./LocationSettingsContainer";
 

@@ -1,4 +1,4 @@
-import { WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
+import { WorkflowActions, WorkflowTriggerEvents } from "@bookph/core/prisma/enums";
 
 type WorkflowWithStepsAndTrigger = {
   trigger: WorkflowTriggerEvents;

@@ -1,6 +1,6 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { useDataTable } from "../../hooks/useDataTable";
 

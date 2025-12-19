@@ -35,7 +35,7 @@ export interface TransactionalPhoneNumberRepository {
     teamId?: number;
     outboundAgentId?: string | null;
     providerPhoneNumberId?: string;
-    subscriptionStatus?: import("@calcom/prisma/enums").PhoneNumberSubscriptionStatus;
+    subscriptionStatus?: import("@bookph/core/prisma/enums").PhoneNumberSubscriptionStatus;
     stripeCustomerId?: string;
     stripeSubscriptionId?: string;
   }): Promise<void>;

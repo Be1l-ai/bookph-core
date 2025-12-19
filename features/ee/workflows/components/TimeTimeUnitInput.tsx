@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { TimeUnit } from "@calcom/prisma/enums";
-import { Icon } from "@calcom/ui/components/icon";
-import { TextField } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { TimeUnit } from "@bookph/core/prisma/enums";
+import { Icon } from "@bookph/ui/components/icon";
+import { TextField } from "@bookph/ui/components/form";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@bookph/ui/components/dropdown";
 
 const TIME_UNITS = [TimeUnit.DAY, TimeUnit.HOUR, TimeUnit.MINUTE] as const;
 

@@ -3,9 +3,9 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 import { vi, it, describe, expect, afterEach } from "vitest";
 import type { Mock } from "vitest";
 
-import { getQualifiedHostsService } from "@calcom/features/di/containers/QualifiedHosts";
-import * as getRoutedUsers from "@calcom/features/users/lib/getRoutedUsers";
-import { RRResetInterval, SchedulingType } from "@calcom/prisma/enums";
+import { getQualifiedHostsService } from "@bookph/core/features/di/containers/QualifiedHosts";
+import * as getRoutedUsers from "@bookph/core/features/users/lib/getRoutedUsers";
+import { RRResetInterval, SchedulingType } from "@bookph/core/prisma/enums";
 
 import { filterHostsByLeadThreshold } from "./filterHostsByLeadThreshold";
 

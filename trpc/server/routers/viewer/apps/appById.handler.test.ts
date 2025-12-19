@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 
 import { TRPCError } from "@trpc/server";
 
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 import { appByIdHandler } from "./appById.handler";
 import type { TAppByIdInputSchema } from "./appById.schema";
@@ -20,11 +20,11 @@ vi.mock("@calcom/app-store/utils", () => ({
   }),
 }));
 
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import getApps, { sanitizeAppForViewer } from "@calcom/app-store/utils";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import getApps, { sanitizeAppForViewer } from "@bookph/core/app-store/utils";
 
-import type { CredentialDataWithTeamName, LocationOption } from "@calcom/app-store/utils";
-import type { App } from "@calcom/types/App";
+import type { CredentialDataWithTeamName, LocationOption } from "@bookph/core/app-store/utils";
+import type { App } from "@bookph/core/types/App";
 
 describe("appByIdHandler", () => {
   const mockUser = {

@@ -5,9 +5,9 @@ import { createWithEqualityFn } from "zustand/traditional";
 
 
 
-import dayjs from "@calcom/dayjs";
-import { BOOKER_NUMBER_OF_DAYS_TO_LOAD } from "@calcom/lib/constants";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { BOOKER_NUMBER_OF_DAYS_TO_LOAD } from "@bookph/core/lib/constants";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
 
 
 

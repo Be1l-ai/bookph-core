@@ -2,9 +2,9 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import dayjs from "@calcom/dayjs";
-import { RefundPolicy } from "@calcom/lib/payment/types";
+import { getPaymentAppData } from "@bookph/core/app-store/_utils/payments/getPaymentAppData";
+import dayjs from "@bookph/core/dayjs";
+import { RefundPolicy } from "@bookph/core/lib/payment/types";
 
 import { handlePaymentRefund } from "./handlePaymentRefund";
 import { processPaymentRefund } from "./processPaymentRefund";

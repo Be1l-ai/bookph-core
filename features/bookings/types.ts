@@ -1,9 +1,9 @@
 import type { ErrorOption, FieldPath } from "react-hook-form";
 
-import type { RegularBookingCreateResult } from "@calcom/features/bookings/lib/dto/types";
-import type { SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import type { AppsStatus } from "@calcom/types/Calendar";
+import type { RegularBookingCreateResult } from "@bookph/core/features/bookings/lib/dto/types";
+import type { SchedulingType } from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import type { AppsStatus } from "@bookph/core/types/Calendar";
 
 import type { DatePickerProps } from "../calendars/DatePicker";
 import type { BookingCreateBody } from "./lib/bookingCreateBodySchema";
@@ -100,5 +100,5 @@ export type RecurringBookingCreateBody = BookingCreateBody & {
 export type BookingResponse = RegularBookingCreateResult;
 
 export type MarkNoShowResponse = Awaited<
-  ReturnType<typeof import("@calcom/features/handleMarkNoShow").default>
+  ReturnType<typeof import("@bookph/core/features/handleMarkNoShow").default>
 >;

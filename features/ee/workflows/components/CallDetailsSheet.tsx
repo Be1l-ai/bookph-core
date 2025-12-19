@@ -1,9 +1,9 @@
 import type { Dispatch } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Badge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { Icon } from "@bookph/ui/components/icon";
 import {
   Sheet,
   SheetContent,
@@ -11,7 +11,7 @@ import {
   SheetHeader,
   SheetFooter,
   SheetClose,
-} from "@calcom/ui/components/sheet";
+} from "@bookph/ui/components/sheet";
 
 import type { CallDetailsAction, CallDetailsState } from "./types";
 

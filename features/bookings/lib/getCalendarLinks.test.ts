@@ -3,8 +3,8 @@ import { createEvent } from "ics";
 import { RRule } from "rrule";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
+import dayjs from "@bookph/core/dayjs";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
 
 import { getCalendarLinks, CalendarLinkType } from "./getCalendarLinks";
 

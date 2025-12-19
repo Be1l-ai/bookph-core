@@ -1,6 +1,6 @@
-import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { MembershipService } from "@calcom/features/membership/services/membershipService";
+import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@bookph/core/features/di/di";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { MembershipService } from "@bookph/core/features/membership/services/membershipService";
 
 import { moduleLoader as membershipRepositoryModuleLoader } from "./MembershipRepository.module";
 

@@ -1,8 +1,8 @@
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { App } from "@calcom/types/App";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { App } from "@bookph/core/types/App";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
 
 export type RemoveAppParams = {
   credentialId: number;

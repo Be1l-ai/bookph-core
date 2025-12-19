@@ -1,4 +1,4 @@
-import { WorkspacePlatformRepository } from "@calcom/lib/server/repository/workspacePlatform";
+import { WorkspacePlatformRepository } from "@bookph/core/lib/server/repository/workspacePlatform";
 
 export default async function handler() {
   const workspacePlatforms = await WorkspacePlatformRepository.findAll();

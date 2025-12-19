@@ -4,11 +4,11 @@ import { useSession } from "next-auth/react";
 import type { AriaRole, ComponentType } from "react";
 import React, { Fragment, useEffect } from "react";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Alert } from "@bookph/ui/components/alert";
+import { Button } from "@bookph/ui/components/button";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
 
 type LicenseRequiredProps = {
   as?: keyof JSX.IntrinsicElements | "";

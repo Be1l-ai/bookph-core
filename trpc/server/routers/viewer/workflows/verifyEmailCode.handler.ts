@@ -1,8 +1,8 @@
 import { createHash } from "crypto";
 
-import { totpRawCheck } from "@calcom/lib/totp";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { totpRawCheck } from "@bookph/core/lib/totp";
+import { prisma } from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

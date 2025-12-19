@@ -6,17 +6,17 @@ import type { UseFormReturn } from "react-hook-form";
 import { Controller, useWatch } from "react-hook-form";
 import "react-phone-number-input/style.css";
 
-import { useHasActiveTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import type { RetellAgentWithDetails } from "@calcom/features/calAIPhone/providers/retellAI";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import PhoneInput from "@calcom/features/components/phone-input";
-import { SENDER_ID, SENDER_NAME } from "@calcom/lib/constants";
-import { formatPhoneNumber } from "@calcom/lib/formatPhoneNumber";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { HttpError } from "@calcom/lib/http-error";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { WorkflowStep } from "@calcom/prisma/client";
+import { useHasActiveTeamPlan } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import type { RetellAgentWithDetails } from "@bookph/core/features/calAIPhone/providers/retellAI";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import PhoneInput from "@bookph/core/features/components/phone-input";
+import { SENDER_ID, SENDER_NAME } from "@bookph/core/lib/constants";
+import { formatPhoneNumber } from "@bookph/core/lib/formatPhoneNumber";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import useMediaQuery from "@bookph/core/lib/hooks/useMediaQuery";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { getTimeFormatStringFromUserTimeFormat } from "@bookph/core/lib/timeFormat";
+import type { WorkflowStep } from "@bookph/core/prisma/client";
 import {
   MembershipRole,
   PhoneNumberSubscriptionStatus,
@@ -24,34 +24,34 @@ import {
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge, InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
+} from "@bookph/core/prisma/enums";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Badge, InfoBadge } from "@bookph/ui/components/badge";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { AddVariablesDropdown } from "@calcom/ui/components/editor";
-import { Editor } from "@calcom/ui/components/editor";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { EmailField } from "@calcom/ui/components/form";
-import { TextArea } from "@calcom/ui/components/form";
-import { Input } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { MultiSelectCheckbox } from "@calcom/ui/components/form";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/dropdown";
+import { AddVariablesDropdown } from "@bookph/ui/components/editor";
+import { Editor } from "@bookph/ui/components/editor";
+import { CheckboxField } from "@bookph/ui/components/form";
+import { EmailField } from "@bookph/ui/components/form";
+import { TextArea } from "@bookph/ui/components/form";
+import { Input } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { MultiSelectCheckbox } from "@bookph/ui/components/form";
+import type { MultiSelectCheckboxesOptionType as Option } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { SkeletonText } from "@bookph/ui/components/skeleton";
+import { showToast } from "@bookph/ui/components/toast";
 
 import {
   isSMSAction,

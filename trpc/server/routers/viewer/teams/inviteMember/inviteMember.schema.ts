@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { MAX_NB_INVITES } from "@calcom/lib/constants";
-import { emailSchema } from "@calcom/lib/emailSchema";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { CreationSource } from "@calcom/prisma/enums";
+import { MAX_NB_INVITES } from "@bookph/core/lib/constants";
+import { emailSchema } from "@bookph/core/lib/emailSchema";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { CreationSource } from "@bookph/core/prisma/enums";
 
 export const ZInviteMemberInputSchema = z.object({
   teamId: z.number(),

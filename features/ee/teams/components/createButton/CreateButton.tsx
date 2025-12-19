@@ -2,11 +2,11 @@
 
 import { usePathname, useRouter } from "next/navigation";
 
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Avatar } from "@calcom/ui/components/avatar";
-import type { ButtonColor } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Avatar } from "@bookph/ui/components/avatar";
+import type { ButtonColor } from "@bookph/ui/components/button";
+import { Button } from "@bookph/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@bookph/ui/components/dropdown";
 
 export interface Option {
   platform?: boolean;

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { CreationSource } from "@calcom/prisma/enums";
+import { CreationSource } from "@bookph/core/prisma/enums";
 
 export const ZInviteMemberByTokenSchemaInputSchema = z.object({
   token: z.string(),

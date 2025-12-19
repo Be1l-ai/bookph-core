@@ -8,38 +8,38 @@ import type { ControlProps } from "react-select";
 import { components } from "react-select";
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { AvailableTimes, AvailableTimesHeader } from "@calcom/features/bookings";
+import type { Dayjs } from "@bookph/core/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { AvailableTimes, AvailableTimesHeader } from "@bookph/core/features/bookings";
 import {
   BookerStoreProvider,
   useInitializeBookerStoreContext,
   useBookerStoreContext,
-} from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useInitializeBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useEvent, useScheduleForEvent } from "@calcom/features/bookings/Booker/utils/event";
-import DatePicker from "@calcom/features/calendars/DatePicker";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import type { Slot } from "@calcom/features/schedules/lib/use-schedule/types";
-import { useNonEmptyScheduleDays } from "@calcom/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
-import { useSlotsForDate } from "@calcom/features/schedules/lib/use-schedule/useSlotsForDate";
-import { APP_NAME, DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calcom/lib/constants";
-import { weekdayToWeekIndex } from "@calcom/lib/dayjs";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Select, ColorPicker } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { HorizontalTabs } from "@calcom/ui/components/navigation";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useInitializeBookerStore } from "@bookph/core/features/bookings/Booker/store";
+import { useEvent, useScheduleForEvent } from "@bookph/core/features/bookings/Booker/utils/event";
+import DatePicker from "@bookph/core/features/calendars/DatePicker";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { TimezoneSelect } from "@bookph/core/features/components/timezone-select";
+import type { Slot } from "@bookph/core/features/schedules/lib/use-schedule/types";
+import { useNonEmptyScheduleDays } from "@bookph/core/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
+import { useSlotsForDate } from "@bookph/core/features/schedules/lib/use-schedule/useSlotsForDate";
+import { APP_NAME, DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@bookph/core/lib/constants";
+import { weekdayToWeekIndex } from "@bookph/core/lib/dayjs";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@bookph/ui/components/dialog";
+import { Select, ColorPicker } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Switch } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { HorizontalTabs } from "@bookph/ui/components/navigation";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { useBookerTime } from "../bookings/Booker/components/hooks/useBookerTime";
 import { EmbedTabName } from "./lib/EmbedTabs";

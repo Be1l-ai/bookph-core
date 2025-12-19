@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import type { PrismaClient } from "@calcom/prisma";
-import { BookingReportReason } from "@calcom/prisma/enums";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { BookingReportReason } from "@bookph/core/prisma/enums";
 
 import { PrismaBookingReportRepository } from "./bookingReport";
 import type { CreateBookingReportInput } from "./bookingReport.interface";

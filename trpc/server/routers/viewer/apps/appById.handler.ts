@@ -1,6 +1,6 @@
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import getApps, { sanitizeAppForViewer } from "@calcom/app-store/utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import getApps, { sanitizeAppForViewer } from "@bookph/core/app-store/utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

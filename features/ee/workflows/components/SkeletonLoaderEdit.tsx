@@ -1,4 +1,4 @@
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+import { SkeletonText, SkeletonContainer } from "@bookph/ui/components/skeleton";
 
 function SkeletonLoader() {
   return (

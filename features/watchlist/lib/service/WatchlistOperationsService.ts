@@ -1,9 +1,9 @@
-import { domainRegex, emailRegex } from "@calcom/lib/emailSchema";
-import logger from "@calcom/lib/logger";
-import type { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import type { WatchlistEntry } from "@calcom/lib/server/repository/watchlist.interface";
-import type { WatchlistRepository } from "@calcom/lib/server/repository/watchlist.repository";
-import { WatchlistAction, WatchlistType } from "@calcom/prisma/enums";
+import { domainRegex, emailRegex } from "@bookph/core/lib/emailSchema";
+import logger from "@bookph/core/lib/logger";
+import type { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import type { WatchlistEntry } from "@bookph/core/lib/server/repository/watchlist.interface";
+import type { WatchlistRepository } from "@bookph/core/lib/server/repository/watchlist.repository";
+import { WatchlistAction, WatchlistType } from "@bookph/core/prisma/enums";
 
 import { WatchlistErrors } from "../errors/WatchlistErrors";
 import { extractDomainFromEmail, normalizeEmail } from "../utils/normalization";

@@ -1,8 +1,8 @@
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import defaultPrisma from "@calcom/prisma";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import defaultPrisma from "@bookph/core/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 export type GetSubscriberOptions = {
   userId?: number | null;

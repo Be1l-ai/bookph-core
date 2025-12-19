@@ -1,7 +1,7 @@
-import type { TGetTranscriptAccessLink } from "@calcom/app-store/dailyvideo/zod";
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import type { TimeUnit, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import type { TGetTranscriptAccessLink } from "@bookph/core/app-store/dailyvideo/zod";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@bookph/core/app-store/routing-forms/lib/formSubmissionUtils";
+import type { TimeUnit, WebhookTriggerEvents } from "@bookph/core/prisma/enums";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 export interface BaseEventDTO {
   triggerEvent: WebhookTriggerEvents;

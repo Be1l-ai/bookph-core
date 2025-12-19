@@ -1,19 +1,19 @@
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { getInsightsBookingService } from "@calcom/features/di/containers/InsightsBooking";
-import { getInsightsRoutingService } from "@calcom/features/di/containers/InsightsRouting";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
+import dayjs from "@bookph/core/dayjs";
+import { getInsightsBookingService } from "@bookph/core/features/di/containers/InsightsBooking";
+import { getInsightsRoutingService } from "@bookph/core/features/di/containers/InsightsRouting";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
 import {
   extractDateRangeFromColumnFilters,
   replaceDateRangeColumnFilter,
-} from "@calcom/features/insights/lib/bookingUtils";
-import { objectToCsv } from "@calcom/features/insights/lib/objectToCsv";
+} from "@bookph/core/features/insights/lib/bookingUtils";
+import { objectToCsv } from "@bookph/core/features/insights/lib/objectToCsv";
 import {
   getTimeView,
   getDateRanges,
   type GetDateRangesParams,
-} from "@calcom/features/insights/server/insightsDateUtils";
+} from "@bookph/core/features/insights/server/insightsDateUtils";
 import {
   bookingRepositoryBaseInputSchema,
   insightsRoutingServiceInputSchema,
@@ -21,14 +21,14 @@ import {
   routingRepositoryBaseInputSchema,
   routedToPerPeriodInputSchema,
   routedToPerPeriodCsvInputSchema,
-} from "@calcom/features/insights/server/raw-data.schema";
-import { RoutingEventsInsights } from "@calcom/features/insights/server/routing-events";
-import { VirtualQueuesInsights } from "@calcom/features/insights/server/virtual-queues";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import authedProcedure from "@calcom/trpc/server/procedures/authedProcedure";
-import { router } from "@calcom/trpc/server/trpc";
+} from "@bookph/core/features/insights/server/raw-data.schema";
+import { RoutingEventsInsights } from "@bookph/core/features/insights/server/routing-events";
+import { VirtualQueuesInsights } from "@bookph/core/features/insights/server/virtual-queues";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import authedProcedure from "@bookph/core/trpc/server/procedures/authedProcedure";
+import { router } from "@bookph/core/trpc/server/trpc";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,6 +1,6 @@
-import { getConnectedDestinationCalendarsAndEnsureDefaultsInDb } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getConnectedDestinationCalendarsAndEnsureDefaultsInDb } from "@bookph/core/features/calendars/lib/getConnectedDestinationCalendars";
+import { prisma } from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TConnectedCalendarsInputSchema } from "./connectedCalendars.schema";
 

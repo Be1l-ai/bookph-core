@@ -29,7 +29,7 @@ async function stubEnvAndReload(key: string, value: string) {
   // We refresh constants and prevent cached modules.
   // @see https://github.com/vitest-dev/vitest/issues/4232#issuecomment-1745452522
   vi.resetModules();
-  await import("@calcom/lib/constants");
+  await import("@bookph/core/lib/constants");
 }
 
 // Mock dependencies

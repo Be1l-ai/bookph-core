@@ -1,8 +1,8 @@
 import { Controller } from "react-hook-form";
 import type { Control } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Label, Select } from "@calcom/ui/components/form";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Label, Select } from "@bookph/ui/components/form";
 
 import type { AgentFormValues } from "../../types/schemas";
 import { LANGUAGE_OPTIONS } from "../../utils/constants";

@@ -1,4 +1,4 @@
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import type { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import type { WebhookSubscriber } from "../dto/types";
 import type { WebhookPayload } from "../factory/types";
@@ -135,7 +135,7 @@ export interface IFormWebhookService extends IFormEventEmitter, IFormScheduler {
 
 export interface IRecordingWebhookService {
   emitRecordingReady(params: {
-    evt: import("@calcom/types/Calendar").CalendarEvent;
+    evt: import("@bookph/core/types/Calendar").CalendarEvent;
     downloadLink: string;
     booking?: {
       id: number;
@@ -149,7 +149,7 @@ export interface IRecordingWebhookService {
   }): Promise<void>;
 
   emitTranscriptionGenerated(params: {
-    evt: import("@calcom/types/Calendar").CalendarEvent;
+    evt: import("@bookph/core/types/Calendar").CalendarEvent;
     downloadLinks?: {
       transcription?: Array<{
         format: string;

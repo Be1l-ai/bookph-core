@@ -1,7 +1,7 @@
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { RoleManagementFactory } from "@calcom/features/pbac/services/role-management.factory";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { RoleManagementFactory } from "@bookph/core/features/pbac/services/role-management.factory";
+import { prisma } from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,8 +1,8 @@
 import { createHash } from "crypto";
 
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { hashEmail } from "@calcom/lib/server/PiiHasher";
-import { totpRawCheck } from "@calcom/lib/totp";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
+import { hashEmail } from "@bookph/core/lib/server/PiiHasher";
+import { totpRawCheck } from "@bookph/core/lib/totp";
 
 export const verifyCodeUnAuthenticated = async (email: string, code: string) => {
   if (!email || !code) {

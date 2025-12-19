@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import type { FC } from "react";
 import { Fragment } from "react";
 
-import { UserPermissionRole } from "@calcom/prisma/enums";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
 
 type AdminRequiredProps = {
   as?: keyof JSX.IntrinsicElements;

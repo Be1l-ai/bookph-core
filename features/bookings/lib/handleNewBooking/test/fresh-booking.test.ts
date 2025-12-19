@@ -30,7 +30,7 @@ import {
   mockCalendarToCrashOnCreateEvent,
   mockVideoAppToCrashOnCreateMeeting,
   BookingLocations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectWorkflowToBeTriggered,
   expectWorkflowToBeNotTriggered,
@@ -45,23 +45,23 @@ import {
   expectSuccessfulCalendarEventCreationInCalendar,
   expectICalUIDAsString,
   expectBookingTrackingToBeInDatabase,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
-import { testWithAndWithoutOrg } from "@calcom/web/test/utils/bookingScenario/test";
+} from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
+import { testWithAndWithoutOrg } from "@bookph/core/web/test/utils/bookingScenario/test";
 
 import type { Request, Response } from "express";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, expect } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { createWatchlistEntry } from "@calcom/features/watchlist/lib/testUtils";
-import { WEBSITE_URL, WEBAPP_URL } from "@calcom/lib/constants";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { resetTestEmails } from "@calcom/lib/testEmails";
-import { CreationSource, WatchlistType } from "@calcom/prisma/enums";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { appStoreMetadata } from "@bookph/core/app-store/appStoreMetaData";
+import { createWatchlistEntry } from "@bookph/core/features/watchlist/lib/testUtils";
+import { WEBSITE_URL, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { resetTestEmails } from "@bookph/core/lib/testEmails";
+import { CreationSource, WatchlistType } from "@bookph/core/prisma/enums";
+import { BookingStatus, SchedulingType } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 

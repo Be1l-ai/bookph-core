@@ -1,7 +1,7 @@
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { prisma } from "@calcom/prisma";
-import type { Team, OrganizationSettings } from "@calcom/prisma/client";
+import { updateNewTeamMemberEventTypes } from "@bookph/core/features/ee/teams/lib/queries";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { prisma } from "@bookph/core/prisma";
+import type { Team, OrganizationSettings } from "@bookph/core/prisma/client";
 
 import { getOrgUsernameFromEmail } from "./getOrgUsernameFromEmail";
 

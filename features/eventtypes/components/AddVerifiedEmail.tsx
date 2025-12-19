@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import { VerifyCodeDialog } from "@calcom/features/bookings/components/VerifyCodeDialog";
-import { isValidEmail } from "@calcom/features/isValidEmail";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { TextField, Label } from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { VerifyCodeDialog } from "@bookph/core/features/bookings/components/VerifyCodeDialog";
+import { isValidEmail } from "@bookph/core/features/isValidEmail";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
+import { TextField, Label } from "@bookph/ui/components/form";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { useAddVerifiedEmail } from "../../../platform/atoms/event-types/hooks/useAddVerifiedEmail";
 import { useGetVerifiedEmails } from "../../../platform/atoms/event-types/hooks/useGetVerifiedEmails";

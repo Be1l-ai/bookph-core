@@ -1,4 +1,4 @@
-import { featureFlagRouter } from "@calcom/features/flags/server/router";
+import { featureFlagRouter } from "@bookph/core/features/flags/server/router";
 
 import { router } from "../../trpc";
 import app_RoutingForms from "../apps/routing-forms/_router";

@@ -1,16 +1,16 @@
 import React, { Suspense } from "react";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { getSuccessPageLocationMessage } from "@calcom/app-store/locations";
-import dayjs from "@calcom/dayjs";
-import { PayIcon } from "@calcom/features/bookings/components/event-meta/PayIcon";
-import { Price } from "@calcom/features/bookings/components/event-meta/Price";
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { APP_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { isBrowserLocale24h } from "@calcom/lib/timeFormat";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import { localStorage } from "@calcom/lib/webstorage";
+import { getPaymentAppData } from "@bookph/core/app-store/_utils/payments/getPaymentAppData";
+import { getSuccessPageLocationMessage } from "@bookph/core/app-store/locations";
+import dayjs from "@bookph/core/dayjs";
+import { PayIcon } from "@bookph/core/features/bookings/components/event-meta/PayIcon";
+import { Price } from "@bookph/core/features/bookings/components/event-meta/Price";
+import type { PaymentPageProps } from "@bookph/core/features/ee/payments/pages/payment";
+import { APP_NAME, WEBSITE_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { isBrowserLocale24h } from "@bookph/core/lib/timeFormat";
+import { CURRENT_TIMEZONE } from "@bookph/core/lib/timezoneConstants";
+import { localStorage } from "@bookph/core/lib/webstorage";
 
 import { AtomsWrapper } from "../../src/components/atoms-wrapper";
 import { cn } from "../../src/lib/utils";

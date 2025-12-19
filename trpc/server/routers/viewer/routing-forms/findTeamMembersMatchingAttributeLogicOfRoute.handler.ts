@@ -6,23 +6,23 @@
 import type { ServerResponse } from "http";
 import type { NextApiResponse } from "next";
 
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { enrichHostsWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import { enrichFormWithMigrationData } from "@calcom/app-store/routing-forms/enrichFormWithMigrationData";
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { entityPrismaWhereClause } from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import { getUrlSearchParamsToForwardForTestPreview } from "@calcom/features/routing-forms/lib/getUrlSearchParamsToForward";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { fromEntriesWithDuplicateKeys } from "@calcom/lib/fromEntriesWithDuplicateKeys";
-import type { PrismaClient } from "@calcom/prisma";
-import type { App_RoutingForms_Form } from "@calcom/prisma/client";
-import { getAbsoluteEventTypeRedirectUrl } from "@calcom/routing-forms/getEventTypeRedirectUrl";
-import { getSerializableForm } from "@calcom/routing-forms/lib/getSerializableForm";
-import { getServerTimingHeader } from "@calcom/routing-forms/lib/getServerTimingHeader";
-import isRouter from "@calcom/routing-forms/lib/isRouter";
-import { RouteActionType } from "@calcom/routing-forms/zod";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { findTeamMembersMatchingAttributeLogic } from "@bookph/core/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { enrichHostsWithDelegationCredentials } from "@bookph/core/app-store/delegationCredential";
+import { enrichFormWithMigrationData } from "@bookph/core/app-store/routing-forms/enrichFormWithMigrationData";
+import { getLuckyUserService } from "@bookph/core/features/di/containers/LuckyUser";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { entityPrismaWhereClause } from "@bookph/core/features/pbac/lib/entityPermissionUtils.server";
+import { getUrlSearchParamsToForwardForTestPreview } from "@bookph/core/features/routing-forms/lib/getUrlSearchParamsToForward";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { fromEntriesWithDuplicateKeys } from "@bookph/core/lib/fromEntriesWithDuplicateKeys";
+import type { PrismaClient } from "@bookph/core/prisma";
+import type { App_RoutingForms_Form } from "@bookph/core/prisma/client";
+import { getAbsoluteEventTypeRedirectUrl } from "@bookph/core/routing-forms/getEventTypeRedirectUrl";
+import { getSerializableForm } from "@bookph/core/routing-forms/lib/getSerializableForm";
+import { getServerTimingHeader } from "@bookph/core/routing-forms/lib/getServerTimingHeader";
+import isRouter from "@bookph/core/routing-forms/lib/isRouter";
+import { RouteActionType } from "@bookph/core/routing-forms/zod";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,9 +1,9 @@
-import type { LuckyUserService, RoutingFormResponse } from "@calcom/features/bookings/lib/getLuckyUser";
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
-import logger from "@calcom/lib/logger";
-import type { RRResetInterval, SelectedCalendar } from "@calcom/prisma/client";
-import { RRTimestampBasis } from "@calcom/prisma/enums";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import type { LuckyUserService, RoutingFormResponse } from "@bookph/core/features/bookings/lib/getLuckyUser";
+import { getLuckyUserService } from "@bookph/core/features/di/containers/LuckyUser";
+import logger from "@bookph/core/lib/logger";
+import type { RRResetInterval, SelectedCalendar } from "@bookph/core/prisma/client";
+import { RRTimestampBasis } from "@bookph/core/prisma/enums";
+import type { CredentialForCalendarService } from "@bookph/core/types/Credential";
 
 export const errorCodes = {
   MAX_LEAD_THRESHOLD_FALSY: "Max lead threshold should be null or > 1, not 0.",

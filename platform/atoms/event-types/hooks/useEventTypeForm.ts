@@ -3,21 +3,21 @@ import { useMemo, useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import checkForMultiplePaymentApps from "@calcom/app-store/_utils/payments/checkForMultiplePaymentApps";
-import { locationsResolver } from "@calcom/app-store/locations";
-import { DEFAULT_PROMPT_VALUE, DEFAULT_BEGIN_MESSAGE } from "@calcom/features/calAIPhone/promptTemplates";
-import type { TemplateType } from "@calcom/features/calAIPhone/zod-utils";
-import { sortHosts } from "@calcom/features/eventtypes/components/HostEditDialogs";
-import { validateCustomEventName } from "@calcom/features/eventtypes/lib/eventNaming";
+import checkForMultiplePaymentApps from "@bookph/core/app-store/_utils/payments/checkForMultiplePaymentApps";
+import { locationsResolver } from "@bookph/core/app-store/locations";
+import { DEFAULT_PROMPT_VALUE, DEFAULT_BEGIN_MESSAGE } from "@bookph/core/features/calAIPhone/promptTemplates";
+import type { TemplateType } from "@bookph/core/features/calAIPhone/zod-utils";
+import { sortHosts } from "@bookph/core/features/eventtypes/components/HostEditDialogs";
+import { validateCustomEventName } from "@bookph/core/features/eventtypes/lib/eventNaming";
 import type {
   FormValues,
   EventTypeSetupProps,
   EventTypeUpdateInput,
-} from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { validateIntervalLimitOrder } from "@calcom/lib/intervalLimits/validateIntervalLimitOrder";
-import { validateBookerLayouts } from "@calcom/lib/validateBookerLayouts";
-import { eventTypeBookingFields as eventTypeBookingFieldsSchema } from "@calcom/prisma/zod-utils";
+} from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { validateIntervalLimitOrder } from "@bookph/core/lib/intervalLimits/validateIntervalLimitOrder";
+import { validateBookerLayouts } from "@bookph/core/lib/validateBookerLayouts";
+import { eventTypeBookingFields as eventTypeBookingFieldsSchema } from "@bookph/core/prisma/zod-utils";
 
 type Fields = z.infer<typeof eventTypeBookingFieldsSchema>;
 

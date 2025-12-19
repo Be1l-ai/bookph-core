@@ -1,18 +1,18 @@
 import { useEffect, useRef } from "react";
 import { shallow } from "zustand/shallow";
 
-import dayjs from "@calcom/dayjs";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useSlotReservationId } from "@calcom/features/bookings/Booker/useSlotReservationId";
-import { isBookingDryRun } from "@calcom/features/bookings/Booker/utils/isBookingDryRun";
+import dayjs from "@bookph/core/dayjs";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useSlotReservationId } from "@bookph/core/features/bookings/Booker/useSlotReservationId";
+import { isBookingDryRun } from "@bookph/core/features/bookings/Booker/utils/isBookingDryRun";
 import {
   MINUTES_TO_BOOK,
   PUBLIC_QUERY_RESERVATION_INTERVAL_SECONDS,
   PUBLIC_QUERY_RESERVATION_STALE_TIME_SECONDS,
-} from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { trpc } from "@calcom/trpc";
-import type { TIsAvailableOutputSchema } from "@calcom/trpc/server/routers/viewer/slots/isAvailable.schema";
+} from "@bookph/core/lib/constants";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { trpc } from "@bookph/core/trpc";
+import type { TIsAvailableOutputSchema } from "@bookph/core/trpc/server/routers/viewer/slots/isAvailable.schema";
 
 import { useIsQuickAvailabilityCheckFeatureEnabled } from "./useIsQuickAvailabilityCheckFeatureEnabled";
 

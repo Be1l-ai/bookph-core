@@ -1,5 +1,5 @@
-import type { PrismaClient } from "@calcom/prisma";
-import prisma from "@calcom/prisma";
+import type { PrismaClient } from "@bookph/core/prisma";
+import prisma from "@bookph/core/prisma";
 
 import type {
   IBookingPaymentRepository,

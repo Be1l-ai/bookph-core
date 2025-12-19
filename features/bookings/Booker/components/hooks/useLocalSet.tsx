@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { localStorage } from "@calcom/lib/webstorage";
+import { localStorage } from "@bookph/core/lib/webstorage";
 
 export interface HasExternalId {
   externalId: string;

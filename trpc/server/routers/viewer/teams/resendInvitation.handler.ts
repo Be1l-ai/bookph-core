@@ -1,11 +1,11 @@
-import { sendTeamInviteEmail } from "@calcom/emails/organization-email-service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { VerificationTokenRepository } from "@calcom/lib/server/repository/verificationToken";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { sendTeamInviteEmail } from "@bookph/core/emails/organization-email-service";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { OnboardingPathService } from "@bookph/core/features/onboarding/lib/onboarding-path.service";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { VerificationTokenRepository } from "@bookph/core/lib/server/repository/verificationToken";
+import { prisma } from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { ensureAtleastAdminPermissions, getTeamOrThrow } from "./inviteMember/utils";
 import type { TResendInvitationInputSchema } from "./resendInvitation.schema";

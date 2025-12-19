@@ -2,12 +2,12 @@ import type { Table } from "@tanstack/react-table";
 import type { Dispatch, SetStateAction } from "react";
 import { useState, Fragment } from "react";
 
-import { DataTableSelectionBar } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
+import { DataTableSelectionBar } from "@bookph/core/features/data-table";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { SchedulingType } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc";
+import classNames from "@bookph/ui/classNames";
+import { Button } from "@bookph/ui/components/button";
 import {
   Command,
   CommandEmpty,
@@ -15,10 +15,10 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@calcom/ui/components/command";
-import { Icon } from "@calcom/ui/components/icon";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@bookph/ui/components/command";
+import { Icon } from "@bookph/ui/components/icon";
+import { Popover, PopoverContent, PopoverTrigger } from "@bookph/ui/components/popover";
+import { showToast } from "@bookph/ui/components/toast";
 
 import type { User } from "./MemberList";
 

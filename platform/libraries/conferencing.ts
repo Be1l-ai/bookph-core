@@ -3,6 +3,6 @@ export {
   getDownloadLinkOfCalVideoByRecordingId,
   getAllTranscriptsAccessLinkFromRoomName,
   getCalVideoMeetingSessionsByRoomName,
-} from "@calcom/features/conferencing/lib/videoClient";
+} from "@bookph/core/features/conferencing/lib/videoClient";
 
-export type { CalMeetingParticipant, CalMeetingSession } from "@calcom/app-store/dailyvideo/zod";
+export type { CalMeetingParticipant, CalMeetingSession } from "@bookph/core/app-store/dailyvideo/zod";

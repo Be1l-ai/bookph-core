@@ -1,12 +1,12 @@
-import type { FilterSegmentOutput, SegmentIdentifier } from "@calcom/features/data-table/lib/types";
+import type { FilterSegmentOutput, SegmentIdentifier } from "@bookph/core/features/data-table/lib/types";
 import {
   ZActiveFilters,
   ZSortingState,
   ZColumnSizing,
   ZColumnVisibility,
-} from "@calcom/features/data-table/lib/types";
-import { prisma } from "@calcom/prisma";
-import type { UserFilterSegmentPreference } from "@calcom/prisma/client";
+} from "@bookph/core/features/data-table/lib/types";
+import { prisma } from "@bookph/core/prisma";
+import type { UserFilterSegmentPreference } from "@bookph/core/prisma/client";
 
 import type { TCreateFilterSegmentInputSchema, TUpdateFilterSegmentInputSchema } from "./filterSegment.type";
 

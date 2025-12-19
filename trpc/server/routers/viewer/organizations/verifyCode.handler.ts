@@ -1,12 +1,12 @@
 import { createHash } from "crypto";
 
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { hashEmail } from "@calcom/lib/server/PiiHasher";
-import { totpRawCheck } from "@calcom/lib/totp";
-import type { ZVerifyCodeInputSchema } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
+import { IS_PRODUCTION } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { hashEmail } from "@bookph/core/lib/server/PiiHasher";
+import { totpRawCheck } from "@bookph/core/lib/totp";
+import type { ZVerifyCodeInputSchema } from "@bookph/core/prisma/zod-utils";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

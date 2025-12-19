@@ -1,5 +1,5 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import logger from "@calcom/lib/logger";
+import { createDefaultAIPhoneServiceProvider } from "@bookph/core/features/calAIPhone";
+import logger from "@bookph/core/lib/logger";
 
 import { TRPCError } from "@trpc/server";
 

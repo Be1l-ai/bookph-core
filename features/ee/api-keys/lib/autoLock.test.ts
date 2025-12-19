@@ -1,9 +1,9 @@
 import type { RatelimitResponse } from "@unkey/ratelimit";
 import { vi, describe, it, expect, beforeEach, afterEach } from "vitest";
 
-import { hashAPIKey } from "@calcom/features/ee/api-keys/lib/apiKeys";
-import { RedisService } from "@calcom/features/redis/RedisService";
-import prisma from "@calcom/prisma";
+import { hashAPIKey } from "@bookph/core/features/ee/api-keys/lib/apiKeys";
+import { RedisService } from "@bookph/core/features/redis/RedisService";
+import prisma from "@bookph/core/prisma";
 
 import { handleAutoLock } from "./autoLock";
 

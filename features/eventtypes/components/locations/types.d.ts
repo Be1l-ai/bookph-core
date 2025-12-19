@@ -1,4 +1,4 @@
-import type { LocationSelectCustomClassNames } from "@calcom/features/form/components/LocationSelect";
+import type { LocationSelectCustomClassNames } from "@bookph/core/features/form/components/LocationSelect";
 
 export type LocationCustomClassNames = {
   container?: string;

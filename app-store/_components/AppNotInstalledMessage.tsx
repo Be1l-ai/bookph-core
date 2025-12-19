@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Button } from "@bookph/ui/components/button";
+import { Icon } from "@bookph/ui/components/icon";
 
 export default function AppNotInstalledMessage({ appName }: { appName: string }) {
   const { t } = useLocale();

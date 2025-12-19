@@ -13,14 +13,14 @@ import {
   ColumnFilterType,
   convertFacetedValuesToMap,
   useDataTable,
-} from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
+} from "@bookph/core/features/data-table";
+import { useSegments } from "@bookph/core/features/data-table/hooks/useSegments";
+import { useOrgBranding } from "@bookph/core/features/ee/organizations/context/provider";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { Badge } from "@bookph/ui/components/badge";
 
 import { CallDetailsSheet } from "../components/CallDetailsSheet";
 import type { CallDetailsState, CallDetailsAction } from "../components/types";

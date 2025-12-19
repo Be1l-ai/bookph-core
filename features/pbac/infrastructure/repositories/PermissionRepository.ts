@@ -1,7 +1,7 @@
-import logger from "@calcom/lib/logger";
-import db from "@calcom/prisma";
-import type { PrismaClient as PrismaClientWithExtensions } from "@calcom/prisma";
-import type { MembershipRole } from "@calcom/prisma/enums";
+import logger from "@bookph/core/lib/logger";
+import db from "@bookph/core/prisma";
+import type { PrismaClient as PrismaClientWithExtensions } from "@bookph/core/prisma";
+import type { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { PermissionMapper } from "../../domain/mappers/PermissionMapper";
 import type { TeamPermissions } from "../../domain/models/Permission";

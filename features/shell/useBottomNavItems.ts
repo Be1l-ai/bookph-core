@@ -1,11 +1,11 @@
 import type { User as UserAuth } from "next-auth";
 import posthog from "posthog-js";
 
-import { useHasActiveTeamPlanAsOwner } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { IS_DUB_REFERRALS_ENABLED } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import { useHasActiveTeamPlanAsOwner } from "@bookph/core/features/billing/hooks/useHasPaidPlan";
+import { IS_DUB_REFERRALS_ENABLED } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { showToast } from "@bookph/ui/components/toast";
 
 import { type NavigationItemType } from "./navigation/NavigationItem";
 

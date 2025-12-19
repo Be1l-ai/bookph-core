@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { PeriodType } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import { PeriodType } from "@bookph/core/prisma/enums";
 
 import NoAvailabilityDialog from "../NoAvailabilityDialog";
 

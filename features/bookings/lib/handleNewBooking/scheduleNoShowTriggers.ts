@@ -1,9 +1,9 @@
-import { DailyLocationType } from "@calcom/app-store/constants";
-import dayjs from "@calcom/dayjs";
-import tasker from "@calcom/features/tasker";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { DailyLocationType } from "@bookph/core/app-store/constants";
+import dayjs from "@bookph/core/dayjs";
+import tasker from "@bookph/core/features/tasker";
+import getWebhooks from "@bookph/core/features/webhooks/lib/getWebhooks";
+import { withReporting } from "@bookph/core/lib/sentryWrapper";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 type ScheduleNoShowTriggersArgs = {
   booking: {

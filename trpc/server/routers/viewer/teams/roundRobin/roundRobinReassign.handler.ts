@@ -1,6 +1,6 @@
-import { roundRobinReassignment } from "@calcom/features/ee/round-robin/roundRobinReassignment";
-import { getBookingAccessService } from "@calcom/features/di/containers/BookingAccessService";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { roundRobinReassignment } from "@bookph/core/features/ee/round-robin/roundRobinReassignment";
+import { getBookingAccessService } from "@bookph/core/features/di/containers/BookingAccessService";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

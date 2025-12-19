@@ -1,13 +1,13 @@
 import { useMemo, useEffect } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useAvailableTimeSlots } from "@calcom/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
-import { useBookerTime } from "@calcom/features/bookings/Booker/components/hooks/useBookerTime";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { Calendar } from "@calcom/features/calendars/weeklyview";
-import type { CalendarEvent } from "@calcom/features/calendars/weeklyview/types/events";
-import { localStorage } from "@calcom/lib/webstorage";
+import dayjs from "@bookph/core/dayjs";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import { useAvailableTimeSlots } from "@bookph/core/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
+import { useBookerTime } from "@bookph/core/features/bookings/Booker/components/hooks/useBookerTime";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import { Calendar } from "@bookph/core/features/calendars/weeklyview";
+import type { CalendarEvent } from "@bookph/core/features/calendars/weeklyview/types/events";
+import { localStorage } from "@bookph/core/lib/webstorage";
 
 import type { useScheduleForEventReturnType } from "../utils/event";
 import { getQueryParam } from "../utils/query-param";

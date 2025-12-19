@@ -1,11 +1,11 @@
-import handleCancelBooking from "@calcom/features/bookings/lib/handleCancelBooking";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { BookingAccessService } from "@calcom/features/bookings/services/BookingAccessService";
-import logger from "@calcom/lib/logger";
-import { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import handleCancelBooking from "@bookph/core/features/bookings/lib/handleCancelBooking";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { BookingAccessService } from "@bookph/core/features/bookings/services/BookingAccessService";
+import logger from "@bookph/core/lib/logger";
+import { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import prisma from "@bookph/core/prisma";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

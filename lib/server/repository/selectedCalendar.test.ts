@@ -2,7 +2,7 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, beforeEach } from "vitest";
 
-import prisma from "@calcom/prisma";
+import prisma from "@bookph/core/prisma";
 
 import { SelectedCalendarRepository } from "./selectedCalendar";
 

@@ -17,14 +17,14 @@ import {
 import { expect, test, beforeEach, vi, describe } from "vitest";
 import "vitest-fetch-mock";
 
-import logger from "@calcom/lib/logger";
+import logger from "@bookph/core/lib/logger";
 
 import CalendarService from "../CalendarService";
 import {
   createMockJWTInstance,
   createCredentialForCalendarService,
 } from "./utils";
-import { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
+import { CredentialForCalendarServiceWithEmail } from "@bookph/core/types/Credential";
 
 const log = logger.getSubLogger({ prefix: ["CalendarService.test"] });
 
@@ -150,7 +150,7 @@ describe("getPrimaryCalendar", () => {
 
 describe("Date Optimization Benchmarks", () => {
   test("native Date calculations should be significantly faster than dayjs while producing identical results", async () => {
-    const dayjs = (await import("@calcom/dayjs")).default;
+    const dayjs = (await import("@bookph/core/dayjs")).default;
 
     const testCases = [
       {
@@ -222,7 +222,7 @@ describe("Date Optimization Benchmarks", () => {
   });
 
   test("chunking logic should produce identical results between dayjs and native Date implementations", async () => {
-    const dayjs = (await import("@calcom/dayjs")).default;
+    const dayjs = (await import("@bookph/core/dayjs")).default;
 
     const testCases = [
       {
@@ -300,7 +300,7 @@ describe("Date Optimization Benchmarks", () => {
   });
 
   test("date parsing should be consistent between dayjs and native Date for all expected input formats", async () => {
-    const dayjs = (await import("@calcom/dayjs")).default;
+    const dayjs = (await import("@bookph/core/dayjs")).default;
 
     // Test various date formats that Google Calendar API might return
     const testDates = [

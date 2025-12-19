@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 
-import { ConferencingAppsSettings } from "@calcom/atoms";
+import { ConferencingAppsSettings } from "@bookph/core/atoms";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -4,14 +4,14 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { Team } from "@calcom/prisma/client";
-import type { orgSettingsSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { Team } from "@bookph/core/prisma/client";
+import type { orgSettingsSchema } from "@bookph/core/prisma/zod-utils";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { Form } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 type FormValues = {
   name: Team["name"];

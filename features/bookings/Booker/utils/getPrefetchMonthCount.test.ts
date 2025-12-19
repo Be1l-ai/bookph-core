@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+import { BookerLayouts } from "@bookph/core/prisma/zod-utils";
 
 import { getPrefetchMonthCount } from "./getPrefetchMonthCount";
 

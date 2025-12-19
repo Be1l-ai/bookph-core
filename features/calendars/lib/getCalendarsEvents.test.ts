@@ -2,13 +2,13 @@ import "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import GoogleCalendarService from "@calcom/app-store/googlecalendar/lib/CalendarService";
-import OfficeCalendarService from "@calcom/app-store/office365calendar/lib/CalendarService";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import type { EventBusyDate } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+import GoogleCalendarService from "@bookph/core/app-store/googlecalendar/lib/CalendarService";
+import OfficeCalendarService from "@bookph/core/app-store/office365calendar/lib/CalendarService";
+import { symmetricDecrypt } from "@bookph/core/lib/crypto";
+import logger from "@bookph/core/lib/logger";
+import type { SelectedCalendar } from "@bookph/core/prisma/client";
+import type { EventBusyDate } from "@bookph/core/types/Calendar";
+import type { CredentialForCalendarService, CredentialPayload } from "@bookph/core/types/Credential";
 
 import getCalendarsEvents, {
   getCalendarsEventsWithTimezones,

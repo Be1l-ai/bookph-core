@@ -1,8 +1,8 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import logger from "@bookph/core/lib/logger";
+import prisma from "@bookph/core/prisma";
 
 import { PrismaQueuedFormResponseRepository } from "../lib/queuedFormResponse/PrismaQueuedFormResponseRepository";
 import { QueuedFormResponseService } from "../lib/queuedFormResponse/QueuedFormResponseService";

@@ -1,16 +1,16 @@
-import { enrichUsersWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { ensureAvailableUsers } from "@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
+import { enrichUsersWithDelegationCredentials } from "@bookph/core/app-store/delegationCredential";
+import dayjs from "@bookph/core/dayjs";
+import { ensureAvailableUsers } from "@bookph/core/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
+import { getEventTypesFromDB } from "@bookph/core/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IsFixedAwareUser } from "@bookph/core/features/bookings/lib/handleNewBooking/types";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import { withSelectedCalendars } from "@bookph/core/features/users/repositories/UserRepository";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import logger from "@bookph/core/lib/logger";
+import type { PrismaClient } from "@bookph/core/prisma";
 
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import type { TGetManagedEventUsersToReassignInputSchema } from "./getManagedEventUsersToReassign.schema";
 

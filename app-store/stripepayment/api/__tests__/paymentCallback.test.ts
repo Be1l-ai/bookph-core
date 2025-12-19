@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import sendVerificationRequest from "@calcom/features/auth/lib/sendVerificationRequest";
-import { HttpError } from "@calcom/lib/http-error";
-import { VerificationTokenService } from "@calcom/lib/server/service/VerificationTokenService";
-import { prisma } from "@calcom/prisma";
+import sendVerificationRequest from "@bookph/core/features/auth/lib/sendVerificationRequest";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { VerificationTokenService } from "@bookph/core/lib/server/service/VerificationTokenService";
+import { prisma } from "@bookph/core/prisma";
 
 import { getCustomerAndCheckoutSession } from "../../lib/getCustomerAndCheckoutSession";
 

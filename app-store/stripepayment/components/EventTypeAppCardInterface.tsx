@@ -1,11 +1,11 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { useAppContextWithSchema } from "@calcom/app-store/EventTypeAppContext";
-import AppCard from "@calcom/app-store/_components/AppCard";
-import type { EventTypeAppCardComponent } from "@calcom/app-store/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useAppContextWithSchema } from "@bookph/core/app-store/EventTypeAppContext";
+import AppCard from "@bookph/core/app-store/_components/AppCard";
+import type { EventTypeAppCardComponent } from "@bookph/core/app-store/types";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
 
 import checkForMultiplePaymentApps from "../../_utils/payments/checkForMultiplePaymentApps";
 import useIsAppEnabled from "../../_utils/useIsAppEnabled";

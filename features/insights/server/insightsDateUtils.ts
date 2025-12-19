@@ -1,4 +1,4 @@
-import dayjs from "@calcom/dayjs";
+import dayjs from "@bookph/core/dayjs";
 
 type TimeViewType = "week" | "month" | "year" | "day";
 

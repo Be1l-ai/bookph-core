@@ -4,17 +4,17 @@ import { createHash } from "crypto";
 import type { GetServerSidePropsContext } from "next";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { getAbsoluteEventTypeRedirectUrlWithEmbedSupport } from "@calcom/app-store/routing-forms/getEventTypeRedirectUrl";
-import { getResponseToStore } from "@calcom/app-store/routing-forms/lib/getResponseToStore";
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import { handleResponse } from "@calcom/app-store/routing-forms/lib/handleResponse";
-import { findMatchingRoute } from "@calcom/app-store/routing-forms/lib/processRoute";
-import { substituteVariables } from "@calcom/app-store/routing-forms/lib/substituteVariables";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { isAuthorizedToViewFormOnOrgDomain } from "@calcom/features/routing-forms/lib/isAuthorizedToViewForm";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { PrismaRoutingFormRepository } from "@calcom/lib/server/repository/PrismaRoutingFormRepository";
+import { getAbsoluteEventTypeRedirectUrlWithEmbedSupport } from "@bookph/core/app-store/routing-forms/getEventTypeRedirectUrl";
+import { getResponseToStore } from "@bookph/core/app-store/routing-forms/lib/getResponseToStore";
+import { getSerializableForm } from "@bookph/core/app-store/routing-forms/lib/getSerializableForm";
+import { handleResponse } from "@bookph/core/app-store/routing-forms/lib/handleResponse";
+import { findMatchingRoute } from "@bookph/core/app-store/routing-forms/lib/processRoute";
+import { substituteVariables } from "@bookph/core/app-store/routing-forms/lib/substituteVariables";
+import { orgDomainConfig } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import { isAuthorizedToViewFormOnOrgDomain } from "@bookph/core/features/routing-forms/lib/isAuthorizedToViewForm";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { checkRateLimitAndThrowError } from "@bookph/core/lib/checkRateLimitAndThrowError";
+import { PrismaRoutingFormRepository } from "@bookph/core/lib/server/repository/PrismaRoutingFormRepository";
 
 import { getRoutedUrl } from "./getRoutedUrl";
 import { getUrlSearchParamsToForward } from "./getUrlSearchParamsToForward";

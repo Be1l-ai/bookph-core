@@ -4,10 +4,10 @@ import { getSession } from "next-auth/react";
 import {
   entityPrismaWhereClause,
   canEditEntity,
-} from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import { sanitizeValue } from "@calcom/lib/csvUtils";
-import prisma from "@calcom/prisma";
-import type { App_RoutingForms_Form } from "@calcom/prisma/client";
+} from "@bookph/core/features/pbac/lib/entityPermissionUtils.server";
+import { sanitizeValue } from "@bookph/core/lib/csvUtils";
+import prisma from "@bookph/core/prisma";
+import type { App_RoutingForms_Form } from "@bookph/core/prisma/client";
 
 import { getSerializableForm } from "../../lib/getSerializableForm";
 import { getHumanReadableFieldResponseValue } from "../../lib/responseData/getHumanReadableFieldResponseValue";

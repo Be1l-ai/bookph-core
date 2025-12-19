@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-import { SkeletonLoader } from "@calcom/features/apps/components/SkeletonLoader";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogTrigger, DialogClose } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { SkeletonLoader } from "@bookph/core/features/apps/components/SkeletonLoader";
+import { Dialog } from "@bookph/core/features/components/controlled-dialog";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { Button } from "@bookph/ui/components/button";
+import { DialogContent, DialogFooter, DialogTrigger, DialogClose } from "@bookph/ui/components/dialog";
+import { EmptyScreen } from "@bookph/ui/components/empty-screen";
+import { Label } from "@bookph/ui/components/form";
+import { showToast } from "@bookph/ui/components/toast";
 
 import CreateDirectory from "./CreateDirectory";
 import DirectoryInfo from "./DirectoryInfo";

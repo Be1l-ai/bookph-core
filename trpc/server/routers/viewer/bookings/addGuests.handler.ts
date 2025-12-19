@@ -1,20 +1,20 @@
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { BookingEmailSmsHandler } from "@calcom/features/bookings/lib/BookingEmailSmsHandler";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { extractBaseEmail } from "@calcom/lib/extract-base-email";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { BookingResponses } from "@calcom/prisma/zod-utils";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@bookph/core/app-store/delegationCredential";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import dayjs from "@bookph/core/dayjs";
+import { BookingEmailSmsHandler } from "@bookph/core/features/bookings/lib/BookingEmailSmsHandler";
+import EventManager from "@bookph/core/features/bookings/lib/EventManager";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { PermissionCheckService } from "@bookph/core/features/pbac/services/permission-check.service";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { extractBaseEmail } from "@bookph/core/lib/extract-base-email";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import logger from "@bookph/core/lib/logger";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { BookingResponses } from "@bookph/core/prisma/zod-utils";
+import { eventTypeBookingFields } from "@bookph/core/prisma/zod-utils";
+import type { CalendarEvent } from "@bookph/core/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

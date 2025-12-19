@@ -2,11 +2,11 @@ import { randomUUID } from "crypto";
 import { v4 as uuid } from "uuid";
 import { describe, expect, it, vi, beforeAll, afterAll } from "vitest";
 
-import { ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import { prisma } from "@calcom/prisma";
-import type { Team, User, Membership } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, MembershipRole } from "@calcom/prisma/enums";
+import { ColumnFilterType } from "@bookph/core/features/data-table/lib/types";
+import { prisma } from "@bookph/core/prisma";
+import type { Team, User, Membership } from "@bookph/core/prisma/client";
+import { Prisma } from "@bookph/core/prisma/client";
+import { BookingStatus, MembershipRole } from "@bookph/core/prisma/enums";
 
 import {
   InsightsRoutingBaseService as InsightsRoutingService,

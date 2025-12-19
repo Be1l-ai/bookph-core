@@ -1,11 +1,11 @@
 import type { TFunction } from "i18next";
 import { default as cloneDeep } from "lodash/cloneDeep";
 
-import { getRichDescription } from "@calcom/lib/CalEventParser";
-import { EMAIL_FROM_NAME } from "@calcom/lib/constants";
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { getRichDescription } from "@bookph/core/lib/CalEventParser";
+import { EMAIL_FROM_NAME } from "@bookph/core/lib/constants";
+import { getReplyToHeader } from "@bookph/core/lib/getReplyToHeader";
+import { TimeFormat } from "@bookph/core/lib/timeFormat";
+import type { CalendarEvent, Person } from "@bookph/core/types/Calendar";
 
 import generateIcsFile from "../lib/generateIcsFile";
 import { GenerateIcsRole } from "../lib/generateIcsFile";

@@ -1,11 +1,11 @@
 import { useSession } from "next-auth/react";
 import { useMemo } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useAvailableTimeSlots } from "@calcom/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
-import { Calendar } from "@calcom/features/calendars/weeklyview";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
+import dayjs from "@bookph/core/dayjs";
+import { useAvailableTimeSlots } from "@bookph/core/features/bookings/Booker/components/hooks/useAvailableTimeSlots";
+import { Calendar } from "@bookph/core/features/calendars/weeklyview";
+import { BookingStatus } from "@bookph/core/prisma/enums";
+import { trpc } from "@bookph/core/trpc";
 
 import { useTimePreferences } from "../../bookings/lib/timePreferences";
 import { useSchedule } from "../../schedules/lib/use-schedule/useSchedule";

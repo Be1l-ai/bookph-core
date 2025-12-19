@@ -1,7 +1,7 @@
 import {
   EventTeamAssignmentTab,
   type EventTeamAssignmentTabBaseProps,
-} from "@calcom/features/eventtypes/components/tabs/assignment/EventTeamAssignmentTab";
+} from "@bookph/core/features/eventtypes/components/tabs/assignment/EventTeamAssignmentTab";
 
 const EventTeamAssignmentTabWebWrapper = (
   props: Omit<EventTeamAssignmentTabBaseProps, "isSegmentApplicable">

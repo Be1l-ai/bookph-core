@@ -1,4 +1,4 @@
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { WebhookTriggerEvents } from "@bookph/core/prisma/enums";
 
 import type { MeetingStartedDTO, MeetingEndedDTO } from "../dto/types";
 import type { WebhookPayload } from "./types";

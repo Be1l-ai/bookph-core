@@ -37,8 +37,8 @@ vi.mock("@calcom/features/CalendarEventBuilder", () => ({
   },
 }));
 
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
+import { sendCustomWorkflowEmail } from "@bookph/core/emails/workflow-email-service";
+import { CalendarEventBuilder } from "@bookph/core/features/CalendarEventBuilder";
 
 import { sendWorkflowEmails, ZSendWorkflowEmailsSchema } from "./sendWorkflowEmails";
 

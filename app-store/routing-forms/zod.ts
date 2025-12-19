@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { raqbQueryValueSchema } from "@calcom/lib/raqb/zod";
+import { raqbQueryValueSchema } from "@bookph/core/lib/raqb/zod";
 
 import { routingFormAppDataSchemas } from "./appDataSchemas";
 

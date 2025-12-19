@@ -1,6 +1,6 @@
-import { getOrgFullOrigin } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { teamMetadataSchema, userMetadata } from "@calcom/prisma/zod-utils";
+import { getOrgFullOrigin } from "@bookph/core/features/ee/organizations/lib/orgDomains";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { teamMetadataSchema, userMetadata } from "@bookph/core/prisma/zod-utils";
 
 export const enrichFormWithMigrationData = <
   T extends {

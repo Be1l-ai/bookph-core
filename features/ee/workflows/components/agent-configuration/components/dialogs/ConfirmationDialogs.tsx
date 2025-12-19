@@ -1,8 +1,8 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Dialog as UIDialog } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import { ConfirmationDialogContent } from "@bookph/ui/components/dialog";
+import { Dialog as UIDialog } from "@bookph/ui/components/dialog";
+import { showToast } from "@bookph/ui/components/toast";
 
 interface ConfirmationDialogsProps {
   cancellingNumberId: number | null;

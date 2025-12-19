@@ -1,4 +1,4 @@
-import type { readonlyPrisma } from "@calcom/prisma";
+import type { readonlyPrisma } from "@bookph/core/prisma";
 
 import {
   InsightsBookingBaseService,

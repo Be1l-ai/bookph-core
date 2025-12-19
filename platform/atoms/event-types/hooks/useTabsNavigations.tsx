@@ -5,18 +5,18 @@ import type { TFunction } from "i18next";
 import { useMemo } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
+import { getPaymentAppData } from "@bookph/core/app-store/_utils/payments/getPaymentAppData";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@bookph/core/app-store/zod-utils";
+import useLockedFieldsManager from "@bookph/core/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import type { Workflow } from "@bookph/core/features/ee/workflows/lib/types";
 import type {
   EventTypeSetupProps,
   AvailabilityOption,
   FormValues,
   EventTypeApps,
-} from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
+} from "@bookph/core/features/eventtypes/lib/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { VerticalTabItemProps } from "@bookph/ui/components/navigation";
 
 type Props = {
   formMethods: UseFormReturn<FormValues>;

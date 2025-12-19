@@ -1,8 +1,8 @@
 import { describe, expect, test, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getAvailableDatesInMonth } from "@calcom/features/calendars/lib/getAvailableDatesInMonth";
-import { daysInMonth, yyyymmdd } from "@calcom/lib/dayjs";
+import dayjs from "@bookph/core/dayjs";
+import { getAvailableDatesInMonth } from "@bookph/core/features/calendars/lib/getAvailableDatesInMonth";
+import { daysInMonth, yyyymmdd } from "@bookph/core/lib/dayjs";
 
 describe("Test Suite: Date Picker", () => {
   describe("Calculates the available dates left in the month", () => {

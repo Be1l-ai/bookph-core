@@ -1,5 +1,5 @@
-import { getBrand } from "@calcom/features/ee/organizations/lib/getBrand";
-import { WEBSITE_URL } from "@calcom/lib/constants";
+import { getBrand } from "@bookph/core/features/ee/organizations/lib/getBrand";
+import { WEBSITE_URL } from "@bookph/core/lib/constants";
 
 export const getBookerBaseUrl = async (organizationId: number | null) => {
   const orgBrand = await getBrand(organizationId);

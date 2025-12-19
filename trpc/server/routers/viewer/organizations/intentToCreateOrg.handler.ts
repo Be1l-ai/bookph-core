@@ -1,16 +1,16 @@
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { OrganizationOnboardingFactory } from "@calcom/ee/organizations/lib/service/onboarding/OrganizationOnboardingFactory";
+import { LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import { OrganizationOnboardingFactory } from "@bookph/core/ee/organizations/lib/service/onboarding/OrganizationOnboardingFactory";
 import {
   assertCanCreateOrg,
   findUserToBeOrgOwner,
-} from "@calcom/features/ee/organizations/lib/server/orgCreationUtils";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { DeploymentRepository } from "@calcom/lib/server/repository/deployment";
-import { prisma } from "@calcom/prisma";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+} from "@bookph/core/features/ee/organizations/lib/server/orgCreationUtils";
+import { OrganizationOnboardingRepository } from "@bookph/core/features/organizations/repositories/OrganizationOnboardingRepository";
+import { IS_SELF_HOSTED } from "@bookph/core/lib/constants";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { DeploymentRepository } from "@bookph/core/lib/server/repository/deployment";
+import { prisma } from "@bookph/core/prisma";
+import { UserPermissionRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

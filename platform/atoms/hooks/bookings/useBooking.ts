@@ -5,8 +5,8 @@ import {
   SUCCESS_STATUS,
   CAL_API_VERSION_HEADER,
   VERSION_2024_08_13,
-} from "@calcom/platform-constants";
-import type { GetBookingOutput_2024_08_13 } from "@calcom/platform-types";
+} from "@bookph/core/platform-constants";
+import type { GetBookingOutput_2024_08_13 } from "@bookph/core/platform-types";
 
 import http from "../../lib/http";
 

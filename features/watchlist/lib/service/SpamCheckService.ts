@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 import type { BlockingResult } from "../interface/IBlockingService";
 import type { GlobalBlockingService } from "./GlobalBlockingService";

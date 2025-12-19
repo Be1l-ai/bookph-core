@@ -1,7 +1,7 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { Payment } from "@calcom/prisma/client";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import type { Payment } from "@bookph/core/prisma/client";
 
 import { handleNoShowFee } from "./handleNoShowFee";
 import { processNoShowFeeOnCancellation } from "./processNoShowFeeOnCancellation";

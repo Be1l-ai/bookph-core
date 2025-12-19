@@ -1,8 +1,8 @@
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import { type InvalidAppCredentialBannerProps } from "@calcom/features/users/components/InvalidAppCredentialsBanner";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getAppFromSlug } from "@bookph/core/app-store/utils";
+import { type InvalidAppCredentialBannerProps } from "@bookph/core/features/users/components/InvalidAppCredentialsBanner";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 type checkInvalidAppCredentialsOptions = {
   ctx: {

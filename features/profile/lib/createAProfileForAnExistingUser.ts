@@ -1,12 +1,12 @@
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import { RedirectType } from "@calcom/prisma/enums";
+import { getOrgFullOrigin } from "@bookph/core/ee/organizations/lib/orgDomains";
+import { getOrgUsernameFromEmail } from "@bookph/core/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { ProfileRepository } from "@bookph/core/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import prisma from "@bookph/core/prisma";
+import { RedirectType } from "@bookph/core/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["lib", "createAProfileForAnExistingUser"] });
 export const createAProfileForAnExistingUser = async ({

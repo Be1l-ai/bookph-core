@@ -1,4 +1,4 @@
-import type { BookingStatus } from "@calcom/prisma/enums";
+import type { BookingStatus } from "@bookph/core/prisma/enums";
 
 // Upper case the first letter of each word and replace underscores with spaces
 export function bookingStatusToText(status: BookingStatus) {

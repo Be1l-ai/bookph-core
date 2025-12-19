@@ -11,25 +11,25 @@ import {
   getDate,
   Timezones,
   createOrganization,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectWorkflowToBeTriggered,
   expectSMSWorkflowToBeTriggered,
   expectSMSWorkflowToBeNotTriggered,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@bookph/core/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, beforeEach, vi } from "vitest";
 
-import { resetTestSMS } from "@calcom/lib/testSMS";
-import { SMSLockState, SchedulingType } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { resetTestSMS } from "@bookph/core/lib/testSMS";
+import { SMSLockState, SchedulingType } from "@bookph/core/prisma/enums";
+import { test } from "@bookph/core/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 
 vi.mock("@calcom/lib/constants", async () => {
-  const actual = await vi.importActual<typeof import("@calcom/lib/constants")>("@calcom/lib/constants");
+  const actual = await vi.importActual<typeof import("@bookph/core/lib/constants")>("@calcom/lib/constants");
 
   return {
     ...actual,

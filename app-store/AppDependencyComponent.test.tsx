@@ -33,7 +33,7 @@ vi.mock("@calcom/lib/constants", () => ({
   WEBAPP_URL: "http://localhost:3000",
 }));
 
-vi.mock("@calcom/ui/components/icon", () => ({
+vi.mock("@bookph/ui/components/icon", () => ({
   Icon: ({ name, className }: { name: string; className?: string }) => (
     <svg data-testid={`${name}-icon`} className={className}>
       {name}

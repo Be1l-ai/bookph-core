@@ -1,5 +1,5 @@
-import { zodNonRouterField } from "@calcom/app-store/routing-forms/zod";
-import { routingFormResponseInDbSchema } from "@calcom/app-store/routing-forms/zod";
+import { zodNonRouterField } from "@bookph/core/app-store/routing-forms/zod";
+import { routingFormResponseInDbSchema } from "@bookph/core/app-store/routing-forms/zod";
 
 import type { RoutingFormResponseData } from "./types";
 

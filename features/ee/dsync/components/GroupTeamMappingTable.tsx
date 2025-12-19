@@ -3,10 +3,10 @@ import { useReactTable, getCoreRowModel } from "@tanstack/react-table";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 
-import { DataTableProvider } from "@calcom/features/data-table/DataTableProvider";
-import { DataTable, DataTableToolbar } from "@calcom/features/data-table/components";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { DataTableProvider } from "@bookph/core/features/data-table/DataTableProvider";
+import { DataTable, DataTableToolbar } from "@bookph/core/features/data-table/components";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
 
 import CreateTeamDialog from "./CreateTeamDialog";
 import GroupNameCell from "./GroupNameCell";

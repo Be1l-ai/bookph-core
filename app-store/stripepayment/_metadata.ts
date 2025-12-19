@@ -1,4 +1,4 @@
-import type { AppMeta } from "@calcom/types/App";
+import type { AppMeta } from "@bookph/core/types/App";
 
 import _package from "./package.json";
 

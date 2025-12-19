@@ -3,8 +3,8 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, test, vi, expect, beforeEach } from "vitest";
 
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { CreationSource } from "@calcom/prisma/enums";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import { CreationSource } from "@bookph/core/prisma/enums";
 
 vi.mock("@calcom/lib/server/i18n", () => {
   return {

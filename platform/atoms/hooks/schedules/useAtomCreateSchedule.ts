@@ -1,9 +1,9 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@calcom/platform-types";
-import type { CreateScheduleHandlerReturn } from "@calcom/trpc/server/routers/viewer/availability/schedule/create.handler";
-import { TCreateInputSchema as CreateScheduleSchema } from "@calcom/trpc/server/routers/viewer/availability/schedule/create.schema";
+import { SUCCESS_STATUS } from "@bookph/core/platform-constants";
+import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@bookph/core/platform-types";
+import type { CreateScheduleHandlerReturn } from "@bookph/core/trpc/server/routers/viewer/availability/schedule/create.handler";
+import { TCreateInputSchema as CreateScheduleSchema } from "@bookph/core/trpc/server/routers/viewer/availability/schedule/create.schema";
 
 import http from "../../lib/http";
 import { QUERY_KEY as SchedulesQueryKey } from "./useAtomGetAllSchedules";

@@ -1,6 +1,6 @@
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import type { Webhook } from "@calcom/prisma/client";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { WebhookRepository } from "@bookph/core/features/webhooks/lib/repository/WebhookRepository";
+import type { Webhook } from "@bookph/core/prisma/client";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 type GetByViewerOptions = {
   ctx: {

@@ -1,6 +1,6 @@
-import { isSMSOrWhatsappAction } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { Icon } from "@calcom/ui/components/icon";
-import classNames from "@calcom/ui/classNames";
+import { isSMSOrWhatsappAction } from "@bookph/core/features/ee/workflows/lib/actionHelperFunctions";
+import { Icon } from "@bookph/ui/components/icon";
+import classNames from "@bookph/ui/classNames";
 
 import type { WorkflowStep } from "../lib/types";
 

@@ -7,7 +7,7 @@ import "@calcom/features/bookings/Booker/components/__mocks__/EventMeta";
 import "@calcom/features/bookings/Booker/components/__mocks__/Header";
 import "@calcom/features/bookings/Booker/components/__mocks__/LargeCalendar";
 import "@calcom/features/bookings/Booker/components/__mocks__/Section";
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
+import { constantsScenarios } from "@bookph/core/lib/__mocks__/constants";
 import "@calcom/lib/__mocks__/logger";
 
 import React from "react";

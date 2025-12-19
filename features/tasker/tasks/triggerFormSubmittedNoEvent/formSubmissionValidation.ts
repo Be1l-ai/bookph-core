@@ -1,7 +1,7 @@
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
-import prisma from "@calcom/prisma";
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/routing-forms/lib/formSubmissionUtils";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { RoutingFormResponseRepository } from "@bookph/core/lib/server/repository/formResponse";
+import prisma from "@bookph/core/prisma";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@bookph/core/routing-forms/lib/formSubmissionUtils";
 
 export interface ValidationOptions {
   responseId: number;

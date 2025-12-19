@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
 
-import { getEmbedIframe } from "@calcom/embed-core/playwright/lib/testUtils";
+import { getEmbedIframe } from "@bookph/core/embed-core/playwright/lib/testUtils";
 // eslint-disable-next-line no-restricted-imports
-import { test } from "@calcom/web/playwright/lib/fixtures";
+import { test } from "@bookph/core/web/playwright/lib/fixtures";
 
 test.describe("React Embed", () => {
   test.describe("Inline", () => {

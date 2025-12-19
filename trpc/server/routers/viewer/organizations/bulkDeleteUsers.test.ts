@@ -5,7 +5,7 @@ import prismock from "../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import type { TrpcSessionUser } from "../../../types";
 import { bulkDeleteUsersHandler } from "./bulkDeleteUsers.handler";

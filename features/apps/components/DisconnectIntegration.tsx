@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { ButtonProps } from "@calcom/ui/components/button";
-import { DisconnectIntegrationComponent } from "@calcom/ui/components/disconnect-calendar-integration";
-import { showToast } from "@calcom/ui/components/toast";
+import { isDelegationCredential } from "@bookph/core/lib/delegationCredential";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { trpc } from "@bookph/core/trpc/react";
+import type { ButtonProps } from "@bookph/ui/components/button";
+import { DisconnectIntegrationComponent } from "@bookph/ui/components/disconnect-calendar-integration";
+import { showToast } from "@bookph/ui/components/toast";
 
 export default function DisconnectIntegration(props: {
   credentialId: number;

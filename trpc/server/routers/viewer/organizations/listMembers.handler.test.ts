@@ -1,9 +1,9 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@bookph/core/prisma/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { type TypedColumnFilter, ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import { type TypedColumnFilter, ColumnFilterType } from "@bookph/core/features/data-table/lib/types";
+import type { FilterType } from "@bookph/core/types/data-table";
 
 import { listMembersHandler } from "./listMembers.handler";
 

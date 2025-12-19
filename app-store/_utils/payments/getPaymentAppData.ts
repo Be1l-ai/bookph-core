@@ -1,7 +1,7 @@
 import type { z } from "zod";
 
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import type { EventTypeMetaDataSchema } from "@bookph/core/prisma/zod-utils";
 
 import type { appDataSchemas } from "../../apps.schemas.generated";
 import type { appDataSchema, paymentOptionEnum } from "../../stripepayment/zod";

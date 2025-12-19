@@ -1,6 +1,6 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { Button } from "@calcom/ui/components/button";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Dialog, DialogContent } from "@bookph/ui/components/dialog";
+import { Button } from "@bookph/ui/components/button";
 
 import { useGatedFeaturesStore, GatedFeatures } from "../stores/gatedFeaturesStore";
 

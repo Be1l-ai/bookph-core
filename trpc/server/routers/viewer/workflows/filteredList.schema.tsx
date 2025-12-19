@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 
-import { filterQuerySchemaStrict } from "@calcom/features/filters/lib/getTeamsFiltersFromQuery";
+import { filterQuerySchemaStrict } from "@bookph/core/features/filters/lib/getTeamsFiltersFromQuery";
 
 export const ZFilteredListInputSchema = z
   .object({

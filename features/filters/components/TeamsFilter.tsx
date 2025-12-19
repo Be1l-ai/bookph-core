@@ -2,18 +2,18 @@ import { useSession } from "next-auth/react";
 import type { InputHTMLAttributes, ReactNode } from "react";
 import { forwardRef, useState } from "react";
 
-import { getOrgOrTeamAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { VerticalDivider } from "@calcom/ui/components/divider";
-import { Divider } from "@calcom/ui/components/divider";
-import { FilterSearchField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { AnimatedPopover } from "@calcom/ui/components/popover";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { getOrgOrTeamAvatar } from "@bookph/core/lib/defaultAvatarImage";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useTypedQuery } from "@bookph/core/lib/hooks/useTypedQuery";
+import { trpc } from "@bookph/core/trpc/react";
+import classNames from "@bookph/ui/classNames";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { VerticalDivider } from "@bookph/ui/components/divider";
+import { Divider } from "@bookph/ui/components/divider";
+import { FilterSearchField } from "@bookph/ui/components/form";
+import { Icon } from "@bookph/ui/components/icon";
+import { AnimatedPopover } from "@bookph/ui/components/popover";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import { filterQuerySchema } from "../lib/getTeamsFiltersFromQuery";
 

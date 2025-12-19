@@ -5,8 +5,8 @@ import type { TransportOptions } from "nodemailer";
 import nodemailer from "nodemailer";
 import path from "path";
 
-import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
-import { serverConfig } from "@calcom/lib/serverConfig";
+import { APP_NAME, WEBAPP_URL } from "@bookph/core/lib/constants";
+import { serverConfig } from "@bookph/core/lib/serverConfig";
 
 const transporter = nodemailer.createTransport<TransportOptions>({
   ...(serverConfig.transport as TransportOptions),

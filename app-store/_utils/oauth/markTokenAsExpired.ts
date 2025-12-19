@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import type { CredentialPayload } from "@calcom/types/Credential";
+import prisma from "@bookph/core/prisma";
+import type { CredentialPayload } from "@bookph/core/types/Credential";
 
 import { getTokenObjectFromCredential } from "./getTokenObjectFromCredential";
 

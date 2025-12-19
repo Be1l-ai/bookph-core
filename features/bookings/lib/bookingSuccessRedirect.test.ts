@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, test } from "vitest";
 
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { navigateInTopWindow } from "@calcom/lib/navigateInTopWindow";
+import { useIsEmbed } from "@bookph/core/embed-core/embed-iframe";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { navigateInTopWindow } from "@bookph/core/lib/navigateInTopWindow";
 
 import { useBookingSuccessRedirect, getNewSearchParams } from "./bookingSuccessRedirect";
 

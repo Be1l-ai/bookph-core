@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import type { ITimezone } from "@calcom/features/components/timezone-select";
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Select, DatePicker } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
+import dayjs from "@bookph/core/dayjs";
+import { TimezoneSelect } from "@bookph/core/features/components/timezone-select";
+import type { ITimezone } from "@bookph/core/features/components/timezone-select";
+import LicenseRequired from "@bookph/core/features/ee/common/components/LicenseRequired";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { CURRENT_TIMEZONE } from "@bookph/core/lib/timezoneConstants";
+import type { RouterOutputs } from "@bookph/core/trpc/react";
+import { trpc } from "@bookph/core/trpc/react";
+import { Avatar } from "@bookph/ui/components/avatar";
+import { Select, DatePicker } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
 
 import TeamAvailabilityTimes from "./TeamAvailabilityTimes";
 

@@ -1,13 +1,13 @@
 import type { PropsWithChildren } from "react";
 import { useState } from "react";
 
-import { useFlagMap } from "@calcom/features/flags/context/provider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import { trpc } from "@calcom/trpc";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { Button } from "@calcom/ui/components/button";
+import { useFlagMap } from "@bookph/core/features/flags/context/provider";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { useParamsWithFallback } from "@bookph/core/lib/hooks/useParamsWithFallback";
+import { trpc } from "@bookph/core/trpc";
+import { showToast } from "@bookph/ui/components/toast";
+import { Tooltip } from "@bookph/ui/components/tooltip";
+import { Button } from "@bookph/ui/components/button";
 
 const GoogleIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

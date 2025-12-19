@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import handleCancelBooking from "@calcom/features/bookings/lib/handleCancelBooking";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { BookingAccessService } from "@calcom/features/bookings/services/BookingAccessService";
-import { PrismaBookingReportRepository } from "@calcom/lib/server/repository/bookingReport";
-import { BookingStatus, BookingReportReason } from "@calcom/prisma/enums";
+import handleCancelBooking from "@bookph/core/features/bookings/lib/handleCancelBooking";
+import { BookingRepository } from "@bookph/core/features/bookings/repositories/BookingRepository";
+import { BookingAccessService } from "@bookph/core/features/bookings/services/BookingAccessService";
+import { PrismaBookingReportRepository } from "@bookph/core/lib/server/repository/bookingReport";
+import { BookingStatus, BookingReportReason } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

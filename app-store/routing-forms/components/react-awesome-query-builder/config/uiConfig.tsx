@@ -6,7 +6,7 @@ import type {
   WidgetProps,
 } from "react-awesome-query-builder";
 
-import { EmailField as EmailWidget } from "@calcom/ui/components/form";
+import { EmailField as EmailWidget } from "@bookph/ui/components/form";
 
 import widgetsComponents from "../widgets";
 import type { Widgets, WidgetsWithoutFactory } from "./types";

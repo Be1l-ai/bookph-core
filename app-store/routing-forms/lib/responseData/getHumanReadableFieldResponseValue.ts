@@ -1,4 +1,4 @@
-import type { Field, FormResponse } from "@calcom/app-store/routing-forms/types/types";
+import type { Field, FormResponse } from "@bookph/core/app-store/routing-forms/types/types";
 
 /**
  * Ensures a value is either a string or string array.

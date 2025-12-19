@@ -1,14 +1,14 @@
 import type { TFunction } from "i18next";
 import { useEffect, useRef } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useShouldShowArrows } from "@calcom/features/apps/components/AllApps";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import { useIsEmbed } from "@bookph/core/embed-core/embed-iframe";
+import { useShouldShowArrows } from "@bookph/core/features/apps/components/AllApps";
+import { useBookerStoreContext } from "@bookph/core/features/bookings/Booker/BookerStoreProvider";
+import type { BookerEvent } from "@bookph/core/features/bookings/types";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import classNames from "@bookph/ui/classNames";
+import { Icon } from "@bookph/ui/components/icon";
 
 /** Render X mins as X hours or X hours Y mins instead of in minutes once >= 60 minutes */
 export const getDurationFormatted = (mins: number | undefined, t: TFunction) => {

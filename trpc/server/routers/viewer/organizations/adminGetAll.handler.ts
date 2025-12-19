@@ -1,6 +1,6 @@
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { prisma } from "@bookph/core/prisma";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import type { TrpcSessionUser } from "../../../types";
 

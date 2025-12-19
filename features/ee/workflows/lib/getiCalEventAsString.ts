@@ -3,9 +3,9 @@ import type { DateArray } from "ics";
 import { RRule } from "rrule";
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import type { Prisma, User } from "@calcom/prisma/client";
+import dayjs from "@bookph/core/dayjs";
+import { parseRecurringEvent } from "@bookph/core/lib/isRecurringEvent";
+import type { Prisma, User } from "@bookph/core/prisma/client";
 
 type Booking = Prisma.BookingGetPayload<{
   include: {

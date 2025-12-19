@@ -1,6 +1,6 @@
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+import { CredentialRepository } from "@bookph/core/features/credentials/repositories/CredentialRepository";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { moduleLoader as prismaModuleLoader } from "@bookph/core/features/di/modules/Prisma";
 
 import { createModule, bindModuleToClassOnToken, type ModuleLoader } from "../di";
 

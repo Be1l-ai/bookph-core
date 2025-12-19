@@ -2,15 +2,15 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import type { Membership, Team, User, VerificationToken, Profile } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { updateNewTeamMemberEventTypes } from "@bookph/core/features/ee/teams/lib/queries";
+import { TeamRepository } from "@bookph/core/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@bookph/core/features/ee/workflows/lib/service/WorkflowService";
+import { createAProfileForAnExistingUser } from "@bookph/core/features/profile/lib/createAProfileForAnExistingUser";
+import { deleteDomain } from "@bookph/core/lib/domainManager/organization";
+import { ErrorCode } from "@bookph/core/lib/errorCodes";
+import { ErrorWithCode } from "@bookph/core/lib/errors";
+import type { Membership, Team, User, VerificationToken, Profile } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TeamService } from "./teamService";
 
@@ -40,7 +40,7 @@ describe("TeamService", () => {
     mockTeamBillingFactory.findAndInit.mockResolvedValue(mockTeamBilling);
     mockTeamBillingFactory.findAndInitMany.mockResolvedValue([mockTeamBilling]);
     
-    const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+    const { getTeamBillingServiceFactory } = await import("@bookph/core/ee/billing/di/containers/Billing");
     vi.mocked(getTeamBillingServiceFactory).mockReturnValue(mockTeamBillingFactory);
   });
 

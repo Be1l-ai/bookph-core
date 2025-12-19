@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import * as constants from "@calcom/lib/constants";
-import { BookingStatus } from "@calcom/prisma/client";
-import type { JsonValue } from "@calcom/types/Json";
+import * as constants from "@bookph/core/lib/constants";
+import { BookingStatus } from "@bookph/core/prisma/client";
+import type { JsonValue } from "@bookph/core/types/Json";
 
 import {
   determineReschedulePreventionRedirect,
@@ -12,7 +12,7 @@ import {
 
 // Mock the constants module
 vi.mock("@calcom/lib/constants", async () => {
-  const actual = (await vi.importActual("@calcom/lib/constants")) as typeof import("@calcom/lib/constants");
+  const actual = (await vi.importActual("@calcom/lib/constants")) as typeof import("@bookph/core/lib/constants");
   return {
     ...actual,
     ENV_PAST_BOOKING_RESCHEDULE_CHANGE_TEAM_IDS: undefined, // Default to undefined, will be overridden in tests

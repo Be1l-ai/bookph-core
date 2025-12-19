@@ -1,13 +1,13 @@
 import type { z } from "zod";
 
-import { whereClauseForOrgWithSlugOrRequestedSlug } from "@calcom/ee/organizations/lib/orgDomains";
-import logger from "@calcom/lib/logger";
-import { getParsedTeam } from "@calcom/lib/server/repository/teamUtils";
-import type { PrismaClient } from "@calcom/prisma";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { whereClauseForOrgWithSlugOrRequestedSlug } from "@bookph/core/ee/organizations/lib/orgDomains";
+import logger from "@bookph/core/lib/logger";
+import { getParsedTeam } from "@bookph/core/lib/server/repository/teamUtils";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { prisma } from "@bookph/core/prisma";
+import type { Prisma } from "@bookph/core/prisma/client";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 type TeamGetPayloadWithParsedMetadata<TeamSelect extends Prisma.TeamSelect> =
   | (Omit<Prisma.TeamGetPayload<{ select: TeamSelect }>, "metadata" | "isOrganization"> & {

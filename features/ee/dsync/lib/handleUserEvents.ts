@@ -1,16 +1,16 @@
 import type { DirectorySyncEvent, User } from "@boxyhq/saml-jackson";
 
-import removeUserFromOrg from "@calcom/features/ee/dsync/lib/removeUserFromOrg";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { getTeamOrThrow } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
-import type { UserWithMembership } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
-import { sendExistingUserTeamInviteEmails } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
-import { sendSignupToOrganizationEmail } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
+import removeUserFromOrg from "@bookph/core/features/ee/dsync/lib/removeUserFromOrg";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getTranslation } from "@bookph/core/lib/server/i18n";
+import prisma from "@bookph/core/prisma";
+import { IdentityProvider } from "@bookph/core/prisma/enums";
+import { getTeamOrThrow } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/utils";
+import type { UserWithMembership } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/utils";
+import { sendExistingUserTeamInviteEmails } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/utils";
+import { sendSignupToOrganizationEmail } from "@bookph/core/trpc/server/routers/viewer/teams/inviteMember/utils";
 
 import { assignValueToUserInOrgBulk } from "./assignValueToUser";
 import getAttributesFromScimPayload from "./getAttributesFromScimPayload";

@@ -1,6 +1,6 @@
-import { isTeamMember } from "@calcom/features/ee/teams/lib/queries";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { isTeamMember } from "@bookph/core/features/ee/teams/lib/queries";
+import { prisma } from "@bookph/core/prisma";
+import type { TrpcSessionUser } from "@bookph/core/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

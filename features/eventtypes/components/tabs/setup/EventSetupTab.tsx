@@ -3,28 +3,28 @@ import { Controller, useFormContext } from "react-hook-form";
 import type { UseFormGetValues, UseFormSetValue, Control, FormState } from "react-hook-form";
 import type { MultiValue } from "react-select";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { useIsPlatform } from "@bookph/core/atoms/hooks/useIsPlatform";
+import useLockedFieldsManager from "@bookph/core/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import type {
   EventTypeSetupProps,
   InputClassNames,
   SelectClassNames,
   SettingsToggleClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import type { FormValues, LocationFormValues } from "@calcom/features/eventtypes/lib/types";
-import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import { slugify } from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import classNames from "@calcom/ui/classNames";
-import { Editor } from "@calcom/ui/components/editor";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Skeleton } from "@calcom/ui/components/skeleton";
+} from "@bookph/core/features/eventtypes/lib/types";
+import type { FormValues, LocationFormValues } from "@bookph/core/features/eventtypes/lib/types";
+import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@bookph/core/lib/constants";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { md } from "@bookph/core/lib/markdownIt";
+import { slugify } from "@bookph/core/lib/slugify";
+import turndown from "@bookph/core/lib/turndownService";
+import classNames from "@bookph/ui/classNames";
+import { Editor } from "@bookph/ui/components/editor";
+import { TextAreaField } from "@bookph/ui/components/form";
+import { Label } from "@bookph/ui/components/form";
+import { TextField } from "@bookph/ui/components/form";
+import { Select } from "@bookph/ui/components/form";
+import { SettingsToggle } from "@bookph/ui/components/form";
+import { Skeleton } from "@bookph/ui/components/skeleton";
 
 import Locations from "../../locations/Locations";
 import type { LocationCustomClassNames } from "../../locations/types";

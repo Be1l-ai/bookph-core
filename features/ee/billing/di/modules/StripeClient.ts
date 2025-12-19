@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 
-import { type Container, createModule, ModuleLoader } from "@calcom/features/di/di";
+import { type Container, createModule, ModuleLoader } from "@bookph/core/features/di/di";
 
 import { DI_TOKENS } from "../tokens";
 

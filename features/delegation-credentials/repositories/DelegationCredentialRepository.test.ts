@@ -2,7 +2,7 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, beforeEach, vi } from "vitest";
 
-import { encryptServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
+import { encryptServiceAccountKey } from "@bookph/core/lib/server/serviceAccountKey";
 
 import { DelegationCredentialRepository } from "./DelegationCredentialRepository";
 
@@ -22,7 +22,7 @@ vi.mock("@calcom/prisma", () => ({
 vi.mock("@calcom/lib/crypto", async (importOriginal) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const actual = await importOriginal<typeof import("@calcom/lib/crypto")>();
+  const actual = await importOriginal<typeof import("@bookph/core/lib/crypto")>();
   return {
     ...actual,
     symmetricEncrypt: vi.fn((serviceAccountKey) => {

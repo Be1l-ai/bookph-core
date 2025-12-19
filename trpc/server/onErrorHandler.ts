@@ -1,8 +1,8 @@
 import { captureException } from "@sentry/nextjs";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { getServerErrorFromUnknown } from "@calcom/lib/server/getServerErrorFromUnknown";
+import { HttpError } from "@bookph/core/lib/http-error";
+import { getServerErrorFromUnknown } from "@bookph/core/lib/server/getServerErrorFromUnknown";
 
 import { TRPCError } from "@trpc/server";
 import { getHTTPStatusCodeFromError } from "@trpc/server/http";

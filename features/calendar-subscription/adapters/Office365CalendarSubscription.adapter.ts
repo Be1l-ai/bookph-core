@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
+import logger from "@bookph/core/lib/logger";
+import type { SelectedCalendar } from "@bookph/core/prisma/client";
 
 import type {
   CalendarSubscriptionEvent,

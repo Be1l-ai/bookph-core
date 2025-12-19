@@ -1,5 +1,5 @@
-import { bulkUpdateEventsToDefaultLocation } from "@calcom/app-store/_utils/bulkUpdateEventsToDefaultLocation";
-import { prisma } from "@calcom/prisma";
+import { bulkUpdateEventsToDefaultLocation } from "@bookph/core/app-store/_utils/bulkUpdateEventsToDefaultLocation";
+import { prisma } from "@bookph/core/prisma";
 
 import { TRPCError } from "@trpc/server";
 

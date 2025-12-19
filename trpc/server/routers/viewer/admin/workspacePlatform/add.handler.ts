@@ -1,7 +1,7 @@
 import type { z } from "zod";
 
-import logger from "@calcom/lib/logger";
-import { WorkspacePlatformRepository } from "@calcom/lib/server/repository/workspacePlatform";
+import logger from "@bookph/core/lib/logger";
+import { WorkspacePlatformRepository } from "@bookph/core/lib/server/repository/workspacePlatform";
 
 import { TRPCError } from "@trpc/server";
 

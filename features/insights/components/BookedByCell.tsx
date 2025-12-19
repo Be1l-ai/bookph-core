@@ -1,8 +1,8 @@
 import { useId } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import { Badge } from "@bookph/ui/components/badge";
+import { Tooltip } from "@bookph/ui/components/tooltip";
 
 import type { RoutingFormTableRow } from "../lib/types";
 import { CellWithOverflowX } from "./CellWithOverflowX";

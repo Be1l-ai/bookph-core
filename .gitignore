@@ -1,0 +1,16 @@
+.env
+node_modules
+node_modules/
+dist
+dist/
+build
+build/
+.DS_Store
+.vscode
+.idea
+*.log
+*.lock
+coverage
+coverage/
+prisma/generated/
+pnpm-lock.yaml

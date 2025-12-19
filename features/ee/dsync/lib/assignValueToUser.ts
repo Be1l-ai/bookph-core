@@ -1,15 +1,15 @@
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { PrismaAttributeOptionRepository } from "@calcom/lib/server/repository/PrismaAttributeOptionRepository";
-import { PrismaAttributeRepository } from "@calcom/lib/server/repository/PrismaAttributeRepository";
-import { findAssignmentsForMember } from "@calcom/lib/service/attribute/server/utils";
+import { MembershipRepository } from "@bookph/core/features/membership/repositories/MembershipRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { PrismaAttributeOptionRepository } from "@bookph/core/lib/server/repository/PrismaAttributeOptionRepository";
+import { PrismaAttributeRepository } from "@bookph/core/lib/server/repository/PrismaAttributeRepository";
+import { findAssignmentsForMember } from "@bookph/core/lib/service/attribute/server/utils";
 import type {
   AttributeId,
   AttributeName,
   BulkAttributeAssigner,
   AttributeOptionAssignment,
-} from "@calcom/lib/service/attribute/types";
+} from "@bookph/core/lib/service/attribute/types";
 import {
   doesSupportMultipleValues,
   isAssignmentForLockedAttribute,
@@ -17,8 +17,8 @@ import {
   isAssignmentSame,
   buildSlugFromValue,
   canSetValueBeyondOptions,
-} from "@calcom/lib/service/attribute/utils";
-import prisma from "@calcom/prisma";
+} from "@bookph/core/lib/service/attribute/utils";
+import prisma from "@bookph/core/prisma";
 
 const log = logger.getSubLogger({ prefix: ["entity/attribute"] });
 

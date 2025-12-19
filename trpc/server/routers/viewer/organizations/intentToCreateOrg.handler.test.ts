@@ -2,9 +2,9 @@ import prismock from "../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { OrganizationPaymentService } from "@calcom/features/ee/organizations/lib/OrganizationPaymentService";
-import { BillingPeriod, UserPermissionRole, CreationSource } from "@calcom/prisma/enums";
+import { LicenseKeySingleton } from "@bookph/core/ee/common/server/LicenseKeyService";
+import { OrganizationPaymentService } from "@bookph/core/features/ee/organizations/lib/OrganizationPaymentService";
+import { BillingPeriod, UserPermissionRole, CreationSource } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

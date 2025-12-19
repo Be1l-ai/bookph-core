@@ -1,9 +1,9 @@
 import type { IncomingHttpHeaders } from "http";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import type { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import type { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { HttpError } from "@calcom/lib/http-error";
+import type { EventTypeRepository } from "@bookph/core/features/eventtypes/repositories/eventTypeRepository";
+import type { FeaturesRepository } from "@bookph/core/features/flags/features.repository";
+import { HttpError } from "@bookph/core/lib/http-error";
 
 import { BotDetectionService } from "./BotDetectionService";
 

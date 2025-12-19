@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { z } from "zod";
 
-import { CHECKOUT_SESSION_TYPES } from "@calcom/features/ee/billing/constants";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { CHECKOUT_SESSION_TYPES } from "@bookph/core/features/ee/billing/constants";
+import stripe from "@bookph/core/features/ee/payments/server/stripe";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { HttpError } from "@bookph/core/lib/http-error";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
 
 const querySchema = z.object({
   session_id: z.string().min(1),

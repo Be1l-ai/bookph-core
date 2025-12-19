@@ -1,6 +1,6 @@
-import dayjs from "@calcom/dayjs";
-import type { EventType } from "@calcom/prisma/client";
-import { PeriodType } from "@calcom/prisma/enums";
+import dayjs from "@bookph/core/dayjs";
+import type { EventType } from "@bookph/core/prisma/client";
+import { PeriodType } from "@bookph/core/prisma/enums";
 
 import { ROLLING_WINDOW_PERIOD_MAX_DAYS_TO_CHECK } from "./constants";
 import logger from "./logger";

@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { PrismaSelectedSlotRepository } from "@calcom/lib/server/repository/PrismaSelectedSlotRepository";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { PrismaSelectedSlotRepository } from "@bookph/core/lib/server/repository/PrismaSelectedSlotRepository";
 
 import { createModule } from "../di";
 

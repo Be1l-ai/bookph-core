@@ -1,9 +1,9 @@
 import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import { test, todo } from "@calcom/web/playwright/lib/fixtures";
-import type { Fixtures } from "@calcom/web/playwright/lib/fixtures";
-import { selectFirstAvailableTimeSlotNextMonth } from "@calcom/web/playwright/lib/testUtils";
+import { test, todo } from "@bookph/core/web/playwright/lib/fixtures";
+import type { Fixtures } from "@bookph/core/web/playwright/lib/fixtures";
+import { selectFirstAvailableTimeSlotNextMonth } from "@bookph/core/web/playwright/lib/testUtils";
 
 import {
   getEmbedIframe,

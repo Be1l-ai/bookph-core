@@ -1,5 +1,5 @@
-import { getWatchlistFeature } from "@calcom/features/di/watchlist/containers/watchlist";
-import type logger from "@calcom/lib/logger";
+import { getWatchlistFeature } from "@bookph/core/features/di/watchlist/containers/watchlist";
+import type logger from "@bookph/core/lib/logger";
 
 import { extractDomainFromEmail } from "../utils/normalization";
 

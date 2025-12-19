@@ -1,13 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
 
-import { generateUniqueAPIKey as generateHashedApiKey } from "@calcom/ee/api-keys/lib/apiKeys";
-import type { PrismaClient } from "@calcom/prisma";
+import { generateUniqueAPIKey as generateHashedApiKey } from "@bookph/core/ee/api-keys/lib/apiKeys";
+import type { PrismaClient } from "@bookph/core/prisma";
 
 export class PrismaApiKeyRepository {
   constructor(private prismaClient: PrismaClient) {}
 
   static async withGlobalPrisma() {
-    return new PrismaApiKeyRepository((await import("@calcom/prisma")).prisma);
+    return new PrismaApiKeyRepository((await import("@bookph/core/prisma")).prisma);
   }
 
   async findByHashedKey(hashedKey: string) {

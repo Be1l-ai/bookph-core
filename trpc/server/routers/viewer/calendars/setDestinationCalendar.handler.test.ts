@@ -7,13 +7,13 @@ import {
   getScenarioData,
   createOrganization,
   createDelegationCredential,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@bookph/core/web/test/utils/bookingScenario/bookingScenario";
+import { setupAndTeardown } from "@bookph/core/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, it, vi, expect } from "vitest";
 
-import { getConnectedCalendars } from "@calcom/features/calendars/lib/CalendarManager";
-import { SchedulingType, MembershipRole } from "@calcom/prisma/enums";
+import { getConnectedCalendars } from "@bookph/core/features/calendars/lib/CalendarManager";
+import { SchedulingType, MembershipRole } from "@bookph/core/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,7 +1,7 @@
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { IS_TEAM_BILLING_ENABLED } from "@bookph/core/lib/constants";
+import { prisma } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 import type { TrpcSessionUser } from "../../../types";
 

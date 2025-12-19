@@ -1,5 +1,5 @@
-import { BookingEmailAndSmsTriggerDevTasker } from "@calcom/features/bookings/lib/tasker/BookingEmailAndSmsTriggerTasker";
-import { createContainer } from "@calcom/features/di/di";
+import { BookingEmailAndSmsTriggerDevTasker } from "@bookph/core/features/bookings/lib/tasker/BookingEmailAndSmsTriggerTasker";
+import { createContainer } from "@bookph/core/features/di/di";
 
 import { moduleLoader as BookingEmailAndSmsTriggerDevTaskerModule } from "./BookingEmailAndSmsTriggerDevTasker.module";
 

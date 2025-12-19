@@ -1,5 +1,5 @@
-import { CheckBookingLimitsService } from "@calcom/features/bookings/lib/checkBookingLimits";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { CheckBookingLimitsService } from "@bookph/core/features/bookings/lib/checkBookingLimits";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
 
 import { type Container, createModule } from "../di";
 

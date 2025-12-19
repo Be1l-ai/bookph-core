@@ -6,15 +6,15 @@ import { useRouter } from "next/navigation";
 import type { SyntheticEvent } from "react";
 import { useEffect, useState } from "react";
 
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
-import { useBookingSuccessRedirect } from "@calcom/features/bookings/lib/bookingSuccessRedirect";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { EventType, Payment } from "@calcom/prisma/client";
-import type { PaymentOption } from "@calcom/prisma/enums";
-import { Button } from "@calcom/ui/components/button";
-import { CheckboxField } from "@calcom/ui/components/form";
+import getStripe from "@bookph/core/app-store/stripepayment/lib/client";
+import { useBookingSuccessRedirect } from "@bookph/core/features/bookings/lib/bookingSuccessRedirect";
+import { WEBAPP_URL } from "@bookph/core/lib/constants";
+import { useCompatSearchParams } from "@bookph/core/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@bookph/core/lib/hooks/useLocale";
+import type { EventType, Payment } from "@bookph/core/prisma/client";
+import type { PaymentOption } from "@bookph/core/prisma/enums";
+import { Button } from "@bookph/ui/components/button";
+import { CheckboxField } from "@bookph/ui/components/form";
 
 import type { PaymentPageProps } from "../pages/payment";
 

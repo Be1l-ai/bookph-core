@@ -1,16 +1,16 @@
 import type { z } from "zod";
 
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getParsedTeam } from "@calcom/lib/server/repository/teamUtils";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { CreationSource } from "@calcom/prisma/enums";
-import type { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { getOrgUsernameFromEmail } from "@bookph/core/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { createAProfileForAnExistingUser } from "@bookph/core/features/profile/lib/createAProfileForAnExistingUser";
+import { UserRepository } from "@bookph/core/features/users/repositories/UserRepository";
+import logger from "@bookph/core/lib/logger";
+import { safeStringify } from "@bookph/core/lib/safeStringify";
+import { getParsedTeam } from "@bookph/core/lib/server/repository/teamUtils";
+import type { PrismaClient } from "@bookph/core/prisma";
+import { MembershipRole } from "@bookph/core/prisma/enums";
+import type { CreationSource } from "@bookph/core/prisma/enums";
+import type { teamMetadataStrictSchema } from "@bookph/core/prisma/zod-utils";
+import { teamMetadataSchema } from "@bookph/core/prisma/zod-utils";
 
 const orgSelect = {
   id: true,

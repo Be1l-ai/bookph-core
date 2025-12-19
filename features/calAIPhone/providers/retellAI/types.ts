@@ -1,6 +1,6 @@
 import type { Retell } from "retell-sdk";
 
-import type { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
+import type { PrismaAgentRepository } from "@bookph/core/features/calAIPhone/repositories/PrismaAgentRepository";
 
 export type RetellLLM = Retell.LlmResponse;
 export type RetellPhoneNumber = Retell.PhoneNumberResponse;

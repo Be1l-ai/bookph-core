@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
+import { DI_TOKENS } from "@bookph/core/features/di/tokens";
+import { ScheduleRepository } from "@bookph/core/features/schedules/repositories/ScheduleRepository";
 
 import { createModule } from "../di";
 
