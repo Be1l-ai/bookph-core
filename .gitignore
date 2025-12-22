@@ -12,5 +12,6 @@ build/
 *.lock
 coverage
 coverage/
-prisma/generated/
+# Keep prisma/generated/client for package distribution
+!prisma/generated/client/
 pnpm-lock.yaml
