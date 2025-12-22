@@ -1,5 +1,5 @@
 {
-  "extends": "@bookph/tsconfig/base.json",
+  "extends": "../../tsconfig/base.json",
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ES2021",

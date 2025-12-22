@@ -1,5 +1,5 @@
 {
-  "extends": "@bookph/tsconfig/react-library.json",
+  "extends": "../tsconfig/react-library.json",
   "exclude": ["dist", "build", "**/node_modules/**"],
   "compilerOptions": {
     "baseUrl": ".",

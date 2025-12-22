@@ -1,5 +1,5 @@
 {
-  "extends": "@bookph/tsconfig/react-library.json",
+  "extends": "../tsconfig/react-library.json",
   "include": [
     "../types/@wojtekmaj__react-daterange-picker.d.ts",
     "../types/business-days-plugin.d.ts",
@@ -9,7 +9,12 @@
     "../types/window.d.ts",
     "./server"
   ],
-  "exclude": ["**/node_modules/**", "./react", "./server/**/*.test.ts", "./server/**/*.spec.ts"],
+  "exclude": [
+    "**/node_modules/**",
+    "./react",
+    "./server/**/*.test.ts",
+    "./server/**/*.spec.ts"
+  ],
   "compilerOptions": {
     "isolatedModules": false,
     "noEmit": false,

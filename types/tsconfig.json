@@ -1,5 +1,5 @@
 {
-  "extends": "@bookph/tsconfig/base.json",
+  "extends": "../tsconfig/base.json",
   "include": ["."],
   "exclude": ["dist", "build", "**/node_modules/**"]
 }

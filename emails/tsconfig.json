@@ -1,5 +1,5 @@
 {
-  "extends": "@bookph/tsconfig/react-library.json",
+  "extends": "../tsconfig/react-library.json",
   "include": [
     "../../apps/web/next-env.d.ts",
     "../types/*.d.ts",

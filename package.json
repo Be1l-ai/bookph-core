@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "BookPH Core - Backend packages and shared logic",
   "private": false,
-  "main": "index.js",
+  "type": "module",
   "exports": {
     "./*": "./*"
   },
   "scripts": {
-    "build": "echo 'Build script placeholder'",
-    "test": "echo 'Test script placeholder'"
+    "build": "echo 'Note: This package exports raw TypeScript files. Consuming applications must transpile @bookph/core'",
+    "test": "echo 'Test script placeholder'",
+    "typecheck": "tsc --noEmit",
+    "prisma:generate": "prisma generate"
   },
   "keywords": [
     "bookph",
@@ -25,9 +27,11 @@
   },
   "devDependencies": {
     "@prisma/client": "6.16.0",
+    "@types/node": "^20.0.0",
     "prisma": "6.16.0",
     "prisma-kysely": "^2.2.1",
     "ts-node": "^10.9.2",
+    "typescript": "^5.3.0",
     "zod-prisma-types": "^3.3.10"
   },
   "dependencies": {

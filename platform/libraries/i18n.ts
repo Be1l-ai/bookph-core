@@ -8,11 +8,27 @@ import logger from "@bookph/core/lib/logger";
 /* eslint-disable @typescript-eslint/no-require-imports */
 const { i18n } = require("@bookph/core/config/next-i18next.config");
 const path = require("path");
-const translationsPath = path.resolve(__dirname, "../../../../apps/web/public/static/locales/en/common.json");
-const englishTranslations: Record<string, string> = require(translationsPath);
+
+// Use try/catch with fallback for when package is installed externally (not in monorepo)
+let englishTranslations: Record<string, string> = {};
+try {
+  const translationsPath = path.resolve(
+    __dirname,
+    "../../../../apps/web/public/static/locales/en/common.json"
+  );
+  englishTranslations = require(translationsPath);
+} catch (error) {
+  // Fallback when installed as external package
+  logger.warn(
+    "Could not load bundled English translations in platform/libraries/i18n.ts, will fetch dynamically"
+  );
+  englishTranslations = {};
+}
 /* eslint-enable @typescript-eslint/no-require-imports */
 
-const translationCache = new Map<string, Record<string, string>>([["en-common", englishTranslations]]);
+const translationCache = new Map<string, Record<string, string>>([
+  ["en-common", englishTranslations],
+]);
 const i18nInstanceCache = new Map<string, I18nInstance>();
 const SUPPORTED_NAMESPACES = ["common"];
 
@@ -43,7 +59,9 @@ export async function loadTranslations(_locale: string, _ns: string) {
     );
 
     if (!response.ok) {
-      logger.warn(`Failed to fetch translations for ${locale}: ${response.status}, falling back to English`);
+      logger.warn(
+        `Failed to fetch translations for ${locale}: ${response.status}, falling back to English`
+      );
       return englishTranslations;
     }
 
@@ -51,7 +69,10 @@ export async function loadTranslations(_locale: string, _ns: string) {
     translationCache.set(cacheKey, translations);
     return translations;
   } catch (err) {
-    logger.warn(`Failed to load translations for ${locale}, falling back to English:`, err);
+    logger.warn(
+      `Failed to load translations for ${locale}, falling back to English:`,
+      err
+    );
     return englishTranslations;
   }
 }

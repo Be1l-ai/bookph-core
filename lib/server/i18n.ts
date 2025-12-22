@@ -11,10 +11,17 @@ const log = logger.getSubLogger({ prefix: ["[i18n]"] });
 
 // Import only English translations directly to avoid HTTP requests
 // Other languages will be loaded dynamically to minimize bundle size
-const englishTranslations: Record<
-  string,
-  string
-> = require("../../../apps/web/public/static/locales/en/common.json");
+// Use try/catch with fallback for when package is installed externally (not in monorepo)
+let englishTranslations: Record<string, string> = {};
+try {
+  englishTranslations = require("../../../apps/web/public/static/locales/en/common.json");
+} catch (error) {
+  // Fallback when installed as external package
+  log.warn(
+    "Could not load bundled English translations, will fetch dynamically"
+  );
+  englishTranslations = {};
+}
 
 const translationCache = new Map<string, Record<string, string>>();
 const i18nInstanceCache = new Map<string, any>();
