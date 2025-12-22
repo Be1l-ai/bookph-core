@@ -8,12 +8,9 @@ datasource db {
 }
 
 generator client {
-  provider            = "prisma-client"
-  previewFeatures     = ["views"]
-  output              = "./generated/prisma"
-  engineType          = "client"
-  moduleFormat        = "cjs"
-  importFileExtension = ""
+  provider        = "prisma-client"
+  previewFeatures = ["views"]
+  engineType      = "client"
 }
 
 // generator zod {

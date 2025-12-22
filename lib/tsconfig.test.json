@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
 
-  "extends": "@bookph/tsconfig/base.json",
+  "extends": "../tsconfig/base.json",
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "es5",
