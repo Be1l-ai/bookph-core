@@ -29,5 +29,10 @@
     "prisma-kysely": "^2.2.1",
     "ts-node": "^10.9.2",
     "zod-prisma-types": "^3.3.10"
+  },
+  "dependencies": {
+    "@unkey/ratelimit": "^2.1.4",
+    "tslog": "^4.9.3",
+    "zod": "^3.22.4"
   }
 }
