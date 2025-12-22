@@ -11,7 +11,8 @@
     "build": "echo 'Note: This package exports raw TypeScript files. Consuming applications must transpile @bookph/core'",
     "test": "echo 'Test script placeholder'",
     "typecheck": "tsc --noEmit",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "keywords": [
     "bookph",
@@ -26,7 +27,6 @@
     "url": "https://github.com/Be1l-ai/bookph-core.git"
   },
   "devDependencies": {
-    "@prisma/client": "6.16.0",
     "@types/node": "^20.0.0",
     "prisma": "6.16.0",
     "prisma-kysely": "^2.2.1",
@@ -35,6 +35,7 @@
     "zod-prisma-types": "^3.3.10"
   },
   "dependencies": {
+    "@prisma/client": "6.16.0",
     "@unkey/ratelimit": "^2.1.4",
     "tslog": "^4.9.3",
     "zod": "^3.22.4"
