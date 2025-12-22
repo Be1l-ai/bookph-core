@@ -7,14 +7,28 @@
   "exports": {
     "./atoms": "./platform/atoms/index.ts",
     "./atoms/*": "./platform/atoms/*",
+    "./config/*": "./config/*",
+    "./dayjs": "./dayjs/index.ts",
+    "./dayjs/*": "./dayjs/*",
+    "./ee/*": "./features/ee/*",
+    "./emails/*": "./emails/*",
+    "./embed-react": "./embeds/embed-react/src/index.ts",
+    "./features/*": "./features/*",
+    "./lib/*": "./lib/*",
+    "./platform/*": "./platform/*",
+    "./prisma": "./prisma/index.ts",
+    "./prisma/*": "./prisma/*",
+    "./sms/*": "./sms/*",
+    "./trpc/*": "./trpc/*",
+    "./types/*": "./types/*",
+    "./web/*": "./web/*",
     "./*": "./*"
   },
   "scripts": {
     "build": "echo 'Note: This package exports raw TypeScript files. Consuming applications must transpile @bookph/core'",
     "test": "echo 'Test script placeholder'",
     "typecheck": "tsc --noEmit",
-    "prisma:generate": "prisma generate",
-    "postinstall": "prisma generate"
+    "prisma:generate": "prisma generate"
   },
   "keywords": [
     "bookph",
