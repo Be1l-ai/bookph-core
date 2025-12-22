@@ -5,13 +5,16 @@
   "private": false,
   "type": "module",
   "exports": {
+    "./atoms": "./platform/atoms/index.ts",
+    "./atoms/*": "./platform/atoms/*",
     "./*": "./*"
   },
   "scripts": {
     "build": "echo 'Note: This package exports raw TypeScript files. Consuming applications must transpile @bookph/core'",
     "test": "echo 'Test script placeholder'",
     "typecheck": "tsc --noEmit",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "keywords": [
     "bookph",
