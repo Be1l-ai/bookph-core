@@ -45,14 +45,17 @@ if (!isNaN(loggerLevel)) {
       break;
   }
 }
-const baseClient = globalForPrisma.baseClient || new PrismaClient(prismaOptions);
+const baseClient =
+  globalForPrisma.baseClient || new PrismaClient(prismaOptions);
 
 export const customPrisma = (options?: Prisma.PrismaClientOptions) => {
   let finalOptions = { ...prismaOptions };
 
   if (options?.datasources?.db?.url) {
     const customConnectionString = options.datasources.db.url;
-    const customAdapter = new PrismaPg({ connectionString: customConnectionString });
+    const customAdapter = new PrismaPg({
+      connectionString: customConnectionString,
+    });
 
     const { datasources: _datasources, ...restOptions } = options;
     finalOptions = {
@@ -68,7 +71,9 @@ export const customPrisma = (options?: Prisma.PrismaClientOptions) => {
     .$extends(excludeLockedUsersExtension())
     .$extends(excludePendingPaymentsExtension())
     .$extends(bookingIdempotencyKeyExtension())
-    .$extends(disallowUndefinedDeleteUpdateManyExtension()) as unknown as PrismaClient;
+    .$extends(
+      disallowUndefinedDeleteUpdateManyExtension()
+    ) as unknown as PrismaClient;
 };
 
 // FIXME: Due to some reason, there are types failing in certain places due to the $extends. Fix it and then enable it
@@ -80,7 +85,9 @@ export const prisma: PrismaClient = baseClient
   .$extends(excludeLockedUsersExtension())
   .$extends(excludePendingPaymentsExtension())
   .$extends(bookingIdempotencyKeyExtension())
-  .$extends(disallowUndefinedDeleteUpdateManyExtension()) as unknown as PrismaClient;
+  .$extends(
+    disallowUndefinedDeleteUpdateManyExtension()
+  ) as unknown as PrismaClient;
 
 // This prisma instance is meant to be used only for READ operations.
 // If self hosting, feel free to leave INSIGHTS_DATABASE_URL as empty and `readonlyPrisma` will default to `prisma`.
